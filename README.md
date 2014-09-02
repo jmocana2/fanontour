@@ -1,4 +1,4 @@
-fanontour
+FanOnTour
 =========
 
 FanOnTour Repository
