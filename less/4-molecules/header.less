@@ -2,7 +2,13 @@
 //=====================
 
 #header{
-	padding: 10px 0;
+	position: relative;
+	z-index: 2;
+
+	.sup{
+		padding-top: 10px;
+		background-color: @colorK4;
+	}
 
 	h1{
 		float: left;		
@@ -11,10 +17,12 @@
 	//Navigation
 	nav{
 		float: right;
+		margin-top: 10px;
+		margin-right: 20px;
 	}
 
 	.list-login{
-		margin-left: 0;
+		margin-left: 0;		
 
 		li{
 			background: url('../img/icons/shapes/green-line.png') no-repeat 0 center;
@@ -23,7 +31,28 @@
 
 			&:first-child{
 				background: none;
+				margin-left: 0;
+				padding-left: 0;
 			}
+		}
+	}
+
+	.dropdown-language{
+		float: right;
+		margin-top: 8px;
+
+		li{
+			background: none;
+		}		
+	}
+
+	.inf{
+		background: url('../img/backgrounds/bg_black_trans.png');		
+
+		.text-hide{
+			background: url('../img/text/txt-do-it.png');
+			width: 118px;
+			height: 24px;
 		}
 	}
 }
