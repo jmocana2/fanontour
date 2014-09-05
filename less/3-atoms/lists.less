@@ -1,16 +1,20 @@
 //list point
 .list-point{
 	li{
-		font: normal 1em/1.2em 'robotoblack', sans-serif;
-		text-transform: uppercase;
-		background: url('../img/icons/shapes/green-circle.png') no-repeat 0 5px;
+		font: normal 1em/1.2em 'robotomedium', sans-serif;
+		background: url('../img/icons/shapes/green-circle.png') no-repeat 0 center;
 		margin-left: 18px;
 		padding-left: 25px;
 		padding-right: 0;
+		vertical-align: middle;
 
 		&:first-child{
 			margin-left: 0;
 			padding-left: 0;
+			background: none;
+		}
+
+		&.not-point{
 			background: none;
 		}
 	}

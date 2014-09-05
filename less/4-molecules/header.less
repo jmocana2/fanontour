@@ -6,19 +6,24 @@
 	z-index: 2;
 
 	.sup{
-		padding-top: 10px;
+		
 		background-color: @colorK4;
 	}
 
 	h1{
-		float: left;		
+		float: left;
+		padding-top: 5px;		
 	}
 
 	//Navigation
 	nav{
 		float: right;
-		margin-top: 10px;
-		margin-right: 20px;
+		margin-right: 20px;	
+		margin-top: 14px;
+
+		&.logged{
+			margin-top: 0;
+		}	
 	}
 
 	.list-login{
@@ -39,7 +44,7 @@
 
 	.dropdown-language{
 		float: right;
-		margin-top: 8px;
+		margin-top: 15px;
 
 		li{
 			background: none;
@@ -55,4 +60,72 @@
 			height: 24px;
 		}
 	}
+
+	//Private navigation
+	.fanontour-mod-user{
+		background-color: @colorB1;
+		padding: 12px;
+		min-width: 120px;
+
+		nav{
+			position: absolute;
+			top: 58px;
+			right: -62px;
+			width: 705px;
+
+			li{
+				margin: 0;
+				padding: 0;
+				border-left: 1px #444 solid;
+				
+				float: left;
+			}
+
+			a{
+				padding: 14px 20px 15px 20px;
+				display: block;
+
+				&:hover{
+					background-color: @colorG1;
+				}
+			}
+
+			.active{
+				a{
+					background-color: @colorG1;
+				}	
+			}
+		}
+
+		li{
+			background: none;
+		}
+
+		a{
+			color: @colorW;
+
+			&.shape-arrow{
+				.shape-arrow-bottom (@radius: 7px, @color: @colorB1, @x: 0, @y: 38px);
+			}
+		}
+
+		.mod-img{
+			margin-right: 10px;
+			width: 32px;
+		}
+
+		.mod-txt{
+			padding-top: 9px;		
+		}
+
+		img{
+			border: 1px @colorW solid;
+			.border-radius (@radius: @radius);
+		}
+
+
+
+
+	}
+
 }
