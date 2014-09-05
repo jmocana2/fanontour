@@ -8,9 +8,9 @@ FanOnTour Repository
 <table width="100%">
   <tr>
     <th scope="col">&nbsp;</th>
-    <th scope="col">Página</th>
+    <th scope="col">Page</th>
     <th scope="col">Wireframe</th>
-    <th scope="col">Diseño</th>
+    <th scope="col">Design</th>
 	  <th scope="col">Front-end</th>
 	  <th scope="col">back-end</th>
   </tr> 
