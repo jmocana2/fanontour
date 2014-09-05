@@ -5,68 +5,8 @@ FanOnTour Repository
 
 <!DOCTYPE html>
 <head>
-<meta http-equiv="Content-Type" content="text/; charset=UTF-8">
-<title>fanontour.com</title>
-
-<!-- Cabeceras comunes -->	
-<?php // include('include/cabeceras/comun.'); ?>
-
-<!-- CSS -->
-<link rel="stylesheet" href="css/jquery.fancybox.css">
-<!--     -->
-
-<!-- JS -->
-<script src="js/jquery.fancybox.pack.js"></script>
-<!--    -->
 
 </head>
-
-
-<style>
-*{ margin:0; padding:0;}
-a{color: #000;}
-h1 { padding:30px; font:bold 32px/36px Helvetica, Arial,  sans-serif; background:#0669b2; color:#fff;}
-table { font:14px/14px Helvetica, Arial, sans-serif; border-collapse:collapse;}
-th { color:#444; padding:16px 8px; border:1px solid #ddd; text-align:left; background: #fffffb; /* Old browsers */
-
-background: -moz-linear-gradient(top,  #fffffb 0%, #e0e0e2 100%); /* FF3.6+ */
-
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fffffb), color-stop(100%,#e0e0e2)); /* Chrome,Safari4+ */
-
-background: -webkit-linear-gradient(top,  #fffffb 0%,#e0e0e2 100%); /* Chrome10+,Safari5.1+ */
-
-background: -o-linear-gradient(top,  #fffffb 0%,#e0e0e2 100%); /* Opera 11.10+ */
-
-background: -ms-linear-gradient(top,  #fffffb 0%,#e0e0e2 100%); /* IE10+ */
-
-background: linear-gradient(top,  #fffffb 0%,#e0e0e2 100%); /* W3C */
-
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffffb', endColorstr='#e0e0e2',GradientType=0 ); /* IE6-9 */
-
-}
-td { color:#666; padding:12px 8px; border:1px solid #ddd; background: #fcfbff; /* Old browsers */
-
-background: -moz-linear-gradient(top,  #fcfbff 0%, #eeedf2 100%); /* FF3.6+ */
-
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfbff), color-stop(100%,#eeedf2)); /* Chrome,Safari4+ */
-
-background: -webkit-linear-gradient(top,  #fcfbff 0%,#eeedf2 100%); /* Chrome10+,Safari5.1+ */
-
-background: -o-linear-gradient(top,  #fcfbff 0%,#eeedf2 100%); /* Opera 11.10+ */
-
-background: -ms-linear-gradient(top,  #fcfbff 0%,#eeedf2 100%); /* IE10+ */
-
-background: linear-gradient(top,  #fcfbff 0%,#eeedf2 100%); /* W3C */
-
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfbff', endColorstr='#eeedf2',GradientType=0 ); /* IE6-9 */
-
-}
-.cod { font:12px/14px Helvetica, Arial, sans-serif;}
-.proceso a { color:red;}
-.validacion a {color: #09C;}
-.ok a { color:green;}
-tr:hover td { background:#eee;}
-</style>
 
 <body>
 
