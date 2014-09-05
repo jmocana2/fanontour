@@ -3,13 +3,6 @@ FanOnTour
 
 FanOnTour Repository
 
-<!DOCTYPE html>
-<head>
-
-</head>
-
-<body>
-
 <h1>FanOnTour Proyect <a style="color: #8fda33" href="wireframes/fanontour-presentation.ppt">(Presentation)</a></h1>
 
 <table width="100%">
@@ -227,7 +220,3 @@ FanOnTour Repository
 	<li style="color: #09C">validation</li>
 	<li style="color: green">validated</li>
 </ul>
-
-
-</body>
-</>
