@@ -707,6 +707,9 @@ a:hover {
   #footer .inf1 li {
     margin-left: 8px;
   }
+  #footer .inf1 li:first-child {
+    margin-left: 0;
+  }
   #footer .inf1 a {
     position: static;
   }
@@ -735,6 +738,12 @@ a:hover {
     position: absolute;
     top: 49px;
     right: 15px;
+  }
+  #footer .inf1 li {
+    margin-left: 2px;
+  }
+  #footer .inf1 .fanontour-mod-share {
+    width: 275px;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
