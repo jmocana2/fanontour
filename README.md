@@ -43,7 +43,7 @@ FanOnTour Repository
     <td>template</td>
     <td class="validacion"><a target="_blank" href="wireframes/template.pdf">template</a></td>
     <td class="validacion"><a target="_blank" href="design/template/template.jpg">jpg</a></td>
-    <td class="validacion"><a target="_blank" href="template.html">template (public)</a> | <a target="_blank" href="template-login.html">template (private)</a></td>
+    <td class="validacion"><a target="_blank" href="template.html">template (public)</a> | <a target="_blank" href="template-login.html">template (private)</a><br><br><a target="_blank" href="http://www.responsinator.com/?url=jmocana.eu%2Ffanontour%2F">DEVICES template (public)</a> | <a target="_blank" href="http://www.responsinator.com/?url=http%3A%2F%2Fjmocana.eu%2Ffanontour%2Ftemplate-login.html">DEVICES template (private)</a></td>
     <td class="ok">&nbsp;</td>
   </tr>
   <tr>
