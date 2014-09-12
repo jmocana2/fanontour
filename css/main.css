@@ -596,10 +596,9 @@ a:hover {
   overflow: hidden;
   border-bottom: 5px #014c84 solid;
 }
-#footer .inf1 p {
-  color: #ffffff;
-  float: left;
-  margin: 3px 0 0 0;
+#footer .inf1 .fanontour-mod-share {
+  width: 556px;
+  margin: 0 auto;
 }
 #footer .inf2 {
   background-color: #403f3f;
