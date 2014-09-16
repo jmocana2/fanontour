@@ -25,8 +25,8 @@ FanOnTour Repository
   <tr>
     <td></td>
     <td>Header</td>
-    <td class="validacion"><a target="_blank" href="wireframes/header.png">wireframe</a></td>
-    <td class="validacion"><a target="_blank" href="design/template/template.jpg">jpg</a></td>
+    <td class="ok"><a target="_blank" href="wireframes/header.png">wireframe</a></td>
+    <td class="ok"><a target="_blank" href="design/template/template.jpg">jpg</a></td>
     <td class="validacion"><a target="_blank" href="include/template/header.html">HTML5</a></td>
     <td>&nbsp;</td>
   </tr>
@@ -41,17 +41,17 @@ FanOnTour Repository
   <tr>
     <td></td>
     <td>template</td>
-    <td class="validacion"><a target="_blank" href="wireframes/template.pdf">template</a></td>
-    <td class="validacion"><a target="_blank" href="design/template/template.jpg">jpg</a></td>
+    <td class="ok"><a target="_blank" href="wireframes/template.png">wireframe</a></td>
+    <td class="ok"><a target="_blank" href="design/template/template.jpg">jpg</a></td>
     <td class="validacion"><a target="_blank" href="template.html">template (public)</a> | <a target="_blank" href="template-login.html">template (private)</a><br><br><a target="_blank" href="http://www.responsinator.com/?url=jmocana.eu%2Ffanontour%2F">DEVICES template (public)</a> | <a target="_blank" href="http://www.responsinator.com/?url=http%3A%2F%2Fjmocana.eu%2Ffanontour%2Ftemplate-login.html">DEVICES template (private)</a></td>
     <td class="ok">&nbsp;</td>
   </tr>
   <tr>
     <td>00</td>
     <td>Home</td>
-    <td class="ok"><a class="fancybox" target="_blank" href="diseno//01_home/home_2_player."></a></td>
-    <td class="ok"><a target="_blank" href="index."></a></td>
-  <td class="ok"><a target="_blank" href="http://dap.advernet.es/"></a></td>
+    <td class="validacion"><a class="fancybox" target="_blank" href="wireframes/00_home.png">wireframe</a></td>
+    <td class="validacion"><a target="_blank" href="design/00_home.jpg">jpg</a></td>
+  <td class="proceso"><a target="_blank" href="00_home.html">HTML5</a></td>
   <td class="ok">&nbsp;</td>
   </tr>
   <tr>
