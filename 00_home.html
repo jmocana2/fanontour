@@ -42,6 +42,7 @@
 	
 	<!-- JS -->
 	<script src="public/vendor/jquery/jquery.js"></script>
+	<script src="public/vendor/jquery/jquery.lazyload.min.js"></script>
 	<script src="public/vendor/modernizr/modernizr_2.8.3.js"></script>	
 	<script src="public/vendor/bootstrap/bootstrap.js"></script>
 	<script src="js/main.js"></script>
@@ -61,277 +62,424 @@
 	<main>
 		<div id="bg-container">
 			<section id="fanontour-search-box">
-				<div class="container">
-					<header>
-						<h1>¡Consigue tus entradas ya!</h1>
-						<h2>descripción corta de la sección</h2>
-					</header>
+				<div class="container relative">
+					<div class="tab tab-default">
 				
-					<!-- Nav tabs -->
-					<ul class="nav nav-tabs" role="tablist">
-					  <li class="active"><a href="#tab-entradas" role="tab" data-toggle="tab">Entradas</a></li>
-					  <li><a href="#tab-hoteles" role="tab" data-toggle="tab">Hoteles</a></li>
-					  <li><a href="#tab-vuelos" role="tab" data-toggle="tab">Vuelos</a></li>
-					  <li><a href="#tab-actividades" role="tab" data-toggle="tab">Actividades</a></li>
-					  <li><a href="#tab-restaurantes" role="tab" data-toggle="tab">Restaurantes</a></li>
-					  <li><a href="#tab-alquiler" role="tab" data-toggle="tab">Alquiler de coches</a></li>
-					  <li><a href="#tab-tour" role="tab" data-toggle="tab">Tour personalizado</a></li>
-					</ul>
-					<p class="fanontour-new-feature">Nuevo!</p>
-
-					<!-- Tab panes -->
-					<div class="tab-content">
-					  <div class="tab-pane active" id="tab-entradas">...</div>
-					  <div class="tab-pane" id="tab-hoteles">...</div>
-					  <div class="tab-pane" id="tab-vuelos">...</div>
-					  <div class="tab-pane" id="tab-actividades">...</div>
-					  <div class="tab-pane" id="tab-tab-restaurantes">...</div>
-					  <div class="tab-pane" id="tab-alquiler">...</div>
-					  <div class="tab-pane" id="tab-tour">...</div>
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs nav-tabs-default" role="tablist">
+						  <li class="active"><a href="#tab-tickets" role="tab" data-toggle="tab" title="buscar entradas">Entradas</a></li>
+						  <li><a href="#tab-hotels" role="tab" data-toggle="tab" title="buscar hoteles">Hoteles</a></li>
+						  <li><a href="#tab-flights" role="tab" data-toggle="tab" title="buscar vuelos">Vuelos</a></li>
+						  <li><a href="#tab-activities" role="tab" data-toggle="tab" title="buscar actividades">Actividades</a></li>
+						  <li><a href="#tab-restaurants" role="tab" data-toggle="tab" title="buscar restaurantes">Restaurantes</a></li>
+						  <li><a href="#tab-rent-car" role="tab" data-toggle="tab" title="buscar coches en alquiler">Alquiler de coches</a></li>
+						  <li><a class="highlight" href="#tab-tour" role="tab" data-toggle="tab" title="crear tour personalizado">Tour personalizado</a>
+							<p class="text text-new-feature sprite"><span>¡Nuevo!</span></p>
+						  </li>
+						</ul>
+						
+						<!-- Tab panes -->
+						<div class="tab-content">
+						  <div class="tab-pane active" id="tab-tickets">
+						  		<section id="fanontour-search-tickets">
+						  			<header>
+										<h1>¡Consigue tus entradas ya!</h1>
+										<h2>descripción corta de la sección</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<p>buscador tickets</p>
+									</div>
+						  		</section>
+						  </div>
+						  <div class="tab-pane" id="tab-hotels">
+						  		<section id="fanontour-search-hotels">
+						  			<header>
+										<h1>Encuentra los mejores hoteles</h1>
+										<h2>descripción corta de la sección</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<p>buscador hoteles</p>
+									</div>
+						  		</section>
+						  </div>
+						  <div class="tab-pane" id="tab-flights">
+						  		<section id="fanontour-search-flights">
+						  			<header>
+										<h1>Programa tu vuelo</h1>
+										<h2>descripción corta de la sección</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<p>buscador vuelos</p>
+									</div>
+						  		</section>
+						  </div>
+						  <div class="tab-pane" id="tab-activities">
+						  		<section id="fanontour-search-activities">
+						  			<header>
+										<h1>Mira nuestras actividades</h1>
+										<h2>descripción corta de la sección</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<p>buscador actividades</p>
+									</div>
+						  		</section>
+						  </div>
+						  <div class="tab-pane" id="tab-restaurants">
+						  		<section id="fanontour-search-restaurants">
+						  			<header>
+										<h1>Los mejores restaurantes</h1>
+										<h2>descripción corta de la sección</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<p>buscador restaurantes</p>
+									</div>
+						  		</section>
+						  </div>
+						  <div class="tab-pane" id="tab-rent-car">
+						  		<section id="fanontour-search-rent-car">
+						  			<header>
+										<h1>Alquiler de coches</h1>
+										<h2>descripción corta de la sección</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<p>buscador coches</p>
+									</div>
+						  		</section>
+						  </div>
+						  <div class="tab-pane" id="tab-tour">
+						  		<section id="fanontour-search-tour">
+						  			<header>
+										<h1>Crea tu tour personalizado</h1>
+										<h2>descripción corta de la sección</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<p>buscador tour personalizado</p>
+									</div>
+						  		</section>
+						  </div>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section id="fanontour-most-popular-events">
+			<section id="fanontour-most-popular-events" class="fanontour-mod">
 				<div class="container">
 					<header>
 						<h1>Eventos más populares</h1>
 					</header>
-					<ul>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madona concert</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madona concert</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madona concert</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madona concert</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madona concert</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madona concert</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madona concert</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madona concert</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-					</ul>
+					<div class="row">
+						<ul class="clearfix">
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona concert</h2>
+										<p class="price price-default" itemprop="price">175 &euro;</p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona concert</h2>
+										<p class="price price-default" itemprop="price">175 &euro;</p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona concert</h2>
+										<p class="price price-default" itemprop="price">175 &euro;</p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona concert</h2>
+										<p class="price price-default" itemprop="price">175 &euro;</p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona concert</h2>
+										<p class="price price-default" itemprop="price">175 &euro;</p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona concert</h2>
+										<p class="price price-default" itemprop="price">175 &euro;</p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona concert</h2>
+										<p class="price price-default" itemprop="price">175 &euro;</p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona concert</h2>
+										<p class="price price-default" itemprop="price">175 &euro;</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>	
 			</section>
-			<section id="fanontour-most-popular-destinations">
+			<section id="fanontour-most-popular-destinations" class="fanontour-mod bg-white">
 				<div class="container">
 					<header>
 						<h1>Destinos más populares</h1>
 					</header>
-					<ul>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madrid</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madrid</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madrid</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madrid</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madrid</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madrid</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madrid</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Madrid</h2>
-								<p class="price price-default">175 &euro;</p>
-							</div>
-						</li>
-					</ul>
+					<div class="row">
+						<ul class="clearfix">
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price">175 &euro;<span>/noche</span></p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price">175 &euro;<span>/noche</span></p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price">175 &euro;<span>/noche</span></p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price">175 &euro;<span>/noche</span></p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price">175 &euro;<span>/noche</span></p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price">175 &euro;<span>/noche</span></p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price">175 &euro;<span>/noche</span></p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price">175 &euro;<span>/noche</span></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>	
 			</section>
-			<section id="fanontour-lastest-coustomized-tours">
+			<section id="fanontour-lastest-coustomized-tours" class="fanontour-mod">
 				<div class="container">
 					<header>
 						<h1>Últimos tours personalizados</h1>
 					</header>
-					<ul>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Mi primer tour: Madrid</h2>
-								<a href="#" class="text text-tie">por jmocana</a>							
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Mi primer tour: Madrid</h2>
-								<a href="#" class="text text-tie">por jmocana</a>							
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Mi primer tour: Madrid</h2>
-								<a href="#" class="text text-tie">por jmocana</a>							
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Mi primer tour: Madrid</h2>
-								<a href="#" class="text text-tie">por jmocana</a>							
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Mi primer tour: Madrid</h2>
-								<a href="#" class="text text-tie">por jmocana</a>							
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Mi primer tour: Madrid</h2>
-								<a href="#" class="text text-tie">por jmocana</a>							
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Mi primer tour: Madrid</h2>
-								<a href="#" class="text text-tie">por jmocana</a>							
-							</div>
-						</li>
-						<li class="col-md-3">
-							<div class="fanontour-bg-img">
-								<a href="#"><img src="#" alt="#"></a>
-							</div>
-							<div class="fanontour-details">
-								<h2>Mi primer tour: Madrid</h2>
-								<a href="#" class="text text-tie">por jmocana</a>							
-							</div>
-						</li>
-					</ul>
+					<div class="row">
+						<ul class="clearfix">
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> por jmocana</a>	
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Mi primer tour: Madrid</h2>																			
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/rural_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> por jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">¡Fin de semana increible!</h2>										
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>									
+									<img class="lazy" data-original="img/photos/atleti_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> por jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Viendo a mi equipo</h2>										
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/tapas_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> por jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">De tapas por Madrid</h2>										
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> por jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Mi primer tour: Madrid</h2>										
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> por jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Mi primer tour: Madrid</h2>										
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> por jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Mi primer tour: Madrid</h2>										
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="ver evento" itemprop="url"></a>
+									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> por jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Mi primer tour: Madrid</h2>										
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>	
 			</section>		
 		</div>
