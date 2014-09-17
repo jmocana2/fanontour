@@ -26,10 +26,13 @@ $( document ).ready(function() { //DOM OK!
 
 
 		 $( "#fanontour-search-box .nav a" ).click(function() {
+		 	var num_sec = $(this).parent().prevAll().length;
+		  	$(".bg-container").fadeOut("fast", function(){		  				  
+		  		$(".bg-container").css("background","url('"+ images[num_sec] +"')no-repeat 0 0");
+		  		$(".bg-container").css("background-size","contain");
+		  		$(this).fadeIn("fast");
+		  	})
 		  	
-		  	var num_sec = $(this).parent().prevAll().length;		  
-		  	$("#bg-container").css("background","url('"+ images[num_sec] +"')no-repeat 0 0");
-		  	$("#bg-container").css("background-size","contain");
 		});
 	});
 });
