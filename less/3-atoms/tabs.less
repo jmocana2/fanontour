@@ -1,0 +1,44 @@
+//tab-default
+.tab-default{
+	.nav-tabs{
+		border: none;
+
+		li{
+			margin-bottom: 0;
+
+			&:first-child{
+				a{
+					margin-left: 0;
+				}
+			}
+		}
+
+		a{
+			background-color: @colorB1;
+			color: @colorW;
+			border: none;
+			margin-right: 0;
+			margin-left: 3px;
+
+			&:hover{
+				border: none;
+				background-color: @colorG1;
+			}
+
+			&.highlight{
+				background-color: @colorB12;
+			}
+		}
+
+		li.active{
+
+			border: none;		
+
+			a{
+				background-color: @colorG1;
+				color: @colorW;
+				border: none;
+			}
+		}
+	}
+}
