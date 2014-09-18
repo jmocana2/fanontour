@@ -1,15 +1,16 @@
 $( document ).ready(function() { //DOM OK!
   	
   	//Lazy load
-  	$(function() {
-	    $("img.lazy").lazyload({
-	    	threshold : 200,
-	    	effect : "fadeIn"
-	    });
-	});
+  	if($("img.lazy").length){
+	  	$(function() {
+		    $("img.lazy").lazyload({
+		    	threshold : 200,
+		    	effect : "fadeIn"
+		    });
+		});
+    }
 
-	//backgrounds search box
-	
+	//backgrounds search box	
 	$(function() {
 		//=================================
 		//CONFIG IMAGES
