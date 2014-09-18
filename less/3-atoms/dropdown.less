@@ -1,3 +1,40 @@
+//dropsown default
+.dropdown-tab{
+
+	width: 100%;
+
+	&.open{
+		.dropdown-toggle{
+			background-color: @colorG1 !important;
+		}
+	}
+
+	.dropdown-menu{
+		border: none;
+		background-color: transparent;
+		.box-shadow (none);
+		width: 100%;
+
+		li{
+
+			border-top: 1px #1f7fc5 solid;
+			border-bottom: 1px @colorB12  solid;
+
+			a{
+				width: 100%;
+				margin-left: 0;
+				padding: 7px 0;
+				background-color: @colorB1 !important;
+
+				&:hover{
+					background-color: @colorG1 !important;
+					color: @colorW;
+				}
+			}
+		}		
+	}
+}
+
 //dropsown language
 .dropdown-language{
 
