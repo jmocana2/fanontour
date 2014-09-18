@@ -60,15 +60,22 @@
 	<!-- -->
 	<!-- MAIN -->
 	<main>
+
 		<div class="bg-container absolute"></div>
 		<div class="content">
-			
-			<!-- ========= TERMS AND CONDITIONS ========= -->
-			<?php include('include/modals/terms-conditions.html'); ?>
-			<!-- ======================================== -->
-			<!-- ============ PRIVACY POLICY ============ -->
-			<?php include('include/modals/privacy-policy.html'); ?>
-			<!-- ======================================== -->
+
+			<!-- ========== (MODAL) TERMS AND CONDITIONS ========= -->
+			<?php
+				$modal = "modal-conditions";
+				include('include/modals/modal-box.html'); 
+			?>
+			<!-- ================================================= -->
+			<!-- =========== (MODAL) PRIVACY POLICY ============== -->
+			<?php
+				$modal = "modal-policy";
+				include('include/modals/modal-box.html'); 
+			?>
+			<!-- ================================================= -->
 
 			<section id="fanontour-search-box">
 				<div class="container relative">
