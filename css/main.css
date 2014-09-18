@@ -300,6 +300,34 @@ a:hover {
 .list-point li.not-point {
   background: none;
 }
+.dropdown-tab {
+  width: 100%;
+}
+.dropdown-tab.open .dropdown-toggle {
+  background-color: #6eb21b !important;
+}
+.dropdown-tab .dropdown-menu {
+  border: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 100%;
+}
+.dropdown-tab .dropdown-menu li {
+  border-top: 1px #1f7fc5 solid;
+  border-bottom: 1px #014c84 solid;
+}
+.dropdown-tab .dropdown-menu li a {
+  width: 100%;
+  margin-left: 0;
+  padding: 7px 0;
+  background-color: #0669b2 !important;
+}
+.dropdown-tab .dropdown-menu li a:hover {
+  background-color: #6eb21b !important;
+  color: #ffffff;
+}
 .dropdown-language {
   width: 71px;
 }
@@ -518,12 +546,15 @@ a:hover {
   border: none;
   margin-right: 0;
   margin-left: 3px;
+  width: 120px;
+  text-align: center;
 }
 .tab-default .nav-tabs a:hover {
   border: none;
   background-color: #6eb21b;
 }
 .tab-default .nav-tabs a.highlight {
+  width: 184px;
   padding-right: 71px;
 }
 .tab-default .nav-tabs li.active {
@@ -559,6 +590,17 @@ a:hover {
 }
 .sprite {
   background: url('../img/sprites/sprite.png') no-repeat 0 0;
+}
+.modal-default .modal-header {
+  background-color: #0669b2;
+}
+.modal-default .modal-header .close {
+  font-size: 2.8em;
+  margin-top: -10px;
+}
+.modal-default .modal-title {
+  font: normal 1.5em/1.2em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
+  color: #ffffff;
 }
 .price {
   font: normal 1.214em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
@@ -770,7 +812,7 @@ a:hover {
   text-align: center;
 }
 #fanontour-search-box .tab-default {
-  width: 694px;
+  width: 922px;
   margin: 0 auto;
 }
 #fanontour-search-box .tab-default .highlight {
@@ -780,6 +822,10 @@ a:hover {
 #fanontour-search-box .tab-default .tab-content {
   background: url('../img/backgrounds/bg_white_trans.png');
   padding: 20px;
+}
+#fanontour-search-box .dropdown-toggle {
+  width: 100%;
+  margin-left: 0;
 }
 .fanontour-mod {
   padding: 30px 0;
@@ -858,14 +904,14 @@ a:hover {
 }
 .bg-container {
   background: url('../img/backgrounds/home/tickets_h_600px.jpg') no-repeat center 0;
-  background-size: contain;
+  background-size: cover;
   width: 100%;
-  height: 600px;
+  height: 532px;
   top: 56px;
 }
 #fanontour-search-box {
   padding-top: 200px;
-  margin-bottom: 100px;
+  margin-bottom: 113px;
 }
 #fanontour-search-box .tab-content {
   min-height: 135px;
@@ -877,10 +923,19 @@ a:hover {
   #header nav.logged {
     margin-top: 15px;
   }
+  #fanontour-search-box .tab-default {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   #header {
     position: fixed;
+    width: 100%;
+  }
+  #header h1 {
+    width: 200px;
+  }
+  #header h1 img {
     width: 100%;
   }
   #header nav {
@@ -933,6 +988,26 @@ a:hover {
     border-bottom: 1px #212121 solid;
     border-top: 1px #5b5a5a solid;
   }
+  main {
+    padding-top: 102px;
+  }
+  #fanontour-search-box {
+    padding-top: 138px;
+    margin-bottom: 174px;
+  }
+  #fanontour-search-box header {
+    top: -100px;
+  }
+  #fanontour-search-box h1 {
+    font-size: 2.3em;
+  }
+  #fanontour-search-box h2 {
+    font-size: 1.4em;
+  }
+  .bg-container {
+    background: url('../img/backgrounds/home/mobile_h_600px.jpg') no-repeat center 0;
+    background-size: cover;
+  }
 }
 @media (max-width: 480px) {
   #header nav {
@@ -948,6 +1023,9 @@ a:hover {
   }
   #footer .inf1 .fanontour-mod-share {
     width: 275px;
+  }
+  .fanontour-mod-details {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
