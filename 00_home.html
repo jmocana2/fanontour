@@ -62,19 +62,39 @@
 	<main>
 		<div class="bg-container absolute"></div>
 		<div class="content">
+			
+			<!-- ========= TERMS AND CONDITIONS ========= -->
+			<?php include('include/modals/terms-conditions.html'); ?>
+			<!-- ======================================== -->
+			<!-- ============ PRIVACY POLICY ============ -->
+			<?php include('include/modals/privacy-policy.html'); ?>
+			<!-- ======================================== -->
+
 			<section id="fanontour-search-box">
 				<div class="container relative">
 					<div class="tab tab-default">
 				
 						<!-- Nav tabs -->
 						<ul class="nav nav-tabs nav-tabs-default" role="tablist">
-						  <li class="active"><a href="#tab-tickets" role="tab" data-toggle="tab" title="search tickets">Tickets</a></li>
-						  <li><a href="#tab-hotels" role="tab" data-toggle="tab" title="search hotels">Hotels</a></li>
-						  <li><a href="#tab-flights" role="tab" data-toggle="tab" title="search flights">Flights</a></li>
-						  <li><a href="#tab-activities" role="tab" data-toggle="tab" title="search activities">Activities</a></li>
-						  <li><a href="#tab-restaurants" role="tab" data-toggle="tab" title="search restaurants">Restaurants</a></li>
-						  <li><a href="#tab-rent-car" role="tab" data-toggle="tab" title="search rental cars">Rental cars</a></li>
-						  <li><a class="highlight relative" href="#tab-tour" role="tab" data-toggle="tab" title="make your cutomized tour">Customized tour <span class="text-new-feature"><span>New!</span></span></a></li>
+						  <li class="active hidden-xs hidden-sm"><a href="#tab-tickets" role="tab" data-toggle="tab" title="search tickets">Tickets</a></li>
+						  <li class="hidden-xs hidden-sm"><a href="#tab-hotels" role="tab" data-toggle="tab" title="search hotels">Hotels</a></li>
+						  <li class="hidden-xs hidden-sm"><a href="#tab-flights" role="tab" data-toggle="tab" title="search flights">Flights</a></li>
+						  <li class="hidden-xs hidden-sm"><a href="#tab-activities" role="tab" data-toggle="tab" title="search activities">Activities</a></li>
+						  <li class="hidden-xs hidden-sm"><a href="#tab-restaurants" role="tab" data-toggle="tab" title="search restaurants">Restaurants</a></li>
+						  <li class="hidden-xs hidden-sm"><a href="#tab-rent-car" role="tab" data-toggle="tab" title="search rental cars">Rental cars</a></li>
+						  <li class="hidden-xs hidden-sm"><a class="highlight relative" href="#tab-tour" role="tab" data-toggle="tab" title="make your cutomized tour">Customized tour <span class="text-new-feature"><span>New!</span></span></a></li>
+						  <li class="dropdown dropdown-tab visible-xs visible-sm">
+					        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">What are you looking for? <span class="caret"></span></a>
+					        <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+					          <li><a href="#tab-tickets" tabindex="-1" role="tab" data-toggle="tab" title="search tickets">Tickets</a></li>
+					          <li><a href="#tab-hotels" tabindex="-1" role="tab" data-toggle="tab" title="search hotels">Hotels</a></li>
+					          <li><a href="#tab-flights" tabindex="-1" role="tab" data-toggle="tab" title="search flights">Flights</a></li>
+					          <li><a href="#tab-activities" tabindex="-1" role="tab" data-toggle="tab" title="search activities">Activities</a></li>
+					          <li><a href="#tab-restaurants" tabindex="-1" role="tab" data-toggle="tab" title="search restaurants">Restaurants</a></li>
+					          <li><a href="#tab-rent-car" tabindex="-1" role="tab" data-toggle="tab" title="search rental cars">Rental cars</a></li>
+					          <li><a href="#tab-tour" tabindex="-1" role="tab" data-toggle="tab" title="make your cutomized tour">Customized tour</a></li>
+					        </ul>
+					      </li>
 						</ul>
 						
 						<!-- Tab panes -->
@@ -168,7 +188,7 @@
 					</header>
 					<div class="row padding-v-15">
 						<ul class="clearfix">
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
@@ -180,7 +200,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
@@ -192,7 +212,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
@@ -204,7 +224,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
@@ -216,7 +236,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
@@ -228,7 +248,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
@@ -240,7 +260,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
@@ -252,7 +272,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
@@ -276,7 +296,7 @@
 					</header>
 					<div class="row padding-v-15">
 						<ul class="clearfix">
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
@@ -288,7 +308,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
@@ -300,7 +320,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
@@ -312,7 +332,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
@@ -324,7 +344,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
@@ -336,7 +356,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
@@ -348,7 +368,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
@@ -360,7 +380,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
@@ -384,7 +404,7 @@
 					</header>
 					<div class="row padding-v-15">
 						<ul class="clearfix">
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
@@ -396,7 +416,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/rural_262x196.jpg" alt="#">
@@ -408,7 +428,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>									
 									<img class="lazy" data-original="img/photos/atleti_262x196.jpg" alt="#">
@@ -420,7 +440,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/tapas_262x196.jpg" alt="#">
@@ -432,7 +452,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
@@ -444,7 +464,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
@@ -456,7 +476,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
@@ -468,7 +488,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="fanontour-mod-details col-md-3" itemscope itemtype="http://schema.org/Event">								
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
 									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
