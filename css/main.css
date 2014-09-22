@@ -29,6 +29,8 @@ ul {
 }
 .content {
   min-height: 600px;
+  position: relative;
+  z-index: 2;
 }
 @font-face {
   font-family: 'robotothin';
@@ -284,6 +286,21 @@ a:hover {
   color: #6eb21b;
   text-decoration: none;
 }
+label {
+  font: normal 1.1em/1.1em 'robotomedium', 'robotoregular', 'sans-serif';
+  color: #7a7575;
+}
+input.form-control,
+textarea.form-control {
+  font-size: .9em;
+}
+.title-photo {
+  font: normal 3em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-top: 88px;
+  margin-bottom: 14px;
+}
 .list-point li {
   font: normal 1em/1.2em 'robotomedium', 'Arial', 'sans-serif';
   background: url('../img/icons/shapes/green-circle.png') no-repeat 0 center;
@@ -313,6 +330,7 @@ a:hover {
   -moz-box-shadow: none;
   box-shadow: none;
   width: 100%;
+  padding: 0;
 }
 .dropdown-tab .dropdown-menu li {
   border-top: 1px #1f7fc5 solid;
@@ -321,7 +339,7 @@ a:hover {
 .dropdown-tab .dropdown-menu li a {
   width: 100%;
   margin-left: 0;
-  padding: 7px 0;
+  padding: 9px 0;
   background-color: #0669b2 !important;
 }
 .dropdown-tab .dropdown-menu li a:hover {
@@ -546,16 +564,17 @@ a:hover {
   border: none;
   margin-right: 0;
   margin-left: 3px;
-  width: 120px;
+  width: 105px;
   text-align: center;
+  padding: 10px 0;
 }
 .tab-default .nav-tabs a:hover {
   border: none;
   background-color: #6eb21b;
 }
 .tab-default .nav-tabs a.highlight {
-  width: 184px;
-  padding-right: 71px;
+  width: 170px;
+  padding-right: 48px;
 }
 .tab-default .nav-tabs li.active {
   border: none;
@@ -583,10 +602,54 @@ a:hover {
 .bg-white {
   background-color: #ffffff;
 }
+.bg-container {
+  background: url('../img/backgrounds/home/tickets_h_600px.jpg') no-repeat center 0;
+  background-size: cover;
+  width: 100%;
+  height: 532px;
+  top: 56px;
+}
+.bg-container-generic {
+  background: url('../img/backgrounds/general/general-background_200px-h.jpg') no-repeat center 0;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  top: 56px;
+}
 .text-new-feature {
   font: normal 1em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
   background-color: #b00808;
   color: #ffffff;
+}
+.fanontour-panel-primary {
+  border: 1px #eaeaea solid;
+}
+.fanontour-panel-primary .panel-heading {
+  background-color: #0669b2;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.fanontour-panel-primary .panel-title {
+  font: normal 1.231em/1.4em 'robotoregular', 'Arial', 'sans-serif';
+  color: #ffffff;
+}
+.form-default {
+  padding-top: 20px;
+}
+.form-default .leyend {
+  font-size: 0.923em;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.form-default .input-group {
+  padding: 0 15px;
+}
+.form-default .captcha img {
+  max-width: 302px;
+  margin-bottom: 5px;
+  width: 100%;
+  height: auto;
 }
 .sprite {
   background: url('../img/sprites/sprite.png') no-repeat 0 0;
@@ -601,6 +664,15 @@ a:hover {
 .modal-default .modal-title {
   font: normal 1.5em/1.2em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
   color: #ffffff;
+}
+.alert strong {
+  font-family: 'robotobold', 'Arial Black', 'sans-serif';
+  font-weight: normal;
+}
+.breadcrumb-default {
+  padding-top: 10px;
+  background-color: transparent;
+  font: normal 0.923em/1em 'robotomedium', 'Arial', 'sans-serif';
 }
 .price {
   font: normal 1.214em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
@@ -812,7 +884,7 @@ a:hover {
   text-align: center;
 }
 #fanontour-search-box .tab-default {
-  width: 922px;
+  width: 818px;
   margin: 0 auto;
 }
 #fanontour-search-box .tab-default .highlight {
@@ -901,13 +973,6 @@ a:hover {
 .fanontour-mod-details:hover .price,
 .fanontour-mod-details:hover .headband {
   background-color: #6eb21b;
-}
-.bg-container {
-  background: url('../img/backgrounds/home/tickets_h_600px.jpg') no-repeat center 0;
-  background-size: cover;
-  width: 100%;
-  height: 532px;
-  top: 56px;
 }
 #fanontour-search-box {
   padding-top: 200px;
