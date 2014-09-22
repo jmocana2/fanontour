@@ -50,4 +50,31 @@ $( document ).ready(function() { //DOM OK!
 		  	
 		});
 	});
+
+	//FORM VALIDATIONS
+	//contact
+
+	var emailreg = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+   
+    if($("#contact").length){
+		$( "#contact .btn-validate" ).click(function() {
+
+			$("#contact form").find(".has-error").removeClass("has-error");
+
+	        if( $("#input-name-01").val() == "" ){
+	        	$("#input-name-01").closest(".form-group").addClass("has-error");	        	
+	        }
+	        else if( $("#input-email-01").val() == "" || !emailreg.test($('#input-email-01').val())){	        	
+	        	$("#input-email-01").closest(".form-group").addClass("has-error");	        	
+	        }
+	        else if( $("#textarea-message-01").val() == "" ){
+	        	$("#textarea-message-01").closest(".form-group").addClass("has-error");	        	
+	        }
+	        else if( $("#captcha-01").val() == "" ){
+	        	$("#captcha-01").closest(".form-group").addClass("has-error");	        	
+	        }
+
+	        
+		});	
+	}	
 });
