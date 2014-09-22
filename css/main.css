@@ -5,6 +5,14 @@ body {
   color: #616161;
   background-color: #eaeaea;
 }
+strong {
+  font-weight: normal;
+  font-family: 'robotobold';
+}
+em {
+  font-style: normal;
+  font-family: 'robotoitalic';
+}
 ul {
   list-style: none;
   padding-left: 0;
@@ -29,8 +37,6 @@ ul {
 }
 .content {
   min-height: 600px;
-  position: relative;
-  z-index: 2;
 }
 @font-face {
   font-family: 'robotothin';
@@ -300,6 +306,8 @@ textarea.form-control {
   text-transform: uppercase;
   padding-top: 88px;
   margin-bottom: 14px;
+  position: relative;
+  z-index: 2;
 }
 .list-point li {
   font: normal 1em/1.2em 'robotomedium', 'Arial', 'sans-serif';
