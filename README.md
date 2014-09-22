@@ -27,7 +27,7 @@ FanOnTour Repository
     <td>Header</td>
     <td class="ok"><a target="_blank" href="wireframes/header.png">wireframe</a></td>
     <td class="ok"><a target="_blank" href="design/template/template.jpg">jpg</a></td>
-    <td class="validacion"><a target="_blank" href="include/template/header.html">HTML5</a></td>
+    <td class="ok"><a target="_blank" href="include/template/header.html">HTML5</a></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -81,10 +81,10 @@ FanOnTour Repository
   <tr>
     <td>02.3</td>
     <td>Contact us</td>
-    <td class="ok"><a class="fancybox" target="_blank" href="diseno//03_pagina_video/single/pagina_video_single_info."></a></td>
-    <td class="ok"><a target="_blank" href="video/"></a></td>
-  <td class="proceso"><a target="_blank" href="http://dap.advernet.es/videos/emma-garcia-dando-el-do-de-pecho_13075"></a></td>
-  <td class="ok">&nbsp;</td>
+    <td class="validacion"><a class="fancybox" target="_blank" href="wireframes/02_contact-us.png">wireframe</a></td>
+    <td class="validacion"><a target="_blank" href="design/02_contact-us.jpg">jpg</a></td>
+    <td class="validacion"><a target="_blank" href="02_contact-us.html">HTML5</a></td>
+    <td class="ok">&nbsp;</td>
   </tr>
   <tr>
     <td>02.4</td>
@@ -115,7 +115,7 @@ FanOnTour Repository
     <td>Terms and conditions</td>
     <td class="ok"><a class="fancybox" target="_blank" href="diseno//05_user/login/user-login."></a></td>
     <td class="ok"><a target="_blank" href="usuario/login."></a></td>
-    <td class="validacion"><a target="_blank" href="include/modals/terms-conditions.html">HTML5</a></td>
+    <td class="ok"><a target="_blank" href="include/modals/terms-conditions.html">HTML5</a></td>
     <td class="ok">&nbsp;</td>
   </tr>
   <tr>
@@ -123,7 +123,7 @@ FanOnTour Repository
     <td>Privacy policy</td>
     <td class="ok">&nbsp;</td>
     <td class="ok">&nbsp;</td>
-    <td class="validacion"><a target="_blank" href="include/modals/privacy-policy.html">HTML5</a></td>
+    <td class="ok"><a target="_blank" href="include/modals/privacy-policy.html">HTML5</a></td>
     <td class="ok">&nbsp;</td>
   </tr>
   <tr>
