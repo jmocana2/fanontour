@@ -164,6 +164,38 @@ ul {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'icomoon';
+  src: url('../font/ico-fanontour/icomoon.eot?-dl8972');
+  src: url('../font/ico-fanontour/icomoon.eot?#iefix-dl8972') format('embedded-opentype'), url('../font/ico-fanontour/icomoon.woff?-dl8972') format('woff'), url('../font/ico-fanontour/icomoon.ttf?-dl8972') format('truetype'), url('../font/ico-fanontour/icomoon.svg?-dl8972#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="fanontour-icon"],
+[class*=" fanontour-icon"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fanontour-icon-concert:before {
+  content: "\e600";
+}
+.fanontour-icon-festival:before {
+  content: "\e601";
+}
+.fanontour-icon-other:before {
+  content: "\e602";
+}
+.fanontour-icon-sport:before {
+  content: "\e603";
+}
 .no-margin {
   margin: 0 !important;
 }
@@ -937,6 +969,31 @@ textarea.form-control {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+}
+.fanontour-mod-details span.glyphicon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #262626;
+  color: #ffffff;
+  font-size: 2em;
+  z-index: 3;
+  padding: 5px;
+}
+.fanontour-mod-details span.glyphicon.fanontour-icon-concert {
+  background-color: #e3007b;
+}
+.fanontour-mod-details span.glyphicon.fanontour-icon-sport {
+  background-color: #c6152d;
+}
+.fanontour-mod-details span.glyphicon.fanontour-icon-festival {
+  background-color: #e8641b;
+}
+.fanontour-mod-details span.glyphicon.fanontour-icon-other {
+  background-color: #143e5d;
+}
+.fanontour-mod-details span.glyphicon:hover {
+  cursor: help;
 }
 .fanontour-mod-details .fanontour-details {
   position: relative;
