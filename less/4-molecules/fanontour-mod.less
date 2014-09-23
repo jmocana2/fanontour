@@ -33,7 +33,36 @@
 		}	
 	}
 
-	
+	span.glyphicon{
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: @colorK12;
+		color: @colorW;
+		font-size: 2em;
+		z-index: 3;
+		padding: 5px;
+
+		&.fanontour-icon-concert{
+			background-color: @colorConcert;
+		}
+
+		&.fanontour-icon-sport{
+			background-color: @colorSport;
+		}
+
+		&.fanontour-icon-festival{
+			background-color: @colorFestival;
+		}
+
+		&.fanontour-icon-other{
+			background-color: @colorOther;
+		}
+
+		&:hover{
+			cursor: help;
+		}
+	}	
 
 	.fanontour-details{
 		position: relative;
