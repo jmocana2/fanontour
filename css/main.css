@@ -17,6 +17,15 @@ ul {
   list-style: none;
   padding-left: 0;
 }
+.d-block {
+  display: block;
+}
+.d-inline {
+  display: inline;
+}
+.d-iblock {
+  display: inline-block;
+}
 .relative {
   position: relative;
 }
@@ -24,6 +33,13 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
+}
+.f-left {
+  float: left;
+  width: auto;
+}
+.f-right {
+  float: right;
 }
 .mod-img {
   float: left;
@@ -196,6 +212,9 @@ ul {
 .fanontour-icon-sport:before {
   content: "\e603";
 }
+.fanontour-icon-search:before {
+  content: "\e604";
+}
 .no-margin {
   margin: 0 !important;
 }
@@ -325,7 +344,7 @@ a:hover {
   text-decoration: none;
 }
 label {
-  font: normal 1.1em/1.1em 'robotomedium', 'robotoregular', 'sans-serif';
+  font: normal 1em/1.1em 'robotoregular', 'Arial', 'sans-serif';
   color: #7a7575;
 }
 input.form-control,
@@ -387,7 +406,7 @@ textarea.form-control {
   color: #ffffff;
 }
 .dropdown-language {
-  width: 71px;
+  width: 74px;
 }
 .dropdown-language .main-link {
   background-color: #d2d2d2;
@@ -579,6 +598,79 @@ textarea.form-control {
 .dropdown-mobile-menu#dropdown-mobile-02.open img {
   border-bottom: 4px #6eb21b solid;
 }
+.dropdown-form {
+  position: relative;
+}
+.dropdown-form a.shape-arrow {
+  position: relative;
+}
+.dropdown-form a.shape-arrow span:before {
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-top: 5px solid #4a4a4a;
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  border-bottom: 0;
+  content: "";
+  height: 0;
+  left: 182px;
+  position: absolute;
+  top: 5px;
+  width: 0;
+  z-index: 2;
+}
+.dropdown-form a input {
+  cursor: pointer;
+}
+.dropdown-form .dropdown-menu {
+  width: 600px;
+  padding: 0;
+}
+.dropdown-form .dropdown-menu li {
+  background-color: #eaeaea;
+  border-bottom: 1px #b2b2b2 solid;
+  border-top: 1px #ffffff solid;
+}
+.dropdown-form .dropdown-menu li:hover {
+  background-color: #ffffff;
+}
+.dropdown-form .dropdown-menu a {
+  font-size: .9em;
+  text-align: center;
+}
+.dropdown-form .dropdown-menu a:hover {
+  background-color: #ffffff;
+}
+.dropdown-form.open a.shape-arrow {
+  position: relative;
+}
+.dropdown-form.open a.shape-arrow span:before {
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-bottom: 5px solid #4a4a4a;
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  border-top: 0;
+  content: "";
+  height: 0;
+  left: 182px;
+  position: absolute;
+  top: 5px;
+  width: 0;
+  z-index: 2;
+}
+.dropdown-form.open a:hover.shape-arrow {
+  position: relative;
+}
+.dropdown-form.open a:hover.shape-arrow span:before {
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-bottom: 5px solid #0669b2;
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  border-top: 0;
+  content: "";
+  height: 0;
+  left: 182px;
+  position: absolute;
+  top: 5px;
+  width: 0;
+  z-index: 2;
+}
 .btn-primary {
   background-color: #0669b2;
   color: #ffffff;
@@ -588,6 +680,28 @@ textarea.form-control {
 .btn-primary:hover {
   background-color: #6eb21b;
   border-color: #6eb21b;
+}
+.btn-search {
+  background-color: #6eb21b;
+  color: #ffffff;
+  font: normal 1.131em/1.2em 'roboto_condensedregular', 'Arial', 'sans-serif';
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  vertical-align: middle;
+}
+.btn-search:hover {
+  color: #ffffff;
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  opacity: 0.75;
+}
+.btn-search span {
+  font-size: .85em;
+  padding-left: 5px;
+  position: relative;
+  top: -1px;
 }
 .tab-default .nav-tabs {
   border: none;
@@ -938,6 +1052,30 @@ textarea.form-control {
 #fanontour-search-box .dropdown-toggle {
   width: 100%;
   margin-left: 0;
+}
+#fanontour-search-box label {
+  width: 100px;
+  text-align: right;
+}
+#fanontour-search-box input {
+  width: 275px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+#fanontour-search-box .dropdown {
+  display: inline-block;
+}
+#fanontour-search-box .form-col-1 input {
+  margin-bottom: 0;
+  margin-right: 5px;
+}
+#fanontour-search-box .form-col-2 input,
+#fanontour-search-box .form-col-2 .dropdown {
+  width: 204px;
+}
+#fanontour-search-box .form-col-2 .btn-search {
+  margin-top: 10px;
 }
 .fanontour-mod {
   padding: 30px 0;
