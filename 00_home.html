@@ -76,6 +76,11 @@
 				include('include/modals/modal-box.html'); 
 			?>
 			<!-- ================================================= -->
+			<!-- ========== (MODAL) REGISTER ADVISE ============== -->
+			<?php
+				include('include/modals/register-advise.html'); 
+			?>
+			<!-- ================================================= -->
 
 			<section id="fanontour-search-box">
 				<div class="container relative">
@@ -89,7 +94,7 @@
 						  <li class="hidden-xs hidden-sm"><a href="#tab-activities" role="tab" data-toggle="tab" title="search activities">Activities</a></li>
 						  <li class="hidden-xs hidden-sm"><a href="#tab-restaurants" role="tab" data-toggle="tab" title="search restaurants">Restaurants</a></li>
 						  <li class="hidden-xs hidden-sm"><a href="#tab-rent-car" role="tab" data-toggle="tab" title="search rental cars">Rental cars</a></li>
-						  <li class="hidden-xs hidden-sm"><a class="highlight relative" href="#tab-tour" role="tab" data-toggle="tab" title="make your cutomized tour">Customized tour <span class="text-new-feature"><span>New!</span></span></a></li>
+						  <li class="hidden-xs hidden-sm"><a class="register-advise highlight relative" href="#tab-tour" role="tab" data-toggle="tab" title="make your cutomized tour">Customized tour <span class="text-new-feature"><span>New!</span></span></a></li>
 						  <li class="dropdown dropdown-tab visible-xs visible-sm">
 					        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">What are you looking for? <span class="caret"></span></a>
 					        <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
@@ -105,7 +110,7 @@
 						</ul>
 						
 						<!-- Tab panes -->
-						<div class="tab-content">
+						<div class="tab-content clearfix">
 						  <div class="tab-pane active" id="tab-tickets">
 						  		<section id="fanontour-search-tickets">
 						  			<header>
@@ -113,7 +118,13 @@
 										<h2>Short description of the section</h2>
 									</header>
 									<div class="fanontour-mod-search">
-										<p>tickets search</p>
+										<form class="form-inline form-col-1" role="form" action="#" method="post">
+											<div class="form-group col-sm-offset-1 col-sm-10 text-center padding-v-20">
+											    <label class="sr-only" for="event-01">Email address</label>
+											    <input type="text" class="form-control" id="event-01" placeholder="Search by artist, team, city or event">
+											    <button class="btn btn-search text-uppercase">search <span class="glyphicon fanontour-icon-search"></span></button>
+											</div>
+										</form>
 									</div>
 						  		</section>
 						  </div>
@@ -124,7 +135,21 @@
 										<h2>Short description of the section</h2>
 									</header>
 									<div class="fanontour-mod-search">
-										<p>hotels search</p>
+										<form class="form-inline form-col-2" role="form" action="#" method="post">
+											<div class="form-group col-sm-offset-1 col-sm-10 padding-v-10">
+												<fieldset class="col-xs-12 no-padding">
+											    	<label for="hotel-field-01">Going to</label>
+											   		<input type="text" class="form-control" id="hotel-field-01" placeholder="City">
+											    </fieldset>
+											    <label for="hotel-field-02">Check in</label>
+											    <input type="date" class="form-control" id="hotel-field-02" placeholder="dd/mm/yyyy">
+											    <label for="hotel-field-03">Check out</label>
+											    <input type="date" class="form-control" id="hotel-field-03" placeholder="dd/mm/yyyy">
+											    <div class="text-center">
+											    	<button class="btn btn-search text-uppercase">search <span class="glyphicon fanontour-icon-search"></span></button>
+												</div>
+											</div>
+										</form>
 									</div>
 						  		</section>
 						  </div>
@@ -135,7 +160,21 @@
 										<h2>Short description of the section</h2>
 									</header>
 									<div class="fanontour-mod-search">
-										<p>flights search</p>
+										<form class="form-inline form-col-2" role="form" action="#" method="post">
+											<div class="form-group col-sm-offset-1 col-sm-10 padding-v-10">
+												<label for="flight-field-01">From</label>
+											   	<input type="text" class="form-control" id="flight-field-01" placeholder="City">
+											   	<label for="flight-field-02">To</label>
+											   	<input type="text" class="form-control" id="flight-field-02" placeholder="City">											    
+											    <label for="hotel-field-03">Departure date</label>
+											    <input type="date" class="form-control" id="hotel-field-03" placeholder="dd/mm/yyyy">
+											    <label for="hotel-field-04">Return date</label>
+											    <input type="date" class="form-control" id="hotel-field-04" placeholder="dd/mm/yyyy">
+											    <div class="text-center">
+											    	<button class="btn btn-search text-uppercase">search <span class="glyphicon fanontour-icon-search"></span></button>
+												</div>
+											</div>
+										</form>
 									</div>
 						  		</section>
 						  </div>
@@ -146,7 +185,21 @@
 										<h2>Short description of the section</h2>
 									</header>
 									<div class="fanontour-mod-search">
-										<p>activities search</p>
+										<form class="form-inline form-col-2" role="form" action="#" method="post">
+											<div class="form-group col-sm-offset-1 col-sm-10 padding-v-10">
+												<fieldset class="col-xs-12 no-padding">
+											    	<label for="activity-field-01">City</label>
+											   		<input type="text" class="form-control" id="activity-field-01" placeholder="City name">
+											    </fieldset>
+											    <label for="activity-field-02">Begin date</label>
+											    <input type="date" class="form-control" id="activity-field-02" placeholder="dd/mm/yyyy">
+											    <label for="activity-field-03">Finish date</label>
+											    <input type="date" class="form-control" id="activity-field-03" placeholder="dd/mm/yyyy">
+											    <div class="text-center">
+											    	<button class="btn btn-search text-uppercase">search <span class="glyphicon fanontour-icon-search"></span></button>
+												</div>
+											</div>
+										</form>
 									</div>
 						  		</section>
 						  </div>
@@ -157,7 +210,56 @@
 										<h2>Short description of the section</h2>
 									</header>
 									<div class="fanontour-mod-search">
-										<p>restaurants search</p>
+										<form class="form-inline form-col-2" role="form" action="#" method="post">
+											<div class="form-group col-sm-offset-1 col-sm-10 padding-v-10">
+												<label for="restaurant-field-01">Name</label>
+											   	<input type="text" class="form-control" id="restaurant-field-01" placeholder="Restaurant name">
+											   	<label for="restaurant-field-02">City</label>
+											   	<input type="text" class="form-control" id="restaurant-field-02" placeholder="City name">											    
+											    <label for="restaurant-field-03">Cusine</label>
+											    <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
+												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="cusine-field-03" placeholder="Cusine type"></span></a>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Italian</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">American</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Japanese</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												  </ul>
+												</div>
+											    											    
+											    <div class="text-center">
+											    	<button class="btn btn-search text-uppercase">search <span class="glyphicon fanontour-icon-search"></span></button>
+												</div>
+											</div>
+										</form>
 									</div>
 						  		</section>
 						  </div>
@@ -198,7 +300,6 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<span class="glyphicon fanontour-icon-concert" title="Concert"></span>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
@@ -211,7 +312,6 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<span class="glyphicon fanontour-icon-sport" title="Sport"></span>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
@@ -224,7 +324,6 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<span class="glyphicon fanontour-icon-festival" title="Festival"></span>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
@@ -237,7 +336,6 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<span class="glyphicon fanontour-icon-other" title="Other event"></span>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
@@ -250,7 +348,6 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<span class="glyphicon fanontour-icon-concert" title="Concert"></span>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
@@ -263,7 +360,6 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<span class="glyphicon fanontour-icon-sport" title="Sport"></span>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
@@ -276,7 +372,6 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<span class="glyphicon fanontour-icon-festival" title="Festival"></span>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
@@ -289,7 +384,6 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<span class="glyphicon fanontour-icon-other" title="Other event"></span>
 									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
