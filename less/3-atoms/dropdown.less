@@ -39,7 +39,7 @@
 //dropsown language
 .dropdown-language{
 
-	width: 71px;
+	width: 74px;
 
 	.main-link{
 		background-color: #d2d2d2;
@@ -195,5 +195,60 @@
 		img{
 			border-bottom: 4px @colorG1 solid;
 		}
+	}
+}
+
+//dropdown-form
+.dropdown-form{
+
+	position: relative;
+
+	a{
+		&.shape-arrow{
+			.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 182px, @y: 5px);
+		}
+
+		input{
+			cursor: pointer;
+		}
+	}
+
+	.dropdown-menu{
+
+		width: 600px;
+		padding: 0;
+
+		li{
+			background-color: @colorK4;
+			border-bottom: 1px @colorK3 solid;
+			border-top: 1px @colorW solid;
+
+			&:hover{
+				background-color: @colorW;
+			}
+		}
+
+		a{			
+			font-size: .9em;
+			text-align: center;
+
+			&:hover{
+				background-color: @colorW;
+			}
+		}		
+	}
+
+	&.open{	
+		a{
+			&.shape-arrow{
+				.shape-arrow-top (@radius: 5px, @color: #4a4a4a, @x: 182px, @y: 5px);
+			}
+
+			&:hover{
+				&.shape-arrow{
+					.shape-arrow-top (@radius: 5px, @color: @colorB1, @x: 182px, @y: 5px);
+				}
+			}
+		}		
 	}
 }
