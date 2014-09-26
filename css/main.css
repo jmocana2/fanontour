@@ -1099,6 +1099,23 @@ textarea.form-control {
 .fanontour-mod ul {
   margin-bottom: 0;
 }
+.fanontour-mod-default {
+  border-top: 1px #ffffff solid;
+  border-bottom: 1px #b2b2b2 solid;
+  padding: 20px 0;
+}
+.fanontour-mod-default:first-child {
+  border-top: none;
+}
+.fanontour-mod-default img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.fanontour-mod-default h2 {
+  font: normal 1.692em/1em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
+  color: #4c4c4c;
+  margin-bottom: 10px;
+}
 .fanontour-mod-details {
   position: relative;
   margin-bottom: 30px;
