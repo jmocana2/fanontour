@@ -37,6 +37,7 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="public/vendor/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="public/vendor/bower-components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css">
 	<link rel="stylesheet" href="css/main.css">
 	<!--     -->
 	
@@ -45,6 +46,8 @@
 	<script src="public/vendor/jquery/jquery.lazyload.min.js"></script>
 	<script src="public/vendor/modernizr/modernizr_2.8.3.js"></script>	
 	<script src="public/vendor/bootstrap/bootstrap.js"></script>
+	<script src="public/vendor/bower-components/moment/min/moment.min.js"></script>
+	<script src="public/vendor/bower-components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 	<script src="js/main.js"></script>
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -142,9 +145,15 @@
 											   		<input type="text" class="form-control" id="hotel-field-01" placeholder="City">
 											    </fieldset>
 											    <label for="hotel-field-02">Check in</label>
-											    <input type="date" class="form-control" id="hotel-field-02" placeholder="dd/mm/yyyy">
+											    <?php 
+											    	$id_date = "datetimepicker_01";
+											    	include('include/forms/date.html'); 
+											    ?>
 											    <label for="hotel-field-03">Check out</label>
-											    <input type="date" class="form-control" id="hotel-field-03" placeholder="dd/mm/yyyy">
+											    <?php 
+											    	$id_date = "datetimepicker_02";
+											    	include('include/forms/date.html'); 
+											    ?>
 											    <div class="text-center">
 											    	<button class="btn btn-search text-uppercase">search <span class="glyphicon fanontour-icon-search"></span></button>
 												</div>
@@ -167,9 +176,15 @@
 											   	<label for="flight-field-02">To</label>
 											   	<input type="text" class="form-control" id="flight-field-02" placeholder="City">											    
 											    <label for="hotel-field-03">Departure date</label>
-											    <input type="date" class="form-control" id="hotel-field-03" placeholder="dd/mm/yyyy">
+											    <?php 
+											    	$id_date = "datetimepicker_03";
+											    	include('include/forms/date.html'); 
+											    ?>
 											    <label for="hotel-field-04">Return date</label>
-											    <input type="date" class="form-control" id="hotel-field-04" placeholder="dd/mm/yyyy">
+											    <?php 
+											    	$id_date = "datetimepicker_04";
+											    	include('include/forms/date.html'); 
+											    ?>
 											    <div class="text-center">
 											    	<button class="btn btn-search text-uppercase">search <span class="glyphicon fanontour-icon-search"></span></button>
 												</div>
@@ -191,10 +206,16 @@
 											    	<label for="activity-field-01">City</label>
 											   		<input type="text" class="form-control" id="activity-field-01" placeholder="City name">
 											    </fieldset>
-											    <label for="activity-field-02">Begin date</label>
-											    <input type="date" class="form-control" id="activity-field-02" placeholder="dd/mm/yyyy">
-											    <label for="activity-field-03">Finish date</label>
-											    <input type="date" class="form-control" id="activity-field-03" placeholder="dd/mm/yyyy">
+											    <label for="activity-field-02">From</label>
+											    <?php 
+											    	$id_date = "datetimepicker_05";
+											    	include('include/forms/date.html'); 
+											    ?>
+											    <label for="activity-field-03">To</label>
+											    <?php 
+											    	$id_date = "datetimepicker_06";
+											    	include('include/forms/date.html'); 
+											    ?>
 											    <div class="text-center">
 											    	<button class="btn btn-search text-uppercase">search <span class="glyphicon fanontour-icon-search"></span></button>
 												</div>
@@ -212,10 +233,10 @@
 									<div class="fanontour-mod-search">
 										<form class="form-inline form-col-2" role="form" action="#" method="post">
 											<div class="form-group col-sm-offset-1 col-sm-10 padding-v-10">
-												<label for="restaurant-field-01">Name</label>
-											   	<input type="text" class="form-control" id="restaurant-field-01" placeholder="Restaurant name">
-											   	<label for="restaurant-field-02">City</label>
-											   	<input type="text" class="form-control" id="restaurant-field-02" placeholder="City name">											    
+												<label for="restaurant-field-02">City</label>
+											   	<input type="text" class="form-control" id="restaurant-field-02" placeholder="City name">
+												<label for="restaurant-field-01">Restaurant's</label>
+											   	<input type="text" class="form-control" id="restaurant-field-01" placeholder="Restaurant name">	   												    
 											    <label for="restaurant-field-03">Cusine</label>
 											    <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
 												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="cusine-field-03" placeholder="Cusine type"></span></a>
@@ -281,7 +302,13 @@
 										<h2>Fast and easy. Save time and money</h2>
 									</header>
 									<div class="fanontour-mod-search">
-										<p>custom tour search</p>
+										<p class="text-center">To do your own tour you need to do <a href="#" init sesion>login</a> or <a href="#" title="go to the register page">register</a> in fanontour.com</p>
+										<div class="text-center">
+											<ul class="list-inline">
+												<li><a class="btn btn-primary" href="#">Login</a></li>
+												<li><a class="btn btn-primary" href="#">Register</a></li>
+											</ul>
+										</div>
 									</div>
 						  		</section>
 						  </div>
@@ -304,7 +331,7 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">Madona concert</h2>
+										<h2 itemprop="name">Madona</h2>
 										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
 									</div>
 								</div>
@@ -316,7 +343,7 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">Madona concert</h2>
+										<h2 itemprop="name">Madona</h2>
 										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
 									</div>
 								</div>
@@ -328,7 +355,7 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">Madona concert</h2>
+										<h2 itemprop="name">Madona</h2>
 										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
 									</div>
 								</div>
@@ -340,7 +367,7 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">Madona concert</h2>
+										<h2 itemprop="name">Madona</h2>
 										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
 									</div>
 								</div>
@@ -352,7 +379,7 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">Madona concert</h2>
+										<h2 itemprop="name">Madona</h2>
 										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
 									</div>
 								</div>
@@ -364,7 +391,7 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">Madona concert</h2>
+										<h2 itemprop="name">Madona</h2>
 										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
 									</div>
 								</div>
@@ -376,7 +403,7 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">Madona concert</h2>
+										<h2 itemprop="name">Madona</h2>
 										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
 									</div>
 								</div>
@@ -388,7 +415,7 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">Madona concert</h2>
+										<h2 itemprop="name">Madona</h2>
 										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
 									</div>
 								</div>
@@ -521,7 +548,11 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">My first tour: Madrid</h2>																			
+										<ul class="list-inline">
+											<li>Madrid</li>
+											<li>Concert</li>
+											<li>1 day</li>
+										</ul>																			
 									</div>
 								</div>
 							</li>
@@ -533,7 +564,11 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">Incredible weekend!</h2>										
+										<ul class="list-inline">
+											<li>Madrid</li>
+											<li>Concert</li>
+											<li>1 day</li>
+										</ul>																			
 									</div>
 								</div>
 							</li>
@@ -545,7 +580,11 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">Viewing my team</h2>										
+										<ul class="list-inline">
+											<li>Madrid</li>
+											<li>Concert</li>
+											<li>1 day</li>
+										</ul>																			
 									</div>
 								</div>
 							</li>
@@ -557,7 +596,11 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">Appetizers in Madrid</h2>										
+										<ul class="list-inline">
+											<li>Madrid</li>
+											<li>Concert</li>
+											<li>1 day</li>
+										</ul>																			
 									</div>
 								</div>
 							</li>
@@ -569,7 +612,11 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">My first tour: Madrid</h2>										
+										<ul class="list-inline">
+											<li>Madrid</li>
+											<li>Concert</li>
+											<li>1 day</li>
+										</ul>																			
 									</div>
 								</div>
 							</li>
@@ -581,7 +628,11 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">My first tour: Madrid</h2>										
+										<ul class="list-inline">
+											<li>Madrid</li>
+											<li>Concert</li>
+											<li>1 day</li>
+										</ul>																			
 									</div>
 								</div>
 							</li>
@@ -593,7 +644,11 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">My first tour: Madrid</h2>										
+										<ul class="list-inline">
+											<li>Madrid</li>
+											<li>Concert</li>
+											<li>1 day</li>
+										</ul>																			
 									</div>
 								</div>
 							</li>
@@ -605,7 +660,11 @@
 								</div>
 								<div class="fanontour-details">
 									<div>
-										<h2 itemprop="name">My first tour: Madrid</h2>										
+										<ul class="list-inline">
+											<li>Madrid</li>
+											<li>Concert</li>
+											<li>1 day</li>
+										</ul>																			
 									</div>
 								</div>
 							</li>
