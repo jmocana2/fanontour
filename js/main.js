@@ -60,6 +60,11 @@ $( document ).ready(function() { //DOM OK!
 		event.preventDefault();
 	});	
 
+	//Input dates
+	$('.datetimepicker_01, .datetimepicker_02, .datetimepicker_03, .datetimepicker_04, .datetimepicker_05, .datetimepicker_06').datetimepicker({
+		pickTime: false
+	});
+
 	//Validations
 	//
 	//Email validation
@@ -90,9 +95,6 @@ $( document ).ready(function() { //DOM OK!
 	//Register advise
 	$( ".register-advise" ).click(function() {		
 		$('#modal-register').modal('show');
-		return false;
+		//return false;
 	});
-
-
-
 });
