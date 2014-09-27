@@ -833,6 +833,23 @@ textarea.form-control {
   background-color: transparent;
   font: normal 0.923em/1em 'robotomedium', 'Arial', 'sans-serif';
 }
+.carousel .carousel-caption {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: url('../img/backgrounds/bg_black_trans.png') 0 0;
+  padding: 8px 0 24px 0;
+}
+.carousel .carousel-indicators {
+  bottom: 0;
+}
+video {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.embed-responsive {
+  margin-bottom: 20px;
+}
 .price {
   font: normal 1.214em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
 }
@@ -1110,6 +1127,9 @@ textarea.form-control {
 .fanontour-mod-default img {
   width: 100%;
   margin-bottom: 20px;
+}
+.fanontour-mod-default .carousel img {
+  margin-bottom: 0;
 }
 .fanontour-mod-default h2 {
   font: normal 1.692em/1em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
