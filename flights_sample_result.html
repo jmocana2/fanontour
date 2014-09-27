@@ -1,0 +1,932 @@
+
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://localhost:8080/FanOnTour/css/jquery.autocomplete.css" />
+        <script type="text/javascript" src="http://localhost:8080/FanOnTour/js/jquery.autocomplete.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("input[name=searchOpt]:radio").change(function() {
+                    $('.seForcl').hide();
+                    $('#' + $(this).val()).show();
+                })
+            });
+
+            function getCities(val) {
+                alert("val>>" + val);
+                if (window.XMLHttpRequest)
+                {
+                    xmlhttp = new XMLHttpRequest();
+                }
+                else
+                {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function()
+                {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                    {
+                        //xmlhttp.responseText
+                    }
+                }
+                xmlhttp.open("get", "http://localhost:8080/FanOnTour/CarRental/retrieveCities?country=" + val, false);
+                xmlhttp.send();
+            }
+
+        </script>
+
+        <title></title>
+    <script language="JavaScript" type="text/javascript">
+    // Dojo configuration
+    djConfig = {
+        isDebug: false,
+        bindEncoding: "UTF-8"
+          ,baseRelativePath: "/FanOnTour/struts/dojo/"
+          ,baseScriptUri: "/FanOnTour/struts/dojo/"
+         ,parseWidgets : false
+        
+    };
+</script>
+
+
+
+  <script language="JavaScript" type="text/javascript"
+        src="/FanOnTour/struts/dojo/struts_dojo.js"></script>
+
+<script language="JavaScript" type="text/javascript"
+        src="/FanOnTour/struts/ajax/dojoRequire.js"></script>
+<link rel="stylesheet" href="/FanOnTour/struts/xhtml/styles.css" type="text/css"/>
+
+<script language="JavaScript" src="/FanOnTour/struts/utils.js" type="text/javascript"></script>
+<script language="JavaScript" src="/FanOnTour/struts/xhtml/validation.js" type="text/javascript"></script>
+<script language="JavaScript" src="/FanOnTour/struts/css_xhtml/validation.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="banner">
+            
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+<!--        https://developers.facebook.com/docs/facebook-login/login-flow-for-web-->
+    </head>
+    <body>
+        <h1>FanOnTour</h1>
+    </body>
+</html>
+
+        </div>
+        <div id="menu">
+            
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+       
+       
+    </head>
+    <body>
+        <div id="searchForm">
+            <tr>
+    <td class="tdLabel"></td>
+    <td
+>
+<input type="radio" name="searchOpt" id="searchOpt1" value="1"/><label for="searchOpt1">Hotels</label>
+<input type="radio" name="searchOpt" id="searchOpt2" value="2"/><label for="searchOpt2">Flights</label>
+<input type="radio" name="searchOpt" id="searchOpt3" value="3"/><label for="searchOpt3">Events</label>
+<input type="radio" name="searchOpt" id="searchOpt4" value="4"/><label for="searchOpt4">Restaurants</label>
+<input type="radio" name="searchOpt" id="searchOpt5" value="5"/><label for="searchOpt5">Rent Car</label>
+<input type="radio" name="searchOpt" id="searchOpt6" value="6"/><label for="searchOpt6">Customized Tour</label>
+<input type="radio" name="searchOpt" id="searchOpt7" value="7"/><label for="searchOpt7">Activities</label>
+    </td>
+</tr>
+
+
+        </div>
+        <div id="1" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/hotels/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="hDest" value="City" id="find_hDest" class="class java.util.HashMap"/></td>
+</tr>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_502280249"    name="hDateFr"    inputName="dojo.hDateFr"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_502280249");</script>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_1487754350"    name="hDateTo"    inputName="dojo.hDateTo"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_1487754350");</script>
+
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find hotels"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        <div id="2" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/flights/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="fOrig" value="Origin" id="find_fOrig"/></td>
+</tr>
+
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="fDest" value="Destination" id="find_fDest"/></td>
+</tr>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_397086391"    name="fDateFr"    inputName="dojo.fDateFr"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_397086391");</script>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_1186526712"    name="fDateTo"    inputName="dojo.fDateTo"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_1186526712");</script>
+
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find flights"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        
+        <div id="3" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/events/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><select name="event" id="event">
+    <option value="1">Sports</option>
+    <option value="2">Concerts</option>
+    <option value="3">All</option>
+
+
+</select>
+</td>
+</tr>
+
+                <tr>
+    <td class="tdLabel"><label for="efDate" class="label">From Date:</label></td>
+    <td
+><div
+     dojoType="struts:StrutsDatePicker"    id="efDate"    name="efDate"    inputName="dojo.efDate"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+</td>
+</tr>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("efDate");</script>
+
+                 <tr>
+    <td class="tdLabel"><label for="etDate" class="label">To Date:</label></td>
+    <td
+><div
+     dojoType="struts:StrutsDatePicker"    id="etDate"    name="etDate"    inputName="dojo.etDate"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+</td>
+</tr>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("etDate");</script>
+
+                 <tr>
+    <td class="tdLabel"><label for="name" class="label">Event Name:</label></td>
+    <td
+><input type="text" name="name" value="" id="name"/></td>
+</tr>
+ 
+                <tr>
+    <td class="tdLabel"><label for="city" class="label">City:</label></td>
+    <td
+><input type="text" name="city" value="" id="city"/></td>
+</tr>
+
+                
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find Events"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        
+         <div id="4" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/restaurants/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="city" value="city" id="find_city"/></td>
+</tr>
+
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find restaurants"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        
+         
+         <div id="5" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/cars/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><select name="carRequest.country" id="carCountry">
+    <option value="1">Hotels</option>
+    <option value="2">Flights</option>
+    <option value="3">Events</option>
+    <option value="4">Restaurants</option>
+    <option value="5">Rent Car</option>
+    <option value="6">Customized Tour</option>
+    <option value="7">Activities</option>
+
+
+</select>
+</td>
+</tr>
+
+                      
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find car"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        
+          <div id="6" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/activities/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="fOrig" value="Origin" id="find_fOrig"/></td>
+</tr>
+
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="fDest" value="Destination" id="find_fDest"/></td>
+</tr>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_892017215"    name="fDateFr"    inputName="dojo.fDateFr"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_892017215");</script>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_989440394"    name="fDateTo"    inputName="dojo.fDateTo"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_989440394");</script>
+
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find activities"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        
+          <div id="7" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/activities/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="fOrig" value="Origin" id="find_fOrig"/></td>
+</tr>
+
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="fDest" value="Destination" id="find_fDest"/></td>
+</tr>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_1996553332"    name="fDateFr"    inputName="dojo.fDateFr"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_1996553332");</script>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_1750480805"    name="fDateTo"    inputName="dojo.fDateTo"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_1750480805");</script>
+
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find activities"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        
+    </body>
+</html>
+
+        </div>
+        <div id="content">
+            
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <p>List of Flights</p>
+        <table border="1">
+            <thead><tr><td>Route</td><td>Price</td><td>Source</td></tr></thead>
+            
+                <tr>
+                    <td>
+                    
+                        FRA
+                        To
+                        YYZ |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        FRA
+                        To
+                        YYZ |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        FRA
+                        To
+                        YYZ |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        FRA
+                        To
+                        YYZ |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        FRA
+                        To
+                        YYZ |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        FRA
+                        To
+                        YYZ |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        FRA
+                        To
+                        YYZ |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        FRA
+                        To
+                        YYZ |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        YHZ |
+                    
+                        YHZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        YHZ |
+                    
+                        YHZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        YHZ |
+                    
+                        YHZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        YHZ |
+                    
+                        YHZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        YHZ |
+                    
+                        YHZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=26&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=26&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        YHZ |
+                    
+                        YHZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=26&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        YHZ |
+                    
+                        YHZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=26&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=28&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=26&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=28&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=29&vonmonat=06&vonjahr=2015&bistag=30&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        YHZ |
+                    
+                        YHZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=26&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=28&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=29&vonmonat=06&vonjahr=2015&bistag=30&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=30&vonmonat=06&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=26&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=28&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=29&vonmonat=06&vonjahr=2015&bistag=30&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=30&vonmonat=06&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=01&vonmonat=07&vonjahr=2015&bistag=02&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        YHZ |
+                    
+                        YHZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=26&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=28&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=29&vonmonat=06&vonjahr=2015&bistag=30&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=30&vonmonat=06&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=01&vonmonat=07&vonjahr=2015&bistag=02&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=02&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=26&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=28&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=29&vonmonat=06&vonjahr=2015&bistag=30&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=30&vonmonat=06&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=01&vonmonat=07&vonjahr=2015&bistag=02&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=02&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=03&vonmonat=07&vonjahr=2015&bistag=04&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=26&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=28&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=29&vonmonat=06&vonjahr=2015&bistag=30&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=30&vonmonat=06&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=01&vonmonat=07&vonjahr=2015&bistag=02&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=02&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=03&vonmonat=07&vonjahr=2015&bistag=04&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=04&vonmonat=07&vonjahr=2015&bistag=05&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        YHZ |
+                    
+                        YHZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=26&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=28&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=29&vonmonat=06&vonjahr=2015&bistag=30&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=30&vonmonat=06&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=01&vonmonat=07&vonjahr=2015&bistag=02&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=02&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=03&vonmonat=07&vonjahr=2015&bistag=04&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=04&vonmonat=07&vonjahr=2015&bistag=05&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=04&vonmonat=07&vonjahr=2015&bistag=05&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        YHZ |
+                    
+                        YHZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=26&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=28&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=29&vonmonat=06&vonjahr=2015&bistag=30&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=30&vonmonat=06&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=01&vonmonat=07&vonjahr=2015&bistag=02&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=02&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=03&vonmonat=07&vonjahr=2015&bistag=04&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=04&vonmonat=07&vonjahr=2015&bistag=05&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=04&vonmonat=07&vonjahr=2015&bistag=05&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=05&vonmonat=07&vonjahr=2015&bistag=06&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        YYZ
+                        To
+                        FRA |
+                    
+                    </td>
+                        <td><a href="http://a.nonstoppartner.net/a/?i=click&client=condor&camp=suche&fl_type=re&numerwac=1&abflug=FRA&ziel=YYZ&vontag=17&vonmonat=06&vonjahr=2015&bistag=17&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=20&vonmonat=06&vonjahr=2015&bistag=20&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=24&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=26&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=27&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=29&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=01&vonmonat=07&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=FRA&ziel=YYZ&vontag=03&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=18&vonmonat=06&vonjahr=2015&bistag=19&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=20&vonmonat=06&vonjahr=2015&bistag=21&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=21&vonmonat=06&vonjahr=2015&bistag=22&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=23&vonmonat=06&vonjahr=2015&bistag=24&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=24&vonmonat=06&vonjahr=2015&bistag=25&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=25&vonmonat=06&vonjahr=2015&bistag=26&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=26&vonmonat=06&vonjahr=2015&bistag=27&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=27&vonmonat=06&vonjahr=2015&bistag=28&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=28&vonmonat=06&vonjahr=2015&bistag=29&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=29&vonmonat=06&vonjahr=2015&bistag=30&bismonat=06&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=30&vonmonat=06&vonjahr=2015&bistag=01&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=01&vonmonat=07&vonjahr=2015&bistag=02&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=02&vonmonat=07&vonjahr=2015&bistag=03&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=03&vonmonat=07&vonjahr=2015&bistag=04&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=04&vonmonat=07&vonjahr=2015&bistag=05&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=04&vonmonat=07&vonjahr=2015&bistag=05&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=05&vonmonat=07&vonjahr=2015&bistag=06&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en&abflug=YYZ&ziel=FRA&vontag=06&vonmonat=07&vonjahr=2015&bistag=07&bismonat=07&bisjahr=2015&nw=a0pf&flightclass=c&I=es&lang=en">Book</a></td>
+                        <td>Condor</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                    </td>
+                        <td><a href="http://prf.hn/click/camref:10lmWx/destination:http%3A%2F%2Ftracking.mlsat03.de%2Fswiss%2Faffiliate%2Fcustom-forwarding.php%3Fkid%3D995%26dlid%3D1274%26pid%3D10lmWx%26fwid%3D182053%26origin%3DDUS%26destination%3DZRH%26depart%3D10.12.2014%26inbound%3D15.12.2014%26flightnumber%3DLX1016%26adults%3D2%26children%3D3%26infants%3D1">Book</a></td>
+                        <td>SwissAirline</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                    </td>
+                        <td><a href="http://prf.hn/click/camref:10lmWx/destination:http%3A%2F%2Ftracking.mlsat03.de%2Fswiss%2Faffiliate%2Fcustom-forwarding.php%3Fkid%3D995%26dlid%3D1274%26pid%3D10lmWx%26fwid%3D182053%26origin%3DDUS%26destination%3DZRH%26depart%3D10.12.2014%26inbound%3D15.12.2014%26flightnumber%3DLX1018%26adults%3D2%26children%3D3%26infants%3D1">Book</a></td>
+                        <td>SwissAirline</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                    </td>
+                        <td><a href="http://prf.hn/click/camref:10lmWx/destination:http%3A%2F%2Ftracking.mlsat03.de%2Fswiss%2Faffiliate%2Fcustom-forwarding.php%3Fkid%3D995%26dlid%3D1274%26pid%3D10lmWx%26fwid%3D182053%26origin%3DDUS%26destination%3DZRH%26depart%3D10.12.2014%26inbound%3D15.12.2014%26flightnumber%3DLX1026%26adults%3D2%26children%3D3%26infants%3D1">Book</a></td>
+                        <td>SwissAirline</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                    </td>
+                        <td><a href="http://prf.hn/click/camref:10lmWx/destination:http%3A%2F%2Ftracking.mlsat03.de%2Fswiss%2Faffiliate%2Fcustom-forwarding.php%3Fkid%3D995%26dlid%3D1274%26pid%3D10lmWx%26fwid%3D182053%26origin%3DDUS%26destination%3DZRH%26depart%3D10.12.2014%26inbound%3D15.12.2014%26flightnumber%3DLX1016%26adults%3D2%26children%3D3%26infants%3D1">Book</a></td>
+                        <td>SwissAirline</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                    </td>
+                        <td><a href="http://prf.hn/click/camref:10lmWx/destination:http%3A%2F%2Ftracking.mlsat03.de%2Fswiss%2Faffiliate%2Fcustom-forwarding.php%3Fkid%3D995%26dlid%3D1274%26pid%3D10lmWx%26fwid%3D182053%26origin%3DDUS%26destination%3DZRH%26depart%3D10.12.2014%26inbound%3D15.12.2014%26flightnumber%3DLX1018%26adults%3D2%26children%3D3%26infants%3D1">Book</a></td>
+                        <td>SwissAirline</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                    </td>
+                        <td><a href="http://prf.hn/click/camref:10lmWx/destination:http%3A%2F%2Ftracking.mlsat03.de%2Fswiss%2Faffiliate%2Fcustom-forwarding.php%3Fkid%3D995%26dlid%3D1274%26pid%3D10lmWx%26fwid%3D182053%26origin%3DDUS%26destination%3DZRH%26depart%3D10.12.2014%26inbound%3D15.12.2014%26flightnumber%3DLX1026%26adults%3D2%26children%3D3%26infants%3D1">Book</a></td>
+                        <td>SwissAirline</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                    </td>
+                        <td><a href="http://prf.hn/click/camref:10lmWx/destination:http%3A%2F%2Ftracking.mlsat03.de%2Fswiss%2Faffiliate%2Fcustom-forwarding.php%3Fkid%3D995%26dlid%3D1274%26pid%3D10lmWx%26fwid%3D182053%26origin%3DDUS%26destination%3DZRH%26depart%3D10.12.2014%26inbound%3D15.12.2014%26flightnumber%3DLX1016%26adults%3D2%26children%3D3%26infants%3D1">Book</a></td>
+                        <td>SwissAirline</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                    </td>
+                        <td><a href="http://prf.hn/click/camref:10lmWx/destination:http%3A%2F%2Ftracking.mlsat03.de%2Fswiss%2Faffiliate%2Fcustom-forwarding.php%3Fkid%3D995%26dlid%3D1274%26pid%3D10lmWx%26fwid%3D182053%26origin%3DDUS%26destination%3DZRH%26depart%3D10.12.2014%26inbound%3D15.12.2014%26flightnumber%3DLX1018%26adults%3D2%26children%3D3%26infants%3D1">Book</a></td>
+                        <td>SwissAirline</td>
+                </tr>
+            
+                <tr>
+                    <td>
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                        ZRH
+                        To
+                        DUS |
+                    
+                    </td>
+                        <td><a href="http://prf.hn/click/camref:10lmWx/destination:http%3A%2F%2Ftracking.mlsat03.de%2Fswiss%2Faffiliate%2Fcustom-forwarding.php%3Fkid%3D995%26dlid%3D1274%26pid%3D10lmWx%26fwid%3D182053%26origin%3DDUS%26destination%3DZRH%26depart%3D10.12.2014%26inbound%3D15.12.2014%26flightnumber%3DLX1026%26adults%3D2%26children%3D3%26infants%3D1">Book</a></td>
+                        <td>SwissAirline</td>
+                </tr>
+            
+        </table>
+    </body>
+</html>
+
+        </div>
+        <div id="footer">
+            
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <p>this is footerß</p>
+    </body>
+</html>
+
+        </div>
+    </div>  
+
+</body>
+</html>
