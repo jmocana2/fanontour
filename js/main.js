@@ -1,5 +1,5 @@
-$( document ).ready(function() { //DOM OK!
-  	
+$( document ).ready(function() { //DOM OK! 
+
   	//Lazy load
   	if($("img.lazy").length){
 	  	$(function() {
@@ -60,17 +60,20 @@ $( document ).ready(function() { //DOM OK!
 		event.preventDefault();
 	});	
 
+
 	//Input dates
-	$('.datetimepicker_01, .datetimepicker_02, .datetimepicker_03, .datetimepicker_04, .datetimepicker_05, .datetimepicker_06').datetimepicker({
-		pickTime: false
-	});
+	if($(".date").length){
+		$('.datetimepicker_01, .datetimepicker_02, .datetimepicker_03, .datetimepicker_04, .datetimepicker_05, .datetimepicker_06').datetimepicker({
+			pickTime: false
+		});
+	}	
 
 	//Validations
 	//
 	//Email validation
 	var emailreg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
    
-    if($("#contact").length){
+    if($("#contact").length){    	
 		$( "#contact .btn-validate" ).click(function() {
 
 			$("#contact form").find(".has-error").removeClass("has-error");
