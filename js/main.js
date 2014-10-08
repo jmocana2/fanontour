@@ -58,15 +58,31 @@ $( document ).ready(function() { //DOM OK!
 		var dropdown_value = $(this).children("a").text();
 		$(this).closest(".dropdown-form").find("input").attr("value",dropdown_value);
 		event.preventDefault();
-	});	
+	});
 
 
 	//Input dates
 	if($(".date").length){
-		$('.datetimepicker_01, .datetimepicker_02, .datetimepicker_03, .datetimepicker_04, .datetimepicker_05, .datetimepicker_06').datetimepicker({
+		$('.datetimepicker_01, .datetimepicker_02, .datetimepicker_03, .datetimepicker_04, .datetimepicker_05, .datetimepicker_06, .datetimepicker_07, .datetimepicker_08, .datetimepicker_09, .datetimepicker_10, .datetimepicker_11, .datetimepicker_12, .datetimepicker_13, .datetimepicker_14, .datetimepicker_15, .datetimepicker_16').datetimepicker({
 			pickTime: false
 		});
+
+		$('.glyphicon-calendar').click(function () {
+			var date = $(this).closest(".input-group").data("DateTimePicker").getDate();
+			$(this).closest(".input-group").data("DateTimePicker").setMinDate(new Date(date));			
+		});	
 	}	
+
+	//Rental car
+	$( "#conditionsAccepted" ).click(function() {
+		if($(this).attr("value") == "true"){
+			$(".conditionsAccepted").fadeIn();
+			$(this).attr("value","false");
+		}else{
+			$(".conditionsAccepted").fadeOut();
+			$(this).attr("value","true");
+		}
+	});
 
 	//Validations
 	//
@@ -98,6 +114,12 @@ $( document ).ready(function() { //DOM OK!
 	//Register advise
 	$( ".register-advise" ).click(function() {		
 		$('#modal-register').modal('show');
+		//return false;
+	});
+
+	//Customized tour
+	$( ".customized-tour" ).click(function() {		
+		$('#modal-customized-tour').modal('show');
 		//return false;
 	});
 });
