@@ -74,7 +74,7 @@ $( document ).ready(function() { //DOM OK!
 	}	
 
 	//Rental car
-	$( "#conditionsAccepted" ).click(function() {
+	$( "#conditionsAccepted, #tourConditionsAccepted " ).click(function() {
 		if($(this).attr("value") == "true"){
 			$(".conditionsAccepted").fadeIn();
 			$(this).attr("value","false");
