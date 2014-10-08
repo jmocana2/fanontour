@@ -34,7 +34,7 @@
 
 		.tab-content{
 			background: url('../img/backgrounds/bg_white_trans.png');
-			padding: 20px;
+			padding: 15px 20px;
 		}		
 	}	
 
@@ -68,6 +68,10 @@
 
 	.dropdown{
 		display: inline-block;
+
+		.dropdown-menu{
+			background-color: transparent;			
+		}
 	}
 
 	.btn-search{
@@ -97,4 +101,55 @@
 			margin-top: 10px;
 		}
 	}
+
+	.form-col-3{
+		label{
+			width: 84px;	
+		}
+
+		input, .dropdown{
+			width: 153px;
+		}
+
+		//dropdown-form
+		.dropdown-form{
+			a{
+				&.shape-arrow{
+					.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 130px, @y: 5px);
+				}
+			}	
+
+			.dropdown-menu{
+				max-width: 153px;
+				margin-top: -10px;
+			}	
+
+			&.dropdown-col-4{
+				.dropdown-menu{
+					max-width: 600px;
+				}
+			}	
+		}
+
+		.input-group{
+			margin-right: 0;
+
+			input{
+				width: 112px;	
+			}
+		}
+	}	
+
+	.checkbox, .radio{
+
+		display: block;
+		margin-left: 30px;
+		margin-bottom: 10px;
+
+		input{
+			width: auto;
+		}
+
+
+	}	
 }

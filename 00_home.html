@@ -84,6 +84,12 @@
 				include('include/modals/register-advise.html'); 
 			?>
 			<!-- ================================================= -->
+			<!-- ========== (MODAL) CUSTOMIZED TOUR ============== -->
+			<?php
+				include('include/modals/customized-tour.html'); 
+			?>
+			<!-- ================================================= -->
+
 
 			<section id="fanontour-search-box">
 				<div class="container relative">
@@ -97,7 +103,7 @@
 						  <li class="hidden-xs hidden-sm"><a href="#tab-activities" role="tab" data-toggle="tab" title="search activities">Activities</a></li>
 						  <li class="hidden-xs hidden-sm"><a href="#tab-restaurants" role="tab" data-toggle="tab" title="search restaurants">Restaurants</a></li>
 						  <li class="hidden-xs hidden-sm"><a href="#tab-rent-car" role="tab" data-toggle="tab" title="search rental cars">Rental cars</a></li>
-						  <li class="hidden-xs hidden-sm"><a class="register-advise highlight relative" href="#tab-tour" role="tab" data-toggle="tab" title="make your cutomized tour">Customized tour <span class="text-new-feature"><span>New!</span></span></a></li>
+						  <li class="hidden-xs hidden-sm"><a class="customized-tour highlight relative" href="#tab-tour" role="tab" data-toggle="tab" title="make your cutomized tour">Customized tour <span class="text-new-feature"><span>New!</span></span></a></li>
 						  <li class="dropdown dropdown-tab visible-xs visible-sm">
 					        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">What are you looking for? <span class="caret"></span></a>
 					        <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
@@ -239,7 +245,7 @@
 											   	<input type="text" class="form-control" id="restaurant-field-01" placeholder="Restaurant name">	   												    
 											    <label for="restaurant-field-03">Cuisine</label>
 											    <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
-												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="cusine-field-03" placeholder="Cusine type"></span></a>
+												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="cusine-field-03" placeholder="Cuisine type"></span></a>
 												  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
 												    <li class="col-sm-3"><a href="#" rel="nofollow">Italian</a></li>
@@ -291,7 +297,161 @@
 										<h2>Best rental offers worldwide</h2>
 									</header>
 									<div class="fanontour-mod-search">
-										<p>rental cars search</p>
+										<form class="form-inline form-col-3" role="form" action="#" method="post">
+											<label for="car-field-01">Country</label>
+											<div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
+												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-01" placeholder="Please select"></span></a>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+												  </ul>
+											</div>
+											<label for="car-field-02">City</label>
+											<div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
+												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-02" placeholder="Please select"></span></a>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+												  </ul>
+											</div>
+											<label for="car-field-03">Location</label>
+											<div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
+												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-03" placeholder="Please select"></span></a>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+												  </ul>
+											</div>
+											<div class="checkbox "><!-- has-error -->
+	                                       	    <label class="control-label">
+	                                        	<input type="checkbox" name="conditionsAccepted" id="conditionsAccepted" value="true" checked="checked"><span></span>
+	                                            Return car to the same location.                                                
+	                                          </label>
+	                                    	</div>
+	                                    	<div class="conditionsAccepted d-none">
+		                                    	<label for="car-field-04">Country</label>
+												<div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
+													  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-04" placeholder="Please select"></span></a>
+													  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
+													  </ul>
+												</div>
+												<label for="car-field-05">City</label>
+												<div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
+													  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-05" placeholder="Please select"></span></a>
+													  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
+													  </ul>
+												</div>
+												<label for="car-field-06">Location</label>
+												<div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
+													  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-06" placeholder="Please select"></span></a>
+													  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													  </ul>
+												</div>
+											</div>
+											<label for="car-field-07">Pick up date</label>
+											<?php 
+											   	$id_date = "datetimepicker_07";
+											   	include('include/forms/date.html'); 
+											?>
+											<label for="car-field-08">Hour</label>
+											<div class="dropdown dropdown-form">
+												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-08" placeholder="Please select"></span></a>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+												    <li><a href="#" rel="nofollow">11</a></li>
+												    <li><a href="#" rel="nofollow">12</a></li>												    
+												  </ul>
+											</div>	
+											<label for="car-field-09">Minute</label>
+											<div class="dropdown dropdown-form">
+												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-09" placeholder="Please select"></span></a>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+												    <li><a href="#" rel="nofollow">00</a></li>
+												    <li><a href="#" rel="nofollow">15</a></li>
+												    <li><a href="#" rel="nofollow">30</a></li>
+												    <li><a href="#" rel="nofollow">45</a></li>												    
+												  </ul>
+											</div>
+											<label for="car-field-10">Drop off date</label>
+											<?php 
+											   	$id_date = "datetimepicker_08";
+											   	include('include/forms/date.html'); 
+											?>
+											<label for="car-field-11">Hour</label>
+											<div class="dropdown dropdown-form">
+												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-11" placeholder="Please select"></span></a>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+												    <li><a href="#" rel="nofollow">11</a></li>
+												    <li><a href="#" rel="nofollow">12</a></li>												    
+												  </ul>
+											</div>	
+											<label for="car-field-12">Minute</label>
+											<div class="dropdown dropdown-form">
+												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-12" placeholder="Please select"></span></a>
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+												    <li><a href="#" rel="nofollow">00</a></li>
+												    <li><a href="#" rel="nofollow">15</a></li>
+												    <li><a href="#" rel="nofollow">30</a></li>
+												    <li><a href="#" rel="nofollow">45</a></li>												    
+												  </ul>
+											</div>
+											<div class="checkbox "><!-- has-error -->
+	                                       	    <label class="control-label">
+	                                        	<input type="checkbox" name="driverage" id="driver-over-25" checked="checked"><span></span>
+	                                            Driver aged between 25 – 70?                                                
+	                                          </label>
+	                                    	</div>	
+	                                    	<div class="text-center">
+										    	<button class="btn btn-search text-uppercase">search <span class="glyphicon fanontour-icon-search"></span></button>
+											</div>									
+										</form>
 									</div>
 						  		</section>
 						  </div>
@@ -302,7 +462,7 @@
 										<h2>Fast and easy. Save time and money</h2>
 									</header>
 									<div class="fanontour-mod-search">
-										<p class="text-center">To do your own tour you need to do <a href="#" init sesion>login</a> or <a href="#" title="go to the register page">register</a> in fanontour.com</p>
+										<p class="text-center">To start planing your perfect tour</p>
 										<div class="text-center">
 											<ul class="list-inline">
 												<li><a class="btn btn-primary" href="#">Login</a></li>
@@ -549,8 +709,8 @@
 								<div class="fanontour-details">
 									<div>
 										<ul class="list-inline">
-											<li>Madrid</li>
-											<li>Concert</li>
+											<li class="d-block">Madrid</li>
+											<li class="no-margin no-border">Concert</li>
 											<li>1 day</li>
 										</ul>																			
 									</div>
@@ -565,8 +725,8 @@
 								<div class="fanontour-details">
 									<div>
 										<ul class="list-inline">
-											<li>Madrid</li>
-											<li>Concert</li>
+											<li class="d-block">Madrid</li>
+											<li class="no-margin no-border">Concert</li>
 											<li>1 day</li>
 										</ul>																			
 									</div>
@@ -581,8 +741,8 @@
 								<div class="fanontour-details">
 									<div>
 										<ul class="list-inline">
-											<li>Madrid</li>
-											<li>Concert</li>
+											<li class="d-block">Madrid</li>
+											<li class="no-margin no-border">Concert</li>
 											<li>1 day</li>
 										</ul>																			
 									</div>
@@ -597,8 +757,8 @@
 								<div class="fanontour-details">
 									<div>
 										<ul class="list-inline">
-											<li>Madrid</li>
-											<li>Concert</li>
+											<li class="d-block">Madrid</li>
+											<li class="no-margin no-border">Concert</li>
 											<li>1 day</li>
 										</ul>																			
 									</div>
@@ -613,8 +773,8 @@
 								<div class="fanontour-details">
 									<div>
 										<ul class="list-inline">
-											<li>Madrid</li>
-											<li>Concert</li>
+											<li class="d-block">Madrid</li>
+											<li class="no-margin no-border">Concert</li>
 											<li>1 day</li>
 										</ul>																			
 									</div>
@@ -629,8 +789,8 @@
 								<div class="fanontour-details">
 									<div>
 										<ul class="list-inline">
-											<li>Madrid</li>
-											<li>Concert</li>
+											<li class="d-block">Madrid</li>
+											<li class="no-margin no-border">Concert</li>
 											<li>1 day</li>
 										</ul>																			
 									</div>
@@ -645,8 +805,8 @@
 								<div class="fanontour-details">
 									<div>
 										<ul class="list-inline">
-											<li>Madrid</li>
-											<li>Concert</li>
+											<li class="d-block">Madrid</li>
+											<li class="no-margin no-border">Concert</li>
 											<li>1 day</li>
 										</ul>																			
 									</div>
@@ -661,8 +821,8 @@
 								<div class="fanontour-details">
 									<div>
 										<ul class="list-inline">
-											<li>Madrid</li>
-											<li>Concert</li>
+											<li class="d-block">Madrid</li>
+											<li class="no-margin no-border">Concert</li>
 											<li>1 day</li>
 										</ul>																			
 									</div>

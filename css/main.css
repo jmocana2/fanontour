@@ -18,13 +18,16 @@ ul {
   padding-left: 0;
 }
 .d-block {
-  display: block;
+  display: block !important;
 }
 .d-inline {
   display: inline;
 }
 .d-iblock {
   display: inline-block;
+}
+.d-none {
+  display: none;
 }
 .relative {
   position: relative;
@@ -350,6 +353,48 @@ label {
 input.form-control,
 textarea.form-control {
   font-size: .9em;
+}
+.checkbox,
+.radio {
+  display: block;
+  min-height: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 25px;
+}
+.checkbox label,
+.radio label {
+  display: inline;
+  font-weight: normal;
+  cursor: pointer;
+}
+.checkbox input[type="radio"],
+.radio input[type="radio"],
+.checkbox input[type="checkbox"],
+.radio input[type="checkbox"] {
+  float: left;
+  margin-left: -20px;
+  display: none;
+}
+.checkbox input[type="radio"] + span,
+.radio input[type="radio"] + span,
+.checkbox input[type="checkbox"] + span,
+.radio input[type="checkbox"] + span {
+  display: inline-block;
+  margin-left: -20px;
+  margin-right: 0.5em;
+  float: left;
+  width: 19px;
+  height: 18px;
+  background: url('../img/sprites/form-sprite.png') no-repeat 0 0;
+}
+.checkbox input[type="checkbox"] + span,
+.radio input[type="checkbox"] + span {
+  background-position: 0 0;
+}
+.checkbox input[type="checkbox"]:checked + span,
+.radio input[type="checkbox"]:checked + span {
+  background-position: 0 -18px;
 }
 .title-photo {
   font: normal 3em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
@@ -824,6 +869,22 @@ textarea.form-control {
   font: normal 1.5em/1.2em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
   color: #ffffff;
 }
+#modal-customized-tour .dropdown a.shape-arrow {
+  position: relative;
+}
+#modal-customized-tour .dropdown a.shape-arrow span:before {
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-top: 5px solid #4a4a4a;
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  border-bottom: 0;
+  content: "";
+  height: 0;
+  left: 512px;
+  position: absolute;
+  top: 16px;
+  width: 0;
+  z-index: 2;
+}
 .alert strong {
   font-family: 'robotobold', 'Arial Black', 'sans-serif';
   font-weight: normal;
@@ -1069,7 +1130,7 @@ video {
 }
 #fanontour-search-box .tab-default .tab-content {
   background: url('../img/backgrounds/bg_white_trans.png');
-  padding: 20px;
+  padding: 15px 20px;
 }
 #fanontour-search-box .dropdown-toggle {
   width: 100%;
@@ -1096,6 +1157,9 @@ video {
 #fanontour-search-box .dropdown {
   display: inline-block;
 }
+#fanontour-search-box .dropdown .dropdown-menu {
+  background-color: transparent;
+}
 #fanontour-search-box .form-col-1 input {
   margin-bottom: 0;
   margin-right: 5px;
@@ -1109,6 +1173,52 @@ video {
 }
 #fanontour-search-box .form-col-2 .btn-search {
   margin-top: 10px;
+}
+#fanontour-search-box .form-col-3 label {
+  width: 84px;
+}
+#fanontour-search-box .form-col-3 input,
+#fanontour-search-box .form-col-3 .dropdown {
+  width: 153px;
+}
+#fanontour-search-box .form-col-3 .dropdown-form a.shape-arrow {
+  position: relative;
+}
+#fanontour-search-box .form-col-3 .dropdown-form a.shape-arrow span:before {
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-top: 5px solid #4a4a4a;
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  border-bottom: 0;
+  content: "";
+  height: 0;
+  left: 130px;
+  position: absolute;
+  top: 5px;
+  width: 0;
+  z-index: 2;
+}
+#fanontour-search-box .form-col-3 .dropdown-form .dropdown-menu {
+  max-width: 153px;
+  margin-top: -10px;
+}
+#fanontour-search-box .form-col-3 .dropdown-form.dropdown-col-4 .dropdown-menu {
+  max-width: 600px;
+}
+#fanontour-search-box .form-col-3 .input-group {
+  margin-right: 0;
+}
+#fanontour-search-box .form-col-3 .input-group input {
+  width: 112px;
+}
+#fanontour-search-box .checkbox,
+#fanontour-search-box .radio {
+  display: block;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+#fanontour-search-box .checkbox input,
+#fanontour-search-box .radio input {
+  width: auto;
 }
 .fanontour-mod {
   padding: 30px 0;
@@ -1194,7 +1304,7 @@ video {
   bottom: 0;
   left: 0;
   width: 100%;
-  min-height: 38px;
+  min-height: 46px;
   background: url('../img/backgrounds/bg_black_trans.png');
 }
 .fanontour-mod-details .fanontour-details ul {
@@ -1213,7 +1323,7 @@ video {
   border: none;
 }
 .fanontour-mod-details h2 {
-  font: normal 1.214em/1.1em 'roboto_condensedregular', 'Arial Black', 'sans-serif';
+  font: normal 1.214em/1.6em 'roboto_condensedregular', 'Arial Black', 'sans-serif';
   color: #ffffff;
   float: left;
   padding: 10px 0 0 10px;
@@ -1222,7 +1332,7 @@ video {
 .fanontour-mod-details .price {
   float: right;
   margin-bottom: 0;
-  padding: 8px 15px;
+  padding: 12px 15px;
 }
 .fanontour-mod-details .headband {
   position: absolute;
@@ -1247,7 +1357,7 @@ video {
 }
 #fanontour-search-box {
   padding-top: 200px;
-  margin-bottom: 113px;
+  min-height: 487px;
 }
 #fanontour-search-box .tab-content {
   min-height: 135px;
