@@ -1,5 +1,27 @@
 $( document ).ready(function() { //DOM OK! 
 
+  	//FUNCTIONS
+
+  	// Función que suma o resta días a la fecha indicada
+ 	// plus dates
+	sumaFecha = function(d, fecha)
+	{
+		 var Fecha = new Date();
+		 var sFecha = fecha || (Fecha.getDate() + "/" + (Fecha.getMonth() +1) + "/" + Fecha.getFullYear());
+		 var sep = sFecha.indexOf('/') != -1 ? '/' : '-'; 
+		 var aFecha = sFecha.split(sep);
+		 var fecha = aFecha[2]+'/'+aFecha[1]+'/'+aFecha[0];
+		 fecha= new Date(fecha);
+		 fecha.setDate(fecha.getDate()+parseInt(d));
+		 var anno=fecha.getFullYear();
+		 var mes= fecha.getMonth()+1;
+		 var dia= fecha.getDate();
+		 mes = (mes < 10) ? ("0" + mes) : mes;
+		 dia = (dia < 10) ? ("0" + dia) : dia;
+		 var fechaFinal = dia+sep+mes+sep+anno;
+		 return (fechaFinal);
+	}
+
   	//Lazy load
   	if($("img.lazy").length){
 	  	$(function() {
@@ -51,6 +73,12 @@ $( document ).ready(function() { //DOM OK!
 		});
 	});
 
+	//ACCORDION
+	//title
+	$( ".panel-title" ).click(function() {
+		$(this).parent().addClass("active");	
+	});	
+
 	//FORMS
 	//
 	//Dropdown-form
@@ -67,13 +95,19 @@ $( document ).ready(function() { //DOM OK!
 			pickTime: false
 		});
 
-		$('.glyphicon-calendar').click(function () {
+		$('.departure-date').click(function () {
+			alert($(this).attr("value"));
 			var date = $(this).closest(".input-group").data("DateTimePicker").getDate();
-			$(this).closest(".input-group").data("DateTimePicker").setMinDate(new Date(date));			
+			$(this).closest(".input-group").data("DateTimePicker").setMinDate(new Date(date));	
+
+			/*if($(this).parent().attr("class").indexOf("departure-date") == -1){
+				var arrival_date = sumaFecha(7, $(this).parent().attr("value"))
+				$(this).closest("form").find(".arrive-date").attr("value", arrival_date)
+			}*/		
 		});	
 	}	
 
-	//Rental car
+	//Rental car (drop off)
 	$( "#conditionsAccepted, #tourConditionsAccepted " ).click(function() {
 		if($(this).attr("value") == "true"){
 			$(".conditionsAccepted").fadeIn();
@@ -83,6 +117,20 @@ $( document ).ready(function() { //DOM OK!
 			$(this).attr("value","true");
 		}
 	});
+
+	//Rental car (age)
+	/*$( ".checkbox-message" ).click(function() {
+		alert($(this).find("input").attr("value"))
+		if($(this).find("input").attr("value") == "true"){
+			$("#age-field").fadeIn();
+			$(this).find("input").attr("value","false");
+		}else{
+			$("#age-field").fadeOut();
+			$(this).find("input").attr("value","true");
+		}
+	});*/
+
+
 
 	//Validations
 	//
@@ -122,4 +170,11 @@ $( document ).ready(function() { //DOM OK!
 		$('#modal-customized-tour').modal('show');
 		//return false;
 	});
+
+	//TOOLTIPS
+	//
+	//Car information
+	if($("#car-tooltip").length){
+		$('#car-tooltip').tooltip()
+	}	
 });
