@@ -14,3 +14,24 @@
 		color: @colorW;		
 	}
 }
+
+.panel-accordion{
+	.panel-title{
+		text-transform: uppercase;
+		font: normal 1.3em @font-title, @font-default-system, @font-third;
+		color: @colorK2;		
+	}
+
+	.panel-heading{
+		&.active{
+			background-color: @colorG1;
+			
+			h4{
+				a{
+					color: @colorW;
+
+				}
+			}
+		}		
+	}
+}

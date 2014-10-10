@@ -1,6 +1,9 @@
+<?php 
+	$hoy = date("m/d/Y"); 
+?>	 
 <div class="form-group">
 	<div class='input-group date <?php echo $id_date; ?>'>
-		<input id="<?php echo $id_date; ?>" type='text' class="form-control" data-date-format="DD/MM/YYYY"/>
+		<input id="<?php echo $id_date; ?>" type='text' class="form-control <?php // echo $class_input; ?>" value="<?php echo $hoy; ?>" data-date-format="DD/MM/YYYY"/>
 		<span class="input-group-addon">
 			<span class="glyphicon glyphicon-calendar"></span>
 		</span>

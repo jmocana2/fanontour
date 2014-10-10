@@ -7,9 +7,8 @@
     </div>
     <div class="modal-body">
       <div class="panel-group" id="accordion">
-        <form role="form" action="#" method="post">
-          <div class="panel panel-default">
-            <div class="panel-heading">
+         <div class="panel panel-default panel-accordion">
+            <div class="panel-heading active">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseTickets">
                   Tickets
@@ -25,7 +24,7 @@
               </div>
             </div>
           </div>
-          <div class="panel panel-default">
+          <div class="panel panel-default panel-accordion">
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseHotels">
@@ -40,21 +39,26 @@
                     <label for="tour-hotel-field-01">Going to</label>
                     <input type="text" class="form-control" id="tour-hotel-field-01" placeholder="City">
                   </fieldset>
-                  <label for="tour-hotel-field-02">Check in</label>
-                  <?php 
-                    $id_date = "datetimepicker_09";
-                    include('include/forms/date.html'); 
-                  ?>
-                  <label for="hotel-field-03">Check out</label>
-                  <?php 
-                    $id_date = "datetimepicker_10";
-                    include('include/forms/date.html'); 
-                  ?>                      
-                 
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label for="tour-hotel-field-02">Check in</label>
+                      <?php 
+                        $id_date = "datetimepicker_09";
+                        include('include/forms/date.html'); 
+                      ?>
+                    </div>
+                    <div class="col-sm-6">
+                    <label for="hotel-field-03">Check out</label>
+                    <?php 
+                      $id_date = "datetimepicker_10";
+                      include('include/forms/date.html'); 
+                    ?>                      
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
-          <div class="panel panel-default">
+          <div class="panel panel-default panel-accordion">
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseFlights">
@@ -64,30 +68,34 @@
             </div>
             <div id="collapseFlights" class="panel-collapse collapse">
               <div class="panel-body">
-                <div class="form-group ">                      
-                  <label for="tour-flight-field-01">From</label>
-                  <input type="text" class="form-control" id="tour-flight-field-01" placeholder="City">
-                </div>
-                <div class="form-group "> 
-                  <label for="tour-flight-field-02">To</label>
-                  <input type="text" class="form-control" id="tour-flight-field-02" placeholder="City">                          
-                </div>  
-
-                 <label for="tour-hotel-field-03">Departure date</label>
-                  <?php 
-                    $id_date = "datetimepicker_11";
-                    include('include/forms/date.html'); 
-                  ?>
-                  <label for="tour-hotel-field-04">Return date</label>
-                  <?php 
-                    $id_date = "datetimepicker_12";
-                    include('include/forms/date.html'); 
-                  ?>                      
-                  
+                <div class="row">
+                  <div class="form-group col-sm-6">                      
+                    <label for="tour-flight-field-01">From</label>
+                    <input type="text" class="form-control" id="tour-flight-field-01" placeholder="City">
+                  </div>
+                  <div class="form-group col-sm-6"> 
+                    <label for="tour-flight-field-02">To</label>
+                    <input type="text" class="form-control" id="tour-flight-field-02" placeholder="City">                          
+                  </div>  
+                  <div class="col-sm-6">
+                   <label for="tour-hotel-field-03">Departure date</label>
+                    <?php 
+                      $id_date = "datetimepicker_11";
+                      include('include/forms/date.html'); 
+                    ?>
+                    </div>
+                    <div class="col-sm-6">
+                    <label for="tour-hotel-field-04">Return date</label>
+                    <?php 
+                      $id_date = "datetimepicker_12";
+                      include('include/forms/date.html'); 
+                    ?>  
+                    </div>                    
+                  </div>
               </div>
             </div>
          </div>
-         <div class="panel panel-default">
+         <div class="panel panel-default panel-accordion">
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseActivities">
@@ -102,21 +110,26 @@
                     <label for="tour-activity-field-01">City</label>
                     <input type="text" class="form-control" id="tour-activity-field-01" placeholder="City name">
                   </fieldset>
-                  <label for="tour-activity-field-02">From</label>
-                  <?php 
-                    $id_date = "datetimepicker_13";
-                    include('include/forms/date.html'); 
-                  ?>
-                  <label for="activity-field-03">To</label>
-                  <?php 
-                    $id_date = "datetimepicker_14";
-                    include('include/forms/date.html'); 
-                  ?>                    
-               
+                  <div class="row">
+                     <div class="col-sm-6">
+                      <label for="tour-activity-field-02">From</label>
+                      <?php 
+                        $id_date = "datetimepicker_13";
+                        include('include/forms/date.html'); 
+                      ?>
+                    </div>
+                    <div class="col-sm-6">  
+                      <label for="activity-field-03">To</label>
+                      <?php 
+                        $id_date = "datetimepicker_14";
+                        include('include/forms/date.html'); 
+                      ?>
+                    </div>                    
+                  </div>
               </div>
             </div>
          </div>
-         <div class="panel panel-default">
+         <div class="panel panel-default panel-accordion">
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseRestaurants">
@@ -177,7 +190,7 @@
               </div>
             </div>
          </div>
-         <div class="panel panel-default">
+         <div class="panel panel-default panel-accordion">
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseCars">
@@ -298,71 +311,75 @@
                           </div>
                          </div> 
                       </div>
-                      <label for="tour-car-field-15">Pick up date</label>
-                      <?php 
-                          $id_date = "datetimepicker_07";
-                          include('include/forms/date.html'); 
-                      ?>
-                      <div class="form-group">
-                        <label for="tour-car-field-08">Hour</label>
-                        <div class="dropdown dropdown-form">
-                            <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-08" placeholder="Please select"></span></a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <li><a href="#" rel="nofollow">11</a></li>
-                              <li><a href="#" rel="nofollow">12</a></li>                            
-                            </ul>
+                      <div class="row">
+                       <div class="col-sm-6">
+                        <label for="tour-car-field-15">Pick up date</label>
+                        <?php 
+                            $id_date = "datetimepicker_07";
+                            include('include/forms/date.html'); 
+                        ?>
+                        <div class="form-group">
+                          <label for="tour-car-field-08">Hour</label>
+                          <div class="dropdown dropdown-form">
+                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-08" placeholder="Please select"></span></a>
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <li><a href="#" rel="nofollow">11</a></li>
+                                <li><a href="#" rel="nofollow">12</a></li>                            
+                              </ul>
+                          </div>
                         </div>
-                      </div>
-                      <div class="form-group">    
-                        <label for="tour-car-field-09">Minute</label>
-                        <div class="dropdown dropdown-form">
-                            <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-09" placeholder="Please select"></span></a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <li><a href="#" rel="nofollow">00</a></li>
-                              <li><a href="#" rel="nofollow">15</a></li>
-                              <li><a href="#" rel="nofollow">30</a></li>
-                              <li><a href="#" rel="nofollow">45</a></li>                            
-                            </ul>
+                        <div class="form-group">    
+                          <label for="tour-car-field-09">Minute</label>
+                          <div class="dropdown dropdown-form">
+                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-09" placeholder="Please select"></span></a>
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <li><a href="#" rel="nofollow">00</a></li>
+                                <li><a href="#" rel="nofollow">15</a></li>
+                                <li><a href="#" rel="nofollow">30</a></li>
+                                <li><a href="#" rel="nofollow">45</a></li>                            
+                              </ul>
+                          </div>
+                        </div> 
+                       </div> 
+                        <div class="col-sm-6">
+                        <label for="tour-car-field-10">Drop off date</label>
+                        <?php 
+                            $id_date = "datetimepicker_16";
+                            include('include/forms/date.html'); 
+                        ?>
+                        <div class="form-group">
+                          <label for="tour-car-field-11">Hour</label>
+                          <div class="dropdown dropdown-form">
+                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-11" placeholder="Please select"></span></a>
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <li><a href="#" rel="nofollow">11</a></li>
+                                <li><a href="#" rel="nofollow">12</a></li>                            
+                              </ul>
+                          </div>
                         </div>
-                      </div> 
-                       
-                      <label for="tour-car-field-10">Drop off date</label>
-                      <?php 
-                          $id_date = "datetimepicker_16";
-                          include('include/forms/date.html'); 
-                      ?>
-                      <div class="form-group">
-                        <label for="tour-car-field-11">Hour</label>
-                        <div class="dropdown dropdown-form">
-                            <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-11" placeholder="Please select"></span></a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <li><a href="#" rel="nofollow">11</a></li>
-                              <li><a href="#" rel="nofollow">12</a></li>                            
-                            </ul>
+                        <div class="form-group">    
+                          <label for="tour-car-field-12">Minute</label>
+                          <div class="dropdown dropdown-form">
+                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-12" placeholder="Please select"></span></a>
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <li><a href="#" rel="nofollow">00</a></li>
+                                <li><a href="#" rel="nofollow">15</a></li>
+                                <li><a href="#" rel="nofollow">30</a></li>
+                                <li><a href="#" rel="nofollow">45</a></li>                            
+                              </ul>
+                          </div>
                         </div>
-                      </div>
-                      <div class="form-group">    
-                        <label for="tour-car-field-12">Minute</label>
-                        <div class="dropdown dropdown-form">
-                            <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="car-field-12" placeholder="Please select"></span></a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <li><a href="#" rel="nofollow">00</a></li>
-                              <li><a href="#" rel="nofollow">15</a></li>
-                              <li><a href="#" rel="nofollow">30</a></li>
-                              <li><a href="#" rel="nofollow">45</a></li>                            
-                            </ul>
+                        <div class="checkbox "><!-- has-error -->
+                          <label class="control-label">
+                            <input type="checkbox" name="driverage" id="driver-over-25" checked="checked"><span></span>
+                              Driver aged between 25 – 70?                                                
+                          </label>
                         </div>
-                      </div>
-                      <div class="checkbox "><!-- has-error -->
-                        <label class="control-label">
-                          <input type="checkbox" name="driverage" id="driver-over-25" checked="checked"><span></span>
-                            Driver aged between 25 – 70?                                                
-                        </label>
-                      </div>
+                       </div> 
+                </div>
               </div>
             </div>
          </div>
-        </form>
       </div>
     </div>
     <div class="modal-footer">

@@ -23,3 +23,36 @@
 		}
 	}
 }
+
+//Small fields
+.small-field-h{
+	padding: 0 5px;
+	height: 27px;
+
+	&+.input-group-addon{
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+}
+
+.small-field-w{
+	width: 55px !important;
+
+	input{
+		width: 55px !important;
+	}
+}
+
+//time
+.time-field{
+	label{
+		width: 48px !important;
+	}
+
+	a{
+		&.shape-arrow{
+			.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 38px, @y: 5px) !important;
+		}
+	}
+}
+
