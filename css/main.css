@@ -846,6 +846,10 @@ textarea.form-control {
   background-color: #b00808;
   color: #ffffff;
 }
+.big-text {
+  font: normal 2em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
+  text-shadow: 1px 1px #ffffff;
+}
 .fanontour-panel-primary {
   border: 1px #eaeaea solid;
 }
