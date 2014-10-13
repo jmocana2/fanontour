@@ -203,19 +203,40 @@ ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.fanontour-icon-concert:before {
+.icon-icons-fanontour_activity:before {
+  content: "\e605";
+}
+.icon-icons-fanontour_cars:before {
+  content: "\e606";
+}
+.icon-icons-fanontour_entry:before {
+  content: "\e607";
+}
+.icon-icons-fanontour_flight:before {
+  content: "\e608";
+}
+.icon-icons-fanontour_hotel:before {
+  content: "\e609";
+}
+.icon-icons-fanontour_restaurant:before {
+  content: "\e60a";
+}
+.icon-icons-fanontour_ticket:before {
+  content: "\e60b";
+}
+.icon-icons-fanontour_concert:before {
   content: "\e600";
 }
-.fanontour-icon-festival:before {
+.icon-icons-fanontour_festival:before {
   content: "\e601";
 }
-.fanontour-icon-other:before {
+.icon-icons-fanontour_other:before {
   content: "\e602";
 }
-.fanontour-icon-sport:before {
+.icon-icons-fanontour_sport:before {
   content: "\e603";
 }
-.fanontour-icon-search:before {
+.icon-icons-fanontour_search:before {
   content: "\e604";
 }
 .no-margin {
@@ -841,6 +862,10 @@ textarea.form-control {
   height: 200px;
   top: 56px;
 }
+.bg-trans-title {
+  background: url('../img/backgrounds/bg-trans-titles.png') repeat-y 0 0;
+  padding-left: 22px;
+}
 .text-new-feature {
   font: normal 1em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
   background-color: #b00808;
@@ -849,6 +874,13 @@ textarea.form-control {
 .big-text {
   font: normal 2em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
   text-shadow: 1px 1px #ffffff;
+}
+.panel-default .panel-heading {
+  padding: 0;
+}
+.panel-default h4 a {
+  padding: 10px 15px;
+  display: block;
 }
 .fanontour-panel-primary {
   border: 1px #eaeaea solid;
@@ -866,6 +898,13 @@ textarea.form-control {
   text-transform: uppercase;
   font: normal 1.3em 'roboto_condensedbold', 'Arial', 'sans-serif';
   color: #403f3f;
+}
+.panel-accordion .panel-heading {
+  padding: 0;
+}
+.panel-accordion .panel-heading h4 a {
+  padding: 10px 15px;
+  display: block;
 }
 .panel-accordion .panel-heading.active {
   background-color: #6eb21b;
@@ -938,6 +977,9 @@ textarea.form-control {
   font: normal 1.5em/1.2em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
   color: #ffffff;
 }
+#modal-customized-tour h4 a span {
+  font-size: 1.2em;
+}
 #modal-customized-tour .dropdown a.shape-arrow {
   position: relative;
 }
@@ -953,6 +995,9 @@ textarea.form-control {
   top: 16px;
   width: 0;
   z-index: 2;
+}
+#modal-customized-tour .modal-footer {
+  border: none;
 }
 .tooltip .tooltip-inner {
   background-color: #0669b2;
@@ -1384,7 +1429,7 @@ video {
 .fanontour-mod-details .fanontour-details {
   position: relative;
 }
-.fanontour-mod-details .fanontour-details div {
+.fanontour-mod-details .fanontour-details > div {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1397,7 +1442,7 @@ video {
 }
 .fanontour-mod-details .fanontour-details li {
   color: #ffffff;
-  font: normal 1.1em/1.1em 'roboto_condensedregular', 'Arial Black', 'sans-serif';
+  font: normal 1em/1.1em 'roboto_condensedregular', 'Arial Black', 'sans-serif';
   border-left: 1px #ffffff solid;
   margin-left: 6px;
   padding-left: 6px;
@@ -1406,18 +1451,31 @@ video {
 .fanontour-mod-details .fanontour-details li:first-child {
   margin-left: 0;
   border: none;
+  overflow: hidden;
+  height: 17px;
+  font-size: 1.1em;
 }
 .fanontour-mod-details h2 {
-  font: normal 1.214em/1.6em 'roboto_condensedregular', 'Arial Black', 'sans-serif';
+  font: normal 1.214em/1.8em 'roboto_condensedregular', 'Arial Black', 'sans-serif';
   color: #ffffff;
   float: left;
   padding: 10px 0 0 10px;
   margin-bottom: 0;
+  max-width: 260px;
+  max-height: 45px;
+  overflow: hidden;
+}
+.fanontour-mod-details .bg-trans-title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-left: 22px;
 }
 .fanontour-mod-details .price {
-  float: right;
+  display: inline-block;
   margin-bottom: 0;
   padding: 12px 15px;
+  float: right;
 }
 .fanontour-mod-details .headband {
   position: absolute;
