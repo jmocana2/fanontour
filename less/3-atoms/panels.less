@@ -1,3 +1,17 @@
+//panel default
+.panel-default{
+	.panel-heading{
+		padding: 0;
+	}
+
+	h4{
+		a{
+			padding: 10px 15px;
+			display: block;
+		}
+	}
+}
+
 //primary panel
 .fanontour-panel-primary{
 
@@ -23,15 +37,24 @@
 	}
 
 	.panel-heading{
+
+		padding: 0;
+
+		h4{
+			a{
+				padding: 10px 15px;
+				display: block;
+			}
+		}
+
 		&.active{
-			background-color: @colorG1;
-			
 			h4{
 				a{
 					color: @colorW;
-
 				}
 			}
+			
+			background-color: @colorG1;			
 		}		
 	}
 }
