@@ -75,8 +75,8 @@ $( document ).ready(function() { //DOM OK!
 
 	//ACCORDION
 	//title
-	$( ".panel-title" ).click(function() {
-		$(this).parent().addClass("active");	
+	$( "#modal-customized-tour input, #modal-customized-tour .glyphicon-calendar" ).click(function() {
+		$(this).closest(".panel").find(".panel-heading").addClass("active");
 	});	
 
 	//FORMS
@@ -118,15 +118,14 @@ $( document ).ready(function() { //DOM OK!
 		}
 	});
 
-	//Rental car (age)
-	/*$( ".checkbox-message" ).click(function() {
-		alert($(this).find("input").attr("value"))
-		if($(this).find("input").attr("value") == "true"){
-			$("#age-field").fadeIn();
-			$(this).find("input").attr("value","false");
+	//Rental car (drop off)
+	/*$( "#driver-over-25" ).click(function() {
+		if($(this).attr("value") == "true"){
+			$("#age-field").css("display", "inline");
+			$(this).attr("value","false");
 		}else{
 			$("#age-field").fadeOut();
-			$(this).find("input").attr("value","true");
+			$(this).attr("value","true");
 		}
 	});*/
 
