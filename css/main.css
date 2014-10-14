@@ -390,7 +390,7 @@ a:hover {
 }
 label {
   font: normal 1em/1.1em 'robotoregular', 'Arial', 'sans-serif';
-  color: #7a7575;
+  color: #403f3f;
 }
 input.form-control,
 textarea.form-control {
@@ -980,6 +980,10 @@ textarea.form-control {
 #modal-customized-tour h4 a span {
   font-size: 1.2em;
 }
+#modal-customized-tour .dropdown a {
+  display: inline-block;
+  width: 100%;
+}
 #modal-customized-tour .dropdown a.shape-arrow {
   position: relative;
 }
@@ -991,6 +995,22 @@ textarea.form-control {
   content: "";
   height: 0;
   left: 512px;
+  position: absolute;
+  top: 16px;
+  width: 0;
+  z-index: 2;
+}
+#modal-customized-tour .col-sm-6 a.shape-arrow {
+  position: relative;
+}
+#modal-customized-tour .col-sm-6 a.shape-arrow span:before {
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-top: 5px solid #4a4a4a;
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  border-bottom: 0;
+  content: "";
+  height: 0;
+  left: 232px;
   position: absolute;
   top: 16px;
   width: 0;
@@ -1258,6 +1278,8 @@ video {
 #fanontour-search-box label {
   width: 100px;
   text-align: right;
+  position: relative;
+  top: -3px;
 }
 #fanontour-search-box input {
   width: 275px;
