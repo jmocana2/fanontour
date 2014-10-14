@@ -151,10 +151,6 @@ $( document ).ready(function() { //DOM OK!
 	//Geolocalización
 	if($(".city_ori").length){
 
-	  	var geocoder;  
-		if (navigator.geolocation) {
-		    navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
-		} 
 		//Get the latitude and the longitude;
 		function successFunction(position) {
 		    var lat = position.coords.latitude;
@@ -165,6 +161,12 @@ $( document ).ready(function() { //DOM OK!
 		function errorFunction(){
 		    alert("Geocoder failed");
 		}
+
+	  	var geocoder;  
+		if (navigator.geolocation) {
+		    navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+		} 
+		
 		
 		geocoder = new google.maps.Geocoder();
 
