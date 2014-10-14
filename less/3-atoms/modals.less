@@ -27,8 +27,19 @@
 
 	.dropdown{
 		a{
+			display: inline-block;
+			width: 100%;
+
 			&.shape-arrow{
 				.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 512px, @y: 16px);
+			}
+		}
+	}
+
+	.col-sm-6{
+		a{
+			&.shape-arrow{
+				.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 232px, @y: 16px);
 			}
 		}
 	}
