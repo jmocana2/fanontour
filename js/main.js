@@ -79,6 +79,19 @@ $( document ).ready(function() { //DOM OK!
 		$(this).closest(".panel").find(".panel-heading").addClass("active");
 	});	
 
+	$("#modal-customized-tour input").focusout(function() {
+		var vacio = 1;
+		var a_inputs =  $(this).closest(".panel-body").find(".type-reset")
+		for(i=0; i<a_inputs.length;i++){
+			if($(a_inputs).eq(i).val() != ""){
+				vacio = 0;
+			}
+		}
+		if(vacio){
+			$(this).closest(".panel").find(".panel-heading").removeClass("active");
+		}  	
+  	});
+
 	//FORMS
 	//
 	//Dropdown-form
@@ -129,8 +142,48 @@ $( document ).ready(function() { //DOM OK!
 		}
 	});*/
 
+	//Copy cities in customized tour
+	$(".city_dest").focusout(function() {
+		var city_dest = $(this).val();
+		$(this).closest("#modal-customized-tour").find(".city_dest").val(city_dest);    	
+  	});
 
+	//Geolocalización
+	if($(".city_ori").length){
 
+	  	var geocoder;  
+		if (navigator.geolocation) {
+		    navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+		} 
+		//Get the latitude and the longitude;
+		function successFunction(position) {
+		    var lat = position.coords.latitude;
+		    var lng = position.coords.longitude;
+		    codeLatLng(lat, lng)
+		}
+
+		function errorFunction(){
+		    alert("Geocoder failed");
+		}
+		
+		geocoder = new google.maps.Geocoder();
+
+		function codeLatLng(lat, lng) {
+
+		var latlng = new google.maps.LatLng(lat, lng);
+		    geocoder.geocode({'latLng': latlng}, function(results, status) {
+		      if (status == google.maps.GeocoderStatus.OK) {     
+		        if (results[1]) {
+		         //City
+		         var city_ori = results[0].address_components[2].short_name;
+		         $(".city_ori").val(city_ori);
+		         }
+		       }  
+		    });
+		}
+	}
+
+	  
 	//Validations
 	//
 	//Email validation
