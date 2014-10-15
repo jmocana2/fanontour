@@ -45,14 +45,37 @@
 
 //time
 .time-field{
-	label{
-		width: 48px !important;
+
+	display: inline-block;
+
+	.sr-only{
+		width: 0 !important;
 	}
 
 	a{
+		position: relative;
 		&.shape-arrow{
-			.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 38px, @y: 5px) !important;
+			.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 36px, @y: 4px) !important;
 		}
 	}
+
+	label{
+		display: inline-block;
+		width: 33px;
+	}
+
+	input{
+		max-width: 50px;
+		display: inline-block;
+	}
+
+	.dropdown-form{
+		display: inline-block;		
+	}
+		
+	.dropdown-menu{
+		max-width: 56px !important;
+		min-width: inherit;
+	}	
 }
 

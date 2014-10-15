@@ -944,8 +944,14 @@ textarea.form-control {
 .small-field-w input {
   width: 55px !important;
 }
-.time-field label {
-  width: 48px !important;
+.time-field {
+  display: inline-block;
+}
+.time-field .sr-only {
+  width: 0 !important;
+}
+.time-field a {
+  position: relative;
 }
 .time-field a.shape-arrow {
   position: relative !important;
@@ -957,11 +963,26 @@ textarea.form-control {
   border-bottom: 0 !important;
   content: "" !important;
   height: 0 !important;
-  left: 38px !important;
+  left: 36px !important;
   position: absolute !important;
-  top: 5px !important;
+  top: 4px !important;
   width: 0 !important;
   z-index: 2 !important;
+}
+.time-field label {
+  display: inline-block;
+  width: 33px;
+}
+.time-field input {
+  max-width: 50px;
+  display: inline-block;
+}
+.time-field .dropdown-form {
+  display: inline-block;
+}
+.time-field .dropdown-menu {
+  max-width: 56px !important;
+  min-width: inherit;
 }
 .sprite {
   background: url('../img/sprites/sprite.png') no-repeat 0 0;
@@ -999,6 +1020,22 @@ textarea.form-control {
   top: 16px;
   width: 0;
   z-index: 2;
+}
+#modal-customized-tour .time-field a.shape-arrow {
+  position: relative !important;
+}
+#modal-customized-tour .time-field a.shape-arrow span:before {
+  border-left: 5px solid rgba(0, 0, 0, 0) !important;
+  border-top: 5px solid #4a4a4a !important;
+  border-right: 5px solid rgba(0, 0, 0, 0) !important;
+  border-bottom: 0 !important;
+  content: "" !important;
+  height: 0 !important;
+  left: 36px !important;
+  position: absolute !important;
+  top: 14px !important;
+  width: 0 !important;
+  z-index: 2 !important;
 }
 #modal-customized-tour .col-sm-6 a.shape-arrow {
   position: relative;
@@ -1315,6 +1352,11 @@ video {
 #fanontour-search-box .form-col-2 .btn-search {
   margin-top: 10px;
 }
+#fanontour-search-box .form-col-2 .time-field .dropdown-form .dropdown-menu {
+  max-width: 56px;
+  min-width: inherit;
+  margin-top: -10px;
+}
 #fanontour-search-box .form-col-3 label {
   width: 84px;
 }
@@ -1371,6 +1413,9 @@ video {
 #fanontour-search-box #age-field {
   display: none;
   margin-left: 15px;
+  position: absolute;
+  left: 220px;
+  top: 0;
 }
 .fanontour-mod {
   padding: 30px 0;

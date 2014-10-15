@@ -44,6 +44,7 @@
                       <label for="tour-hotel-field-02">Check in</label>
                       <?php 
                         $id_date = "datetimepicker_09";
+                        $class_input = "";
                         include('include/forms/date.html'); 
                       ?>
                     </div>
@@ -51,6 +52,7 @@
                     <label for="hotel-field-03">Check out</label>
                     <?php 
                       $id_date = "datetimepicker_10";
+                      $class_input = "";
                       include('include/forms/date.html'); 
                     ?>                      
                     </div>
@@ -81,6 +83,7 @@
                    <label for="tour-hotel-field-03">Departure date</label>
                     <?php 
                       $id_date = "datetimepicker_11";
+                      $class_input = "";
                       include('include/forms/date.html'); 
                     ?>
                     </div>
@@ -88,6 +91,7 @@
                     <label for="tour-hotel-field-04">Return date</label>
                     <?php 
                       $id_date = "datetimepicker_12";
+                      $class_input = "";
                       include('include/forms/date.html'); 
                     ?>  
                     </div>                    
@@ -115,6 +119,7 @@
                       <label for="tour-activity-field-02">From</label>
                       <?php 
                         $id_date = "datetimepicker_13";
+                        $class_input = "";
                         include('include/forms/date.html'); 
                       ?>
                     </div>
@@ -122,6 +127,7 @@
                       <label for="activity-field-03">To</label>
                       <?php 
                         $id_date = "datetimepicker_14";
+                        $class_input = "";
                         include('include/forms/date.html'); 
                       ?>
                     </div>                    
@@ -202,41 +208,12 @@
             </div>
             <div id="collapseCars" class="panel-collapse collapse">
               <div class="panel-body">
-                      <div class="form-group">
-                         <label for="tour-car-field-01">Country</label>
-                      
-                        <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
-                            <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-01" placeholder="Please select"></span></a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                            </ul>
-                        </div>
-                      </div>
-                      <div class="form-group"> 
-                        <label for="tour-car-field-02">City</label>
-                        <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
-                            <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control city_dest type-reset" id="car-field-02" placeholder="Please select"></span></a>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                              <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                            </ul>
-                        </div>
-                      </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label for="tour-car-field-01">City</label>
+                      <input type="text" class="form-control" id="tour-car-field-01" placeholder="City name">
+                    </div>
+                    <div class="col-sm-6">  
                       <div class="form-group">
                         <label for="tour-car-field-03">Location</label>
                         <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
@@ -254,6 +231,8 @@
                             </ul>
                         </div>
                       </div>
+                     </div>
+                   </div>   
                       <div class="checkbox "><!-- has-error -->
                           <label class="control-label">
                             <input type="checkbox" name="tourConditionsAccepted" id="tourConditionsAccepted" value="true" checked="checked"><span></span>
@@ -261,40 +240,12 @@
                           </label>
                       </div>
                       <div class="conditionsAccepted d-none">
-                        <div class="form-group">
-                          <label for="tour-car-field-04">Country</label>
-                          <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
-                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-04" placeholder="Please select"></span></a>
-                              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Spain</a></li>
-                              </ul>
-                          </div>
-                         </div>
-                         <div class="form-group"> 
+                       <div class="row">
+                        <div class="col-sm-6">
                           <label for="tour-car-field-05">City</label>
-                          <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
-                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control city_dest type-reset" id="car-field-05" placeholder="Please select"></span></a>
-                              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid</a></li>
-                              </ul>
-                          </div>
-                        </div>
+                       <input type="text" class="form-control" id="tour-car-field-05" placeholder="City name">
+                       </div>
+                       <div class="col-sm-6">
                         <div class="form-group">  
                           <label for="tour-car-field-06">Location</label>
                           <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
@@ -312,6 +263,9 @@
                               </ul>
                           </div>
                          </div> 
+                        </div>
+                       </div>
+
                       </div>
                       <div class="row">
                        <div class="col-sm-6">
@@ -320,20 +274,21 @@
                             $id_date = "datetimepicker_07";
                             include('include/forms/date.html'); 
                         ?>
-                        <div class="form-group">
-                          <label for="tour-car-field-08">Hour</label>
+                        <div class="form-group time-field">
+                          <label for="tour-car-field-08">Time</label>
                           <div class="dropdown dropdown-form">
-                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-08" placeholder="Please select"></span></a>
+                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-08"></span></a>
                               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                                 <li><a href="#" rel="nofollow">11</a></li>
                                 <li><a href="#" rel="nofollow">12</a></li>                            
                               </ul>
                           </div>
                         </div>
-                        <div class="form-group">    
-                          <label for="tour-car-field-09">Minute</label>
+                         <span>:</span>
+                        <div class="form-group time-field">    
+                          <label for="tour-car-field-09" class="sr-only">Minute</label>
                           <div class="dropdown dropdown-form">
-                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-09" placeholder="Please select"></span></a>
+                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-09"></span></a>
                               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                                 <li><a href="#" rel="nofollow">00</a></li>
                                 <li><a href="#" rel="nofollow">15</a></li>
@@ -349,20 +304,21 @@
                             $id_date = "datetimepicker_16";
                             include('include/forms/date.html'); 
                         ?>
-                        <div class="form-group">
-                          <label for="tour-car-field-11">Hour</label>
+                        <div class="form-group time-field">
+                          <label for="tour-car-field-11">Time</label>
                           <div class="dropdown dropdown-form">
-                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-11" placeholder="Please select"></span></a>
+                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-11"></span></a>
                               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                                 <li><a href="#" rel="nofollow">11</a></li>
                                 <li><a href="#" rel="nofollow">12</a></li>                            
                               </ul>
                           </div>
                         </div>
-                        <div class="form-group">    
-                          <label for="tour-car-field-12">Minute</label>
+                        <span>:</span>
+                        <div class="form-group time-field">    
+                          <label for="tour-car-field-12" class="sr-only">Minute</label>
                           <div class="dropdown dropdown-form">
-                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-12" placeholder="Please select"></span></a>
+                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-12"></span></a>
                               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                                 <li><a href="#" rel="nofollow">00</a></li>
                                 <li><a href="#" rel="nofollow">15</a></li>
@@ -371,14 +327,15 @@
                               </ul>
                           </div>
                         </div>
-                        <div class="checkbox tourCheckbox-message"><!-- has-error -->
+                        
+                       </div> 
+                </div>
+                <div class="checkbox tourCheckbox-message"><!-- has-error -->
                           <label class="control-label">
                             <input type="checkbox" name="driverage" id="driver-over-25" checked="checked"><span></span>
                               Driver aged between 25 – 70?                                                
                           </label>
                         </div>
-                       </div> 
-                </div>
               </div>
             </div>
          </div>
