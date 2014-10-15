@@ -109,7 +109,6 @@ $( document ).ready(function() { //DOM OK!
 		});
 
 		$('.date input').change(function () {
-			alert($(this).val());
 			var date = $(this).closest(".input-group").data("DateTimePicker").getDate();
 			$(this).closest(".input-group").data("DateTimePicker").setMinDate(new Date(date));	
 
