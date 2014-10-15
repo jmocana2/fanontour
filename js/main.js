@@ -108,8 +108,8 @@ $( document ).ready(function() { //DOM OK!
 			pickTime: false
 		});
 
-		$('.departure-date').click(function () {
-			alert($(this).attr("value"));
+		$('.date input').change(function () {
+			alert($(this).val());
 			var date = $(this).closest(".input-group").data("DateTimePicker").getDate();
 			$(this).closest(".input-group").data("DateTimePicker").setMinDate(new Date(date));	
 
@@ -132,7 +132,7 @@ $( document ).ready(function() { //DOM OK!
 	});
 
 	//Rental car (drop off)
-	/*$( "#driver-over-25" ).click(function() {
+	$("#driver").click(function() {
 		if($(this).attr("value") == "true"){
 			$("#age-field").css("display", "inline");
 			$(this).attr("value","false");
@@ -140,7 +140,7 @@ $( document ).ready(function() { //DOM OK!
 			$("#age-field").fadeOut();
 			$(this).attr("value","true");
 		}
-	});*/
+	});
 
 	//Copy cities in customized tour
 	$(".city_dest").focusout(function() {
