@@ -178,3 +178,21 @@
 	}
 }
 
+.shape-arrow-responsive (@radius, @color, @x, @y) {
+	position: relative;
+
+	span:before{
+		border-left: @radius solid rgba(0, 0, 0, 0);
+		border-bottom: @radius solid @color;
+		border-right: @radius solid rgba(0, 0, 0, 0);
+		border-top: 0;
+		content: "";
+		height: 0;
+		right: @x;
+		position: absolute;
+		top: @y;
+		width: 0;
+		z-index: 2;
+	}
+}
+

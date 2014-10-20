@@ -42,20 +42,9 @@
 	<!--     -->
 	
 	<!-- JS -->
-	<script src="public/vendor/jquery/jquery.js"></script>
-	<script src="public/vendor/jquery/jquery.lazyload.min.js"></script>
-	<script src="public/vendor/modernizr/modernizr_2.8.3.js"></script>	
-	<script src="public/vendor/bootstrap/bootstrap.js"></script>
-	<script src="public/vendor/bower-components/moment/min/moment.min.js"></script>
-	<script src="public/vendor/bower-components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script src="js/main.js"></script>
+	<script src="public/vendor/modernizr/modernizr_2.8.3.js"></script>
+	<!--     -->	
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->	
-	<!--    -->
 
 </head>
 <body id="home" class="en">
@@ -93,6 +82,7 @@
 
 
 			<section id="fanontour-search-box">
+				<h1 class="sr-only">Search box</h1>
 				<div class="container relative">
 					<div class="tab tab-default">
 				
@@ -114,14 +104,14 @@
 					          <li><a href="#tab-activities" tabindex="-1" role="tab" data-toggle="tab" title="search activities">Activities</a></li>
 					          <li><a href="#tab-restaurants" tabindex="-1" role="tab" data-toggle="tab" title="search restaurants">Restaurants</a></li>
 					          <li><a href="#tab-rent-car" tabindex="-1" role="tab" data-toggle="tab" title="search rental cars">Rental cars</a></li>
-					          <li><a class="relative" href="#tab-tour" tabindex="-1" role="tab" data-toggle="tab" title="make your cutomized tour">Customized tour <span class="text-new-feature"><span>New!</span></span></a></li>
+					          <li><a class="relative customized-tour" href="#tab-tour" tabindex="-1" role="tab" data-toggle="tab" title="make your cutomized tour">Customized tour <span class="text-new-feature"><span>New!</span></span></a></li>
 					        </ul>
 					      </li>
 						</ul>
 						
 						<!-- Tab panes -->
 						<div class="tab-content clearfix">
-						  <div class="tab-pane" id="tab-tickets">
+						  <div class="tab-pane active" id="tab-tickets">
 						  		<section id="fanontour-search-tickets">
 						  			<header>
 										<h1>Get your tickets now! </h1>
@@ -151,16 +141,16 @@
 											    	<label for="hotel-field-01">Going to</label>
 											   		<input type="text" class="form-control" id="hotel-field-01" placeholder="City name">
 											    </fieldset>
-											    <label for="hotel-field-02">Check in</label>
+											    <label for="datetimepicker_01">Check in</label>
 											    <?php 
 											    	$id_date = "datetimepicker_01";
-											    	$class_input = "departure-date";
+											    	$class_input = "start_date";
 											    	include('include/forms/date.html'); 
 											    ?>
-											    <label for="hotel-field-03">Check out</label>
+											    <label for="datetimepicker_02">Check out</label>
 											    <?php 
 											    	$id_date = "datetimepicker_02";
-											    	$class_input = "arrive-date";
+											    	$class_input = "end-date";
 											    	include('include/forms/date.html'); 
 											    ?>
 											    <div class="text-center">
@@ -184,16 +174,16 @@
 											   	<input type="text" class="form-control city_ori" id="flight-field-01" placeholder="City name">
 											   	<label for="flight-field-02">To</label>
 											   	<input type="text" class="form-control" id="flight-field-02" placeholder="City name">											    
-											    <label for="hotel-field-03">Departure date</label>
+											    <label for="datetimepicker_03">Departure date</label>
 											    <?php 
 											    	$id_date = "datetimepicker_03";
-											    	$class_input = "departure-date";
+											    	$class_input = "start_datee";
 											    	include('include/forms/date.html'); 
 											    ?>
-											    <label for="hotel-field-04">Return date</label>
+											    <label for="datetimepicker_04">Return date</label>
 											    <?php 
 											    	$id_date = "datetimepicker_04";
-											    	$class_input = "";
+											    	$class_input = "end-date";
 											    	include('include/forms/date.html'); 
 											    ?>
 											    <div class="text-center">
@@ -217,16 +207,16 @@
 											    	<label for="activity-field-01">City</label>
 											   		<input type="text" class="form-control" id="activity-field-01" placeholder="City name">
 											    </fieldset>
-											    <label for="activity-field-02">From</label>
+											    <label for="datetimepicker_05">From</label>
 											    <?php 
 											    	$id_date = "datetimepicker_05";
-											    	$class_input = "";
+											    	$class_input = "start_date";
 											    	include('include/forms/date.html'); 
 											    ?>
-											    <label for="activity-field-03">To</label>
+											    <label for="datetimepicker_06">To</label>
 											    <?php 
 											    	$id_date = "datetimepicker_06";
-											    	$class_input = "";
+											    	$class_input = "end-date";
 											    	include('include/forms/date.html'); 
 											    ?>
 											    <div class="text-center">
@@ -252,8 +242,9 @@
 											   	<input type="text" class="form-control" id="restaurant-field-01" placeholder="Restaurant name">	   												    
 											    <label for="restaurant-field-03">Cuisine</label>
 											    <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
-												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control" id="cusine-field-03" placeholder="Cuisine type"></span></a>
-												  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+												  <a class="shape-arrow" href="#"><span></span></a>
+												  <input type="text" class="form-control" id="restaurant-field-03" placeholder="Cuisine type" data-toggle="dropdown" >
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="restaurant-field-03">
 												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
 												    <li class="col-sm-3"><a href="#" rel="nofollow">Italian</a></li>
 												    <li class="col-sm-3"><a href="#" rel="nofollow">American</a></li>
@@ -297,7 +288,7 @@
 									</div>
 						  		</section>
 						  </div>
-						  <div class="tab-pane active" id="tab-rent-car">
+						  <div class="tab-pane" id="tab-rent-car">
 						  		<section id="fanontour-search-rent-car">
 						  			<header>
 										<h1>Rent a car!</h1>
@@ -309,8 +300,9 @@
 											<input type="text" class="form-control small-field-h" id="car-field-01" placeholder="City name">											
 											<label for="car-field-02">Location</label>
 											<div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
-												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control small-field-h" id="car-field-02" placeholder="Please select"></span></a>
-												  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+												  <a class="shape-arrow" data-toggle="dropdown" href="#"><span></span></a>
+												  <input type="text" class="form-control small-field-h" id="car-field-02" placeholder="Please select"  data-toggle="dropdown">
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-02">
 												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
 												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
 												    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
@@ -333,8 +325,9 @@
 												<input type="text" class="form-control small-field-h" id="car-field-03" placeholder="City name">	
 												<label for="car-field-04">Location</label>
 												<div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
-													  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control small-field-h" id="car-field-04" placeholder="Please select"></span></a>
-													  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+													  <a class="shape-arrow" href="#"><span></span></a>
+													  <input type="text" class="form-control small-field-h" id="car-field-04" placeholder="Please select"  data-toggle="dropdown">
+													  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-04">
 													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
 													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
 													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
@@ -348,17 +341,18 @@
 												</div>
 											</div>
 											<div class="clearfix">
-												<label for="car-field-07">Pick up date</label>
+												<label for="datetimepicker_07">Pick up date</label>
 												<?php 
 												   	$id_date = "datetimepicker_07";
-												   	$class_input = "small-field-h";
+												   	$class_input = "start-date small-field-h";
 												   	include('include/forms/date.html'); 
 												?>
 												<div class="time-field dinline-block">
 													<label for="car-field-08">Time</label>
 													<div class="dropdown dropdown-form small-field-w">
-														  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control small-field-h" id="car-field-08"></span></a>
-														  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+														  <a class="shape-arrow"  href="#"><span></span></a>
+														  <input type="text" class="form-control small-field-h" id="car-field-08" data-toggle="dropdown">
+														  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-08">
 														    <li><a href="#" rel="nofollow">11</a></li>
 														    <li><a href="#" rel="nofollow">12</a></li>												    
 														  </ul>
@@ -366,8 +360,9 @@
 													<span>:</span>												
 													<label for="car-field-09" class="sr-only">Minute</label>
 													<div class="dropdown dropdown-form small-field-w">
-														  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control small-field-h" id="car-field-09"></span></a>
-														  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+														  <a class="shape-arrow" href="#"><span></span></a>
+														  <input type="text" class="form-control small-field-h" id="car-field-09" data-toggle="dropdown">
+														  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-09">
 														    <li><a href="#" rel="nofollow">00</a></li>
 														    <li><a href="#" rel="nofollow">15</a></li>
 														    <li><a href="#" rel="nofollow">30</a></li>
@@ -376,17 +371,18 @@
 													</div>
 												</div>	
 											</div>
-											<label for="car-field-10" class="">Drop off date</label>
+											<label for="datetimepicker_08" class="">Drop off date</label>
 											<?php 
 											   	$id_date = "datetimepicker_08";
-											   	$class_input = "small-field-h";
+											   	$class_input = "end-date small-field-h";
 											   	include('include/forms/date.html'); 
 											?>
 											<div class="time-field dinline-block">
 												<label for="car-field-11">Time</label>
 												<div class="dropdown dropdown-form small-field-w">
-													  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control small-field-h" id="car-field-11"></span></a>
-													  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+													  <a class="shape-arrow" href="#"><span></span></a>
+													  <input type="text" class="form-control small-field-h" id="car-field-11" data-toggle="dropdown">
+													  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-11">
 													    <li><a href="#" rel="nofollow">11</a></li>
 													    <li><a href="#" rel="nofollow">12</a></li>												    
 													  </ul>
@@ -394,8 +390,9 @@
 												<span>:</span>
 												<label for="car-field-12" class="sr-only">Minute</label>
 												<div class="dropdown dropdown-form small-field-w">
-													  <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control small-field-h" id="car-field-12"></span></a>
-													  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+													  <a class="shape-arrow" href="#"><span></span></a>
+													  <input type="text" class="form-control small-field-h" id="car-field-12" data-toggle="dropdown">
+													  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-12">
 													    <li><a href="#" rel="nofollow">00</a></li>
 													    <li><a href="#" rel="nofollow">15</a></li>
 													    <li><a href="#" rel="nofollow">30</a></li>
@@ -408,11 +405,11 @@
 	                                        		<input type="checkbox" name="driverage" id="driver" class="small-field-w small-field-h" checked="checked" value="true"><span></span>
 	                                            	Driver aged between 25 – 70                                                 
 	                                          	</label>
-	                                          <span id="car-tooltip" class="glyphicon glyphicon-question-sign"  data-toggle="tooltip" data-placement="top" title="Drivers under 25 or over 70 may have to pay extra, so please check the cars terms and conditions"></span>
+	                                          <span class="glyphicon glyphicon-question-sign car-tooltip"  data-toggle="tooltip" data-placement="top" title="Drivers under 25 or over 70 may have to pay extra, so please check the cars terms and conditions"></span>
 	                                          	<div class="positionr">
-	                                          		<div id="age-field">
+	                                          		<div class="age-field">
 	                                          			<label for="car-field13">Age</label>
-											   			<input type="text" class="form-control small-field-w small-field-h" id="car-field13" checked>
+											   			<input type="text" class="form-control small-field-w small-field-h" id="car-field13">
 											   		</div>
 											   	</div>
 	                                    	</div>	
@@ -455,7 +452,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="Full Madona Concert. Great Concert!" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -469,7 +466,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -483,7 +480,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -497,7 +494,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -511,7 +508,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -525,7 +522,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -539,7 +536,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -553,7 +550,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madona_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -579,7 +576,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="Saint petersburg and Roma" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -593,7 +590,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -605,7 +602,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -617,7 +614,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -629,7 +626,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -641,7 +638,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -653,7 +650,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -665,7 +662,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
 								</div>
 								<div class="fanontour-details">
 									<div>
@@ -689,7 +686,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
 									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>	
 								</div>
 								<div class="fanontour-details">
@@ -705,7 +702,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/rural_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/rural_262x196.jpg" data-original="img/photos/rural_262x196.jpg" alt="#">
 									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
 								</div>
 								<div class="fanontour-details">
@@ -721,7 +718,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>									
-									<img class="lazy" data-original="img/photos/atleti_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/atleti_262x196.jpg" data-original="img/photos/atleti_262x196.jpg" alt="#">
 									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
 								</div>
 								<div class="fanontour-details">
@@ -737,7 +734,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/tapas_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/tapas_262x196.jpg" data-original="img/photos/tapas_262x196.jpg" alt="#">
 									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
 								</div>
 								<div class="fanontour-details">
@@ -753,7 +750,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
 									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
 								</div>
 								<div class="fanontour-details">
@@ -769,7 +766,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
 									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
 								</div>
 								<div class="fanontour-details">
@@ -785,7 +782,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
 									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
 								</div>
 								<div class="fanontour-details">
@@ -801,7 +798,7 @@
 							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
 								<div class="fanontour-bg-img">
 									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
-									<img class="lazy" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
 									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
 								</div>
 								<div class="fanontour-details">
@@ -824,5 +821,22 @@
 	<!-- FOOTER -->
 	<?php include('include/template/footer.html'); ?>
 	<!-- -->
+
+	<!-- JS -->
+	<script src="public/vendor/jquery/jquery.js"></script>
+	<script src="public/vendor/jquery/jquery.lazyload.min.js"></script>
+	<script src="public/vendor/bootstrap/bootstrap.js"></script>
+	<script src="public/vendor/bower-components/moment/min/moment.min.js"></script>
+	<script src="public/vendor/bower-components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script src="js/main.js"></script>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->	
+	<!--    -->
+
+
 </body>
 </html>
