@@ -28,7 +28,7 @@
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseHotels">
-                  Hotels <span class="fanontour-icon icon-icons-fanontour_hotel floatr"></span>
+                  Hotels <span class="fanontour-icon icon-icons-fanontour_hotel floatr">
                 </a>
               </h4>
             </div>
@@ -41,18 +41,18 @@
                   </fieldset>
                   <div class="row">
                     <div class="col-sm-6">
-                      <label for="datetimepicker_09">Check in</label>
+                      <label for="tour-hotel-field-02">Check in</label>
                       <?php 
                         $id_date = "datetimepicker_09";
-                        $class_input = "start_date";
+                        $class_input = "";
                         include('include/forms/date.html'); 
                       ?>
                     </div>
                     <div class="col-sm-6">
-                    <label for="datetimepicker_10">Check out</label>
+                    <label for="hotel-field-03">Check out</label>
                     <?php 
                       $id_date = "datetimepicker_10";
-                      $class_input = "end-date";
+                      $class_input = "";
                       include('include/forms/date.html'); 
                     ?>                      
                     </div>
@@ -64,7 +64,7 @@
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseFlights">
-                  Flights <span class="fanontour-icon icon-icons-fanontour_flight floatr"></span>
+                  Flights <span class="fanontour-icon icon-icons-fanontour_flight floatr">
                 </a>
               </h4>
             </div>
@@ -80,18 +80,18 @@
                     <input type="text" class="form-control city_dest type-reset" id="tour-flight-field-02" placeholder="City">                          
                   </div>  
                   <div class="col-sm-6">
-                   <label for="datetimepicker_11">Departure date</label>
+                   <label for="tour-hotel-field-03">Departure date</label>
                     <?php 
                       $id_date = "datetimepicker_11";
-                      $class_input = "start-date";
+                      $class_input = "";
                       include('include/forms/date.html'); 
                     ?>
                     </div>
                     <div class="col-sm-6">
-                    <label for="datetimepicker_12">Return date</label>
+                    <label for="tour-hotel-field-04">Return date</label>
                     <?php 
                       $id_date = "datetimepicker_12";
-                      $class_input = "end-date";
+                      $class_input = "";
                       include('include/forms/date.html'); 
                     ?>  
                     </div>                    
@@ -103,7 +103,7 @@
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseActivities">
-                  Activities <span class="fanontour-icon icon-icons-fanontour_activity floatr"></span>
+                  Activities <span class="fanontour-icon icon-icons-fanontour_activity floatr">
                 </a>
               </h4>
             </div>
@@ -116,18 +116,18 @@
                   </fieldset>
                   <div class="row">
                      <div class="col-sm-6">
-                      <label for="datetimepicker_13">From</label>
+                      <label for="tour-activity-field-02">From</label>
                       <?php 
                         $id_date = "datetimepicker_13";
-                        $class_input = "start-date";
+                        $class_input = "";
                         include('include/forms/date.html'); 
                       ?>
                     </div>
                     <div class="col-sm-6">  
-                      <label for="datetimepicker_14">To</label>
+                      <label for="activity-field-03">To</label>
                       <?php 
                         $id_date = "datetimepicker_14";
-                        $class_input = "end-date";
+                        $class_input = "";
                         include('include/forms/date.html'); 
                       ?>
                     </div>                    
@@ -139,7 +139,7 @@
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseRestaurants">
-                  Restaurants <span class="fanontour-icon icon-icons-fanontour_restaurant floatr"></span>
+                  Restaurants <span class="fanontour-icon icon-icons-fanontour_restaurant floatr">
                 </a>
               </h4>
             </div>
@@ -157,9 +157,8 @@
                     <div class="form-group col-sm-6">  
                         <label for="tour-restaurant-field-03">Cuisine</label>
                         <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
-                        <a class="shape-arrow" data-toggle="dropdown" href="#"><span></span></a>
-                        <input type="text" class="form-control type-reset" id="tour-restaurant-field-03" placeholder="Cuisine type">
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="tour-restaurant-field-03">
+                        <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="cusine-field-03" placeholder="Cuisine type"></span></a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                           <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
                           <li class="col-sm-3"><a href="#" rel="nofollow">Italian</a></li>
                           <li class="col-sm-3"><a href="#" rel="nofollow">American</a></li>
@@ -203,7 +202,7 @@
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseCars">
-                  Rental cars <span class="fanontour-icon icon-icons-fanontour_cars floatr"></span>
+                  Rental cars <span class="fanontour-icon icon-icons-fanontour_cars floatr">
                 </a>
               </h4>
             </div>
@@ -212,15 +211,14 @@
                   <div class="row">
                     <div class="col-sm-6">
                       <label for="tour-car-field-01">City</label>
-                      <input type="text" class="form-control city_dest" id="tour-car-field-01" placeholder="City name">
+                      <input type="text" class="form-control" id="tour-car-field-01" placeholder="City name">
                     </div>
                     <div class="col-sm-6">  
                       <div class="form-group">
                         <label for="tour-car-field-03">Location</label>
                         <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
-                            <a class="shape-arrow" data-toggle="dropdown" href="#"><span></span></a>
-                            <input type="text" class="form-control type-reset" id="tour-car-field-03" placeholder="Please select">
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="tour-car-field-03">
+                            <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-03" placeholder="Please select"></span></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                               <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
                               <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
                               <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
@@ -245,15 +243,14 @@
                        <div class="row">
                         <div class="col-sm-6">
                           <label for="tour-car-field-05">City</label>
-                       <input type="text" class="form-control city_dest" id="tour-car-field-05" placeholder="City name">
+                       <input type="text" class="form-control" id="tour-car-field-05" placeholder="City name">
                        </div>
                        <div class="col-sm-6">
                         <div class="form-group">  
                           <label for="tour-car-field-06">Location</label>
                           <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
-                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span></span></a>
-                              <input type="text" class="form-control type-reset" id="tour-car-field-06" placeholder="Please select">
-                              <ul class="dropdown-menu" role="menu" aria-labelledby="tour-car-field-06">
+                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-06" placeholder="Please select"></span></a>
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                                 <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
                                 <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
                                 <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
@@ -272,18 +269,16 @@
                       </div>
                       <div class="row">
                        <div class="col-sm-6">
-                        <label for="datetimepicker_15">Pick up date</label>
+                        <label for="tour-car-field-15">Pick up date</label>
                         <?php 
-                            $id_date = "datetimepicker_15";
-                            $class_input = "start-date";
+                            $id_date = "datetimepicker_07";
                             include('include/forms/date.html'); 
                         ?>
                         <div class="form-group time-field">
                           <label for="tour-car-field-08">Time</label>
                           <div class="dropdown dropdown-form">
-                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span></span></a>
-                              <input type="text" class="form-control type-reset" id="tour-car-field-08">
-                              <ul class="dropdown-menu" role="menu" aria-labelledby="tour-car-field-08">
+                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-08"></span></a>
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                                 <li><a href="#" rel="nofollow">11</a></li>
                                 <li><a href="#" rel="nofollow">12</a></li>                            
                               </ul>
@@ -293,9 +288,8 @@
                         <div class="form-group time-field">    
                           <label for="tour-car-field-09" class="sr-only">Minute</label>
                           <div class="dropdown dropdown-form">
-                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span></span></a>
-                              <input type="text" class="form-control type-reset" id="tour-car-field-09">
-                              <ul class="dropdown-menu" role="menu" aria-labelledby="tour-car-field-09">
+                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-09"></span></a>
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                                 <li><a href="#" rel="nofollow">00</a></li>
                                 <li><a href="#" rel="nofollow">15</a></li>
                                 <li><a href="#" rel="nofollow">30</a></li>
@@ -305,18 +299,16 @@
                         </div> 
                        </div> 
                         <div class="col-sm-6">
-                        <label for="datetimepicker_16">Drop off date</label>
+                        <label for="tour-car-field-10">Drop off date</label>
                         <?php 
                             $id_date = "datetimepicker_16";
-                            $class_input = "end-date";
                             include('include/forms/date.html'); 
                         ?>
                         <div class="form-group time-field">
                           <label for="tour-car-field-11">Time</label>
                           <div class="dropdown dropdown-form">
-                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span></span></a>
-                              <input type="text" class="form-control type-reset" id="tour-car-field-11">
-                              <ul class="dropdown-menu" role="menu" aria-labelledby="tour-car-field-11">
+                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-11"></span></a>
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                                 <li><a href="#" rel="nofollow">11</a></li>
                                 <li><a href="#" rel="nofollow">12</a></li>                            
                               </ul>
@@ -326,9 +318,8 @@
                         <div class="form-group time-field">    
                           <label for="tour-car-field-12" class="sr-only">Minute</label>
                           <div class="dropdown dropdown-form">
-                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span></span></a>
-                              <input type="text" class="form-control type-reset" id="tour-car-field-12">
-                              <ul class="dropdown-menu" role="menu" aria-labelledby="tour-car-field-12">
+                              <a class="shape-arrow" data-toggle="dropdown" href="#"><span><input type="text" class="form-control type-reset" id="car-field-12"></span></a>
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                                 <li><a href="#" rel="nofollow">00</a></li>
                                 <li><a href="#" rel="nofollow">15</a></li>
                                 <li><a href="#" rel="nofollow">30</a></li>
@@ -341,16 +332,9 @@
                 </div>
                 <div class="checkbox tourCheckbox-message"><!-- has-error -->
                           <label class="control-label">
-                            <input type="checkbox" name="driverage" id="tour-driver" checked="checked" value="true"><span></span>
-                              Driver aged between 25 – 70                                              
+                            <input type="checkbox" name="driverage" id="driver-over-25" checked="checked"><span></span>
+                              Driver aged between 25 – 70?                                                
                           </label>
-                          <span class="glyphicon glyphicon-question-sign car-tooltip"  data-toggle="tooltip" data-placement="top" title="Drivers under 25 or over 70 may have to pay extra, so please check the cars terms and conditions"></span>
-                            <div class="positionr">
-                              <div class="age-field">
-                              <label for="tour-car-field13">Age</label>
-                              <input type="text" class="form-control small-field-w small-field-h" id="tour-car-field13">
-                            </div>
-                          </div>
                         </div>
               </div>
             </div>

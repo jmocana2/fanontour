@@ -1,6 +1,26 @@
-var calendar;
-
 $( document ).ready(function() { //DOM OK! 
+
+  	//FUNCTIONS
+
+  	// Función que suma o resta días a la fecha indicada
+ 	// plus dates
+	sumaFecha = function(d, fecha)
+	{
+		 var Fecha = new Date();
+		 var sFecha = fecha || (Fecha.getDate() + "/" + (Fecha.getMonth() +1) + "/" + Fecha.getFullYear());
+		 var sep = sFecha.indexOf('/') != -1 ? '/' : '-'; 
+		 var aFecha = sFecha.split(sep);
+		 var fecha = aFecha[2]+'/'+aFecha[1]+'/'+aFecha[0];
+		 fecha= new Date(fecha);
+		 fecha.setDate(fecha.getDate()+parseInt(d));
+		 var anno=fecha.getFullYear();
+		 var mes= fecha.getMonth()+1;
+		 var dia= fecha.getDate();
+		 mes = (mes < 10) ? ("0" + mes) : mes;
+		 dia = (dia < 10) ? ("0" + dia) : dia;
+		 var fechaFinal = dia+sep+mes+sep+anno;
+		 return (fechaFinal);
+	}
 
   	//Lazy load
   	if($("img.lazy").length){
@@ -88,10 +108,14 @@ $( document ).ready(function() { //DOM OK!
 			pickTime: false
 		});
 
-		$('.glyphicon-calendar').click(function () {
+		$('.date input').change(function () {
 			var date = $(this).closest(".input-group").data("DateTimePicker").getDate();
-			$(this).closest(".input-group").data("DateTimePicker").setMinDate(new Date(date));		
-			var str = $(this).parent().prev().attr("class");			
+			$(this).closest(".input-group").data("DateTimePicker").setMinDate(new Date(date));	
+
+			/*if($(this).parent().attr("class").indexOf("departure-date") == -1){
+				var arrival_date = sumaFecha(7, $(this).parent().attr("value"))
+				$(this).closest("form").find(".arrive-date").attr("value", arrival_date)
+			}*/		
 		});	
 	}	
 
@@ -107,26 +131,21 @@ $( document ).ready(function() { //DOM OK!
 	});
 
 	//Rental car (drop off)
-	$("#driver, #tour-driver").click(function() {
+	$("#driver").click(function() {
 		if($(this).attr("value") == "true"){
-			$(this).closest(".checkbox").find(".age-field").css("display", "inline");
+			$("#age-field").css("display", "inline");
 			$(this).attr("value","false");
 		}else{
-			$(this).closest(".checkbox").find(".age-field").fadeOut();
+			$("#age-field").fadeOut();
 			$(this).attr("value","true");
 		}
 	});
 
-	//Copy cities in customized tour	
+	//Copy cities in customized tour
 	$(".city_dest").focusout(function() {
-		if(!($(".city-active").length)){
-			var city_dest = $(this).val();
-			$(this).closest("#modal-customized-tour").find(".city_dest").val(city_dest);
-			$("#modal-customized-tour").addClass("city-active");    
-		}		
+		var city_dest = $(this).val();
+		$(this).closest("#modal-customized-tour").find(".city_dest").val(city_dest);    	
   	});
-
-  	
 
 	//Geolocalización
 	if($(".city_ori").length){
@@ -208,36 +227,7 @@ $( document ).ready(function() { //DOM OK!
 	//TOOLTIPS
 	//
 	//Car information
-	if($(".car-tooltip").length){
-		$('.car-tooltip').tooltip()
+	if($("#car-tooltip").length){
+		$('#car-tooltip').tooltip()
 	}	
 });
-
-//FUNCTIONS
-
-// Función que suma o resta días a la fecha indicada
-// plus dates
-sumaFecha = function(d, fecha)
-{
-	 var Fecha = new Date();
-	 var sFecha = fecha || (Fecha.getDate() + "/" + (Fecha.getMonth() +1) + "/" + Fecha.getFullYear());
-	 var sep = sFecha.indexOf('/') != -1 ? '/' : '-'; 
-	 var aFecha = sFecha.split(sep);
-	 var fecha = aFecha[2]+'/'+aFecha[1]+'/'+aFecha[0];
-	 fecha= new Date(fecha);
-	 fecha.setDate(fecha.getDate()+parseInt(d));
-	 var anno=fecha.getFullYear();
-	 var mes= fecha.getMonth()+1;
-	 var dia= fecha.getDate();
-	 mes = (mes < 10) ? ("0" + mes) : mes;
-	 dia = (dia < 10) ? ("0" + dia) : dia;
-	 var fechaFinal = dia+sep+mes+sep+anno;
-	 return (fechaFinal);
-}
-
-//min calendar arrive date
-function caparFecha(h, m, y){
-	var fecha = h.text() + "/" + (parseInt(m) + 1) + "/" + y;
-	var fecha2 = sumaFecha(7, fecha);
-	
-}
