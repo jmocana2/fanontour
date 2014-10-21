@@ -245,6 +245,9 @@ input[data-toggle="dropdown"] {
 .icon-icons-fanontour_menu:before {
   content: "\e60c";
 }
+.icon-icons-fanontour_trash:before {
+  content: "\e60d";
+}
 .no-margin {
   margin: 0 !important;
 }
@@ -917,6 +920,9 @@ textarea.form-control {
 .panel-accordion .panel-heading.active h4 a {
   color: #ffffff;
 }
+.panel-accordion .panel-heading.has-error {
+  background-color: #b00808;
+}
 .form-default {
   padding-top: 20px;
 }
@@ -989,6 +995,9 @@ textarea.form-control {
   max-width: 56px !important;
   min-width: inherit;
 }
+.time-field .form-group {
+  vertical-align: inherit;
+}
 .sprite {
   background: url('../img/sprites/sprite.png') no-repeat 0 0;
 }
@@ -1054,6 +1063,14 @@ textarea.form-control {
 }
 #modal-customized-tour .age-field input {
   display: inline;
+}
+#modal-customized-tour .btn-reset {
+  float: right;
+  margin-top: 15px;
+  padding-left: 10px;
+}
+#modal-customized-tour .btn-reset span {
+  padding-right: 5px;
 }
 #modal-customized-tour .col-sm-6 a.shape-arrow {
   position: relative;

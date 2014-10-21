@@ -47,7 +47,7 @@ $( document ).ready(function() { //DOM OK!
 			  	})
 			}  	
 			else{
-				event.preventdefault();
+				event.preventDefault();
 			}  	
 		  	
 		});
@@ -55,7 +55,7 @@ $( document ).ready(function() { //DOM OK!
 
 	//ACCORDION
 	//title
-	$( "#modal-customized-tour input, #modal-customized-tour .glyphicon-calendar" ).click(function() {
+	$( "#modal-customized-tour input, #modal-customized-tour .glyphicon-calendar, #modal-customized-tour .dropdown" ).click(function() {
 		$(this).closest(".panel").find(".panel-heading").addClass("active");
 	});	
 
@@ -167,7 +167,80 @@ $( document ).ready(function() { //DOM OK!
 
 	  
 	//Validations
-	//
+	//Fields
+	//Empty field
+	function validarVacio(campo){
+		var valor = $(campo).val();	
+		if(valor == ""){
+			$(campo).closest(".form-group").addClass("has-error error-empty");			
+		}
+		else{
+			$(campo).closest(".form-group").removeClass("has-error error-empty");			
+		}
+	}
+
+	function validarVacioAll(form){
+		var validado = 0;
+		var campos = $(form).find("input");
+
+		for(i=0; i<campos.length; i++){
+			if($(campos).eq(i).val() != ""){
+				validado = 1;
+			}
+			else{
+				$(form).find(".form-group").addClass("has-error");
+			}
+		}
+		if(!(validado)){
+			event.preventDefault();
+		}		
+	}
+
+	function ageDriver(campo){
+		if(!($(campo).val() >= 25 && $(campo).val() <= 70)){
+			$(campo).closest(".form-group").addClass("has-error");
+			event.preventDefault();
+		}
+	}
+
+	//General input validation
+	$("input[required]").focusout(function() {
+		validarVacio($(this));
+	});	
+
+	$( ".dropdown-menu a" ).click(function() {
+		var campo = $(this).closest(".dropdown-menu").prev("input");
+		setTimeout(function(){validarVacio(campo)}, 300);
+	});	
+	
+	//Panel errors
+	function panelErrors(panel){
+		if($(panel).find(".has-error").length){
+			$(panel).closest(".panel").find(".panel-heading").addClass("has-error");
+		}else{
+			$(panel).closest(".panel").find(".panel-heading").removeClass("has-error");
+		}	
+	}
+
+	//Panels validation
+	function validateMandatoryPanel(panel){
+		if($(panel).find(".error-empty").length){
+			$(".alert-empty").fadeIn();			
+			event.preventDefault();
+		}		
+	}
+
+	//None Search
+	function validateOneSearch(panel){
+		if(!($(panel).find(".active").length)){
+			$(".alert-none-search").fadeIn();
+			event.preventDefault();
+		}
+		else{
+			$(".alert-none-search").fadeOut();
+		}		
+	}
+
 	//Email validation
 	var emailreg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
    
@@ -190,6 +263,131 @@ $( document ).ready(function() { //DOM OK!
 	        }	        
 		});	
 	}
+
+	//Home search
+	if($("#fanontour-search-box").length){
+		//Tickets
+		$( "#tab-tickets .btn" ).click(function() {
+			validarVacio($("#event-01"));
+		});
+
+		//Hotels
+		$( "#tab-hotels .btn" ).click(function() {
+			validarVacio($("#hotel-field-01"));
+		});
+
+		//Flights
+		$( "#tab-flights .btn" ).click(function() {
+			validarVacio($("#flight-field-02"));
+		});	
+
+		//Activities
+		$( "#tab-activities .btn" ).click(function() {
+			validarVacio($("#activity-field-01"));
+		});	
+
+		//Restaurants
+		$( "#tab-restaurants .btn" ).click(function() {
+			validarVacioAll($("#tab-restaurants form"));			
+		});	
+
+		//Rental cars
+		$( "#tab-rent-car .btn" ).click(function() {
+			validarVacio($("#car-field-01"));
+			validarVacio($("#car-field-02"));
+			validarVacio($("#car-field-08"));
+			validarVacio($("#car-field-09"));
+			validarVacio($("#car-field-11"));
+			validarVacio($("#car-field-12"));
+
+			//Return car location
+			if($("#conditionsAccepted").val() == "false"){
+				validarVacio($("#car-field-03"));
+				validarVacio($("#car-field-04"));
+			}
+
+			//Driver age
+			if($("#driver").val() == "false"){
+				validarVacio($("#car-field-13"));
+				ageDriver($("#car-field13"));
+			}					
+		});
+	}
+
+	//Customized Tour
+	if($("#modal-customized-tour").length){
+		$( ".btn-reset" ).click(function() {
+			$(this).closest(".panel-body").find("input").val("");
+			$(this).closest(".panel").find(".panel-heading").removeClass("active");
+			$(this).closest(".panel").find(".has-error").removeClass("has-error");
+		});	
+
+		$( "#modal-customized-tour .btn-search" ).click(function() {
+			//Hotels
+			var panel = $(".panel-hotels");
+			if(($(panel).find(".panel-heading").attr("class").indexOf("active")) != -1){
+				validarVacio($("#tour-hotel-field-01"));
+				validarVacio($("#datetimepicker_09"));
+				validarVacio($("#datetimepicker_10"));
+				validateMandatoryPanel(panel);
+				panelErrors($(panel).find(".panel-body"));
+			}
+
+			//Flights
+			var panel = $(".panel-flights");
+			if(($(panel).find(".panel-heading").attr("class").indexOf("active")) != -1){
+				validarVacio($("#tour-flight-field-01"));
+				validarVacio($("#tour-flight-field-02"));
+				validarVacio($("#datetimepicker_11"));	
+				validarVacio($("#datetimepicker_12"));	
+				validateMandatoryPanel(panel);	
+				panelErrors($(panel).find(".panel-body"));
+			}	
+
+			//Activities
+			var panel = $(".panel-activities");
+			if(($(panel).find(".panel-heading").attr("class").indexOf("active")) != -1){
+				validarVacio($("#tour-activity-field-01"));
+				validarVacio($("#datetimepicker_13"));	
+				validarVacio($("#datetimepicker_14"));	
+				validateMandatoryPanel(panel);	
+				panelErrors($(panel).find(".panel-body"));
+			}
+
+
+			//Rental cars
+			var panel = $(".panel-rental-cars");
+			if(($(panel).find(".panel-heading").attr("class").indexOf("active")) != -1){
+				validarVacio($("#tour-car-field-01"));
+				validarVacio($("#tour-car-field-03"));
+				validarVacio($("#datetimepicker_15"));	
+				validarVacio($("#datetimepicker_16"));
+				validarVacio($("#tour-car-field-08"));
+				validarVacio($("#tour-car-field-09"));
+				validarVacio($("#tour-car-field-11"));
+				validarVacio($("#tour-car-field-12"));		
+				if($("#tourConditionsAccepted").val() == "false"){
+					validarVacio($("#tour-car-field-03"));
+					validarVacio($("#tour-car-field-04"));
+				}
+				if($("#tour-driver").val() == "false"){
+					validarVacio($("#tour-car-field13"));
+					ageDriver($("#tour-car-field13"));
+				}
+
+				validateMandatoryPanel(panel);	
+				panelErrors($(panel).find(".panel-body"));	
+			}
+
+			validateOneSearch($("#modal-customized-tour"));
+
+			if($("#modal-customized-tour").find(".has-error").length){
+				event.preventDefault();
+			}
+		});
+	}	
+	
+	
 
 	//MODALS
 	//
