@@ -1,5 +1,14 @@
-<?php 
-	$hoy = date("m/d/Y"); 
+<?php
+	if(isset($vacio)){
+		if($vacio){
+			$hoy = "";
+		}else{
+			$hoy = date("m/d/Y");
+		}
+	}else{
+		$hoy = date("m/d/Y");		
+	} 
+	 
 ?>	 
 <div class="form-group">
 	<div class='input-group date <?php echo $id_date; ?>'>
