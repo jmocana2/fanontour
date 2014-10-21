@@ -28,6 +28,7 @@
 	.dropdown{
 		a{
 			width: 100%;
+			display: block;
 
 			&.shape-arrow{
 				.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 512px, @y: 16px);
@@ -35,10 +36,16 @@
 		}
 	}
 
+	.checkbox{
+		label{
+			padding-left: 0;	
+		}
+	}
+
 	.time-field{
 		a{
 			&.shape-arrow{
-				.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 36px, @y: 14px) !important;
+				.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 36px, @y: 15px) !important;
 			}
 		}
 	}
@@ -48,7 +55,7 @@
 		margin-left: 15px;
 		position: absolute;
 		left: 220px;
-		top: 0;
+		top: -8px;
 
 		input{
 			display: inline;

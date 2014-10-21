@@ -1008,6 +1008,7 @@ textarea.form-control {
 }
 #modal-customized-tour .dropdown a {
   width: 100%;
+  display: block;
 }
 #modal-customized-tour .dropdown a.shape-arrow {
   position: relative;
@@ -1025,6 +1026,9 @@ textarea.form-control {
   width: 0;
   z-index: 2;
 }
+#modal-customized-tour .checkbox label {
+  padding-left: 0;
+}
 #modal-customized-tour .time-field a.shape-arrow {
   position: relative !important;
 }
@@ -1037,7 +1041,7 @@ textarea.form-control {
   height: 0 !important;
   left: 36px !important;
   position: absolute !important;
-  top: 14px !important;
+  top: 15px !important;
   width: 0 !important;
   z-index: 2 !important;
 }
@@ -1046,7 +1050,7 @@ textarea.form-control {
   margin-left: 15px;
   position: absolute;
   left: 220px;
-  top: 0;
+  top: -8px;
 }
 #modal-customized-tour .age-field input {
   display: inline;
@@ -1581,7 +1585,7 @@ video {
   background-color: #6eb21b;
 }
 #fanontour-search-box {
-  padding-top: 173px;
+  padding-top: 171px;
   min-height: 487px;
 }
 #fanontour-search-box .tab-content {
