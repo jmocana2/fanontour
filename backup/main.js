@@ -82,78 +82,14 @@ $( document ).ready(function() { //DOM OK!
 	});
 
 
-	//Input dates
-	if($(".date").length){
 
-		/* travel days */
-		var days = 7
-		/* =========== */ 
-		var origin_date = getTodayDate();
-		var destiny_date = sumaFecha(days, origin_date)
-
-		$('.start_date').datetimepicker({
-			pickTime: false,
-			defaultDate: origin_date
-		});
-
-		$('.end_date').datetimepicker({
-			pickTime: false,
-			defaultDate: destiny_date
-		});
-
-		// CALENDARS MAIN SEARCH
-		// ======================
-		//Hotels Calendars
-		$(".datetimepicker_01").on("dp.change",function (e) {
-			$('.datetimepicker_02').data("DateTimePicker").setDate(e.date);
-            $('.datetimepicker_02').data("DateTimePicker").setMinDate(e.date);
-        });
-
-        //Flights Calendars
-		$(".datetimepicker_03").on("dp.change",function (e) {
-			$('.datetimepicker_04').data("DateTimePicker").setDate(e.date);
-            $('.datetimepicker_04').data("DateTimePicker").setMinDate(e.date);
-        });
-
-        //Activities Calendars
-		$(".datetimepicker_05").on("dp.change",function (e) {
-			$('.datetimepicker_06').data("DateTimePicker").setDate(e.date);
-            $('.datetimepicker_06').data("DateTimePicker").setMinDate(e.date);
-        });
-
-        //Rental cars Calendars
-		$(".datetimepicker_07").on("dp.change",function (e) {
-			$('.datetimepicker_08').data("DateTimePicker").setDate(e.date);
-            $('.datetimepicker_08').data("DateTimePicker").setMinDate(e.date);
-        });
-
-        // CALENDARS CUSTOMIZED TOUR
-		// =========================
-		// Hotels Calendars
-		// //Hotels Calendars
-		$(".datetimepicker_09").on("dp.change",function (e) {
-			$('.datetimepicker_10').data("DateTimePicker").setDate(e.date);
-            $('.datetimepicker_10').data("DateTimePicker").setMinDate(e.date);
-        });
-
-        //Flights Calendars
-		$(".datetimepicker_11").on("dp.change",function (e) {
-			$('.datetimepicker_12').data("DateTimePicker").setDate(e.date);
-            $('.datetimepicker_12').data("DateTimePicker").setMinDate(e.date);
-        });
-
-        //Activities Calendars
-		$(".datetimepicker_13").on("dp.change",function (e) {
-			$('.datetimepicker_14').data("DateTimePicker").setDate(e.date);
-            $('.datetimepicker_14').data("DateTimePicker").setMinDate(e.date);
-        });
-
-        //Rental cars Calendars
-		$(".datetimepicker_15").on("dp.change",function (e) {
-			$('.datetimepicker_16').data("DateTimePicker").setDate(e.date);
-            $('.datetimepicker_16').data("DateTimePicker").setMinDate(e.date);
-        });
-	}	
+	$('#datetimepicker1').datetimepicker();
+		/*$('.glyphicon-calendar').click(function () {
+			var date = $(this).closest(".input-group").data("DateTimePicker").getDate();
+			$(this).closest(".input-group").data("DateTimePicker").setMinDate(new Date(date));		
+			var str = $(this).parent().prev().attr("class");			
+		});*/	
+	
 
 	//Rental car (drop off)
 	$( "#conditionsAccepted, #tourConditionsAccepted " ).click(function() {
@@ -472,12 +408,6 @@ $( document ).ready(function() { //DOM OK!
 });
 
 //FUNCTIONS
-
-getTodayDate = function(){
-	var f = new Date();
-	var date = f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear();
-	return date;	
-}
 
 // Función que suma o resta días a la fecha indicada
 // plus dates
