@@ -920,8 +920,16 @@ textarea.form-control {
 .panel-accordion .panel-heading.active h4 a {
   color: #ffffff;
 }
+.panel-accordion .panel-heading.warning {
+  background-color: #dbd800;
+}
 .panel-accordion .panel-heading.has-error {
   background-color: #b00808;
+}
+.bootstrap-datetimepicker-widget td.disabled {
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
 }
 .form-default {
   padding-top: 20px;

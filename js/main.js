@@ -55,22 +55,9 @@ $( document ).ready(function() { //DOM OK!
 
 	//ACCORDION
 	//title
-	$( "#modal-customized-tour input, #modal-customized-tour .glyphicon-calendar, #modal-customized-tour .dropdown" ).click(function() {
+	$( "#modal-customized-tour input, #modal-customized-tour .dropdown" ).click(function() {
 		$(this).closest(".panel").find(".panel-heading").addClass("active");
 	});	
-
-	$("#modal-customized-tour input").focusout(function() {
-		var vacio = 1;
-		var a_inputs =  $(this).closest(".panel-body").find(".type-reset")
-		for(i=0; i<a_inputs.length;i++){
-			if($(a_inputs).eq(i).val() != ""){
-				vacio = 0;
-			}
-		}
-		if(vacio){
-			$(this).closest(".panel").find(".panel-heading").removeClass("active");
-		}  	
-  	});
 
 	//FORMS
 	//
@@ -92,13 +79,22 @@ $( document ).ready(function() { //DOM OK!
 		var destiny_date = sumaFecha(days, origin_date)
 
 		$('.start_date').datetimepicker({
+			minDate: origin_date,
 			pickTime: false,
 			defaultDate: origin_date
 		});
 
-		$('.end_date').datetimepicker({
+		//Main search box
+		$('#fanontour-search-box .end_date').datetimepicker({
+			minDate: origin_date,
 			pickTime: false,
 			defaultDate: destiny_date
+		});
+
+		//Customized tour
+		$('#modal-customized-tour .end_date').datetimepicker({
+			minDate: origin_date,
+			pickTime: false,			
 		});
 
 		// CALENDARS MAIN SEARCH
@@ -232,7 +228,8 @@ $( document ).ready(function() { //DOM OK!
 	function validarVacio(campo){
 		var valor = $(campo).val();	
 		if(valor == ""){
-			$(campo).closest(".form-group").addClass("has-error error-empty");			
+			$(campo).closest(".form-group").addClass("has-error error-empty");
+			$(campo).closest(".form-group").removeClass("has-warning");			
 		}
 		else{
 			$(campo).closest(".form-group").removeClass("has-error error-empty");			
@@ -263,16 +260,6 @@ $( document ).ready(function() { //DOM OK!
 		}
 	}
 
-	//General input validation
-	$("input[required]").focusout(function() {
-		validarVacio($(this));
-	});	
-
-	$( ".dropdown-menu a" ).click(function() {
-		var campo = $(this).closest(".dropdown-menu").prev("input");
-		setTimeout(function(){validarVacio(campo)}, 300);
-	});	
-	
 	//Panel errors
 	function panelErrors(panel){
 		if($(panel).find(".has-error").length){
@@ -299,6 +286,32 @@ $( document ).ready(function() { //DOM OK!
 		else{
 			$(".alert-none-search").fadeOut();
 		}		
+	}
+
+	//Panel State
+	function panelState(panel, e){
+		var validado = 0;
+		var warning = 0;
+		var campos = $(panel).find("input.mandatory");
+
+		for(i=0; i<campos.length; i++){
+			if($(campos).eq(i).val() == ""){
+				$(campos).eq(i).closest(".form-group").addClass("has-warning");
+				warning = 1;
+			}
+			else{
+				$(campos).eq(i).closest(".form-group").removeClass("has-warning");
+			}
+		}
+
+		if(warning){
+			$(panel).find(".panel-heading").addClass("warning");
+			$(".alert-empty-war").fadeIn();	
+		}else{
+			$(panel).find(".panel-heading").removeClass("warning");
+			$(panel).find(".panel-heading").removeClass("has-error");
+			$(".alert-empty-war").fadeOut();	
+		}				
 	}
 
 	//Email validation
@@ -376,13 +389,40 @@ $( document ).ready(function() { //DOM OK!
 
 	//Customized Tour
 	if($("#modal-customized-tour").length){
+
+		$( "#modal-customized-tour input[type='text']").change(function(e) {
+			var panel = $(this).closest(".panel");
+			panelState(panel, e);
+		});	
+
+		$("#modal-customized-tour .start_date, #modal-customized-tour .end_date").on("dp.change",function (e) {
+			$(this).closest(".panel").find(".panel-heading").addClass("active");
+			var panel = $(this).closest(".panel");
+			panelState(panel, e);
+        });
+
+        $( "#modal-customized-tour .dropdown-menu a" ).click(function(e) {
+			var panel = $(this).closest(".panel");
+			setTimeout(function(){panelState(panel, e)}, 300);			
+		});
+
 		$( ".btn-reset" ).click(function() {
 			$(this).closest(".panel-body").find("input").val("");
 			$(this).closest(".panel").find(".panel-heading").removeClass("active");
+			$(this).closest(".panel").find(".panel-heading").removeClass("warning");
 			$(this).closest(".panel").find(".has-error").removeClass("has-error");
+			$(this).closest(".panel").find(".has-warning").removeClass("has-warning");
 		});	
 
 		$( "#modal-customized-tour .btn-search" ).click(function(e) {
+			//Tickets
+			var panel = $(".panel-tickets");
+			if(($(panel).find(".panel-heading").attr("class").indexOf("active")) != -1){
+				validarVacio($("#tour-event-01"));
+				validateMandatoryPanel(panel, e);
+				panelErrors($(panel).find(".panel-body"));
+			}
+
 			//Hotels
 			var panel = $(".panel-hotels");
 			if(($(panel).find(".panel-heading").attr("class").indexOf("active")) != -1){
@@ -440,6 +480,10 @@ $( document ).ready(function() { //DOM OK!
 			}
 
 			validateOneSearch($("#modal-customized-tour"), e);
+
+			if(!($("#modal-customized-tour").find(".has-warning").length)){
+				$(".alert-empty-war").fadeOut();
+			}
 
 			if($("#modal-customized-tour").find(".has-error").length){
 				e.preventDefault();
