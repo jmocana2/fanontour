@@ -487,7 +487,14 @@ $( document ).ready(function() { //DOM OK!
 
 			if($("#modal-customized-tour").find(".has-error").length){
 				e.preventDefault();
+			}else{
+				var active_panels = $(".panel .active").parent(".panel");
+
+				for(i=0; i<active_panels.length; i++){
+					$(active_panels[i]).find(".panel_activate").attr("value",true);					
+				}				
 			}
+
 		});
 	}	
 	
