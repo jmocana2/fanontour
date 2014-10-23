@@ -282,7 +282,7 @@
 							<div class="panel-body">
 								<div class="col-md-12 row-padding-v-small">
 
-								<p>For control which section are active we use inputs type hidden that can have the true or false value. We send only the information of the panels with
+								<p>For control which section are active we use inputs type hidden that can have the true or false value. We should send only the information of the panels with
 								the true value.</p>
 
 							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
