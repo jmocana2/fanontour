@@ -1133,6 +1133,9 @@ blockquote dd {
   background-color: #b00808;
   padding: 10px 20px 10px 0;
 }
+.tab-default .tab-content p {
+  max-width: 750px;
+}
 .bg-container {
   background: url('../img/backgrounds/home/tickets_h_600px.jpg') no-repeat center 0;
   background-size: cover;
@@ -1233,6 +1236,19 @@ blockquote {
 }
 .panel-box-body p {
   font-size: 1.077em;
+}
+.panel-box-block {
+  border: 1px #eaeaea solid;
+  background-color: #ffffff;
+  padding: 1.692em;
+  margin-bottom: .8em;
+}
+.panel-box-block h1,
+.panel-box-block h2 {
+  margin-top: 0;
+}
+.panel-box-block.panel-mini {
+  padding: .2em;
 }
 .bootstrap-datetimepicker-widget td.disabled {
   -webkit-opacity: 0.5;
@@ -1796,7 +1812,7 @@ video {
   margin-bottom: 0;
 }
 .fanontour-mod-default h2 {
-  font: normal 1.692em/1em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
+  font: normal 1.692em/1.2em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
   color: #4c4c4c;
   margin-bottom: 10px;
 }
