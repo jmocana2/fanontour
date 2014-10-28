@@ -1,4 +1,25 @@
-//dropsown default
+//dropdown-default
+.dropdown-default{
+	input{
+		margin-left: 5px;
+	}
+
+	a{
+		&.shape-arrow{
+			.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 142px, @y: 15px);
+		}
+
+		&:hover{
+			color: @colorB1;
+
+			&.shape-arrow{
+				.shape-arrow-bottom (@radius: 5px, @color: @colorB1, @x: 142px, @y: 15px);
+			}
+		}
+	}
+}
+
+//dropdown tab
 .dropdown-tab{
 
 	width: 100%;

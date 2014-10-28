@@ -29,6 +29,7 @@
 	}
 }
 
+//panel accordion
 .panel-accordion{
 	.panel-title{
 		text-transform: uppercase;
@@ -84,6 +85,7 @@
 	}
 }
 
+//panel-box-block
 .panel-box-block{
 	border: 1px @colorK4 solid;
 	background-color: @colorW;
@@ -93,7 +95,40 @@
 	h1, h2{margin-top: 0;}
 	
 	&.panel-mini{padding: .2em;}
+}
 
+//panel-filter
+.panel-filter{
+	h2{
+		background-color: @colorB1;
+		font: normal 1.154em @font-title, @font-title-system, @font-third;
+		color: @colorW;
+		text-transform: uppercase;
+		padding: 10px 0;
+		text-align: center;
+		.border-radiuses (@topright: @radius, @bottomright: 0, @bottomleft: 0, @topleft: @radius);
+		margin-bottom: 0;
+	}
+
+	label{
+		display: block;
+	}
+
+	input{
+		margin-bottom: 15px;
+	}
+}
+
+//panel-pagination
+.panel-pagination{
+	.dropdown{
+		display: inline-block;
+	}
+
+	.pagination{
+		margin: 0;
+		float: right;
+	}
 }
 
 //calendars

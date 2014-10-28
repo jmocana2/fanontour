@@ -1,0 +1,68 @@
+//RESULTS
+//===========================
+.results{
+
+	min-height: 1200px;
+
+	li{
+		padding: 20px;
+		border-top: 1px @colorK3 solid;
+
+		&:first-child{
+			border-top: none;
+		}
+
+		.mod-img{
+			float: left;
+			margin-right: 10px;
+		}
+
+		h2{
+			font: normal 1.385em/1.1em 'roboto_condensedregular', @font-title-system, @font-third;
+			color: @colorK21
+		}
+
+		li{
+			padding: 0;
+			border: none;
+			border-left: 1px @colorK3 solid;
+			margin-left: 10px;
+			padding-left: 10px;
+		}
+
+		.list-inline{
+			margin-left: 0;
+		}
+
+		.price{
+			background-color: @colorB1;
+			color: @colorW;
+			width: 154px;
+			padding: 10px 0;
+			text-align: center;
+			.border-radius (@radius);
+			margin-left: 0;
+		}
+
+		.source{
+			margin-left: 5px;
+			border: none;
+			vertical-align: top;	
+			padding-left: 0;
+		}
+
+		.btn{
+			font: normal 1.3em/1.2em  @font-title, @font-title-system, @font-third;
+			width: 154px;
+			padding: 10px 0;
+			text-align: center;
+					
+		}
+
+		span{
+			font-size: 1.4em;
+			display: inline-block;
+			margin-right: 5px;
+		}
+	}
+}
