@@ -151,6 +151,92 @@ $( document ).ready(function() { //DOM OK!
         });
 	}	
 
+	//SLIDER FORM
+	//=======================
+	if($(".panel-filter").length){
+		$('#price-slider, #duration-slider').slider()
+
+		//PRICE SLIDER
+		$('#price-slider').slider()
+		  .on('slideStop', function(ev){
+
+		    var interval = $(this).val()
+		    var res = interval.split(",");
+		    var min_price = res[0];
+		    var max_price = res[1];
+		   
+		  	$(".results ul").remove();
+		  	var resultHtml = "<ul>";
+
+		    $.get("/fanontour/xml/results/activity.xml", function (xml) {
+			    $(xml).find("activity").each(function () {	
+
+			       var price = parseInt($(this).find('price').text());
+
+			       if(price >= min_price && price <= max_price){
+			       	   var name = $(this).find('name').text();
+	       			   var description = $(this).find('description').text();
+	       			   var image = $(this).find('image').text();       			   
+	       			   var duration = $(this).find('duration').text();
+	       			   var source = $(this).find('source').text();
+	       			   var url = $(this).find('url').text();
+				       
+				       resultHtml += "<li><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
+				       resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>"+ description +"</p></div>";
+				       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price'>" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_clock'></span> "+ duration +"</li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li></div>";			
+			       }			      
+			    });
+
+				resultHtml += "</ul>";
+				$(".results").html(resultHtml);
+
+			});
+		  });
+
+		  //PRICE SLIDER
+		$('#duration-slider').slider()
+		  .on('slideStop', function(ev){
+
+		    var interval = $(this).val()
+		    var res = interval.split(",");
+		    var min_duration = res[0];
+		    var max_duration = res[1];
+		   
+		  	$(".results ul").remove();
+		  	var resultHtml = "<ul>";
+
+		    $.get("/fanontour/xml/results/activity.xml", function (xml) {
+			    $(xml).find("activity").each(function () {	
+
+			    	var duration = $(this).find('duration').text();
+			    	console.log(duration);
+			    	if(duration != "Varies"){
+			    		var duration = parseInt(duration);
+			    	} 
+
+			       
+
+			       if((duration >= min_duration && duration <= max_duration) || (duration == "varies")){
+			       	   var name = $(this).find('name').text();
+	       			   var description = $(this).find('description').text();
+	       			   var image = $(this).find('image').text();       			   
+	       			   var price = $(this).find('price').text();
+	       			   var source = $(this).find('source').text();
+	       			   var url = $(this).find('url').text();
+				       
+				       resultHtml += "<li><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
+				       resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>"+ description +"</p></div>";
+				       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price'>" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_clock'></span> "+ duration +"</li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li></div>";			
+			       }			      
+			    });
+
+				resultHtml += "</ul>";
+				$(".results").html(resultHtml);
+
+			});
+		  });						
+	}
+
 	//Rental car (drop off)
 	$( "#conditionsAccepted, #tourConditionsAccepted " ).click(function() {
 		if($(this).attr("value") == "true"){
@@ -182,9 +268,7 @@ $( document ).ready(function() { //DOM OK!
 		}		
   	});
 
-  	
-
-	//Geolocalización
+  	//Geolocalización
 	if($(".city_ori").length){
 
 		//Get the latitude and the longitude;
