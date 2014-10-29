@@ -129,7 +129,8 @@
 .bootstrap-datetimepicker-widget td.hour:hover,
 .bootstrap-datetimepicker-widget td.minute:hover,
 .bootstrap-datetimepicker-widget td.second:hover {
-  background: #eeeeee;
+  background: #0669b2;
+  color: #FFF;
   cursor: pointer;
 }
 .bootstrap-datetimepicker-widget td.old,
