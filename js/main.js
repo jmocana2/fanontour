@@ -88,7 +88,8 @@ $( document ).ready(function() { //DOM OK!
 		$('#fanontour-search-box .end_date').datetimepicker({
 			minDate: origin_date,
 			pickTime: false,
-			defaultDate: destiny_date
+			defaultDate: destiny_date,
+			sideBySide: true
 		});
 
 		//Customized tour
@@ -156,32 +157,27 @@ $( document ).ready(function() { //DOM OK!
 	if($(".panel-filter").length){
 		$('#price-slider, #duration-slider').slider()
 
-		//PRICE SLIDER
-		$('#price-slider').slider()
-		  .on('slideStop', function(ev){
+		function filterActivities(v1min, v1max, v2min, v2max){
 
-		    var interval = $(this).val()
-		    var res = interval.split(",");
-		    var min_price = res[0];
-		    var max_price = res[1];
-		   
-		  	$(".results ul").remove();
+			console.log(v1min + " " + v1max + " " +  v2min + " " + v2max)
+
+			$(".results ul").remove();
 		  	var resultHtml = "<ul>";
 
 		    $.get("/fanontour/xml/results/activity.xml", function (xml) {
 			    $(xml).find("activity").each(function () {	
 
 			       var price = parseInt($(this).find('price').text());
+			       var duration = parseInt($(this).find('duration').text());
 
-			       if(price >= min_price && price <= max_price){
+			       if((price >= v1min && price <= v1max) && (duration >= v2min && duration <= v2max)){
 			       	   var name = $(this).find('name').text();
 	       			   var description = $(this).find('description').text();
 	       			   var image = $(this).find('image').text();       			   
-	       			   var duration = $(this).find('duration').text();
 	       			   var source = $(this).find('source').text();
 	       			   var url = $(this).find('url').text();
 				       
-				       resultHtml += "<li><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
+				       resultHtml += "<li class='mod-result'><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
 				       resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>"+ description +"</p></div>";
 				       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price'>" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_clock'></span> "+ duration +"</li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li></div>";			
 			       }			      
@@ -191,50 +187,38 @@ $( document ).ready(function() { //DOM OK!
 				$(".results").html(resultHtml);
 
 			});
-		  });
+		}
 
-		  //PRICE SLIDER
-		$('#duration-slider').slider()
+		//PRICE SLIDER
+		$('#price-slider, #duration-slider').slider()
 		  .on('slideStop', function(ev){
 
-		    var interval = $(this).val()
+		  	//Get min-max values
+		  	//Min max prices
+		  	if($("#price-slider").val() == ""){
+		  		var interval = "0,600";
+		  	}else{
+		  		var interval = $("#price-slider").val();
+		  	}
+
+		  	if($("#duration-slider").val() == ""){
+		  		var interval2 = "0,120";
+		  	}else{
+		  		var interval2 = $("#duration-slider").val();
+		  	}
+		    
 		    var res = interval.split(",");
-		    var min_duration = res[0];
-		    var max_duration = res[1];
-		   
-		  	$(".results ul").remove();
-		  	var resultHtml = "<ul>";
+		    var v1min = res[0];
+		    var v1max = res[1];
+		    //Min max duration
+		 
+		    var res2 = interval2.split(",");
+		    var v2min = res2[0];
+		    var v2max = res2[1];
 
-		    $.get("/fanontour/xml/results/activity.xml", function (xml) {
-			    $(xml).find("activity").each(function () {	
-
-			    	var duration = $(this).find('duration').text();
-			    	console.log(duration);
-			    	if(duration != "Varies"){
-			    		var duration = parseInt(duration);
-			    	} 
-
-			       
-
-			       if((duration >= min_duration && duration <= max_duration) || (duration == "varies")){
-			       	   var name = $(this).find('name').text();
-	       			   var description = $(this).find('description').text();
-	       			   var image = $(this).find('image').text();       			   
-	       			   var price = $(this).find('price').text();
-	       			   var source = $(this).find('source').text();
-	       			   var url = $(this).find('url').text();
-				       
-				       resultHtml += "<li><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
-				       resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>"+ description +"</p></div>";
-				       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price'>" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_clock'></span> "+ duration +"</li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li></div>";			
-			       }			      
-			    });
-
-				resultHtml += "</ul>";
-				$(".results").html(resultHtml);
-
-			});
-		  });						
+		    filterActivities(v1min, v1max, v2min, v2max)		   
+		  	
+		  });		
 	}
 
 	//Rental car (drop off)
@@ -338,9 +322,14 @@ $( document ).ready(function() { //DOM OK!
 	}
 
 	function ageDriver(campo, e){
-		if(!($(campo).val() >= 25 && $(campo).val() <= 70)){
+		
+		if($(campo).val() >= 25 && $(campo).val() <= 70){
 			$(campo).closest(".form-group").addClass("has-error");
+			$(".alert-age").fadeIn();	
 			e.preventDefault();
+		}else{
+			$(campo).closest(".form-group").removeClass("has-error");
+			$(".alert-age").fadeOut();	
 		}
 	}
 
@@ -358,7 +347,7 @@ $( document ).ready(function() { //DOM OK!
 		if($(panel).find(".error-empty").length){
 			$(".alert-empty").fadeIn();			
 			e.preventDefault();
-		}		
+		}
 	}
 
 	//None Search
@@ -385,6 +374,7 @@ $( document ).ready(function() { //DOM OK!
 			}
 			else{
 				$(campos).eq(i).closest(".form-group").removeClass("has-warning");
+				$(campos).eq(i).closest(".form-group").removeClass("has-error");
 			}
 		}
 
@@ -394,7 +384,7 @@ $( document ).ready(function() { //DOM OK!
 		}else{
 			$(panel).find(".panel-heading").removeClass("warning");
 			$(panel).find(".panel-heading").removeClass("has-error");
-			$(".alert-empty-war").fadeOut();	
+			$(".alert-empty-war, .alert-empty").fadeOut();	
 		}				
 	}
 
@@ -474,7 +464,7 @@ $( document ).ready(function() { //DOM OK!
 	//Customized Tour
 	if($("#modal-customized-tour").length){
 
-		$( "#modal-customized-tour input[type='text']").change(function(e) {
+		$( "#modal-customized-tour input[type='text']").focusout(function(e) {
 			var panel = $(this).closest(".panel");
 			panelState(panel, e);
 		});	
@@ -487,7 +477,20 @@ $( document ).ready(function() { //DOM OK!
 
         $( "#modal-customized-tour .dropdown-menu a" ).click(function(e) {
 			var panel = $(this).closest(".panel");
-			setTimeout(function(){panelState(panel, e)}, 300);			
+			setTimeout(function(){panelState(panel, e)}, 10);			
+		});
+
+		$( "#tourConditionsAccepted" ).click(function(e) {
+			if($(this).val() == "false"){
+				$("#tour-car-field-05").addClass("mandatory");
+				$("#tour-car-field-06").addClass("mandatory");
+			}		
+		});
+
+		$( "#tour-driver" ).click(function(e) {
+			if($(this).val() == "false"){
+				$("#tour-car-field13").addClass("mandatory");				
+			}		
 		});
 
 		$( ".btn-reset" ).click(function() {
@@ -538,6 +541,15 @@ $( document ).ready(function() { //DOM OK!
 				panelErrors($(panel).find(".panel-body"));
 			}
 
+			//Restaurants
+			var panel = $(".panel-restaurants");
+			if(($(panel).find(".panel-heading").attr("class").indexOf("active")) != -1){
+				validarVacio($("#tour-restaurant-field-02"));
+				validarVacio($("#tour-restaurant-field-03"));	
+				validateMandatoryPanel(panel, e);	
+				panelErrors($(panel).find(".panel-body"));
+			}
+
 
 			//Rental cars
 			var panel = $(".panel-rental-cars");
@@ -551,13 +563,16 @@ $( document ).ready(function() { //DOM OK!
 				validarVacio($("#tour-car-field-11"));
 				validarVacio($("#tour-car-field-12"));		
 				if($("#tourConditionsAccepted").val() == "false"){
-					validarVacio($("#tour-car-field-03"));
-					validarVacio($("#tour-car-field-04"));
+					validarVacio($("#tour-car-field-05"));
+					validarVacio($("#tour-car-field-06"));
 				}
+
 				if($("#tour-driver").val() == "false"){
+					$("#tour-car-field13").addClass("mandatory");
 					validarVacio($("#tour-car-field13"));
 					ageDriver($("#tour-car-field13"), e);
 				}
+				
 
 				validateMandatoryPanel(panel, e);	
 				panelErrors($(panel).find(".panel-body"));	
@@ -582,7 +597,29 @@ $( document ).ready(function() { //DOM OK!
 		});
 	}	
 	
-	
+	//RESULTS
+	//Creating fixed panels
+	if($("#results").length){
+		var max_height = $("#header").height() + $(".bg-container").height() - 50;
+
+		$(window).scroll(function() {
+		   if($(window).scrollTop() > max_height){
+		   		$(".panel-fix-top").addClass("active");
+		   }else{
+		   		$(".panel-fix-top").removeClass("active");
+		   }
+		});
+	}
+
+	//ORDER BY
+	//price
+	$( ".price-desc" ).click(function() {		
+		$('.mod-result').tsort('li.price',{order:'desc', attr:'data-value'});		
+	});
+
+	$( ".price-asc" ).click(function() {		
+		$('.mod-result').tsort('li.price',{order:'asc', attr:'data-value'});		
+	});
 
 	//MODALS
 	//
