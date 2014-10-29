@@ -461,6 +461,10 @@ textarea.form-control {
 .radio input[type="checkbox"]:checked + span {
   background-position: 0 -18px;
 }
+.form-control[readonly] {
+  background-color: #ffffff;
+  cursor: pointer;
+}
 li {
   margin-bottom: 10px;
 }
@@ -1331,6 +1335,11 @@ blockquote {
   margin: 0;
   float: right;
 }
+.panel-fix-top.active {
+  position: fixed;
+  top: 58px;
+  width: 262px;
+}
 .bootstrap-datetimepicker-widget td.disabled {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
@@ -1411,6 +1420,12 @@ blockquote {
 .time-field .form-group {
   vertical-align: inherit;
 }
+.has-error input {
+  background-color: #f2dede;
+}
+.has-warning input {
+  background-color: #fcf8e3;
+}
 /*!
  * Slider for Bootstrap
  *
@@ -1431,7 +1446,7 @@ blockquote {
   height: 20px;
 }
 .slider.slider-horizontal .slider-track {
-  height: 10px;
+  height: 7px;
   width: 100%;
   margin-top: -5px;
   top: 50%;
@@ -1484,6 +1499,11 @@ blockquote {
 .slider input {
   display: none;
 }
+.slider .tooltip {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+}
 .slider .tooltip-inner {
   white-space: nowrap;
 }
@@ -1527,8 +1547,8 @@ blockquote {
 }
 .slider-handle {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background-color: #6eb21b;
   background-image: -moz-linear-gradient(top, #6eb21b, #6eb21b);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb21b), to(#6eb21b));
@@ -1540,13 +1560,13 @@ blockquote {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-  opacity: 0.8;
+  opacity: 1;
   border: 0px solid transparent;
 }
 .slider-handle.round {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  border-radius: 18px;
 }
 .slider-handle.triangle {
   background: transparent none;
@@ -1878,11 +1898,13 @@ video {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 0;
+  text-shadow: 1px 1px #333;
 }
 #fanontour-search-box h2 {
   font: normal 2.143em/1.2em 'roboto_condensedbold', 'sans-serif';
   color: #ffffff;
   text-align: center;
+  text-shadow: 1px 1px #333;
 }
 #fanontour-search-box .tab-default {
   width: 818px;
@@ -2165,9 +2187,13 @@ video {
 .results li {
   padding: 20px;
   border-top: 1px #b2b2b2 solid;
+  margin-bottom: 0;
 }
 .results li:first-child {
   border-top: none;
+}
+.results li:hover {
+  background-color: #f5f5f5;
 }
 .results li .mod-img {
   float: left;
@@ -2219,7 +2245,7 @@ video {
   margin-right: 5px;
 }
 #fanontour-search-box {
-  padding-top: 171px;
+  padding-top: 169px;
   min-height: 487px;
 }
 #fanontour-search-box .tab-content {
