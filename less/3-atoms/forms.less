@@ -82,6 +82,17 @@
 		vertical-align: inherit;
 	}	
 }
+
+//alerts
+//error
+.has-error input{
+  background-color: #f2dede;
+}
+
+.has-warning input{
+  background-color: #fcf8e3;
+}
+
 /*!
  * Slider for Bootstrap
  *
@@ -102,7 +113,7 @@
   height: 20px;
 }
 .slider.slider-horizontal .slider-track {
-  height: 10px;
+  height: 7px;
   width: 100%;
   margin-top: -5px;
   top: 50%;
@@ -155,6 +166,9 @@
 .slider input {
   display: none;
 }
+.slider .tooltip{
+  .opacity (1);
+}
 .slider .tooltip-inner {
   white-space: nowrap;
 }
@@ -198,8 +212,8 @@
 }
 .slider-handle {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background-color: @colorG1;
   background-image: -moz-linear-gradient(top, @colorG1, @colorG1);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@colorG1), to(@colorG1));
@@ -211,13 +225,13 @@
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  opacity: 0.8;
+  opacity: 1;
   border: 0px solid transparent;
 }
 .slider-handle.round {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  border-radius: 18px;
 }
 .slider-handle.triangle {
   background: transparent none;
