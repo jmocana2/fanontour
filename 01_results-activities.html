@@ -81,47 +81,49 @@
 			                </nav>		           
 						</header>					
 						<div>
-							<div class="col-md-3 fix-top">
-								<div class="panel panel-filter">
-									<h2>Search details</h2>
-									<div class="panel-box-body">
-										<form role="form" action="#" method="post">
-											<div class="form-group padding-v-10">
-												<fieldset>
-											    	<label for="activity-field-01">City</label>
-											   		<input type="text" class="form-control" id="activity-field-01" placeholder="City name" required>
-											    </fieldset>
-											    <label for="datetimepicker_05">From</label>
-											    <?php 
-											    	$id_date = "datetimepicker_05";
-											    	$class_input = "start_date";
-											    	include('include/forms/date.html'); 
-											    ?>
-											    <label for="datetimepicker_06">To</label>
-											    <?php 
-											    	$id_date = "datetimepicker_06";
-											    	$class_input = "end_date";
-											    	include('include/forms/date.html'); 
-											    ?>
-											    <div class="text-center">
-											    	<button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
+							<div class="col-md-3 ">
+								<div class="panel-fix-top">
+									<div class="panel panel-filter">
+										<h2>Your search details</h2>
+										<div class="panel-box-body">
+											<form role="form" action="#" method="post">
+												<div class="form-group padding-v-10">
+													<fieldset>
+												    	<label for="activity-field-01">City</label>
+												   		<input type="text" class="form-control" id="activity-field-01" placeholder="City name" required>
+												    </fieldset>
+												    <label for="datetimepicker_05">From</label>
+												    <?php 
+												    	$id_date = "datetimepicker_05";
+												    	$class_input = "start_date";
+												    	include('include/forms/date.html'); 
+												    ?>
+												    <label for="datetimepicker_06">To</label>
+												    <?php 
+												    	$id_date = "datetimepicker_06";
+												    	$class_input = "end_date";
+												    	include('include/forms/date.html'); 
+												    ?>
+												    <div class="text-center">
+												    	<button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
+													</div>
 												</div>
+											</form>	
+										</div>								
+									</div>
+									<div class="panel panel-filter">
+										<h2>Filter by</h2>
+										<div class="panel-box-body">
+											<div class="row-padding-small">
+												<label for="price-slider">Price (&euro;)</label>
+												<input id="price-slider" type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="1" data-slider-value="[0,600]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
 											</div>
-										</form>	
-									</div>								
-								</div>
-								<div class="panel panel-filter">
-									<h2>Filter by</h2>
-									<div class="panel-box-body">
-										<div class="row-padding-small">
-											<label for="price-slider">Price (&euro;)</label>
-											<input id="price-slider" type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="1" data-slider-value="[0,600]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
-										</div>
-										<div class="row-padding-small">
-											<label for="duration-slider">Duration (hours)</label>
-											<input id="duration-slider" type="text" class="span2" value="" data-slider-min="0" data-slider-max="120" data-slider-step="1" data-slider-value="[0,600]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="h." >
-										</div>
-									</div>								
+											<div class="row-padding-small">
+												<label for="duration-slider">Duration (h.)</label>
+												<input id="duration-slider" type="text" class="span2" value="" data-slider-min="0" data-slider-max="120" data-slider-step="1" data-slider-value="[0,120]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="h." >
+											</div>
+										</div>								
+									</div>	
 								</div>	
 							</div>
 							<div class="col-md-9">
@@ -132,8 +134,8 @@
 										  <a class="shape-arrow" href="#"><span></span></a>
 										  <input type="text" class="form-control" id="order-field-01" data-toggle="dropdown" >
 										  <ul class="dropdown-menu" role="menu" aria-labelledby="order-field-01">
-										    <li><a href="#" rel="nofollow">Price Up</a></li>
-										    <li><a href="#" rel="nofollow">Price Down</a></li>									    									    
+										    <li><a href="#" class="price-desc" rel="nofollow">High to Low</a></li>
+										    <li><a href="#" class="price-asc" rel="nofollow">Low to High</a></li>									    									    
 										  </ul>
 										</div>
 									</div>
@@ -197,6 +199,8 @@
 	<!-- JS -->
 	<script src="public/vendor/jquery/jquery.js"></script>
 	<script src="public/vendor/jquery/jquery.lazyload.min.js"></script>
+	<script src="public/vendor/jquery/jquery.tinysort.min.js"></script>
+	<script src="public/vendor/jquery/jquery.tinysort.charorder.min.js"></script>
 	<script src="public/vendor/bootstrap/bootstrap.js"></script>
 	<script src="public/vendor/bower-components/moment/min/moment.min.js"></script>
 	<script src="public/vendor/bower-components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>

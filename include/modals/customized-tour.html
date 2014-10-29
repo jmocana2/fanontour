@@ -261,8 +261,10 @@
                         <div class="conditionsAccepted d-none">
                          <div class="row">
                           <div class="col-sm-6">
+                            <div class="form-group">
                             <label for="tour-car-field-05">City</label>
-                         <input type="text" class="form-control city_dest type-reset" id="tour-car-field-05" placeholder="City name">
+                            <input type="text" class="form-control city_dest type-reset" id="tour-car-field-05" placeholder="City name">
+                          </div>
                          </div>
                          <div class="col-sm-6">
                           <div class="form-group">  
@@ -363,9 +365,9 @@
                       </label>
                       <span class="glyphicon glyphicon-question-sign car-tooltip"  data-toggle="tooltip" data-placement="top" title="Drivers under 25 or over 70 may have to pay extra, so please check the cars terms and conditions"></span>
                         <div class="positionr">
-                          <div class="age-field">
-                          <label for="tour-car-field13">Age</label>
-                          <input type="text" class="form-control small-field-w small-field-h" id="tour-car-field13">
+                          <div class="age-field form-group">
+                            <label for="tour-car-field13">Age</label>
+                            <input type="text" class="form-control small-field-w small-field-h" id="tour-car-field13">
                         </div>
                       </div>
                     </div>
@@ -382,10 +384,13 @@
               <p><strong>Error:</strong> You must to do almost one search</p>
             </div>
             <div class="alert alert-danger alert-empty dnone" role="alert">
-              <p><strong>Error:</strong> You have to fill the mandatory fields of active search</p>
+              <p><strong>Error:</strong> Please fill in the missing field(s) to activate the search or click reset.</p>
+            </div>
+            <div class="alert alert-danger alert-age dnone" role="alert">
+              <p><strong>Error:</strong> Select a correct age</p>
             </div>
             <div class="alert alert-warning alert-empty-war dnone" role="alert">
-              <p><strong>Warning:</strong> You have to fill the mandatory fields of active search</p>
+              <p><strong>Warning:</strong> Please fill in the missing field(s) or click reset.</p>
             </div>
         </div>
         <button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>

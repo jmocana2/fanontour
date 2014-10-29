@@ -10,7 +10,7 @@
         $url=$activity->url;
 	?>
 
-    <li>
+    <li class="mod-result">
 		<div class="mod-img">
 			<img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
 		</div>
@@ -20,7 +20,7 @@
 		</div>
 		<div class="result-footer">
 			<ul class="list-inline">
-				<li class="price"><?php echo $price; ?> &euro;</li>
+				<li class="price" data-value="<?php echo $price; ?>"><?php echo $price; ?> &euro;</li>
 				<li class="source"><a class="btn btn-search" href="<?php echo $url; ?>">Book here</a></li>
 				<li><span class="fanontour-icon icon-icons-fanontour_clock"></span> <?php echo $duration; ?></li>
 				<li><span class="fanontour-icon icon-icons-fanontour_source"></span> Found in <strong><?php echo $source; ?></strong></li>
