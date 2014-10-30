@@ -93,7 +93,7 @@ $( document ).ready(function() { //DOM OK!
 		});
 
 		//Customized tour
-		$('#modal-customized-tour .end_date').datetimepicker({
+		$('#modal-customized-tour .end_date, #results .end_date').datetimepicker({
 			minDate: origin_date,
 			pickTime: false,			
 		});
@@ -150,6 +150,13 @@ $( document ).ready(function() { //DOM OK!
 			$('.datetimepicker_16').data("DateTimePicker").setDate(e.date);
             $('.datetimepicker_16').data("DateTimePicker").setMinDate(e.date);
         });
+		// CALENDARS RESULTS
+		// =========================
+		//activities
+		$(".datetimepicker_17").on("dp.change",function (e) {
+			$('.datetimepicker_18').data("DateTimePicker").setDate(e.date);
+            $('.datetimepicker_18').data("DateTimePicker").setMinDate(e.date);
+        });
 	}	
 
 	//SLIDER FORM
@@ -158,8 +165,6 @@ $( document ).ready(function() { //DOM OK!
 		$('#price-slider, #duration-slider').slider()
 
 		function filterActivities(v1min, v1max, v2min, v2max){
-
-			console.log(v1min + " " + v1max + " " +  v2min + " " + v2max)
 
 			$(".results ul").remove();
 		  	var resultHtml = "<ul>";
