@@ -62,9 +62,9 @@ $( document ).ready(function() { //DOM OK!
 	//FORMS
 	//
 	//Dropdown-form
-	$( ".dropdown-form .dropdown-menu li" ).click(function(e) {
+	$( ".dropdown .dropdown-menu li" ).click(function(e) {
 		var dropdown_value = $(this).children("a").text();
-		$(this).closest(".dropdown-form").find("input").attr("value",dropdown_value);
+		$(this).closest(".dropdown").find("input").attr("value",dropdown_value);
 		e.preventDefault();
 	});
 
@@ -619,11 +619,13 @@ $( document ).ready(function() { //DOM OK!
 	//ORDER BY
 	//price
 	$( ".price-desc" ).click(function() {		
-		$('.mod-result').tsort('li.price',{order:'desc', attr:'data-value'});		
+		$('.mod-result').tsort('li.price',{order:'desc', attr:'data-value'});
+		paginarFanontour($("#items-field-01").val());			
 	});
 
 	$( ".price-asc" ).click(function() {		
-		$('.mod-result').tsort('li.price',{order:'asc', attr:'data-value'});		
+		$('.mod-result').tsort('li.price',{order:'asc', attr:'data-value'});
+		paginarFanontour($("#items-field-01").val());		
 	});
 
 	//MODALS
@@ -639,6 +641,30 @@ $( document ).ready(function() { //DOM OK!
 		$('#modal-customized-tour').modal('show');
 		//return false;
 	});
+
+	//PAGINATION
+	/* initiate plugin */
+    $("ul.pagination").jPages({
+      containerID : "list_results",
+      perPage : 5
+    });
+
+    function paginarFanontour(num_pag){
+      /* get new nº of items per page */
+      var newPerPage = parseInt(num_pag);
+
+      /* destroy jPages and initiate plugin again */
+      $("ul.pagination").jPages("destroy").jPages({
+        containerID   : "list_results",
+        perPage       : newPerPage
+      });
+    }
+
+    /* on select change */
+    $(".dropdown-items .dropdown-menu a").click(function(){
+     	var num_pag = $(this).text();
+     	paginarFanontour(num_pag);
+    });
 
 	//TOOLTIPS
 	//
