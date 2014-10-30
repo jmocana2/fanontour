@@ -37,6 +37,7 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="public/vendor/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="public/vendor/bower-components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css">
 	<link rel="stylesheet" href="css/main.css">
 	<!--     -->
 	
@@ -92,15 +93,15 @@
 												    	<label for="activity-field-01">City</label>
 												   		<input type="text" class="form-control" id="activity-field-01" placeholder="City name" required>
 												    </fieldset>
-												    <label for="datetimepicker_05">From</label>
+												    <label for="datetimepicker_17">From</label>
 												    <?php 
-												    	$id_date = "datetimepicker_05";
+												    	$id_date = "datetimepicker_17";
 												    	$class_input = "start_date";
 												    	include('include/forms/date.html'); 
 												    ?>
-												    <label for="datetimepicker_06">To</label>
+												    <label for="datetimepicker_18">To</label>
 												    <?php 
-												    	$id_date = "datetimepicker_06";
+												    	$id_date = "datetimepicker_18";
 												    	$class_input = "end_date";
 												    	include('include/forms/date.html'); 
 												    ?>
@@ -139,7 +140,7 @@
 										  </ul>
 										</div>
 									</div>
-									<div class="col-sm-6">
+									<div class="col-sm-6 demo2">
 										<ul class="pagination ">
 											<li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left small-text"></span></a></li>
 											<li class="active"><a href="#">1</a></li>
@@ -170,7 +171,7 @@
 										  </ul>
 										</div>
 									</div>
-									<div class="col-sm-6">
+									<div class="col-sm-6 demo2">
 										<ul class="pagination ">
 											<li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left small-text"></span></a></li>
 											<li class="active"><a href="#">1</a></li>
@@ -202,6 +203,7 @@
 	<script src="public/vendor/jquery/jquery.tinysort.min.js"></script>
 	<script src="public/vendor/jquery/jquery.tinysort.charorder.min.js"></script>
 	<script src="public/vendor/bootstrap/bootstrap.js"></script>
+	<script src="public/vendor/bootstrap/jquery.bootpag.min.js"></script>
 	<script src="public/vendor/bower-components/moment/min/moment.min.js"></script>
 	<script src="public/vendor/bower-components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 	<script src="public/vendor/bootstrap/bootstrap-slider.js"></script>

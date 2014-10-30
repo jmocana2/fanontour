@@ -1328,8 +1328,15 @@ blockquote {
 .panel-filter input {
   margin-bottom: 15px;
 }
+.panel-pagination label {
+  float: left;
+  padding-top: 8px;
+}
 .panel-pagination .dropdown {
   display: inline-block;
+}
+.panel-pagination .dropdown .shape-arrow {
+  display: block;
 }
 .panel-pagination .pagination {
   margin: 0;
