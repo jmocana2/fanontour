@@ -71,22 +71,22 @@
 
 			<section id="activities">
 				<div class="container">
-					<div class="row">
+					
 						<header>
-							<h1 class="title title-photo">Activity results (255 Results)</h1>						
+							<h1 class="title title-photo">Activity results (<span>255</span> Results)</h1>						
 							<nav>
 				                <ol class="breadcrumb breadcrumb-default">
 				                    <li><a href="00_home.html" title="go to the init page">Home</a></li>
-				                    <li>Results (255)</li>
+				                    <li>Results (<span>255</span>)</li>
 				                </ol>
 			                </nav>		           
 						</header>					
 						<div>
 							<div class="col-md-3 ">
 								<div class="panel-fix-top">
-									<div class="panel panel-filter">
-										<h2>Your search details</h2>
-										<div class="panel-box-body">
+									<div class="panel panel-filter accordion">
+										<h2><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed" rel="nofollow">Your search details <small><span class="glyphicon glyphicon-chevron-down"></span></small></a></h2>
+										<div class="panel-box-body panel-collapse collapse in" id="collapse1">
 											<form role="form" action="#" method="post">
 												<div class="form-group padding-v-10">
 													<fieldset>
@@ -112,9 +112,9 @@
 											</form>	
 										</div>								
 									</div>
-									<div class="panel panel-filter">
-										<h2>Filter by</h2>
-										<div class="panel-box-body">
+									<div class="panel panel-filter accordion">
+										<h2><a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed" rel="nofollow">Filter by  <small><span class="glyphicon glyphicon-chevron-down"></span></small></a></h2>
+										<div class="panel-box-body panel-collapse collapse in" id="collapse2">
 											<div class="row-padding-small">
 												<label for="price-slider">Price (&euro;)</label>
 												<input id="price-slider" type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="1" data-slider-value="[0,600]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
@@ -133,8 +133,8 @@
 										<label for="sort-field-01">Sort by</label>
 									    <div class="dropdown dropdown-default">
 										  <a class="shape-arrow" href="#"><span></span></a>
-										  <input type="text" class="form-control" id="sort-field-01" data-toggle="dropdown" placeholder="Select order" >
-										  <ul class="dropdown-menu" role="menu" aria-labelledby="order-field-01">
+										  <input type="text" class="form-control" id="sort-field-01" data-toggle="dropdown" placeholder="Select order" data-value="">
+										  <ul class="dropdown-menu" role="menu" aria-labelledby="sort-field-01">
 										    <li><a href="#" class="price-desc" rel="nofollow">High to Low</a></li>
 										    <li><a href="#" class="price-asc" rel="nofollow">Low to High</a></li>									    									    
 										  </ul>
@@ -146,7 +146,7 @@
 											<div class="dropdown dropdown-default dropdown-small">
 											  <a class="shape-arrow" href="#"><span></span></a>
 											  <input type="text" class="form-control" id="items-field-01" data-toggle="dropdown" value="5" >
-											  <ul class="dropdown-menu" role="menu" aria-labelledby="order-field-01">
+											  <ul class="dropdown-menu" role="menu" aria-labelledby="items-field-01">
 											    <li><a href="#" rel="nofollow">5</a></li>
 											    <li><a href="#" rel="nofollow">10</a></li>
 											    <li><a href="#" rel="nofollow">15</a></li>
@@ -154,7 +154,7 @@
 											  </ul>
 											</div>
 										</div>	
-										<div class="floatr">									
+										<div class="floatr pag">									
 											<ul class="pagination">
 												
 											</ul>
@@ -177,7 +177,7 @@
 								</div>
 							</div>							
 						</div>
-				    </div>
+				    
 			    </div>
 			</section>
 						

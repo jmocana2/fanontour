@@ -65,6 +65,7 @@ $( document ).ready(function() { //DOM OK!
 	$( ".dropdown .dropdown-menu li" ).click(function(e) {
 		var dropdown_value = $(this).children("a").text();
 		$(this).closest(".dropdown").find("input").attr("value",dropdown_value);
+		$(this).closest(".dropdown").find("input").attr("data-value",$(this).prevAll().length);
 		e.preventDefault();
 	});
 
@@ -158,73 +159,6 @@ $( document ).ready(function() { //DOM OK!
             $('.datetimepicker_18').data("DateTimePicker").setMinDate(e.date);
         });
 	}	
-
-	//SLIDER FORM
-	//=======================
-	if($(".panel-filter").length){
-		$('#price-slider, #duration-slider').slider()
-
-		function filterActivities(v1min, v1max, v2min, v2max){
-
-			$(".results ul").remove();
-		  	var resultHtml = "<ul>";
-
-		    $.get("/fanontour/xml/results/activity.xml", function (xml) {
-			    $(xml).find("activity").each(function () {	
-
-			       var price = parseInt($(this).find('price').text());
-			       var duration = parseInt($(this).find('duration').text());
-
-			       if((price >= v1min && price <= v1max) && (duration >= v2min && duration <= v2max)){
-			       	   var name = $(this).find('name').text();
-	       			   var description = $(this).find('description').text();
-	       			   var image = $(this).find('image').text();       			   
-	       			   var source = $(this).find('source').text();
-	       			   var url = $(this).find('url').text();
-				       
-				       resultHtml += "<li class='mod-result'><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
-				       resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>"+ description +"</p></div>";
-				       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price'>" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_clock'></span> "+ duration +"</li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li></div>";			
-			       }			      
-			    });
-
-				resultHtml += "</ul>";
-				$(".results").html(resultHtml);
-
-			});
-		}
-
-		//PRICE SLIDER
-		$('#price-slider, #duration-slider').slider()
-		  .on('slideStop', function(ev){
-
-		  	//Get min-max values
-		  	//Min max prices
-		  	if($("#price-slider").val() == ""){
-		  		var interval = "0,600";
-		  	}else{
-		  		var interval = $("#price-slider").val();
-		  	}
-
-		  	if($("#duration-slider").val() == ""){
-		  		var interval2 = "0,120";
-		  	}else{
-		  		var interval2 = $("#duration-slider").val();
-		  	}
-		    
-		    var res = interval.split(",");
-		    var v1min = res[0];
-		    var v1max = res[1];
-		    //Min max duration
-		 
-		    var res2 = interval2.split(",");
-		    var v2min = res2[0];
-		    var v2max = res2[1];
-
-		    filterActivities(v1min, v1max, v2min, v2max)		   
-		  	
-		  });		
-	}
 
 	//Rental car (drop off)
 	$( "#conditionsAccepted, #tourConditionsAccepted " ).click(function() {
@@ -603,8 +537,79 @@ $( document ).ready(function() { //DOM OK!
 	}	
 	
 	//RESULTS
+	//
+	//SLIDER FORM
+	//=======================
+	if($(".panel-filter").length){
+		$('#price-slider, #duration-slider').slider()
+
+		function filterActivities(v1min, v1max, v2min, v2max){
+
+			$(".results ul").remove();
+		  	var resultHtml = "<ul id='list_results'>";
+
+		    $.get("/fanontour/xml/results/activity.xml", function (xml) {
+			    $(xml).find("activity").each(function () {	
+
+			       var price = parseInt($(this).find('price').text());
+			       var duration = parseInt($(this).find('duration').text());
+
+			       if((price >= v1min && price <= v1max) && (duration >= v2min && duration <= v2max)){
+			       	   var name = $(this).find('name').text();
+	       			   var description = $(this).find('description').text();
+	       			   var image = $(this).find('image').text();       			   
+	       			   var source = $(this).find('source').text();
+	       			   var url = $(this).find('url').text();
+				       
+				       resultHtml += "<li class='mod-result'><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
+				       resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>"+ description +"</p></div>";
+				       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_clock'></span> "+ duration +"</li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li></div>";			
+			       }			      
+			    });
+
+				resultHtml += "</ul>";
+				$(".results").html(resultHtml).promise().done(function(){
+       				orderFanontour($("#sort-field-01").attr("data-value"));
+       				paginarFanontour($("#items-field-01").val()); 
+       				setResults();      				       				
+    			});
+			});
+		}
+
+		//PRICE SLIDER
+		$('#price-slider, #duration-slider').slider()
+		  .on('slideStop', function(ev){
+
+		  	//Get min-max values
+		  	//Min max prices
+		  	if($("#price-slider").val() == ""){
+		  		var interval = "0,600";
+		  	}else{
+		  		var interval = $("#price-slider").val();
+		  	}
+
+		  	if($("#duration-slider").val() == ""){
+		  		var interval2 = "0,120";
+		  	}else{
+		  		var interval2 = $("#duration-slider").val();
+		  	}
+		    
+		    var res = interval.split(",");
+		    var v1min = res[0];
+		    var v1max = res[1];
+		    //Min max duration
+		 
+		    var res2 = interval2.split(",");
+		    var v2min = res2[0];
+		    var v2max = res2[1];
+
+		    filterActivities(v1min, v1max, v2min, v2max)		   
+		  	
+		  });		
+	}
+	
 	//Creating fixed panels
-	if($("#results").length){
+	if($("#results").length && $(window).width() > 991){
 		var max_height = $("#header").height() + $(".bg-container").height() - 50;
 
 		$(window).scroll(function() {
@@ -614,6 +619,13 @@ $( document ).ready(function() { //DOM OK!
 		   		$(".panel-fix-top").removeClass("active");
 		   }
 		});
+	}
+
+	//SET RESULTS
+	function setResults(){
+		var num_results = $("#list_results .mod-result").length;
+		$("h1.title span").text(num_results);
+		$(".breadcrumb span").text(num_results);
 	}
 
 	//ORDER BY
@@ -627,6 +639,18 @@ $( document ).ready(function() { //DOM OK!
 		$('.mod-result').tsort('li.price',{order:'asc', attr:'data-value'});
 		paginarFanontour($("#items-field-01").val());		
 	});
+
+	function orderFanontour(orderby){
+		orderby = parseInt(orderby);
+		switch(orderby){
+			case 0:				
+				$('.mod-result').tsort('li.price',{order:'desc', attr:'data-value'});
+				break;
+			case 1:
+				$('.mod-result').tsort('li.price',{order:'asc', attr:'data-value'});
+				break;
+		}
+	}
 
 	//MODALS
 	//

@@ -1350,6 +1350,18 @@ blockquote {
 .panel-filter input {
   margin-bottom: 15px;
 }
+.panel-filter.accordion h2 {
+  padding: 0;
+}
+.panel-filter.accordion h2 a {
+  padding: 10px 0;
+  color: #ffffff;
+  display: block;
+}
+.panel-filter.accordion h2 small {
+  color: #ffffff;
+  padding-left: 5px;
+}
 .panel-pagination label {
   float: left;
   padding-top: 8px;
@@ -2292,6 +2304,9 @@ video {
   }
 }
 @media (max-width: 768px) {
+  h1.title {
+    font-size: 2.1em;
+  }
   #header {
     position: fixed;
     width: 100%;
@@ -2424,6 +2439,35 @@ video {
     background: url('../img/backgrounds/home/mobile_h_600px.jpg') no-repeat center 0;
     background-size: cover;
   }
+  .bg-container-generic {
+    height: 183px;
+  }
+  .panel-pagination .dropdown-items {
+    margin-bottom: 10px;
+  }
+  .panel-pagination .pag {
+    clear: both;
+    float: right;
+  }
+  .panel-pagination .pag .pagination {
+    margin-right: 0;
+  }
+  .mod-result .result-footer li {
+    float: none;
+    display: block;
+    border: none;
+    margin-top: 15px;
+    margin-left: 0;
+  }
+  .mod-result .result-footer .price {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+  .mod-result .result-footer .source {
+    margin-top: 0;
+  }
 }
 @media (max-width: 480px) {
   #header nav {
@@ -2440,8 +2484,39 @@ video {
   #footer .inf1 .fanontour-mod-share {
     width: 275px;
   }
+  .bg-container-generic {
+    height: 220px;
+  }
   .fanontour-mod-details {
     width: 100%;
+  }
+  .panel-pagination .dropdown-items {
+    margin-top: 20px;
+  }
+  .results .mod-result {
+    background-color: #ffffff;
+  }
+  .results .mod-result .mod-img {
+    margin: 0 auto 15px auto;
+    width: 154px;
+    float: none;
+  }
+  .results .mod-result .mod-txt {
+    display: block;
+    clear: left;
+  }
+  .results .mod-result .mod-txt p {
+    margin-bottom: 15px;
+  }
+  .results .mod-result .result-footer {
+    background-color: #eaeaea;
+    text-align: center;
+    padding: 20px;
+  }
+  .results .mod-result .result-footer .price {
+    float: none;
+    display: inline-block;
+    margin-right: 0;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
