@@ -181,9 +181,15 @@
 .panel-fix-top{
 	&.active{
 		position: fixed;
-		bottom: 340px;	
+		top: 10px;	
 		width: 255px;	
 	}	
+
+	&.limit-height{
+		position: absolute;
+		bottom: 86px;
+		top: inherit;
+	}
 }
 
 //calendars

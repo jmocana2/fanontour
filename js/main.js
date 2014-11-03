@@ -630,17 +630,23 @@ $( document ).ready(function() { //DOM OK!
 	
 	//Creating fixed panels
 	if($("#results").length && $(window).width() > 991){
-		var max_height = $("#header").height() + $(".bg-container").height();
-
+		var init_height = $("#header").height() + $(".bg-container").height();
+		var max_height = $(document).height() - $(".results").height() -10;
+		
 		$(window).scroll(function() {
-
-		    if($(window).scrollTop() > max_height){
+		    if($(window).scrollTop() > init_height){
 		   		$(".panel-fix-top").addClass("active");
 		   		$(".btn-up").fadeIn();
 		   }else{
 		   		$(".panel-fix-top").removeClass("active");
 		   		$(".btn-up").fadeOut();
 		   }
+		   if($(window).scrollTop() >= max_height){
+		   		$(".panel-fix-top").addClass("limit-height");
+		   }else{
+		   		$(".panel-fix-top").removeClass("limit-height");
+		   }
+
 		});
 	}
 

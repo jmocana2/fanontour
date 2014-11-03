@@ -1424,8 +1424,13 @@ blockquote {
 }
 .panel-fix-top.active {
   position: fixed;
-  bottom: 340px;
+  top: 10px;
   width: 255px;
+}
+.panel-fix-top.limit-height {
+  position: absolute;
+  bottom: 86px;
+  top: inherit;
 }
 .bootstrap-datetimepicker-widget td.disabled {
   -webkit-opacity: 0.5;
@@ -2341,6 +2346,9 @@ video {
 }
 #fanontour-search-box .tab-content {
   min-height: 135px;
+}
+.col-filter {
+  min-height: 1108px;
 }
 @media (max-width: 992px) {
   #header .container.relative {
