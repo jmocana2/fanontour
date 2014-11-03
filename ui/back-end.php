@@ -309,6 +309,114 @@
 						</div>					
 										
 				</div>
+
+				<h1>Results</h1>
+				<p>To filter the results we need to generate a xml document with all information of the search. We must also enter values in the "Your search details" box.
+				<br>Pagination, items per page and order of results is done in the front side.</p>
+				<p>Next i show all models of xml to generate</p>
+				<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">XML Model Activities</a>
+								</h4>
+							</div>
+						<div id="collapse1" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<div class="col-md-12 row-padding-v-small">
+							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;Activities&gt;
+	&lt;activity&gt;
+		&lt;name&gt;&lt;/name&gt;
+		&lt;description&gt;&lt;/description&gt;
+		&lt;image&gt;&lt;/image&gt;
+		&lt;price&gt;&lt;/price&gt;
+		&lt;duration&gt;&lt;/duration&gt;
+		&lt;source&gt;&lt;/source&gt;
+		&lt;url&gt;&lt;/url&gt;
+	&lt;/activity&gt;
+&lt;/Activities&gt;
+</pre>
+			</div>
+							</div>
+						</div>
+						</div>					
+										
+				</div>
+
+				<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">Example: XML Model Activities</a>
+								</h4>
+							</div>
+						<div id="collapse1" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<div class="col-md-12 row-padding-v-small">
+								<p>Full example: <a href="http://www.jmocana.eu/fanontour/xml/results/activity.xml" title="see example">http://www.jmocana.eu/fanontour/xml/results/activity.xml</a></p>
+							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;Activities&gt;
+	&lt;activity&gt;
+		&lt;name&gt;Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino&lt;/name&gt;
+		&lt;description&gt;Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!&lt;/description&gt;
+		&lt;image&gt;/fanontour/img/results/recorte_154x102.jpg&lt;/image&gt;
+		&lt;price&gt;45&lt;/price&gt;
+		&lt;duration&gt;70 minutes&lt;/duration&gt;
+		&lt;source&gt;Viator&lt;/source&gt;
+		&lt;url&gt;http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK&lt;/url&gt;
+	&lt;/activity&gt;
+	&lt;activity&gt;
+		&lt;name&gt;Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino&lt;/name&gt;
+		&lt;description&gt;Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!&lt;/description&gt;
+		&lt;image&gt;/fanontour/img/results/recorte_154x102.jpg&lt;/image&gt;
+		&lt;price&gt;75&lt;/price&gt;
+		&lt;duration&gt;10 minutes&lt;/duration&gt;
+		&lt;source&gt;Viator&lt;/source&gt;
+		&lt;url&gt;http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK&lt;/url&gt;
+	&lt;/activity&gt;
+	&lt;activity&gt;
+		&lt;name&gt;Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino&lt;/name&gt;
+		&lt;description&gt;Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!&lt;/description&gt;
+		&lt;image&gt;/fanontour/img/results/recorte_154x102.jpg&lt;/image&gt;
+		&lt;price&gt;5&lt;/price&gt;
+		&lt;duration&gt;75 minutes&lt;/duration&gt;
+		&lt;source&gt;Viator&lt;/source&gt;
+		&lt;url&gt;http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK&lt;/url&gt;
+	&lt;/activity&gt;
+&lt;/Activities&gt;
+</pre>
+			</div>
+							</div>
+						</div>
+						</div>					
+										
+				</div>
+
+				<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">Activities search details</a>
+								</h4>
+							</div>
+						<div id="collapse1" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<div class="col-md-12 row-padding-v-small">
+								<p>Introduce the values (value="<em>load value</em>") in the next inputs</p>
+							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
+&lt;input type="text" class="form-control" id="activity-field-01" placeholder="City name" required&gt;
+&lt;input id="datetimepicker_17" type="text" class="form-control mandatory start_date" data-date-format="DD/MM/YYYY" readonly&gt;
+&lt;input id="datetimepicker_18" type="text" class="form-control mandatory end_date" data-date-format="DD/MM/YYYY" readonly&gt;
+</pre>
+			</div>
+							</div>
+						</div>
+						</div>					
+										
+				</div>
 				</div>
 
 			
