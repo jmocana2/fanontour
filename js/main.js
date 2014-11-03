@@ -570,8 +570,7 @@ $( document ).ready(function() { //DOM OK!
 			       if(isNaN(val_duration)){
 			       	val_duration = max_duration;
 			       }
-			       console.log(val_duration);
-
+			      
 			       if((val_price >= v1min && val_price <= v1max) && (val_duration >= v2min && val_duration <= v2max)){
 			       	   var name = $(this).find('name').text();
 	       			   var description = $(this).find('description').text();
@@ -629,12 +628,12 @@ $( document ).ready(function() { //DOM OK!
 	}
 	
 	//Creating fixed panels
-	if($("#results").length && $(window).width() > 991){
-		var init_height = $("#header").height() + $(".bg-container").height();
-		var max_height = $(document).height() - $(".results").height() -10;
-		
+	if($("#results").length && $(window).width() > 991){		
 		$(window).scroll(function() {
-		    if($(window).scrollTop() > init_height){
+			var init_height = $("#header").height() + $(".bg-container").height();
+			var max_height = $(".results").height() - 240;
+
+			if($(window).scrollTop() > init_height){
 		   		$(".panel-fix-top").addClass("active");
 		   		$(".btn-up").fadeIn();
 		   }else{
@@ -733,6 +732,8 @@ $( document ).ready(function() { //DOM OK!
     $(".dropdown-items .dropdown-menu a").click(function(){
      	var num_pag = $(this).text();
      	paginarFanontour(num_pag);
+     	var altura = $(".results").height() + 135;
+     	$(".col-filter").css("height", altura);
     });
 
 	//TOOLTIPS
