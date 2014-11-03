@@ -2013,6 +2013,12 @@ video {
   background: url('../img/backgrounds/bg_white_trans.png');
   padding: 15px;
 }
+#fanontour-search-box #tab-tickets label {
+  width: 42px;
+}
+#fanontour-search-box #tab-tickets input {
+  width: 328px;
+}
 #fanontour-search-box .dropdown-toggle {
   width: 100%;
   margin-left: 0;
