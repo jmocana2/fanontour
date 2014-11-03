@@ -798,6 +798,20 @@ blockquote dd {
   width: 0;
   z-index: 2;
 }
+.dropdown-default .dropdown-menu {
+  padding: 0;
+}
+.dropdown-default .dropdown-menu li {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.dropdown-default .dropdown-menu li:first-child {
+  margin-top: 0;
+}
+.dropdown-default .dropdown-menu a:hover {
+  background-color: #323232;
+  color: #ffffff;
+}
 .dropdown-default.dropdown-small input {
   width: 50px;
 }
@@ -1153,6 +1167,22 @@ blockquote dd {
   position: relative;
   top: -1px;
 }
+.btn-up {
+  background-color: #ffffff;
+  border: 1px #b2b2b2 solid;
+  padding: 8px 15px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  font-size: 1.7em;
+  position: fixed;
+  bottom: 360px;
+  right: 20px;
+  display: none;
+}
 .tab-default .nav-tabs {
   border: none;
 }
@@ -1347,8 +1377,21 @@ blockquote {
 .panel-filter label {
   display: block;
 }
+.panel-filter label span {
+  font-family: 'Arial', 'sans-serif';
+}
 .panel-filter input {
   margin-bottom: 15px;
+}
+.panel-filter .tooltip.top {
+  top: 15px !important;
+}
+.panel-filter .tooltip.top .tooltip-arrow {
+  border-top-color: transparent;
+  border-bottom-color: #0669b2;
+  border-width: 0 5px 5px;
+  top: 0;
+  bottom: inherit;
 }
 .panel-filter.accordion h2 {
   padding: 0;
@@ -1381,8 +1424,8 @@ blockquote {
 }
 .panel-fix-top.active {
   position: fixed;
-  top: 58px;
-  width: 262px;
+  bottom: 340px;
+  width: 255px;
 }
 .bootstrap-datetimepicker-widget td.disabled {
   -webkit-opacity: 0.5;
@@ -1712,6 +1755,9 @@ blockquote {
   background-color: #0669b2;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.tooltip.top .tooltip-arrow {
+  border-top-color: #0669b2;
 }
 .alert strong {
   font-family: 'robotobold', 'Arial Black', 'sans-serif';
@@ -2226,7 +2272,11 @@ video {
   background-color: #6eb21b;
 }
 .results {
-  min-height: 1200px;
+  min-height: 972px;
+  background: url('../img/ajax-loader.gif') no-repeat center 175px;
+}
+.results #list_results {
+  background-color: #eaeaea;
 }
 .results li {
   padding: 20px;

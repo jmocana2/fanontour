@@ -6,8 +6,13 @@
         $image=$activity->image;
         $price=$activity->price;
         $duration=$activity->duration;
+        $val_duration = $duration;
         $source=$activity->source;
         $url=$activity->url;
+
+        if((int)$duration == 0){
+        	$val_duration = 120;
+        }
 	?>
 
     <li class="mod-result">
@@ -22,7 +27,7 @@
 			<ul class="list-inline">
 				<li class="price" data-value="<?php echo $price; ?>"><?php echo $price; ?> &euro;</li>
 				<li class="source"><a class="btn btn-search" href="<?php echo $url; ?>">Book here</a></li>
-				<li><span class="fanontour-icon icon-icons-fanontour_clock"></span> <?php echo $duration; ?></li>
+				<li class="duration" data-value="<?php echo (int)$val_duration; ?>"><span class="fanontour-icon icon-icons-fanontour_clock"></span> <?php echo $duration; ?></li>
 				<li><span class="fanontour-icon icon-icons-fanontour_source"></span> Found in <strong><?php echo $source; ?></strong></li>
 			</ul>
 		</div>

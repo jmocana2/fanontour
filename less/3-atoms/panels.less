@@ -112,10 +112,26 @@
 
 	label{
 		display: block;
+
+		span{
+			font-family: @font-default-system, @font-third;
+		}
 	}
 
 	input{
 		margin-bottom: 15px;
+	}
+
+	.tooltip.top{
+		top: 15px !important;
+
+		.tooltip-arrow{
+			border-top-color: transparent;
+			border-bottom-color: @colorB1;
+			border-width: 0 5px 5px;
+			top: 0;
+			bottom: inherit; 
+		}
 	}
 
 	&.accordion{
@@ -163,13 +179,10 @@
 
 //panel-fix-top
 .panel-fix-top{
-
-	
-
 	&.active{
 		position: fixed;
-		top: 58px;	
-		width: 262px;	
+		bottom: 340px;	
+		width: 255px;	
 	}	
 }
 

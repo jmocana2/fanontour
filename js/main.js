@@ -59,6 +59,13 @@ $( document ).ready(function() { //DOM OK!
 		$(this).closest(".panel").find(".panel-heading").addClass("active");
 	});	
 
+	//BUTTONS
+	//btn-up
+	$( ".btn-up" ).click(function(e) {
+		$('html,body').animate({scrollTop:'0px'}, 500);
+		e.preventDefault();
+	});
+
 	//FORMS
 	//
 	//Dropdown-form
@@ -541,6 +548,13 @@ $( document ).ready(function() { //DOM OK!
 	//SLIDER FORM
 	//=======================
 	if($(".panel-filter").length){
+		//************* CONFIG ***************
+		var min_duration = 0;
+		var max_duration = 120;
+		var min_price = 0;
+		var max_price = 600;
+
+
 		$('#price-slider, #duration-slider').slider()
 
 		function filterActivities(v1min, v1max, v2min, v2max){
@@ -551,19 +565,25 @@ $( document ).ready(function() { //DOM OK!
 		    $.get("/fanontour/xml/results/activity.xml", function (xml) {
 			    $(xml).find("activity").each(function () {	
 
-			       var price = parseInt($(this).find('price').text());
-			       var duration = parseInt($(this).find('duration').text());
+			       var val_price = parseInt($(this).find('price').text());
+			       var val_duration = parseInt($(this).find('duration').text());
+			       if(isNaN(val_duration)){
+			       	val_duration = max_duration;
+			       }
+			       console.log(val_duration);
 
-			       if((price >= v1min && price <= v1max) && (duration >= v2min && duration <= v2max)){
+			       if((val_price >= v1min && val_price <= v1max) && (val_duration >= v2min && val_duration <= v2max)){
 			       	   var name = $(this).find('name').text();
 	       			   var description = $(this).find('description').text();
-	       			   var image = $(this).find('image').text();       			   
+	       			   var image = $(this).find('image').text();
+	       			   var price = $(this).find('price').text(); 
+	       			   var duration = $(this).find('duration').text();     			   
 	       			   var source = $(this).find('source').text();
 	       			   var url = $(this).find('url').text();
 				       
 				       resultHtml += "<li class='mod-result'><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
 				       resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>"+ description +"</p></div>";
-				       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_clock'></span> "+ duration +"</li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li></div>";			
+				       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li class='duration' data-value='"+ val_duration +"'><span class='fanontour-icon icon-icons-fanontour_clock'></span> "+ duration +"</li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li></div>";			
 			       }			      
 			    });
 
@@ -583,13 +603,13 @@ $( document ).ready(function() { //DOM OK!
 		  	//Get min-max values
 		  	//Min max prices
 		  	if($("#price-slider").val() == ""){
-		  		var interval = "0,600";
+		  		var interval = min_price + "," + max_price;
 		  	}else{
 		  		var interval = $("#price-slider").val();
 		  	}
 
 		  	if($("#duration-slider").val() == ""){
-		  		var interval2 = "0,120";
+		  		var interval2 = min_duration + "," +  max_duration;
 		  	}else{
 		  		var interval2 = $("#duration-slider").val();
 		  	}
@@ -610,13 +630,16 @@ $( document ).ready(function() { //DOM OK!
 	
 	//Creating fixed panels
 	if($("#results").length && $(window).width() > 991){
-		var max_height = $("#header").height() + $(".bg-container").height() - 50;
+		var max_height = $("#header").height() + $(".bg-container").height();
 
 		$(window).scroll(function() {
-		   if($(window).scrollTop() > max_height){
+
+		    if($(window).scrollTop() > max_height){
 		   		$(".panel-fix-top").addClass("active");
+		   		$(".btn-up").fadeIn();
 		   }else{
 		   		$(".panel-fix-top").removeClass("active");
+		   		$(".btn-up").fadeOut();
 		   }
 		});
 	}
@@ -640,6 +663,16 @@ $( document ).ready(function() { //DOM OK!
 		paginarFanontour($("#items-field-01").val());		
 	});
 
+	$( ".duration-desc" ).click(function() {		
+		$('.mod-result').tsort('li.duration',{order:'desc', attr:'data-value'});
+		paginarFanontour($("#items-field-01").val());			
+	});
+
+	$( ".duration-asc" ).click(function() {		
+		$('.mod-result').tsort('li.duration',{order:'asc', attr:'data-value'});
+		paginarFanontour($("#items-field-01").val());		
+	});
+
 	function orderFanontour(orderby){
 		orderby = parseInt(orderby);
 		switch(orderby){
@@ -649,6 +682,12 @@ $( document ).ready(function() { //DOM OK!
 			case 1:
 				$('.mod-result').tsort('li.price',{order:'asc', attr:'data-value'});
 				break;
+			case 2:
+				$('.mod-result').tsort('li.duration',{order:'desc', attr:'data-value'});
+				break;
+			case 3:
+				$('.mod-result').tsort('li.duration',{order:'asc', attr:'data-value'});
+				break;		
 		}
 	}
 
