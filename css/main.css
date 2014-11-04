@@ -800,6 +800,9 @@ blockquote dd {
 }
 .dropdown-default .dropdown-menu {
   padding: 0;
+  width: 156px;
+  left: 5px;
+  max-width: 156px;
 }
 .dropdown-default .dropdown-menu li {
   margin-bottom: 0;
@@ -807,6 +810,9 @@ blockquote dd {
 }
 .dropdown-default .dropdown-menu li:first-child {
   margin-top: 0;
+}
+.dropdown-default .dropdown-menu li a {
+  padding: 3px 8px;
 }
 .dropdown-default .dropdown-menu a:hover {
   background-color: #323232;
@@ -832,7 +838,8 @@ blockquote dd {
   z-index: 2;
 }
 .dropdown-default.dropdown-small .dropdown-menu {
-  min-width: 45px;
+  min-width: 51px;
+  width: 51px;
 }
 .dropdown-tab {
   width: 100%;
@@ -1183,6 +1190,10 @@ blockquote dd {
   right: 20px;
   display: none;
 }
+.btn-up small {
+  display: block;
+  font: normal 0.5em 'Arial', 'sans-serif';
+}
 .tab-default .nav-tabs {
   border: none;
 }
@@ -1429,7 +1440,7 @@ blockquote {
 }
 .panel-fix-top.limit-height {
   position: absolute;
-  bottom: 86px;
+  bottom: 64px;
   top: inherit;
 }
 .bootstrap-datetimepicker-widget td.disabled {
@@ -1756,10 +1767,14 @@ blockquote {
 #modal-customized-tour .modal-footer {
   border: none;
 }
+.tooltip {
+  line-height: .5em;
+}
 .tooltip .tooltip-inner {
   background-color: #0669b2;
   padding-top: 10px;
   padding-bottom: 10px;
+  text-shadow: 1px 1px #000;
 }
 .tooltip.top .tooltip-arrow {
   border-top-color: #0669b2;

@@ -662,7 +662,7 @@ $( document ).ready(function() { //DOM OK!
 	if($("#results").length && $(window).width() > 991){		
 		$(window).scroll(function() {
 			var init_height = $("#header").height() + $(".bg-container").height();
-			var max_height = $(".results").height() - 240;
+			var max_height = $(".results").height() - 215;
 
 			if($(window).scrollTop() > init_height){
 		   		$(".panel-fix-top").addClass("active");
