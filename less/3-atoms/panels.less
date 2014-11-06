@@ -192,6 +192,34 @@
 	}
 }
 
+//panel-results
+.panel-result{
+
+	margin-top: 20px;	
+	.box-shadow (0px 3px 5px 0px rgba(50, 50, 50, 0.5));
+	padding: 0 !important;
+	border: none !important;
+
+	.mod-txt{
+		display: block;
+
+		h2{
+			width: 100%;
+			padding: 12px 25px;
+			font-family: @font-title, @font-title-system, @font-third;
+			color: @colorW;
+			display: block;
+			background-color: @colorK21;
+			.border-radiuses (@topright: @radius, @bottomright: 8, @bottomleft: 0, @topleft: @radius);
+			text-shadow: 1px 1px #000; 
+		}
+	}
+
+	.result-footer{
+		padding: 20px;
+	}
+}
+
 //calendars
 .bootstrap-datetimepicker-widget td.disabled{
 	.opacity(.5);

@@ -1,0 +1,27 @@
+ <?php
+ 	$flights = simplexml_load_file('xml/results/flights.xml'); 
+ 	foreach ($flights->flight as $flight):
+        $route=$flight->route; // declaracion de variables        
+        $price=$flight->price;       
+        $source=$flight->source;
+        $url=$flight->url;      
+	?>
+
+    <li class="mod-result panel panel-result">
+		<div class="mod-txt">
+			<h2><?php echo $route; ?></h2>			
+		</div>
+		<div class="result-footer">
+			<ul class="list-inline">
+				<li class="price" data-value="<?php echo $price; ?>"><?php echo $price; ?> &euro;</li>
+				<li class="source"><a class="btn btn-search" href="<?php echo $url; ?>">Book here</a></li>				
+				<li><span class="fanontour-icon icon-icons-fanontour_source"></span> Found in <strong><?php echo $source; ?></strong></li>
+			</ul>
+		</div>
+	</li>
+
+    <?php       
+    	endforeach;
+    ?>	
+
+
