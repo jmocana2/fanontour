@@ -1446,6 +1446,44 @@ blockquote {
   bottom: 64px;
   top: inherit;
 }
+.panel-result {
+  margin-top: 20px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.5);
+  padding: 0 !important;
+  border: none !important;
+}
+.panel-result .mod-txt {
+  display: block;
+}
+.panel-result .mod-txt h2 {
+  width: 100%;
+  padding: 12px 25px;
+  font-family: 'roboto_condensedbold', 'Arial Black', 'sans-serif';
+  color: #ffffff;
+  display: block;
+  background-color: #4c4c4c;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 8;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 8;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 8;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  text-shadow: 1px 1px #000;
+}
+.panel-result .result-footer {
+  padding: 20px;
+}
 .bootstrap-datetimepicker-widget td.disabled {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
