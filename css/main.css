@@ -760,6 +760,9 @@ blockquote dd {
 .list-point li.not-point {
   background: none;
 }
+#list_results {
+  min-height: inherit !important;
+}
 .dropdown-default input {
   margin-left: 5px;
 }

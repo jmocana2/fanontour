@@ -664,6 +664,9 @@ $( document ).ready(function() { //DOM OK!
 			var init_height = $("#header").height() + $(".bg-container").height();
 			var max_height = $(".results").height() - 215;
 
+			var altura = $(".results").height() + 135;				
+     		$(".col-filter").css("height", altura);
+
 			if($(window).scrollTop() > init_height){
 		   		$(".panel-fix-top").addClass("active");
 		   		$(".btn-up").fadeIn();
@@ -739,14 +742,12 @@ $( document ).ready(function() { //DOM OK!
 	$( ".customized-tour" ).click(function() {		
 		$('#modal-customized-tour').modal('show');
 		//return false;
-	});
+	});	
 
 	/* on select change */
-    $(".dropdown-items .dropdown-menu a").click(function(){
+    $(".dropdown-items .dropdown-menu").delegate("a","click",function(){
      	var num_pag = $(this).text();
-     	paginarFanontour(num_pag);
-     	var altura = $(".results").height() + 135;
-     	$(".col-filter").css("height", altura);
+     	paginarFanontour(num_pag);     	
     });
 
 	//TOOLTIPS
