@@ -122,6 +122,29 @@
 		margin-bottom: 15px;
 	}
 
+	.dropdown-form{
+		a{
+			&.shape-arrow{
+				.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 214px, @y: 11px);
+			}
+		}
+
+		
+
+		&.small-field-w{
+			a{
+				&.shape-arrow{
+					.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 36px, @y: 7px) !important;
+				}
+			}
+
+			.dropdown-menu{
+				top: 25px;
+				width: 50px;
+			}
+		}
+	}		
+
 	.tooltip.top{
 		top: 15px !important;
 
@@ -202,6 +225,7 @@
 
 	.mod-txt{
 		display: block;
+		min-height: inherit !important;
 
 		h2{
 			width: 100%;

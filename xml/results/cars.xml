@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Cars>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>1225.13</price>
+		<doors>5</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>25.13</price>
+		<doors>3</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>1225.13</price>
+		<doors>5</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>1225.13</price>
+		<doors>5</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>1225.13</price>
+		<doors>5</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>122.13</price>
+		<doors>2/4</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>1225.13</price>
+		<doors>4</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>1225.13</price>
+		<doors>5</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>1225.13</price>
+		<doors>5</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>1225.13</price>
+		<doors>5</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>1225.13</price>
+		<doors>5</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>925.13</price>
+		<doors>5</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>2225.13</price>
+		<doors>5</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>1225.13</price>
+		<doors>5</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<price>1225.13</price>
+		<doors>5</doors>
+		<source>rentalCars</source>
+		<url>http://www.rental-cars.com</url>
+	</car>	
+</Cars>		

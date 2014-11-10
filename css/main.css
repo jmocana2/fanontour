@@ -1397,6 +1397,42 @@ blockquote {
 .panel-filter input {
   margin-bottom: 15px;
 }
+.panel-filter .dropdown-form a.shape-arrow {
+  position: relative;
+}
+.panel-filter .dropdown-form a.shape-arrow span:before {
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-top: 5px solid #4a4a4a;
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  border-bottom: 0;
+  content: "";
+  height: 0;
+  left: 214px;
+  position: absolute;
+  top: 11px;
+  width: 0;
+  z-index: 2;
+}
+.panel-filter .dropdown-form.small-field-w a.shape-arrow {
+  position: relative !important;
+}
+.panel-filter .dropdown-form.small-field-w a.shape-arrow span:before {
+  border-left: 5px solid rgba(0, 0, 0, 0) !important;
+  border-top: 5px solid #4a4a4a !important;
+  border-right: 5px solid rgba(0, 0, 0, 0) !important;
+  border-bottom: 0 !important;
+  content: "" !important;
+  height: 0 !important;
+  left: 36px !important;
+  position: absolute !important;
+  top: 7px !important;
+  width: 0 !important;
+  z-index: 2 !important;
+}
+.panel-filter .dropdown-form.small-field-w .dropdown-menu {
+  top: 25px;
+  width: 50px;
+}
 .panel-filter .tooltip.top {
   top: 15px !important;
 }
@@ -1456,6 +1492,7 @@ blockquote {
 }
 .panel-result .mod-txt {
   display: block;
+  min-height: inherit !important;
 }
 .panel-result .mod-txt h2 {
   width: 100%;
@@ -1563,6 +1600,9 @@ blockquote {
 }
 .time-field .form-group {
   vertical-align: inherit;
+}
+.age-field {
+  display: none;
 }
 .has-error input {
   background-color: #f2dede;
@@ -2356,6 +2396,10 @@ video {
 .results li .mod-img {
   float: left;
   margin-right: 10px;
+  border: 1px #b2b2b2 solid;
+}
+.results li .mod-txt {
+  min-height: 70px;
 }
 .results li h2 {
   font: normal 1.385em/1.1em 'roboto_condensedregular', 'Arial Black', 'sans-serif';
