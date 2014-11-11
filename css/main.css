@@ -1874,6 +1874,12 @@ blockquote {
   font-family: 'robotobold', 'Arial Black', 'sans-serif';
   font-weight: normal;
 }
+.has-warning input {
+  background-color: #faf3cc !important;
+}
+.alert-warning {
+  background-color: #faf3cc;
+}
 .breadcrumb-default {
   padding-top: 10px;
   background-color: transparent;
@@ -2119,6 +2125,9 @@ video {
   background: url('../img/backgrounds/bg_white_trans.png');
   padding: 15px;
 }
+#fanontour-search-box .tab-default .tab-content p {
+  max-width: inherit;
+}
 #fanontour-search-box #tab-tickets label {
   width: 42px;
 }
@@ -2134,6 +2143,7 @@ video {
   text-align: right;
   position: relative;
   top: -3px;
+  color: #000000;
 }
 #fanontour-search-box input {
   width: 275px;

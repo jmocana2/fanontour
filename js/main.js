@@ -86,10 +86,6 @@ $( document ).ready(function() { //DOM OK!
 		var origin_date = getTodayDate();
 		var destiny_date = sumaFecha(days, origin_date)
 
-		$( ".input-group-addon" ).click(function(e) {
-			$(".dropdown-menu").hide();
-		});	
-
 		$('.start_date').datetimepicker({
 			minDate: origin_date,
 			pickTime: false,
@@ -433,12 +429,18 @@ $( document ).ready(function() { //DOM OK!
 			if($(this).val() == "false"){
 				$("#tour-car-field-05").addClass("mandatory");
 				$("#tour-car-field-06").addClass("mandatory");
+			}else{
+				$("#tour-car-field-05").removeClass("mandatory");
+				$("#tour-car-field-06").removeClass("mandatory");
 			}		
 		});
 
 		$( "#tour-driver" ).click(function(e) {
 			if($(this).val() == "false"){
 				$("#tour-car-field13").addClass("mandatory");				
+			}
+			else{
+				$("#tour-car-field13").removeClass("mandatory");
 			}		
 		});
 
