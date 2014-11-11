@@ -231,7 +231,167 @@ $( document ).ready(function() { //DOM OK!
 		      perPage : itemsPage
 		    });
 		}
-		//============= FLIGHTS ================			
+		//============= FLIGHTS ================
+		if($("#tickets").length){
+			//=========== TICKETS =============
+			//************* CONFIG ***************			
+			var min_price = 0;
+			var max_price = 2000;
+			var itemsPage = 5;
+
+
+			$('#tickets #price-slider').slider()
+
+			function filterTickets(v1min, v1max){
+
+				$(".results ul").remove();
+			  	var resultHtml = "<ul id='list_results'>";
+
+			    $.get("/fanontour/xml/results/tickets.xml", function (xml) {
+				    $(xml).find("ticket").each(function () {	
+
+				       var val_price = parseInt($(this).find('price').text());    
+				       
+				      
+				       if(val_price >= v1min && val_price <= v1max){
+				       	   var name = $(this).find('name').text();
+		       			   var description = $(this).find('description').text();
+		       			   var image = $(this).find('image').text();
+		       			   var price = $(this).find('price').text();		       			      			   
+		       			   var source = $(this).find('source').text();
+		       			   var url = $(this).find('url').text();
+					       
+					       resultHtml += "<li class='mod-result'><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
+					       resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>"+ description +"</p></div>";
+					       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li></div>";			
+				       }			      
+				    });
+
+					resultHtml += "</ul>";
+					$(".results").html(resultHtml).promise().done(function(){
+	       				orderFanontour($("#sort-field-01").attr("data-value"));
+	       				paginarFanontour($("#items-field-01").val()); 
+	       				setResults();      				       				
+	    			});
+				});
+			}
+
+			//SLIDER
+			$('#tickets #price-slider').slider()
+			  .on('slideStop', function(ev){
+
+			  	//Get min-max values
+			  	//Min max prices
+			  	if($("#price-slider").val() == ""){
+			  		var interval = min_price + "," + max_price;
+			  	}else{
+			  		var interval = $("#price-slider").val();
+			  	}
+
+			    var res = interval.split(",");
+			    var v1min = res[0];
+			    var v1max = res[1];
+
+			    filterTickets(v1min, v1max)	  	
+			});
+
+			//PAGINATION
+			/* initiate plugin */
+		    $("ul.pagination").jPages({
+		      containerID : "list_results",
+		      perPage : itemsPage
+		    });
+	    }  
+		//=========== / TICKETS =============
+		////=========== HOTELS =============
+		if($("#hotels").length){
+			//************* CONFIG ***************			
+			var min_price = 0;
+			var max_price = 2000;
+			var itemsPage = 5;
+
+
+			$('#hotels #price-slider').slider()
+
+			function filterHotels(v1min, v1max){
+
+				$(".results ul").remove();
+			  	var resultHtml = "<ul id='list_results'>";
+
+			    $.get("/fanontour/xml/results/hotels.xml", function (xml) {
+				    $(xml).find("hotel").each(function () {	
+
+				       var val_price = parseInt($(this).find('price').text());    
+				       
+				      
+				       if(val_price >= v1min && val_price <= v1max){
+				       	   var name = $(this).find('name').text();
+		       			   var description = $(this).find('description').text();
+		       			   var image = $(this).find('image').text();
+		       			   var price = $(this).find('price').text();		       			      			   
+		       			   var source = $(this).find('source').text();
+		       			   var url = $(this).find('url').text();
+					       
+					       resultHtml += "<li class='mod-result'><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
+					       resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>"+ description +"</p></div>";
+					       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li></div>";			
+				       }			      
+				    });
+
+					resultHtml += "</ul>";
+					$(".results").html(resultHtml).promise().done(function(){
+	       				orderFanontour($("#sort-field-01").attr("data-value"));
+	       				paginarFanontour($("#items-field-01").val()); 
+	       				setResults();      				       				
+	    			});
+				});
+			}
+
+			//SLIDER
+			$('#hotels #price-slider').slider()
+			  .on('slideStop', function(ev){
+
+			  	//Get min-max values
+			  	//Min max prices
+			  	if($("#price-slider").val() == ""){
+			  		var interval = min_price + "," + max_price;
+			  	}else{
+			  		var interval = $("#price-slider").val();
+			  	}
+
+			    var res = interval.split(",");
+			    var v1min = res[0];
+			    var v1max = res[1];
+
+			    filterHotels(v1min, v1max)	  	
+			});
+
+			//PAGINATION
+			/* initiate plugin */
+		    $("ul.pagination").jPages({
+		      containerID : "list_results",
+		      perPage : itemsPage
+		    });
+	    }  
+		//=========== / HOTELS =============
+		////=========== RESTAURANTS =============
+		if($("#restaurants").length){
+			//************* CONFIG ***************			
+			var itemsPage = 5;
+
+			function filterResults(v1min, v1max){
+
+				//restaurants filter
+			}
+
+			//PAGINATION
+			/* initiate plugin */
+		    $("ul.pagination").jPages({
+		      containerID : "list_results",
+		      perPage : itemsPage
+		    });			
+	    }  
+		//=========== / HOTELS =============				
 
 		
 
