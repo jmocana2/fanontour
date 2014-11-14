@@ -90,6 +90,8 @@
 								  <li role="presentation"><a href="#restaurants" role="tab" data-toggle="tab"><span class="fanontour-icon icon-icons-fanontour_restaurant"></span> Restaurants</a></li>	
 								  <li role="presentation"><a href="#rental-cars" role="tab" data-toggle="tab"><span class="fanontour-icon icon-icons-fanontour_cars"></span> Reantal cars</a></li>								 
 								</ul>
+
+								<a href="00_home.html?nt=new-tour" class="btn btn-primary floatr">New customized tour</a>
 							
 							<!-- Tab panes -->
 								<div class="tab-content">
@@ -141,7 +143,7 @@
 																	</div>
 																	<div class="row-padding-v-small">
 																		<label for="price-slider">Price <span>(&euro;)</span></label>
-																		<input id="price-slider" type="text" class="span2" value="" data-slider-min="0" data-slider-max="2000" data-slider-step="1" data-slider-value="[0,2000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
+																		<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="2000" data-slider-step="1" data-slider-value="[0,2000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
 																	</div>											
 																</div>								
 															</div>	
@@ -154,7 +156,7 @@
 																<label for="sort-field-01">Sort by</label>
 															    <div class="dropdown dropdown-default">
 																  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-																  <input type="text" class="form-control" id="sort-field-01" data-toggle="dropdown" placeholder="Select order" data-value="">
+																  <input type="text" class="form-control sort-field-01" data-toggle="dropdown" placeholder="Select order" data-value="">
 																  <ul class="dropdown-menu" role="menu" aria-labelledby="sort-field-01">
 																    <li><a href="#" class="price-desc" rel="nofollow">Price (High to Low)</a></li>
 																    <li><a href="#" class="price-asc" rel="nofollow">Price (Low to High)</a></li>        									    
@@ -165,7 +167,7 @@
 																	<label for="items-field-01">Items per page:</label>
 																	<div class="dropdown dropdown-default dropdown-small">
 																	  <a class="shape-arrow" href="#"><span></span></a>
-																	  <input type="text" class="form-control" id="items-field-01" data-toggle="dropdown" value="5" >
+																	  <input type="text" class="form-control items-field-01" data-toggle="dropdown" value="10" >
 																	  <ul class="dropdown-menu" role="menu" aria-labelledby="items-field-01">
 																	    <li><a href="#" rel="nofollow">5</a></li>
 																	    <li><a href="#" rel="nofollow">10</a></li>
@@ -181,12 +183,16 @@
 																</div>
 															
 														</div>
-														<div class="results activity-resuts">
-															<ul id="list_results">
-																<!-- TICKETS RESULTS -->
-																<?php include('include/results/ticket-result.html'); ?>									
-																<!-- TICKETS RESULTS -->								
-															</ul>
+														<div class="results">
+															<div class="tse-scrollable wrapper">
+  																<div class="tse-content">
+																	<ul class="list_results">
+																		<!-- TICKETS RESULTS -->
+																		<?php include('include/results/ticket-result.html'); ?>									
+																		<!-- TICKETS RESULTS -->								
+																	</ul>
+																</div>
+															</div>		
 														</div>
 														<div class="panel-pagination panel-box-body bg-white bdr-all margin-bottom-big clearfix">
 															<div class="floatr">									
@@ -240,7 +246,7 @@
 																<div class="panel-box-body panel-collapse collapse in" id="collapse2">										
 																	<div class="row-padding-v-small">
 																		<label for="price-slider">Price <span>(&euro;)</span></label>
-																		<input id="price-slider" type="text" class="span2" value="" data-slider-min="0" data-slider-max="2000" data-slider-step="1" data-slider-value="[0,2000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
+																		<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="2000" data-slider-step="1" data-slider-value="[0,2000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
 																	</div>											
 																</div>								
 															</div>	
@@ -253,7 +259,7 @@
 																<label for="sort-field-01">Sort by</label>
 															    <div class="dropdown dropdown-default">
 																  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-																  <input type="text" class="form-control" id="sort-field-01" data-toggle="dropdown" placeholder="Select order" data-value="">
+																  <input type="text" class="form-control sort-field-01" data-toggle="dropdown" placeholder="Select order" data-value="">
 																  <ul class="dropdown-menu" role="menu" aria-labelledby="sort-field-01">
 																    <li><a href="#" class="price-desc" rel="nofollow">Price (High to Low)</a></li>
 																    <li><a href="#" class="price-asc" rel="nofollow">Price (Low to High)</a></li>        									    
@@ -264,7 +270,7 @@
 																	<label for="items-field-01">Items per page:</label>
 																	<div class="dropdown dropdown-default dropdown-small">
 																	  <a class="shape-arrow" href="#"><span></span></a>
-																	  <input type="text" class="form-control" id="items-field-01" data-toggle="dropdown" value="5" >
+																	  <input type="text" class="form-control items-field-01" data-toggle="dropdown" value="10" >
 																	  <ul class="dropdown-menu" role="menu" aria-labelledby="items-field-01">
 																	    <li><a href="#" rel="nofollow">5</a></li>
 																	    <li><a href="#" rel="nofollow">10</a></li>
@@ -280,12 +286,16 @@
 																</div>
 															
 														</div>
-														<div class="results activity-resuts">
-															<ul id="list_results">
-																<!-- TICKETS RESULTS -->
-																<?php include('include/results/hotel-result.html'); ?>									
-																<!-- TICKETS RESULTS -->								
-															</ul>
+														<div class="results">
+															<div class="tse-scrollable wrapper">
+  																<div class="tse-content">
+																	<ul class="list_results">
+																		<!-- HOTELS RESULTS -->
+																		<?php include('include/results/hotel-result.html'); ?>									
+																		<!-- HOTELS RESULTS -->
+																	</ul>
+																</div>
+															</div>		
 														</div>
 														<div class="panel-pagination panel-box-body bg-white bdr-all margin-bottom-big clearfix">
 															<div class="floatr">									
@@ -341,7 +351,7 @@
 																<div class="panel-box-body panel-collapse collapse in" id="collapse2">
 																	<div class="row-padding-v-small">
 																		<label for="price-slider">Price <span>(&euro;)</span></label>
-																		<input id="price-slider" type="text" class="span2" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="1" data-slider-value="[0,4000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
+																		<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="1" data-slider-value="[0,4000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
 																	</div>
 																	<div class="row-padding-mid">
 																		
@@ -357,7 +367,7 @@
 																<label for="sort-field-01">Sort by</label>
 															    <div class="dropdown dropdown-default">
 																  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-																  <input type="text" class="form-control" id="sort-field-01" data-toggle="dropdown" placeholder="Select order" data-value="">
+																  <input type="text" class="form-control sort-field-01" data-toggle="dropdown" placeholder="Select order" data-value="">
 																  <ul class="dropdown-menu" role="menu" aria-labelledby="sort-field-01">
 																    <li><a href="#" class="price-desc" rel="nofollow">Price (High to Low)</a></li>
 																    <li><a href="#" class="price-asc" rel="nofollow">Price (Low to High)</a></li>        									    
@@ -369,7 +379,7 @@
 																	<label for="items-field-01">Items per page:</label>
 																	<div class="dropdown dropdown-default dropdown-small">
 																	  <a class="shape-arrow" href="#"><span></span></a>
-																	  <input type="text" class="form-control" id="items-field-01" data-toggle="dropdown" value="10" >
+																	  <input type="text" class="form-control items-field-01" data-toggle="dropdown" value="10" >
 																	  <ul class="dropdown-menu" role="menu" aria-labelledby="items-field-01">
 																	    <li><a href="#" rel="nofollow">5</a></li>
 																	    <li><a href="#" rel="nofollow">10</a></li>
@@ -386,11 +396,15 @@
 															
 														</div>
 														<div class="results activity-resuts">
-															<ul id="list_results">
-																<!-- ACTIVITY RESULTS -->
-																<?php include('include/results/flights.html'); ?>									
-																<!-- ACTIVITY RESULTS -->								
-															</ul>
+															<div class="tse-scrollable wrapper">
+  																<div class="tse-content">
+																	<ul class="list_results">
+																		<!-- FLIGHTS RESULTS -->
+																		<?php include('include/results/flights.html'); ?>									
+																		<!-- FLIGHTS RESULTS -->								
+																	</ul>
+																</div>
+															</div>	
 														</div>
 														<div class="panel-pagination panel-box-body bg-white bdr-all margin-bottom-big clearfix">
 															<div class="floatr">									
@@ -444,11 +458,11 @@
 																<div class="panel-box-body panel-collapse collapse in" id="collapse2">
 																	<div class="row-padding-v-small">
 																		<label for="price-slider">Price <span>(&euro;)</span></label>
-																		<input id="price-slider" type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="1" data-slider-value="[0,600]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
+																		<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="1" data-slider-value="[0,600]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
 																	</div>
 																	<div class="row-padding-mid">
 																		<label for="duration-slider">Duration (h.)</label>
-																		<input id="duration-slider" type="text" class="span2" value="" data-slider-min="0" data-slider-max="120" data-slider-step="1" data-slider-value="[0,120]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="h." >
+																		<input type="text" class="duration-slider span2" value="" data-slider-min="0" data-slider-max="120" data-slider-step="1" data-slider-value="[0,120]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="h." >
 																	</div>
 																</div>								
 															</div>	
@@ -461,7 +475,7 @@
 																<label for="sort-field-01">Sort by</label>
 															    <div class="dropdown dropdown-default">
 																  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-																  <input type="text" class="form-control" id="sort-field-01" data-toggle="dropdown" placeholder="Select order" data-value="">
+																  <input type="text" class="form-control sort-field-01" data-toggle="dropdown" placeholder="Select order" data-value="">
 																  <ul class="dropdown-menu" role="menu" aria-labelledby="sort-field-01">
 																    <li><a href="#" class="price-desc" rel="nofollow">Price (High to Low)</a></li>
 																    <li><a href="#" class="price-asc" rel="nofollow">Price (Low to High)</a></li>
@@ -475,7 +489,7 @@
 																	<label for="items-field-01">Items per page:</label>
 																	<div class="dropdown dropdown-default dropdown-small">
 																	  <a class="shape-arrow" href="#"><span></span></a>
-																	  <input type="text" class="form-control" id="items-field-01" data-toggle="dropdown" value="5" >
+																	  <input type="text" class="form-control items-field-01" data-toggle="dropdown" value="10" >
 																	  <ul class="dropdown-menu" role="menu" aria-labelledby="items-field-01">
 																	    <li><a href="#" rel="nofollow">5</a></li>
 																	    <li><a href="#" rel="nofollow">10</a></li>
@@ -492,11 +506,15 @@
 															
 														</div>
 														<div class="results activity-resuts">
-															<ul id="list_results">
-																<!-- ACTIVITY RESULTS -->
-																<?php include('include/results/activity-result.html'); ?>									
-																<!-- ACTIVITY RESULTS -->								
-															</ul>
+															<div class="tse-scrollable wrapper">
+  																<div class="tse-content">
+																	<ul class="list_results">
+																		<!-- ACTIVITY RESULTS -->
+																		<?php include('include/results/activity-result.html'); ?>									
+																		<!-- ACTIVITY RESULTS -->
+																	</ul>
+																</div>
+															</div>		
 														</div>
 														<div class="panel-pagination panel-box-body bg-white bdr-all margin-bottom-big clearfix">
 															<div class="floatr">									
@@ -593,12 +611,12 @@
 																	<label for="items-field-01">Items per page:</label>
 																	<div class="dropdown dropdown-default dropdown-small">
 																	  <a class="shape-arrow" href="#"><span></span></a>
-																	  <input type="text" class="form-control" id="items-field-01" data-toggle="dropdown" value="5" >
+																	  <input type="text" class="form-control items-field-01" data-toggle="dropdown" value="10" >
 																	  <ul class="dropdown-menu" role="menu" aria-labelledby="items-field-01">
 																	    <li><a href="#" rel="nofollow">5</a></li>
 																	    <li><a href="#" rel="nofollow">10</a></li>
 																	    <li><a href="#" rel="nofollow">15</a></li>
-																	    <li><a href="#" rel="nofollow">20</a></li>										    									    
+																	    <li><a href="#" rel="nofollow">20</a></li>			    									    
 																	  </ul>
 																	</div>
 																</div>	
@@ -610,11 +628,15 @@
 															
 														</div>
 														<div class="results activity-resuts">
-															<ul id="list_results">
-																<!-- RESTAURANTS RESULTS -->
-																<?php include('include/results/restaurants-result.html'); ?>									
-																<!-- RESTAURANTS RESULTS -->								
-															</ul>
+															<div class="tse-scrollable wrapper">
+  																<div class="tse-content">
+																	<ul class="list_results">
+																		<!-- RESTAURANTS RESULTS -->
+																		<?php include('include/results/restaurants-result.html'); ?>									
+																		<!-- RESTAURANTS RESULTS -->								
+																	</ul>
+																</div>
+															</div>		
 														</div>
 														<div class="panel-pagination panel-box-body bg-white bdr-all margin-bottom-big clearfix">
 															<div class="floatr">									
@@ -778,7 +800,7 @@
 																<div class="panel-box-body panel-collapse collapse in" id="collapse2">
 																	<div class="row-padding-v-small">
 																		<label for="price-slider">Price <span>(&euro;)</span></label>
-																		<input id="price-slider" type="text" class="span2" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="1" data-slider-value="[0,4000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
+																		<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="1" data-slider-value="[0,4000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
 																	</div>											
 																</div>								
 															</div>	
@@ -791,7 +813,7 @@
 																<label for="sort-field-01">Sort by</label>
 															    <div class="dropdown dropdown-default">
 																  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-																  <input type="text" class="form-control" id="sort-field-01" data-toggle="dropdown" placeholder="Select order" data-value="">
+																  <input type="text" class="form-control sort-field-01" data-toggle="dropdown" placeholder="Select order" data-value="">
 																  <ul class="dropdown-menu" role="menu" aria-labelledby="sort-field-01">
 																    <li><a href="#" class="price-desc" rel="nofollow">Price (High to Low)</a></li>
 																    <li><a href="#" class="price-asc" rel="nofollow">Price (Low to High)</a></li>	      									    
@@ -803,7 +825,7 @@
 																	<label for="items-field-01">Items per page:</label>
 																	<div class="dropdown dropdown-default dropdown-small">
 																	  <a class="shape-arrow" href="#"><span></span></a>
-																	  <input type="text" class="form-control" id="items-field-01" data-toggle="dropdown" value="10" >
+																	  <input type="text" class="form-control items-field-01" data-toggle="dropdown" value="10" >
 																	  <ul class="dropdown-menu" role="menu" aria-labelledby="items-field-01">
 																	    <li><a href="#" rel="nofollow">5</a></li>
 																	    <li><a href="#" rel="nofollow">10</a></li>
@@ -820,18 +842,22 @@
 															
 														</div>
 														<div class="results activity-resuts">
-															<ul id="list_results">
-																<!-- RENTAL CARS RESULTS -->
-																<?php include('include/results/rental-cars.html'); ?>									
-																<!-- RENTAL CARS RESULTS -->								
-															</ul>
+															<div class="tse-scrollable wrapper">
+  																<div class="tse-content">
+																	<ul class="list_results">
+																		<!-- RENTAL CARS RESULTS -->
+																		<?php include('include/results/rental-cars.html'); ?>									
+																		<!-- RENTAL CARS RESULTS -->
+																	</ul>
+																</div>
+															</div>		
 														</div>
 														<div class="panel-pagination panel-box-body bg-white bdr-all margin-bottom-big clearfix">
 															<div class="floatr">									
 																	<ul class="pagination">
 																		
 																	</ul>
-																</div>
+															</div>
 														</div>
 													</div>							
 												</div>
@@ -860,6 +886,7 @@
 	<script src="public/vendor/jquery/jquery.lazyload.min.js"></script>
 	<script src="public/vendor/jquery/jquery.tinysort.min.js"></script>
 	<script src="public/vendor/jquery/jquery.tinysort.charorder.min.js"></script>
+	<script src="public/vendor/jquery/jquery.trackpad-scroll-emulator.min.js"></script>
 	<script src="public/vendor/bootstrap/bootstrap.js"></script>
 	<script src="public/vendor/jpages/jpages.js"></script>
 	<script src="public/vendor/bower-components/moment/min/moment.min.js"></script>
