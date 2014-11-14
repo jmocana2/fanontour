@@ -285,6 +285,13 @@ $( document ).ready(function() { //DOM OK!
 			$(panel).closest(".panel").find(".panel-heading").addClass("has-error");
 		}else{
 			$(panel).closest(".panel").find(".panel-heading").removeClass("has-error");
+		}
+
+		if($(".panel-heading.has-error").length){
+			$(".collapse.in").removeClass("in");
+			$(".panel-heading.has-error").eq(0).addClass("active");
+			$(".panel-heading.has-error").eq(0).next(".collapse").addClass("in");
+			$(".panel-heading.has-error").eq(0).next(".collapse").css("height", "auto");
 		}	
 	}
 
@@ -534,7 +541,7 @@ $( document ).ready(function() { //DOM OK!
 				
 
 				validateMandatoryPanel(panel, e);	
-				panelErrors($(panel).find(".panel-body"));	
+				panelErrors($(panel).find(".panel-body"));					
 			}
 
 			validateOneSearch($("#modal-customized-tour"), e);
@@ -586,7 +593,11 @@ $( document ).ready(function() { //DOM OK!
 	$( ".customized-tour" ).click(function() {		
 		$('#modal-customized-tour').modal('show');
 		//return false;
-	});	
+	});
+
+	if($(".new-tour").length){
+		$('#modal-customized-tour').modal('show');
+	}	
 
 	//TOOLTIPS
 	//
