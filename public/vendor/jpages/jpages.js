@@ -40,7 +40,7 @@
   function Plugin(element, options) {
     this.options = $.extend({}, defaults, options);
 
-    this._container = $("#" + this.options.containerID);
+    this._container = $(this.options.containerID);
     if (!this._container.length) return;
 
     this.jQwindow = $(window);
@@ -55,7 +55,7 @@
     this._last = $(this.options.last);
 
     /* only visible items! */
-    this._items = this._container.children(":visible");
+    this._items = this._container.children("li");
     this._itemsShowing = $([]);
     this._itemsHiding = $([]);
 
@@ -521,7 +521,7 @@
       };
     },
 
-    destroy : function() {
+    destroy : function() {     
       this.jQdocument.unbind("keydown.jPages");
       this._container.unbind("mousewheel.jPages DOMMouseScroll.jPages");
 
