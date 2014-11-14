@@ -158,7 +158,7 @@
 											<label for="items-field-01">Items per page:</label>
 											<div class="dropdown dropdown-default dropdown-small">
 											  <a class="shape-arrow" href="#"><span></span></a>
-											  <input type="text" class="form-control" id="items-field-01" data-toggle="dropdown" value="5" >
+											  <input type="text" class="items-field-01 form-control" data-toggle="dropdown" value="10" >
 											  <ul class="dropdown-menu" role="menu" aria-labelledby="items-field-01">
 											    <li><a href="#" rel="nofollow">5</a></li>
 											    <li><a href="#" rel="nofollow">10</a></li>
@@ -175,18 +175,22 @@
 									
 								</div>
 								<div class="results activity-resuts">
-									<ul id="list_results">
-										<!-- RESTAURANTS RESULTS -->
-										<?php include('include/results/restaurants-result.html'); ?>									
-										<!-- RESTAURANTS RESULTS -->								
-									</ul>
+									<div class="tse-scrollable wrapper">
+  										<div class="tse-content">
+											<ul class="list_results">
+												<!-- RESTAURANTS RESULTS -->
+												<?php include('include/results/restaurants-result.html'); ?>									
+												<!-- RESTAURANTS RESULTS -->
+											</ul>
+										</div>
+									</div>		
 								</div>
 								<div class="panel-pagination panel-box-body bg-white bdr-all margin-bottom-big clearfix">
 									<div class="floatr">									
-											<ul class="pagination">
-												
-											</ul>
-										</div>
+										<ul class="pagination">
+											
+										</ul>
+									</div>
 								</div>
 							</div>							
 						</div>
@@ -207,6 +211,7 @@
 	<script src="public/vendor/jquery/jquery.lazyload.min.js"></script>
 	<script src="public/vendor/jquery/jquery.tinysort.min.js"></script>
 	<script src="public/vendor/jquery/jquery.tinysort.charorder.min.js"></script>
+	<script src="public/vendor/jquery/jquery.trackpad-scroll-emulator.min.js"></script>
 	<script src="public/vendor/bootstrap/bootstrap.js"></script>
 	<script src="public/vendor/jpages/jpages.js"></script>
 	<script src="public/vendor/bower-components/moment/min/moment.min.js"></script>

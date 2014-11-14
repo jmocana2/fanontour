@@ -118,7 +118,7 @@
 										<div class="panel-box-body panel-collapse collapse in" id="collapse2">
 											<div class="row-padding-v-small">
 												<label for="price-slider">Price <span>(&euro;)</span></label>
-												<input id="price-slider" type="text" class="span2" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="1" data-slider-value="[0,4000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
+												<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="1" data-slider-value="[0,4000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
 											</div>
 											<div class="row-padding-mid">
 												
@@ -134,7 +134,7 @@
 										<label for="sort-field-01">Sort by</label>
 									    <div class="dropdown dropdown-default">
 										  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-										  <input type="text" class="form-control" id="sort-field-01" data-toggle="dropdown" placeholder="Select order" data-value="">
+										  <input type="text" class="sort-field-01 form-control" data-toggle="dropdown" placeholder="Select order" data-value="">
 										  <ul class="dropdown-menu" role="menu" aria-labelledby="sort-field-01">
 										    <li><a href="#" class="price-desc" rel="nofollow">Price (High to Low)</a></li>
 										    <li><a href="#" class="price-asc" rel="nofollow">Price (Low to High)</a></li>        									    
@@ -146,7 +146,7 @@
 											<label for="items-field-01">Items per page:</label>
 											<div class="dropdown dropdown-default dropdown-small">
 											  <a class="shape-arrow" href="#"><span></span></a>
-											  <input type="text" class="form-control" id="items-field-01" data-toggle="dropdown" value="10" >
+											  <input type="text" class="items-field-01 form-control" data-toggle="dropdown" value="10" >
 											  <ul class="dropdown-menu" role="menu" aria-labelledby="items-field-01">
 											    <li><a href="#" rel="nofollow">5</a></li>
 											    <li><a href="#" rel="nofollow">10</a></li>
@@ -162,12 +162,16 @@
 										</div>
 									
 								</div>
-								<div class="results activity-resuts">
-									<ul id="list_results">
-										<!-- ACTIVITY RESULTS -->
-										<?php include('include/results/flights.html'); ?>									
-										<!-- ACTIVITY RESULTS -->								
-									</ul>
+								<div class="results">
+									<div class="tse-scrollable wrapper">
+  										<div class="tse-content">
+											<ul class="list_results">
+												<!-- FLIGHTS RESULTS -->
+												<?php include('include/results/flights.html'); ?>									
+												<!-- FLIGHTS RESULTS -->
+											</ul>
+										</div>
+									</div>		
 								</div>
 								<div class="panel-pagination panel-box-body bg-white bdr-all margin-bottom-big clearfix">
 									<div class="floatr">									
@@ -195,6 +199,7 @@
 	<script src="public/vendor/jquery/jquery.lazyload.min.js"></script>
 	<script src="public/vendor/jquery/jquery.tinysort.min.js"></script>
 	<script src="public/vendor/jquery/jquery.tinysort.charorder.min.js"></script>
+	<script src="public/vendor/jquery/jquery.trackpad-scroll-emulator.min.js"></script>
 	<script src="public/vendor/bootstrap/bootstrap.js"></script>
 	<script src="public/vendor/jpages/jpages.js"></script>
 	<script src="public/vendor/bower-components/moment/min/moment.min.js"></script>
