@@ -17,7 +17,7 @@ $( document ).ready(function() { //DOM OK!
 		//=================================
 		//CONFIG IMAGES
 		//=================================
-		 var images = ['/fanontour/img/backgrounds/home/tickets_h_600px.jpg','/fanontour/img/backgrounds/home/hotels_h_600px.jpg', '/fanontour/img/backgrounds/home/recorte_h_600px.jpg','/fanontour/img/backgrounds/home/recorte_h_600px.jpg','/fanontour/img/backgrounds/home/recorte_h_600px.jpg','/fanontour/img/backgrounds/home/recorte_h_600px.jpg','/fanontour/img/backgrounds/home/recorte_h_600px.jpg'];
+		var images = ['/fanontour/img/backgrounds/home/tickets.jpg','/fanontour/img/backgrounds/home/hotels.jpg', '/fanontour/img/backgrounds/home/flights.jpg','/fanontour/img/backgrounds/home/activities.jpg','/fanontour/img/backgrounds/home/restaurants.jpg','/fanontour/img/backgrounds/home/rental-cars.jpg','/fanontour/img/backgrounds/home/recorte_h_600px.jpg'];
 		//================================
 		var d = document.createElement("div");
 		d.style.display = 'none';
