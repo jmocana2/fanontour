@@ -79,9 +79,9 @@
 				include('include/modals/customized-tour.html'); 
 			?>
 			<!-- ================================================= -->
-
-
-			<section id="fanontour-search-box" class="<?php echo $_GET['nt'];?>">
+				
+			
+			<section id="fanontour-search-box" class="bg-trans-black <?php if(isset($_GET['nt'])){ echo $_GET['nt'];}?>">
 				<h1 class="sr-only">Search box</h1>
 				<div class="container relative">
 					<div class="tab tab-default">
