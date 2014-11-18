@@ -38,9 +38,9 @@ $( document ).ready(function() { //DOM OK!
 			    });
 
 				resultHtml += "</ul>";
-				$(id_page + " .results").html(resultHtml).promise().done(function(){
+				$(id_page + " .results .tse-content").html(resultHtml).promise().done(function(){
        				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
-       				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1); 
+       				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1);
        				setResults();      				       				
     			});
 			});
