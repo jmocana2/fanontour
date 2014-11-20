@@ -224,6 +224,18 @@ input[data-toggle="dropdown"] {
 .icon-icons-fanontour_tour:before {
   content: "\e610";
 }
+.icon-icons-fanontour_tour2:before {
+  content: "\e611";
+}
+.icon-icons-fanontour_source2:before {
+  content: "\e612";
+}
+.icon-icons-fanontour_tour3:before {
+  content: "\e613";
+}
+.icon-icons-fanontour_tour4:before {
+  content: "\e614";
+}
 .icon-icons-fanontour_restaurant:before {
   content: "\e60a";
 }
@@ -1199,6 +1211,10 @@ blockquote dd {
 .btn-up small {
   display: block;
   font: normal 0.5em 'Arial', 'sans-serif';
+}
+.btn-new-tour {
+  position: relative;
+  top: -20px;
 }
 .tab-default .nav-tabs {
   border: none;
@@ -2611,6 +2627,11 @@ video {
   max-width: 700px;
   float: left;
 }
+#results .nav-tabs li a {
+  font: normal 1.05em/1em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
+  text-transform: uppercase;
+  width: 114px;
+}
 #results .tab-content {
   padding-top: 20px;
   border-top: 1px #ffffff solid;
@@ -2622,6 +2643,9 @@ video {
 }
 #results .results #list_results li:hover {
   background-color: #ffffff;
+}
+#results .panel-filter h2 {
+  font-size: 1.1em;
 }
 @media (max-width: 992px) {
   #header .container.relative {

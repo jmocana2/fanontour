@@ -70,7 +70,7 @@ $( document ).ready(function() { //DOM OK!
 		paginarFanontour(itemsPage, id_page, 1);
 
 		//SCROLL
-		$(id_page + ' .wrapper').TrackpadScrollEmulator({ autoHide: false });
+		//$(id_page + ' .wrapper').TrackpadScrollEmulator({ autoHide: false });
 		
     }
     //=========== / TICKETS =============
@@ -142,7 +142,7 @@ $( document ).ready(function() { //DOM OK!
 		paginarFanontour(itemsPage, id_page, 1);
 
 		//SCROLL
-		$(id_page + ' .wrapper').TrackpadScrollEmulator({ autoHide: false });
+		//$(id_page + ' .wrapper').TrackpadScrollEmulator({ autoHide: false });
     }
     //============ / HOTELS ================
     //============= FLIGHTS ================
@@ -210,7 +210,7 @@ $( document ).ready(function() { //DOM OK!
 		paginarFanontour(itemsPage, id_page, 1);
 
 		//SCROLL
-		$(id_page + ' .wrapper').TrackpadScrollEmulator({ autoHide: false });
+		//$(id_page + ' .wrapper').TrackpadScrollEmulator({ autoHide: false });
     }
     //============= FLIGHTS ================
 	//=========== ACTIVITIES ===============
@@ -298,7 +298,7 @@ $( document ).ready(function() { //DOM OK!
 		paginarFanontour(itemsPage, id_page, 1);
 
 		//SCROLL			
-		$(id_page + ' .wrapper').TrackpadScrollEmulator({ autoHide: false });
+		//$(id_page + ' .wrapper').TrackpadScrollEmulator({ autoHide: false });
     }
     //=========== / ACTIVITIES ============= 
     //============= RESTAURANTS ============
@@ -316,7 +316,7 @@ $( document ).ready(function() { //DOM OK!
 		paginarFanontour(itemsPage, id_page, 1);	
 
 		//SCROLL
-		$(id_page + ' .wrapper').TrackpadScrollEmulator({ autoHide: false });		
+		//$(id_page + ' .wrapper').TrackpadScrollEmulator({ autoHide: false });		
     }
     //========== / RESTAURANTS =============   
     //=========== RENTAL CARS ==============
@@ -385,7 +385,7 @@ $( document ).ready(function() { //DOM OK!
 		paginarFanontour(itemsPage, id_page, 1);
 
 		//SCROLL
-		$(id_page + ' .wrapper').TrackpadScrollEmulator({ autoHide: false });
+		//$(id_page + ' .wrapper').TrackpadScrollEmulator({ autoHide: false });
     }
     //============= RENTAL CARS ================    
     
@@ -433,7 +433,7 @@ $( document ).ready(function() { //DOM OK!
 	}
 	
 	//Creating fixed panels
-	/*if($("#results").length && $(window).width() > 991){		
+	if($("#results").length && $(window).width() > 991){		
 		$(window).scroll(function() {
 			var init_height = $("#header").height() + $(".bg-container").height();
 			var max_height = $(".results").height() - 215;
@@ -455,7 +455,7 @@ $( document ).ready(function() { //DOM OK!
 		   }
 
 		});
-	}*/
+	}
 
 	//SET RESULTS
 	function setResults(){
