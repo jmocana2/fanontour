@@ -2,11 +2,12 @@
  	$hotels = simplexml_load_file('xml/results/hotels.xml'); 
  	foreach ($hotels->hotel as $hotel):
         $title=$hotel->name; // declaracion de variables
-        $description=$hotel->description;
+        $address=$hotel->address;
+        $city=$hotel->city;
         $image=$hotel->image;
-        $price=$hotel->price;       
-        $source=$hotel->source;
-        $url=$hotel->url;        
+        $price=$hotel->sources->source[0]->price;       
+        $source=$hotel->sources->source[0]->source_name;
+        $url=$hotel->sources->source[0]->url;         
 	?>
 
     <li class="mod-result">
@@ -15,14 +16,45 @@
 		</div>
 		<div class="mod-txt">
 			<h2><?php echo $title; ?></h2>
-			<p><?php echo $description; ?></p>
+			<p><?php echo $address; ?>, <?php echo $city; ?></p>
 		</div>
 		<div class="result-footer">
 			<ul class="list-inline">
 				<li class="price" data-value="<?php echo $price; ?>"><?php echo $price; ?> &euro;</li>
-				<li class="source"><a class="btn btn-search" href="<?php echo $url; ?>">Buy</a></li>				
+				<li class="source"><a class="btn btn-search" href="<?php echo $url; ?>">Book here</a></li>				
 				<li><span class="fanontour-icon icon-icons-fanontour_source2"></span>Found in <strong><?php echo $source; ?></strong></li>
+				<?php if(count($hotel->sources->source) != 1){ ?>
+					<li><a href="#" class="more-offers" rel="nofollow">See all offers</a></li>
+				<?php } ?>
 			</ul>
+			<?php if(count($hotel->sources->source) != 1){ ?>
+				<div class="table-responsive">
+				  <table class="table table-striped">
+				    <thead>
+				    	<tr>
+				    		<th scope="col">Source</th>
+				    		<th scope="col">Price</th>
+				    		<th scope="col" class="text-right"><a class="btn-hide" href="#" rel="no-follow"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></th>
+				    	</tr>
+				    </thead>
+				    <tbody>
+				    	<?php foreach ($hotel->sources->source as $source):
+				    		$url=$source->url;
+				    		$price=$source->price;       
+					        $source=$source->source_name;
+				    	?>
+				    	<tr>
+				    		<td><?php echo $source;?></td>
+				    		<td><?php echo $price; ?> &euro;</td>
+				    		<td class="text-right"><a class="btn btn-search btn-small" href="<?php echo $url; ?>">Book here</a></td>
+				    	</tr>
+				    	<?php       
+					    	endforeach;
+					    ?>	
+				    </tbody>
+				  </table>
+				</div>
+			<?php } ?>
 		</div>
 	</li>
 

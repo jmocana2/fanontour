@@ -44,6 +44,9 @@ ul {
 .f-right {
   float: right;
 }
+.c-both {
+  clear: both;
+}
 .mod-img {
   float: left;
 }
@@ -235,6 +238,15 @@ input[data-toggle="dropdown"] {
 }
 .icon-icons-fanontour_tour4:before {
   content: "\e614";
+}
+.icon-icons-fanontour_scale:before {
+  content: "\e615";
+}
+.icon-icons-fanontour_cousine:before {
+  content: "\e616";
+}
+.icon-icons-fanontour_doors:before {
+  content: "\e617";
 }
 .icon-icons-fanontour_restaurant:before {
   content: "\e60a";
@@ -1215,6 +1227,11 @@ blockquote dd {
 .btn-new-tour {
   position: relative;
   top: -20px;
+}
+.btn-small {
+  width: auto !important;
+  font-size: .9em !important;
+  padding: 4px 10px !important;
 }
 .tab-default .nav-tabs {
   border: none;
@@ -2561,14 +2578,35 @@ video {
   margin-right: 10px;
   margin-bottom: 10px;
   border: 1px #b2b2b2 solid;
+  text-align: center;
 }
 .results li .mod-txt {
   min-height: 70px;
   display: block;
 }
+.results li .mod-txt ul {
+  list-style: disc;
+  margin-left: 17px;
+  margin-bottom: 20px;
+}
+.results li .mod-txt li {
+  border: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.results li .mod-txt p {
+  margin-bottom: 5px;
+}
+.results li .mod-txt .clearfix p {
+  margin-bottom: 0;
+}
+.results li .mod-txt .route {
+  margin-top: -10px;
+}
 .results li h2 {
   font: normal 1.385em/1.1em 'roboto_condensedregular', 'Arial Black', 'sans-serif';
   color: #4c4c4c;
+  margin-bottom: 5px;
 }
 .results li li {
   padding: 0;
@@ -2610,9 +2648,29 @@ video {
   text-align: center;
 }
 .results li span {
-  font-size: 1.4em;
+  font-size: 1.5em;
   display: inline-block;
   margin-right: 5px;
+}
+.results li table {
+  margin-top: 20px;
+  display: none;
+  border-top: 1px #b2b2b2 dotted;
+}
+.results li table th a {
+  color: #4c4c4c;
+  position: relative;
+  top: -38px;
+}
+.results li table th a:hover {
+  color: #6eb21b;
+}
+.results li table tr:hover td {
+  background-color: #403f3f;
+  color: #ffffff;
+}
+.results li table td .btn {
+  border: 1px #ffffff solid;
 }
 #fanontour-search-box {
   padding-top: 169px;
@@ -2628,7 +2686,7 @@ video {
   float: left;
 }
 #results .nav-tabs li a {
-  font: normal 1.05em/1em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
+  font: normal 1.1em/1em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
   text-transform: uppercase;
   width: 114px;
 }
@@ -2645,7 +2703,7 @@ video {
   background-color: #ffffff;
 }
 #results .panel-filter h2 {
-  font-size: 1.1em;
+  font-size: 1.15em;
 }
 @media (max-width: 992px) {
   #header .container.relative {

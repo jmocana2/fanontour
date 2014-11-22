@@ -3,10 +3,11 @@
  	foreach ($cars->car as $car):
         $title=$car->name; // declaracion de variables        
         $image=$car->image;
-        $price=$car->price; 
+        $address=$car->address;        
         $doors=$car->doors;       
-        $source=$car->source;
-        $url=$car->url;     
+        $price=$car->sources->source[0]->price;       
+        $source=$car->sources->source[0]->source_name;
+        $url=$car->sources->source[0]->url;      
 	?>
 
     <li class="mod-result">
@@ -15,15 +16,47 @@
 		</div>
 		<div class="mod-txt">
 			<h2><?php echo $title; ?></h2>	
-			<p>Pick up date: <strong>10/11/2014 (11:20)</strong> | Drop off date: <strong>12/11/2014 (11:20)</strong></p>		
+			<p>Pick up date: <strong>10/11/2014 (11:20)</strong> | Drop off date: <strong>12/11/2014 (11:20)</strong></p>
+			<p>Pick up Address: <strong><?php echo $address ?></strong></p>		
 		</div>
 		<div class="result-footer">
 			<ul class="list-inline">
 				<li class="price" data-value="<?php echo $price; ?>"><?php echo $price; ?> &euro;</li>
-				<li class="source"><a class="btn btn-search" href="<?php echo $url; ?>">Buy</a></li>
+				<li class="source"><a class="btn btn-search" href="<?php echo $url; ?>">Book here</a></li>
 				<li class="doors"><span class="fanontour-icon icon-icons-fanontour_doors"></span> <?php echo $doors; ?> doors</li>
 				<li><span class="fanontour-icon icon-icons-fanontour_source2"></span>Found in <strong><?php echo $source; ?></strong></li>
+				<?php if(count($car->sources->source) != 1){ ?>
+					<li><a href="#" class="more-offers" rel="nofollow">See all offers</a></li>
+				<?php } ?>
 			</ul>
+			<?php if(count($car->sources->source) != 1){ ?>
+				<div class="table-responsive">
+				  <table class="table table-striped">
+				    <thead>
+				    	<tr>
+				    		<th scope="col">Source</th>
+				    		<th scope="col">Price</th>
+				    		<th scope="col" class="text-right"><a class="btn-hide" href="#" rel="no-follow"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></th>
+				    	</tr>
+				    </thead>
+				    <tbody>
+				    	<?php foreach ($car->sources->source as $source):
+				    		$url=$source->url;
+				    		$price=$source->price;       
+					        $source=$source->source_name;
+				    	?>
+				    	<tr>
+				    		<td><?php echo $source;?></td>
+				    		<td><?php echo $price; ?> &euro;</td>
+				    		<td class="text-right"><a class="btn btn-search btn-small" href="<?php echo $url; ?>">Book here</a></td>
+				    	</tr>
+				    	<?php       
+					    	endforeach;
+					    ?>	
+				    </tbody>
+				  </table>
+				</div>
+			<?php } ?>
 		</div>
 	</li>
 

@@ -1,9 +1,12 @@
  <?php
  	$restaurants = simplexml_load_file('xml/results/restaurants.xml'); 
  	foreach ($restaurants->restaurant as $restaurant):
-        $title=$restaurant->name; // declaracion de variables
+        $title=$restaurant->name;
         $description=$restaurant->description;
+        $address=$restaurant->address;
+        $city=$restaurant->city;
         $image=$restaurant->image;
+        $cousine=$restaurant->cousine;
         $source=$restaurant->source;
         $url=$restaurant->url;        
 	?>
@@ -14,11 +17,13 @@
 		</div>
 		<div class="mod-txt">
 			<h2><?php echo $title; ?></h2>
+			<p><?php echo $address; ?>, <?php echo $city; ?></p>
 			<p><?php echo $description; ?></p>
 		</div>
 		<div class="result-footer">
 			<ul class="list-inline">				
-				<li class="source"><a class="btn btn-search" href="<?php echo $url; ?>">Buy</a></li>				
+				<li class="source"><a class="btn btn-search" href="<?php echo $url; ?>">Book here</a></li>
+				<li><span class="fanontour-icon icon-icons-fanontour_cousine"></span> Cousine: <strong><?php echo $cousine; ?></strong></li>				
 				<li><span class="fanontour-icon icon-icons-fanontour_source2"></span>Found in <strong><?php echo $source; ?></strong></li>
 			</ul>
 		</div>

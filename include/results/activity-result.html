@@ -4,11 +4,11 @@
         $title=$activity->name; // declaracion de variables
         $description=$activity->description;
         $image=$activity->image;
-        $price=$activity->price;
         $duration=$activity->duration;
         $val_duration = $duration;
-        $source=$activity->source;
-        $url=$activity->url;
+        $price=$activity->sources->source[0]->price;       
+        $source=$activity->sources->source[0]->source_name;
+        $url=$activity->sources->source[0]->url; 
 
         if((int)$duration == 0){
         	$val_duration = 120;
@@ -26,10 +26,41 @@
 		<div class="result-footer">
 			<ul class="list-inline">
 				<li class="price" data-value="<?php echo $price; ?>"><?php echo $price; ?> &euro;</li>
-				<li class="source"><a class="btn btn-search" href="<?php echo $url; ?>">Buy</a></li>
+				<li class="source"><a class="btn btn-search" href="<?php echo $url; ?>">Book here</a></li>
 				<li class="duration" data-value="<?php echo (int)$val_duration; ?>"><span class="fanontour-icon icon-icons-fanontour_clock"></span> <?php echo $duration; ?> <abbr title="approximately"> approx.</abbr></li>
 				<li><span class="fanontour-icon icon-icons-fanontour_source2"></span>Found in <strong><?php echo $source; ?></strong></li>
+				<?php if(count($activity->sources->source) != 1){ ?>
+					<li><a href="#" class="more-offers" rel="nofollow">See all offers</a></li>
+				<?php } ?>
 			</ul>
+			<?php if(count($activity->sources->source) != 1){ ?>
+				<div class="table-responsive">
+				  <table class="table table-striped">
+				    <thead>
+				    	<tr>
+				    		<th scope="col">Source</th>
+				    		<th scope="col">Price</th>
+				    		<th scope="col" class="text-right"><a class="btn-hide" href="#" rel="no-follow"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></th>
+				    	</tr>
+				    </thead>
+				    <tbody>
+				    	<?php foreach ($activity->sources->source as $source):
+				    		$url=$source->url;
+				    		$price=$source->price;       
+					        $source=$source->source_name;
+				    	?>
+				    	<tr>
+				    		<td><?php echo $source;?></td>
+				    		<td><?php echo $price; ?> &euro;</td>
+				    		<td class="text-right"><a class="btn btn-search btn-small" href="<?php echo $url; ?>">Book here</a></td>
+				    	</tr>
+				    	<?php       
+					    	endforeach;
+					    ?>	
+				    </tbody>
+				  </table>
+				</div>
+			<?php } ?>
 		</div>
 	</li>
 
