@@ -3,121 +3,311 @@
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<price>1225.13</price>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
 		<doors>5</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
+		<sources>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>						
+		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<price>25.13</price>
-		<doors>3</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
-	</car>
-	<car>
-		<name>Mercedes-Benz Viano</name>		
-		<image>/fanontour/img/results/car.jpg</image>
-		<price>1225.13</price>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
 		<doors>5</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
+		<sources>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>100.25</price>
+			</source>							
+		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<price>1225.13</price>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
 		<doors>5</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
+		<sources>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>50.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>						
+		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<price>1225.13</price>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
 		<doors>5</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
+		<sources>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>60.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>						
+		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<price>122.13</price>
-		<doors>2/4</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
-	</car>
-	<car>
-		<name>Mercedes-Benz Viano</name>		
-		<image>/fanontour/img/results/car.jpg</image>
-		<price>1225.13</price>
-		<doors>4</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
-	</car>
-	<car>
-		<name>Mercedes-Benz Viano</name>		
-		<image>/fanontour/img/results/car.jpg</image>
-		<price>1225.13</price>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
 		<doors>5</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
+		<sources>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>10.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>						
+		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<price>1225.13</price>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
 		<doors>5</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
+		<sources>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>						
+		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<price>1225.13</price>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
 		<doors>5</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
+		<sources>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>						
+		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<price>1225.13</price>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
 		<doors>5</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
+		<sources>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>						
+		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<price>925.13</price>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
 		<doors>5</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
+		<sources>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>						
+		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<price>2225.13</price>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
 		<doors>5</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
+		<sources>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>150.25</price>
+			</source>						
+		</sources>
 	</car>
-	<car>
-		<name>Mercedes-Benz Viano</name>		
-		<image>/fanontour/img/results/car.jpg</image>
-		<price>1225.13</price>
-		<doors>5</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
-	</car>
-	<car>
-		<name>Mercedes-Benz Viano</name>		
-		<image>/fanontour/img/results/car.jpg</image>
-		<price>1225.13</price>
-		<doors>5</doors>
-		<source>rentalCars</source>
-		<url>http://www.rental-cars.com</url>
-	</car>	
 </Cars>		

@@ -3,226 +3,575 @@
 	<activity>
 		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
 		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>45</price>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
 		<duration>70 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
 	</activity>
 	<activity>
 		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
 		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>75</price>
-		<duration>10 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>5</price>
-		<duration>75 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>45</price>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
 		<duration>70 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>100</price>
+			</source>			
+		</sources>		
 	</activity>
 	<activity>
 		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
 		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>45</price>
-		<duration>90 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>145</price>
-		<duration>Varies</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>25</price>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
 		<duration>70 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
 	</activity>
 	<activity>
 		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
 		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>555</price>
-		<duration>7 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>45</price>
-		<duration>Varies</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>45</price>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
 		<duration>70 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>150</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
 	</activity>
 	<activity>
 		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
 		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>45</price>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
 		<duration>70 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>190</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
 	</activity>
 	<activity>
 		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
 		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>75</price>
-		<duration>10 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>5</price>
-		<duration>75 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>45</price>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
 		<duration>70 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
 	</activity>
 	<activity>
 		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
 		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>45</price>
-		<duration>90 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>145</price>
-		<duration>Varies</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>25</price>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
 		<duration>70 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
 	</activity>
 	<activity>
 		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
 		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>555</price>
-		<duration>7 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>45</price>
-		<duration>Varies</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>45</price>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
 		<duration>70 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
 	</activity>
 	<activity>
 		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
 		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>145</price>
-		<duration>Varies</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>25</price>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
 		<duration>70 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
 	</activity>
 	<activity>
 		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
 		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>555</price>
-		<duration>7 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>45</price>
-		<duration>Varies</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
-	</activity>
-	<activity>
-		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
-		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
-		<image>/fanontour/img/results/recorte_154x102.jpg</image>
-		<price>45</price>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
 		<duration>70 minutes</duration>
-		<source>Viator</source>
-		<url>http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK</url>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
 	</activity>
+	<activity>
+		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
+		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
+		<duration>70 minutes</duration>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
+	</activity>
+	<activity>
+		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
+		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
+		<duration>70 minutes</duration>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
+	</activity>
+	<activity>
+		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
+		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
+		<duration>70 minutes</duration>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
+	</activity>
+	<activity>
+		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
+		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
+		<duration>70 minutes</duration>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
+	</activity>
+	<activity>
+		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
+		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
+		<duration>70 minutes</duration>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
+	</activity>
+	<activity>
+		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
+		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
+		<duration>70 minutes</duration>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
+	</activity>
+	<activity>
+		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
+		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
+		<duration>70 minutes</duration>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
+	</activity>
+	<activity>
+		<name>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</name>
+		<description>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</description>
+		<image>/fanontour/img/results/recorte_154x102.jpg</image>		
+		<duration>70 minutes</duration>
+		<sources>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>75</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>300</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>400</price>
+			</source>
+			<source>
+				<source_name>Viator</source_name>
+				<url>http://prelive.partner.viator.com/</url>
+				<price>500</price>
+			</source>			
+		</sources>		
+	</activity>	
 </Activities>		
