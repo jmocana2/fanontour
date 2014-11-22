@@ -312,16 +312,112 @@
 
 				<h1>Results</h1>
 				<p>To filter the results we need to generate a xml document with all information of the search. We must also enter values in the "Your search details" box.
-				<br>Pagination, items per page and order of results is done in the front side.</p>
+				<strong>Is important to load the cheapest offer in the first position of &lt;sources&gt;</strong><br>Pagination, items per page and order of results is done in the front side.</p>
 				<p>Next i show all models of xml to generate</p>
+				<h2>Basic XML Models</h2>
 				<div class="panel-group" id="accordion">
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">XML Model Activities</a>
+									<a data-toggle="collapse" data-parent="#accordion" href="#cm1" class="collapsed">XML Model Tickets</a>
 								</h4>
 							</div>
-						<div id="collapse1" class="panel-collapse collapse in">
+						<div id="cm1" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<div class="col-md-12 row-padding-v-small">
+							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;Tickets&gt;
+	&lt;ticket&gt;
+		&lt;name&gt;&lt;/name&gt;
+		&lt;description&gt;&lt;/description&gt;
+		&lt;date&gt;&lt;/date&gt;
+		&lt;place&gt;&lt;/place&gt;
+		&lt;city&gt;&lt;/city&gt;
+		&lt;image&gt;&lt;/image&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;&lt;/source_name&gt;
+				&lt;url&gt;&lt;/url&gt;
+				&lt;price&gt;&lt;/price&gt;
+			&lt;/source&gt;			
+		&lt;/sources&gt;		
+	&lt;/ticket&gt;
+&lt;/Tickets&gt;
+</pre>
+			</div>
+							</div>
+						</div>
+						</div>	
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#cm2">XML Model Hotels</a>
+								</h4>
+							</div>
+						<div id="cm2" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="col-md-12 row-padding-v-small">
+							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;Hotels&gt;
+	&lt;hotel&gt;
+		&lt;name&gt;&lt;/name&gt;
+		&lt;address&gt;&lt;/address&gt;
+		&lt;city&gt;&lt;/city&gt;
+		&lt;image&gt;&lt;/image&gt;		
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;&lt;/source_name&gt;
+				&lt;url&gt;&lt;/url&gt;
+				&lt;price&gt;&lt;/price&gt;
+			&lt;/source&gt;								
+		&lt;/sources&gt;
+	&lt;/hotel&gt;	
+&lt;/Hotels&gt;
+</pre>
+			</div>
+							</div>
+						</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#cm3">XML Model Flights</a>
+								</h4>
+							</div>
+						<div id="cm3" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="col-md-12 row-padding-v-small">
+							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;Flights&gt;
+	&lt;flight scale="0"&gt;
+		&lt;route&gt;&lt;/route&gt;
+		&lt;image&gt;&lt;/image&gt;
+		&lt;departure_time&gt;&lt;/departure_time&gt;
+		&lt;arrival_time&gt;&lt;/arrival_time&gt;	
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;&lt;/source_name&gt;
+				&lt;url&gt;&lt;/url&gt;
+				&lt;price&gt;&lt;/price&gt;
+			&lt;/source&gt;			
+		&lt;/sources&gt;		
+	&lt;/flight&gt;
+&lt;/Flights&gt;
+</pre>
+			</div>
+							</div>
+						</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#cm4">XML Model Activities</a>
+								</h4>
+							</div>
+						<div id="cm4" class="panel-collapse collapse">
 							<div class="panel-body">
 								<div class="col-md-12 row-padding-v-small">
 							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
@@ -330,29 +426,435 @@
 	&lt;activity&gt;
 		&lt;name&gt;&lt;/name&gt;
 		&lt;description&gt;&lt;/description&gt;
-		&lt;image&gt;&lt;/image&gt;
-		&lt;price&gt;&lt;/price&gt;
+		&lt;image&gt;&lt;/image&gt;		
 		&lt;duration&gt;&lt;/duration&gt;
-		&lt;source&gt;&lt;/source&gt;
-		&lt;url&gt;&lt;/url&gt;
-	&lt;/activity&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;&lt;/source_name&gt;
+				&lt;url&gt;&lt;/url&gt;
+				&lt;price&gt;&lt;/price&gt;
+			&lt;/source&gt;			
+		&lt;/sources&gt;		
+	&lt;/activity&gt;	
 &lt;/Activities&gt;
 </pre>
 			</div>
 							</div>
 						</div>
-						</div>					
-										
-				</div>
-
-				<div class="panel-group" id="accordion">
+						</div>
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">Example: XML Model Activities</a>
+									<a data-toggle="collapse" data-parent="#accordion" href="#cm5">XML Model Restaurants</a>
 								</h4>
 							</div>
-						<div id="collapse1" class="panel-collapse collapse in">
+						<div id="cm5" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="col-md-12 row-padding-v-small">
+							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;Restaurants&gt;
+	&lt;restaurant&gt;
+		&lt;name&gt;&lt;/name&gt;
+		&lt;description&gt;&lt;/description&gt;
+		&lt;address&gt;&lt;/address&gt;
+		&lt;city&gt;&lt;/city&gt;
+		&lt;image&gt;&lt;/image&gt;	
+		&lt;cousine&gt;&lt;/cousine&gt;		
+		&lt;source&gt;&lt;/source&gt;
+		&lt;url&gt;&lt;/url&gt;
+	&lt;/restaurant&gt;
+&lt;/Restaurants&gt;
+</pre>
+			</div>
+							</div>
+						</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#cm6">XML Model Rental Cars</a>
+								</h4>
+							</div>
+						<div id="cm6" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="col-md-12 row-padding-v-small">
+							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;Cars&gt;
+	&lt;car&gt;
+		&lt;name&gt;&lt;/name&gt;		
+		&lt;image&gt;&lt;/image&gt;
+		&lt;address&gt;&lt;/address&gt;		
+		&lt;doors&gt;&lt;/doors&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;&lt;/source_name&gt;
+				&lt;url&gt;&lt;/url&gt;
+				&lt;price&gt;&lt;/price&gt;
+			&lt;/source&gt;							
+		&lt;/sources&gt;
+	&lt;/car&gt;
+&lt;/Cars&gt;
+</pre>
+			</div>
+							</div>
+						</div>
+						</div>				
+										
+				</div>
+<h2>XML Examples</h2>
+				<div class="panel-group" id="accordion">
+						
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#cme1">Example: XML Model Tickets</a>
+								</h4>
+							</div>
+						<div id="cme1" class="panel-collapse collapse in">
+							<div class="panel-body">
+								<div class="col-md-12 row-padding-v-small">
+								<p>Full example: <a href="http://www.jmocana.eu/fanontour/xml/results/tickets.xml" title="see example">http://www.jmocana.eu/fanontour/xml/results/tickets.xml</a></p>
+							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;Tickets&gt;
+	&lt;ticket&gt;
+		&lt;name&gt;Entradas FC Barcelona&lt;/name&gt;
+		&lt;description&gt;La pasión con la que este equipo es apoyado y respetado allá donde va es una prueba de la grandeza de este club. Su casa, el Camp Nou, esta considerado uno de los mas prestigiosos campos europeos. &lt;/description&gt;
+		&lt;date&gt;sab 17 ene 2015 21:30&lt;/date&gt;
+		&lt;place&gt;Camp Nou&lt;/place&gt;
+		&lt;city&gt;Barcelona&lt;/city&gt;
+		&lt;image&gt;/fanontour/img/results/ticket.jpg&lt;/image&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;seatwave&lt;/source_name&gt;
+				&lt;url&gt;http://www.seatwave.es/&lt;/url&gt;
+				&lt;price&gt;300&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;seatwave&lt;/source_name&gt;
+				&lt;url&gt;http://www.seatwave.es/&lt;/url&gt;
+				&lt;price&gt;1500&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;entradas.com&lt;/source_name&gt;
+				&lt;url&gt;http://www.entradas.com/&lt;/url&gt;
+				&lt;price&gt;1600&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;seatwave&lt;/source_name&gt;
+				&lt;url&gt;http://www.seatwave.es/&lt;/url&gt;
+				&lt;price&gt;1700&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;seatwave&lt;/source_name&gt;
+				&lt;url&gt;http://www.seatwave.es/&lt;/url&gt;
+				&lt;price&gt;1900&lt;/price&gt;
+			&lt;/source&gt;
+		&lt;/sources&gt;		
+	&lt;/ticket&gt;
+	&lt;ticket&gt;
+		&lt;name&gt;Entradas Atlético de Madrid&lt;/name&gt;
+		&lt;description&gt;La pasión con la que este equipo es apoyado y respetado allá donde va es una prueba de la grandeza de este club. Su casa, el Camp Nou, esta considerado uno de los mas prestigiosos campos europeos. &lt;/description&gt;
+		&lt;date&gt;sab 17 ene 2015 21:30&lt;/date&gt;
+		&lt;place&gt;Vicente Calderón&lt;/place&gt;
+		&lt;city&gt;Madrid&lt;/city&gt;
+		&lt;image&gt;/fanontour/img/results/ticket.jpg&lt;/image&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;seatwave&lt;/source_name&gt;
+				&lt;url&gt;http://www.seatwave.es/&lt;/url&gt;
+				&lt;price&gt;1000&lt;/price&gt;
+			&lt;/source&gt;			
+		&lt;/sources&gt;		
+	&lt;/ticket&gt;
+	&lt;ticket&gt;
+		&lt;name&gt;Entradas FC Barcelona&lt;/name&gt;
+		&lt;description&gt;La pasión con la que este equipo es apoyado y respetado allá donde va es una prueba de la grandeza de este club. Su casa, el Camp Nou, esta considerado uno de los mas prestigiosos campos europeos. &lt;/description&gt;
+		&lt;date&gt;sab 17 ene 2015 21:30&lt;/date&gt;
+		&lt;place&gt;Camp Nou&lt;/place&gt;
+		&lt;city&gt;Barcelona&lt;/city&gt;
+		&lt;image&gt;/fanontour/img/results/ticket.jpg&lt;/image&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;seatwave&lt;/source_name&gt;
+				&lt;url&gt;http://www.seatwave.es/&lt;/url&gt;
+				&lt;price&gt;20&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;seatwave&lt;/source_name&gt;
+				&lt;url&gt;http://www.seatwave.es/&lt;/url&gt;
+				&lt;price&gt;1500&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;entradas.com&lt;/source_name&gt;
+				&lt;url&gt;http://www.entradas.com/&lt;/url&gt;
+				&lt;price&gt;1600&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;seatwave&lt;/source_name&gt;
+				&lt;url&gt;http://www.seatwave.es/&lt;/url&gt;
+				&lt;price&gt;1700&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;seatwave&lt;/source_name&gt;
+				&lt;url&gt;http://www.seatwave.es/&lt;/url&gt;
+				&lt;price&gt;1900&lt;/price&gt;
+			&lt;/source&gt;
+		&lt;/sources&gt;		
+	&lt;/ticket&gt;
+	&lt;ticket&gt;
+		&lt;name&gt;Entradas FC Barcelona&lt;/name&gt;
+		&lt;description&gt;La pasión con la que este equipo es apoyado y respetado allá donde va es una prueba de la grandeza de este club. Su casa, el Camp Nou, esta considerado uno de los mas prestigiosos campos europeos. &lt;/description&gt;
+		&lt;date&gt;sab 17 ene 2015 21:30&lt;/date&gt;
+		&lt;place&gt;Camp Nou&lt;/place&gt;
+		&lt;city&gt;Barcelona&lt;/city&gt;
+		&lt;image&gt;/fanontour/img/results/ticket.jpg&lt;/image&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;seatwave&lt;/source_name&gt;
+				&lt;url&gt;http://www.seatwave.es/&lt;/url&gt;
+				&lt;price&gt;300&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;seatwave&lt;/source_name&gt;
+				&lt;url&gt;http://www.seatwave.es/&lt;/url&gt;
+				&lt;price&gt;1500&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;entradas.com&lt;/source_name&gt;
+				&lt;url&gt;http://www.entradas.com/&lt;/url&gt;
+				&lt;price&gt;1600&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;seatwave&lt;/source_name&gt;
+				&lt;url&gt;http://www.seatwave.es/&lt;/url&gt;
+				&lt;price&gt;1700&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;seatwave&lt;/source_name&gt;
+				&lt;url&gt;http://www.seatwave.es/&lt;/url&gt;
+				&lt;price&gt;1900&lt;/price&gt;
+			&lt;/source&gt;
+		&lt;/sources&gt;		
+	&lt;/ticket&gt;	
+&lt;/Tickets&gt;		
+
+
+							</pre>
+			</div>
+							</div>
+						</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#cme2">Example: XML Model Hotels</a>
+								</h4>
+							</div>
+						<div id="cme2" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="col-md-12 row-padding-v-small">
+								<p>Full example: <a href="http://www.jmocana.eu/fanontour/xml/results/hotels.xml" title="see example">http://www.jmocana.eu/fanontour/xml/results/hotels.xml</a></p>
+							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
+
+							<?xml version="1.0" encoding="utf-8" ?>
+&lt;Hotels&gt;
+	&lt;hotel&gt;
+		&lt;name&gt;Petit Palace President Castellana&lt;/name&gt;
+		&lt;address&gt;Calle del Marques de Villamagna, 4&lt;/address&gt;
+		&lt;city&gt;Madrid&lt;/city&gt;
+		&lt;image&gt;/fanontour/img/results/hotel.jpg&lt;/image&gt;		
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;hoteles.com&lt;/source_name&gt;
+				&lt;url&gt;http://es.hoteles.com/&lt;/url&gt;
+				&lt;price&gt;100&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;hoteles.com&lt;/source_name&gt;
+				&lt;url&gt;http://es.hoteles.com/&lt;/url&gt;
+				&lt;price&gt;1700&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;hoteles.com&lt;/source_name&gt;
+				&lt;url&gt;http://es.hoteles.com/&lt;/url&gt;
+				&lt;price&gt;1800&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;hoteles.com&lt;/source_name&gt;
+				&lt;url&gt;http://es.hoteles.com/&lt;/url&gt;
+				&lt;price&gt;1900&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;hoteles.com&lt;/source_name&gt;
+				&lt;url&gt;http://es.hoteles.com/&lt;/url&gt;
+				&lt;price&gt;1700&lt;/price&gt;
+			&lt;/source&gt;						
+		&lt;/sources&gt;
+	&lt;/hotel&gt;
+	&lt;hotel&gt;
+		&lt;name&gt;Petit Palace President Castellana&lt;/name&gt;
+		&lt;address&gt;Calle del Marques de Villamagna, 4&lt;/address&gt;
+		&lt;city&gt;Madrid&lt;/city&gt;
+		&lt;image&gt;/fanontour/img/results/hotel.jpg&lt;/image&gt;		
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;hoteles.com&lt;/source_name&gt;
+				&lt;url&gt;http://es.hoteles.com/&lt;/url&gt;
+				&lt;price&gt;1500&lt;/price&gt;
+			&lt;/source&gt;									
+		&lt;/sources&gt;
+	&lt;/hotel&gt;
+	&lt;hotel&gt;
+		&lt;name&gt;Petit Palace President Castellana&lt;/name&gt;
+		&lt;address&gt;Calle del Marques de Villamagna, 4&lt;/address&gt;
+		&lt;city&gt;Madrid&lt;/city&gt;
+		&lt;image&gt;/fanontour/img/results/hotel.jpg&lt;/image&gt;		
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;hoteles.com&lt;/source_name&gt;
+				&lt;url&gt;http://es.hoteles.com/&lt;/url&gt;
+				&lt;price&gt;200&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;hoteles.com&lt;/source_name&gt;
+				&lt;url&gt;http://es.hoteles.com/&lt;/url&gt;
+				&lt;price&gt;1700&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;hoteles.com&lt;/source_name&gt;
+				&lt;url&gt;http://es.hoteles.com/&lt;/url&gt;
+				&lt;price&gt;1800&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;hoteles.com&lt;/source_name&gt;
+				&lt;url&gt;http://es.hoteles.com/&lt;/url&gt;
+				&lt;price&gt;1900&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;hoteles.com&lt;/source_name&gt;
+				&lt;url&gt;http://es.hoteles.com/&lt;/url&gt;
+				&lt;price&gt;1700&lt;/price&gt;
+			&lt;/source&gt;						
+		&lt;/sources&gt;
+	&lt;/hotel&gt;		
+&lt;/Hotels&gt;
+
+							</pre>
+			</div>
+							</div>
+						</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#cme3">Example: XML Model Flights</a>
+								</h4>
+							</div>
+						<div id="cme3" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="col-md-12 row-padding-v-small">
+								<p>Full example: <a href="http://www.jmocana.eu/fanontour/xml/results/flights.xml" title="see example">http://www.jmocana.eu/fanontour/xml/results/flights.xml</a></p>
+							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
+
+							<?xml version="1.0" encoding="utf-8" ?>
+&lt;Flights&gt;
+	&lt;flight scale="0"&gt;
+		&lt;route&gt;FRA To YYZ&lt;/route&gt;
+		&lt;image&gt;/fanontour/img/results/wegolo.png&lt;/image&gt;
+		&lt;departure_time&gt;07:30&lt;/departure_time&gt;
+		&lt;arrival_time&gt;19:00&lt;/arrival_time&gt;	
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;wegolo&lt;/source_name&gt;
+				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
+				&lt;price&gt;50&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;wegolo&lt;/source_name&gt;
+				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
+				&lt;price&gt;3500&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;wegolo&lt;/source_name&gt;
+				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
+				&lt;price&gt;3600&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;wegolo&lt;/source_name&gt;
+				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
+				&lt;price&gt;3700&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;wegolo&lt;/source_name&gt;
+				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
+				&lt;price&gt;3800&lt;/price&gt;
+			&lt;/source&gt;			
+		&lt;/sources&gt;		
+	&lt;/flight&gt;
+	&lt;flight scale="1"&gt;
+		&lt;route&gt;YYZ To YHZ | YHZ To FRA&lt;/route&gt;
+		&lt;image&gt;/fanontour/img/results/wegolo.png&lt;/image&gt;
+		&lt;departure_time&gt;07:30&lt;/departure_time&gt;
+		&lt;arrival_time&gt;19:00&lt;/arrival_time&gt;	
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;wegolo&lt;/source_name&gt;
+				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
+				&lt;price&gt;50&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;wegolo&lt;/source_name&gt;
+				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
+				&lt;price&gt;3500&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;wegolo&lt;/source_name&gt;
+				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
+				&lt;price&gt;3600&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;wegolo&lt;/source_name&gt;
+				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
+				&lt;price&gt;3700&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;wegolo&lt;/source_name&gt;
+				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
+				&lt;price&gt;3800&lt;/price&gt;
+			&lt;/source&gt;			
+		&lt;/sources&gt;		
+	&lt;/flight&gt;
+	&lt;flight scale="0"&gt;
+		&lt;route&gt;FRA To YYZ&lt;/route&gt;
+		&lt;image&gt;/fanontour/img/results/wegolo.png&lt;/image&gt;
+		&lt;departure_time&gt;07:30&lt;/departure_time&gt;
+		&lt;arrival_time&gt;19:00&lt;/arrival_time&gt;	
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;wegolo&lt;/source_name&gt;
+				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
+				&lt;price&gt;50&lt;/price&gt;
+			&lt;/source&gt;			
+		&lt;/sources&gt;		
+	&lt;/flight&gt;
+&lt;/Flights&gt;		
+
+
+							</pre>
+			</div>
+							</div>
+						</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#cme4">Example: XML Model Activities</a>
+								</h4>
+							</div>
+						<div id="cme4" class="panel-collapse collapse">
 							<div class="panel-body">
 								<div class="col-md-12 row-padding-v-small">
 								<p>Full example: <a href="http://www.jmocana.eu/fanontour/xml/results/activity.xml" title="see example">http://www.jmocana.eu/fanontour/xml/results/activity.xml</a></p>
@@ -362,32 +864,236 @@
 	&lt;activity&gt;
 		&lt;name&gt;Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino&lt;/name&gt;
 		&lt;description&gt;Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!&lt;/description&gt;
-		&lt;image&gt;/fanontour/img/results/recorte_154x102.jpg&lt;/image&gt;
-		&lt;price&gt;45&lt;/price&gt;
+		&lt;image&gt;/fanontour/img/results/recorte_154x102.jpg&lt;/image&gt;		
 		&lt;duration&gt;70 minutes&lt;/duration&gt;
-		&lt;source&gt;Viator&lt;/source&gt;
-		&lt;url&gt;http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK&lt;/url&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;Viator&lt;/source_name&gt;
+				&lt;url&gt;http://prelive.partner.viator.com/&lt;/url&gt;
+				&lt;price&gt;75&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;Viator&lt;/source_name&gt;
+				&lt;url&gt;http://prelive.partner.viator.com/&lt;/url&gt;
+				&lt;price&gt;200&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;Viator&lt;/source_name&gt;
+				&lt;url&gt;http://prelive.partner.viator.com/&lt;/url&gt;
+				&lt;price&gt;300&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;Viator&lt;/source_name&gt;
+				&lt;url&gt;http://prelive.partner.viator.com/&lt;/url&gt;
+				&lt;price&gt;400&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;Viator&lt;/source_name&gt;
+				&lt;url&gt;http://prelive.partner.viator.com/&lt;/url&gt;
+				&lt;price&gt;500&lt;/price&gt;
+			&lt;/source&gt;			
+		&lt;/sources&gt;		
 	&lt;/activity&gt;
 	&lt;activity&gt;
 		&lt;name&gt;Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino&lt;/name&gt;
 		&lt;description&gt;Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!&lt;/description&gt;
-		&lt;image&gt;/fanontour/img/results/recorte_154x102.jpg&lt;/image&gt;
-		&lt;price&gt;75&lt;/price&gt;
-		&lt;duration&gt;10 minutes&lt;/duration&gt;
-		&lt;source&gt;Viator&lt;/source&gt;
-		&lt;url&gt;http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK&lt;/url&gt;
+		&lt;image&gt;/fanontour/img/results/recorte_154x102.jpg&lt;/image&gt;		
+		&lt;duration&gt;70 minutes&lt;/duration&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;Viator&lt;/source_name&gt;
+				&lt;url&gt;http://prelive.partner.viator.com/&lt;/url&gt;
+				&lt;price&gt;100&lt;/price&gt;
+			&lt;/source&gt;			
+		&lt;/sources&gt;		
 	&lt;/activity&gt;
 	&lt;activity&gt;
 		&lt;name&gt;Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino&lt;/name&gt;
 		&lt;description&gt;Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and afurry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!&lt;/description&gt;
-		&lt;image&gt;/fanontour/img/results/recorte_154x102.jpg&lt;/image&gt;
-		&lt;price&gt;5&lt;/price&gt;
-		&lt;duration&gt;75 minutes&lt;/duration&gt;
-		&lt;source&gt;Viator&lt;/source&gt;
-		&lt;url&gt;http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK&lt;/url&gt;
-	&lt;/activity&gt;
+		&lt;image&gt;/fanontour/img/results/recorte_154x102.jpg&lt;/image&gt;		
+		&lt;duration&gt;70 minutes&lt;/duration&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;Viator&lt;/source_name&gt;
+				&lt;url&gt;http://prelive.partner.viator.com/&lt;/url&gt;
+				&lt;price&gt;75&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;Viator&lt;/source_name&gt;
+				&lt;url&gt;http://prelive.partner.viator.com/&lt;/url&gt;
+				&lt;price&gt;200&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;Viator&lt;/source_name&gt;
+				&lt;url&gt;http://prelive.partner.viator.com/&lt;/url&gt;
+				&lt;price&gt;300&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;Viator&lt;/source_name&gt;
+				&lt;url&gt;http://prelive.partner.viator.com/&lt;/url&gt;
+				&lt;price&gt;400&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;Viator&lt;/source_name&gt;
+				&lt;url&gt;http://prelive.partner.viator.com/&lt;/url&gt;
+				&lt;price&gt;500&lt;/price&gt;
+			&lt;/source&gt;			
+		&lt;/sources&gt;		
+	&lt;/activity&gt;		
 &lt;/Activities&gt;
 </pre>
+			</div>
+							</div>
+						</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#cme5">Example: XML Model Restaurants</a>
+								</h4>
+							</div>
+						<div id="cme5" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="col-md-12 row-padding-v-small">
+								<p>Full example: <a href="http://www.jmocana.eu/fanontour/xml/results/restaurants.xml" title="see example">http://www.jmocana.eu/fanontour/xml/results/restaurants.xml</a></p>
+							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
+
+							<?xml version="1.0" encoding="utf-8" ?>
+&lt;Restaurants&gt;
+	&lt;restaurant&gt;
+		&lt;name&gt;La Parrilla de Leganes&lt;/name&gt;
+		&lt;description&gt;En el interior del Hotel Parquesur, en la localidad madrileña de Leganés, se encuentra situado el restaurante La Parrilla de Leganés.&lt;/description&gt;
+		&lt;address&gt;Avenida Gran Bretaña s/n, (Hotel Parquesur), 28916, Leganes&lt;/address&gt;
+		&lt;city&gt;Madrid&lt;/city&gt;
+		&lt;image&gt;/fanontour/img/results/restaurant.jpg&lt;/image&gt;	
+		&lt;cousine&gt;Spanish&lt;/cousine&gt;		
+		&lt;source&gt;bookatable&lt;/source&gt;
+		&lt;url&gt;http://www.bookatable.es/&lt;/url&gt;
+	&lt;/restaurant&gt;
+	&lt;restaurant&gt;
+		&lt;name&gt;La Parrilla de Leganes&lt;/name&gt;
+		&lt;description&gt;En el interior del Hotel Parquesur, en la localidad madrileña de Leganés, se encuentra situado el restaurante La Parrilla de Leganés.&lt;/description&gt;
+		&lt;address&gt;Avenida Gran Bretaña s/n, (Hotel Parquesur), 28916, Leganes&lt;/address&gt;
+		&lt;city&gt;Madrid&lt;/city&gt;
+		&lt;image&gt;/fanontour/img/results/restaurant.jpg&lt;/image&gt;	
+		&lt;cousine&gt;Spanish&lt;/cousine&gt;		
+		&lt;source&gt;bookatable&lt;/source&gt;
+		&lt;url&gt;http://www.bookatable.es/&lt;/url&gt;
+	&lt;/restaurant&gt;
+	&lt;restaurant&gt;
+		&lt;name&gt;La Parrilla de Leganes&lt;/name&gt;
+		&lt;description&gt;En el interior del Hotel Parquesur, en la localidad madrileña de Leganés, se encuentra situado el restaurante La Parrilla de Leganés.&lt;/description&gt;
+		&lt;address&gt;Avenida Gran Bretaña s/n, (Hotel Parquesur), 28916, Leganes&lt;/address&gt;
+		&lt;city&gt;Madrid&lt;/city&gt;
+		&lt;image&gt;/fanontour/img/results/restaurant.jpg&lt;/image&gt;	
+		&lt;cousine&gt;Spanish&lt;/cousine&gt;		
+		&lt;source&gt;bookatable&lt;/source&gt;
+		&lt;url&gt;http://www.bookatable.es/&lt;/url&gt;
+	&lt;/restaurant&gt;
+&lt;/Restaurants&gt;
+
+							</pre>
+			</div>
+							</div>
+						</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordion" href="#cme6">Example: XML Model Rental Cars</a>
+								</h4>
+							</div>
+						<div id="cme6" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="col-md-12 row-padding-v-small">
+								<p>Full example: <a href="http://www.jmocana.eu/fanontour/xml/results/cars.xml" title="see example">http://www.jmocana.eu/fanontour/xml/results/cars.xml</a></p>
+							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
+
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;Cars&gt;
+	&lt;car&gt;
+		&lt;name&gt;Mercedes-Benz Viano&lt;/name&gt;		
+		&lt;image&gt;/fanontour/img/results/car.jpg&lt;/image&gt;
+		&lt;address&gt;Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid&lt;/address&gt;		
+		&lt;doors&gt;5&lt;/doors&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
+				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
+				&lt;price&gt;150.25&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
+				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
+				&lt;price&gt;150.25&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
+				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
+				&lt;price&gt;150.25&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
+				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
+				&lt;price&gt;150.25&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
+				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
+				&lt;price&gt;150.25&lt;/price&gt;
+			&lt;/source&gt;						
+		&lt;/sources&gt;
+	&lt;/car&gt;
+	&lt;car&gt;
+		&lt;name&gt;Mercedes-Benz Viano&lt;/name&gt;		
+		&lt;image&gt;/fanontour/img/results/car.jpg&lt;/image&gt;
+		&lt;address&gt;Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid&lt;/address&gt;		
+		&lt;doors&gt;5&lt;/doors&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
+				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
+				&lt;price&gt;100.25&lt;/price&gt;
+			&lt;/source&gt;							
+		&lt;/sources&gt;
+	&lt;/car&gt;
+	&lt;car&gt;
+		&lt;name&gt;Mercedes-Benz Viano&lt;/name&gt;		
+		&lt;image&gt;/fanontour/img/results/car.jpg&lt;/image&gt;
+		&lt;address&gt;Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid&lt;/address&gt;		
+		&lt;doors&gt;5&lt;/doors&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
+				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
+				&lt;price&gt;50.25&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
+				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
+				&lt;price&gt;150.25&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
+				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
+				&lt;price&gt;150.25&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
+				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
+				&lt;price&gt;150.25&lt;/price&gt;
+			&lt;/source&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
+				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
+				&lt;price&gt;150.25&lt;/price&gt;
+			&lt;/source&gt;						
+		&lt;/sources&gt;
+	&lt;/car&gt;	
+&lt;/Cars&gt;		
+
+
+							</pre>
 			</div>
 							</div>
 						</div>
@@ -399,17 +1105,17 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">
 								<h4 class="panel-title">
-									<a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">Activities search details</a>
+									<a data-toggle="collapse" data-parent="#accordion" href="#custo1" class="collapsed">Customized tour: Search details</a>
 								</h4>
 							</div>
-						<div id="collapse1" class="panel-collapse collapse in">
+						<div id="custo1" class="panel-collapse collapse in">
 							<div class="panel-body">
 								<div class="col-md-12 row-padding-v-small">
-								<p>Introduce the values (value="<em>load value</em>") in the next inputs</p>
+								<p>We must load the values of the search (value="<em>load value</em>") in the inputs of search details <br>
+								example:</p>
 							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
-&lt;input type="text" class="form-control" id="activity-field-01" placeholder="City name" required&gt;
-&lt;input id="datetimepicker_17" type="text" class="form-control mandatory start_date" data-date-format="DD/MM/YYYY" readonly&gt;
-&lt;input id="datetimepicker_18" type="text" class="form-control mandatory end_date" data-date-format="DD/MM/YYYY" readonly&gt;
+&lt;input type="text" class="form-control" id="activity-field-01" placeholder="City name" value="boxing" required&gt;
+
 </pre>
 			</div>
 							</div>
