@@ -659,7 +659,7 @@
 								<p>Full example: <a href="http://www.jmocana.eu/fanontour/xml/results/hotels.xml" title="see example">http://www.jmocana.eu/fanontour/xml/results/hotels.xml</a></p>
 							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
 
-							<?xml version="1.0" encoding="utf-8" ?>
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
 &lt;Hotels&gt;
 	&lt;hotel&gt;
 		&lt;name&gt;Petit Palace President Castellana&lt;/name&gt;
@@ -759,7 +759,7 @@
 								<p>Full example: <a href="http://www.jmocana.eu/fanontour/xml/results/flights.xml" title="see example">http://www.jmocana.eu/fanontour/xml/results/flights.xml</a></p>
 							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
 
-							<?xml version="1.0" encoding="utf-8" ?>
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
 &lt;Flights&gt;
 	&lt;flight scale="0"&gt;
 		&lt;route&gt;FRA To YYZ&lt;/route&gt;
@@ -958,7 +958,7 @@
 								<p>Full example: <a href="http://www.jmocana.eu/fanontour/xml/results/restaurants.xml" title="see example">http://www.jmocana.eu/fanontour/xml/results/restaurants.xml</a></p>
 							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
 
-							<?xml version="1.0" encoding="utf-8" ?>
+&lt;?xml version="1.0" encoding="utf-8" ?&gt;
 &lt;Restaurants&gt;
 	&lt;restaurant&gt;
 		&lt;name&gt;La Parrilla de Leganes&lt;/name&gt;
