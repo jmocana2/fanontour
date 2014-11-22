@@ -41,7 +41,7 @@ $( document ).ready(function() { //DOM OK!
 		 	if(device_width >= search_box_width){
 			 	var num_sec = $(this).parent().prevAll().length;
 			  	$(".bg-container").fadeOut("fast", function(){		  				  
-			  		$(".bg-container").css("background","url('"+ images[num_sec] +"')no-repeat 0 0");
+			  		$(".bg-container").css("background","url('"+ images[num_sec] +"')no-repeat center 0");
 			  		$(".bg-container").css("background-size","cover");
 			  		$(this).fadeIn("fast");
 			  	})
