@@ -3,7 +3,7 @@ FanOnTour
 
 FanOnTour Repository
 
-<h1>FanOnTour Proyect <a style="color: #8fda33" href="wireframes/fanontour-presentation.ppt">(Presentation)</a></h1>
+<h1>FanOnTour Proyect <a style="color: #8fda33" href="wireframes/fanontour-presentation.ppt">(Presentation)</a> | <a style="color: #8fda33" href="ui/">Documentation</a></h1>
 
 <table width="100%">
   <tr>
@@ -56,10 +56,10 @@ FanOnTour Repository
   </tr>
   <tr>
     <td>01</td>
-    <td>Resultst</td>
-    <td class="ok"><a class="fancybox" target="_blank" href="diseno//02_pagina_playlist/playlist."></a></td>
-    <td class="ok"><a target="_blank" href="playlist/listado-playlist."></a></td>
-  <td class="validacion"><a target="_blank" href="01_results-tickets.html">01_results-tickets</a> <br><a target="_blank" href="01_results-hotels.html">02_results-hotels</a> <br><a target="_blank" href="01_results-flights.html">01_results-flights</a> <br><a target="_blank" href="01_results-activities.html">01_results-activities</a> <br><a target="_blank" href="01_results-restaurants.html">01_results-restaurants</a> <br><a target="_blank" href="01_results-rental-cars.html">01_results-rental-cars</a> <br></td>
+    <td>Results</td>
+    <td class="ok"><a target="_blank" href="wireframes/results.png">wireframe</a></td>
+    <td class="ok"><a target="_blank" href="design/results.png">png</a></td>
+  <td class="ok"><a target="_blank" href="01_results-tickets.html">01_results-tickets</a> <br><a target="_blank" href="01_results-hotels.html">01_results-hotels</a> <br><a target="_blank" href="01_results-flights.html">01_results-flights</a> <br><a target="_blank" href="01_results-activities.html">01_results-activities</a> <br><a target="_blank" href="01_results-restaurants.html">01_results-restaurants</a> <br><a target="_blank" href="01_results-rental-cars.html">01_results-rental-cars</a> <br><a target="_blank" href="01_results-customized-tour.html">01_results-customized-tour.html</a></td>
   <td class="ok">&nbsp;</td>
   </tr>
   <tr>
@@ -90,7 +90,7 @@ FanOnTour Repository
     <td>02.4</td>
     <td>Our partners</td>
     <td class="ok"><a class="fancybox" target="_blank" href="wireframes/our-partners.png">wireframe</a></td>
-    <td class="ok"><a target="_blank" href="design/02_our-suppliers.png">PNG</a></td>
+    <td class="ok"><a target="_blank" href="design/02_our-suppliers.png">png</a></td>
     <td class="ok"><a target="_blank" href="02_our-suppliers.html">HTML5</a></td>
     <td class="ok">&nbsp;</td>
   </tr>
@@ -98,7 +98,7 @@ FanOnTour Repository
     <td>02.5</td>
     <td>FAQ</td>
     <td class="ok"><a class="fancybox" target="_blank" href="wireframes/help.png">wireframe</a></td>
-    <td class="ok"><a target="_blank" href="design/02_help.png">PNG</a></td>
+    <td class="ok"><a target="_blank" href="design/02_help.png">png</a></td>
   <td class="ok"><a target="_blank" href="02_help.html">HTML5</a></td>
   <td class="ok">&nbsp;</td>
   </tr>
@@ -106,7 +106,7 @@ FanOnTour Repository
     <td>02.6</td>
     <td>Work with us</td>
     <td class="ok"><a class="fancybox" target="_blank" href="wireframes/work-with-us.png">wireframe</a></td>
-    <td class="ok"><a target="_blank" href="design/02_work-with-us.png">PNG</a></td>
+    <td class="ok"><a target="_blank" href="design/02_work-with-us.png">png</a></td>
     <td class="ok"><a target="_blank" href="02_work-with-us.html">HTML5</a></td>
     <td class="ok">&nbsp;</td>
   </tr>
@@ -130,7 +130,7 @@ FanOnTour Repository
     <td>02.9</td>
     <td>Donate to charity</td>
     <td class="ok"><a class="fancybox" target="_blank" href="wireframes/work-with-us.png"></a></td>
-    <td class="ok"><a target="_blank" href="design/02_fanontour-fundation.png">PNG</a></td>
+    <td class="ok"><a target="_blank" href="design/02_fanontour-fundation.png">png</a></td>
   <td class="ok"><a target="_blank" href="02_fanontour-fundation.html">HTML5</a></td>
   <td class="ok">&nbsp;</td>
   </tr>
