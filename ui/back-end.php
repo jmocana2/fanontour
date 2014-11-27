@@ -358,23 +358,24 @@
 						<div id="cm2" class="panel-collapse collapse">
 							<div class="panel-body">
 								<div class="col-md-12 row-padding-v-small">
+								<p><strong>properties values:</strong></p>
+								<ul>
+									<li>persons="1" (simple room), persons="2" (double room), persons="3" (triple room)</li>
+								</ul>
 							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
-&lt;?xml version="1.0" encoding="utf-8" ?&gt;
-&lt;Hotels&gt;
-	&lt;hotel&gt;
-		&lt;name&gt;&lt;/name&gt;
-		&lt;address&gt;&lt;/address&gt;
-		&lt;city&gt;&lt;/city&gt;
-		&lt;image&gt;&lt;/image&gt;		
-		&lt;sources&gt;
-			&lt;source&gt;
-				&lt;source_name&gt;&lt;/source_name&gt;
-				&lt;url&gt;&lt;/url&gt;
-				&lt;price&gt;&lt;/price&gt;
-			&lt;/source&gt;								
-		&lt;/sources&gt;
-	&lt;/hotel&gt;	
-&lt;/Hotels&gt;
+&lt;hotel persons=""&gt;
+	&lt;name&gt;&lt;/name&gt;
+	&lt;address&gt;&lt;/address&gt;
+	&lt;city&gt;&lt;/city&gt;
+	&lt;image&gt;&lt;/image&gt;		
+	&lt;sources&gt;
+		&lt;source&gt;
+			&lt;source_name&gt;&lt;/source_name&gt;
+			&lt;url&gt;&lt;/url&gt;
+			&lt;price&gt;&lt;/price&gt;
+		&lt;/source&gt;									
+	&lt;/sources&gt;
+&lt;/hotel&gt;
 </pre>
 			</div>
 							</div>
@@ -388,6 +389,10 @@
 							</div>
 						<div id="cm3" class="panel-collapse collapse">
 							<div class="panel-body">
+								<p><strong>properties values:</strong></p>
+								<ul>
+									<li>scale="0" (Direct flight), scale="1" (Not direct flight)</li>
+								</ul>
 								<div class="col-md-12 row-padding-v-small">
 							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
 &lt;?xml version="1.0" encoding="utf-8" ?&gt;
@@ -478,24 +483,32 @@
 							</div>
 						<div id="cm6" class="panel-collapse collapse">
 							<div class="panel-body">
+								<p><strong>properties values:</strong></p>
+								<ul>
+									<li>type="1" (Full to Full), type="2" (Pre-purchase (Refunds)), type="3" (Pre-purchase (partial refund)), type="4" (Pre-purchase), type="5" (Free tank)</li>
+									<li>air-conditioning="0" (No air conditioning), air-conditioning="1" (with air conditioning)</li>
+									<li>gearstick="0" (automatic transmission), gearstick="1" (manual transmission)</li>
+								</ul>
 								<div class="col-md-12 row-padding-v-small">
 							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
-&lt;?xml version="1.0" encoding="utf-8" ?&gt;
-&lt;Cars&gt;
-	&lt;car&gt;
-		&lt;name&gt;&lt;/name&gt;		
-		&lt;image&gt;&lt;/image&gt;
-		&lt;address&gt;&lt;/address&gt;		
+&lt;car&gt;
+	&lt;name&gt;&lt;/name&gt;		
+	&lt;image&gt;&lt;/image&gt;
+	&lt;address&gt;&lt;/address&gt;		
+	&lt;petrol type="2"&gt;&lt;/petrol&gt;
+	&lt;specifications air-conditioning="0" gearstick="0"&gt;			
 		&lt;doors&gt;&lt;/doors&gt;
-		&lt;sources&gt;
-			&lt;source&gt;
-				&lt;source_name&gt;&lt;/source_name&gt;
-				&lt;url&gt;&lt;/url&gt;
-				&lt;price&gt;&lt;/price&gt;
-			&lt;/source&gt;							
-		&lt;/sources&gt;
-	&lt;/car&gt;
-&lt;/Cars&gt;
+		&lt;seats&gt;&lt;/seats&gt;
+		&lt;insurance&gt;&lt;/insurance&gt;
+	&lt;/specifications&gt;	
+	&lt;sources&gt;
+		&lt;source&gt;
+			&lt;source_name&gt;&lt;/source_name&gt;
+			&lt;url&gt;&lt;/url&gt;
+			&lt;price&gt;&lt;/price&gt;
+		&lt;/source&gt;									
+	&lt;/sources&gt;
+&lt;/car&gt;
 </pre>
 			</div>
 							</div>
@@ -503,7 +516,7 @@
 						</div>				
 										
 				</div>
-<h2>XML Examples</h2>
+<h2>XML Examples (Simple results and customized tour)</h2>
 				<div class="panel-group" id="accordion">
 						
 						<div class="panel panel-default">
@@ -661,7 +674,7 @@
 
 &lt;?xml version="1.0" encoding="utf-8" ?&gt;
 &lt;Hotels&gt;
-	&lt;hotel&gt;
+	&lt;hotel persons="3"&gt;
 		&lt;name&gt;Petit Palace President Castellana&lt;/name&gt;
 		&lt;address&gt;Calle del Marques de Villamagna, 4&lt;/address&gt;
 		&lt;city&gt;Madrid&lt;/city&gt;
@@ -694,7 +707,7 @@
 			&lt;/source&gt;						
 		&lt;/sources&gt;
 	&lt;/hotel&gt;
-	&lt;hotel&gt;
+	&lt;hotel persons="1"&gt;
 		&lt;name&gt;Petit Palace President Castellana&lt;/name&gt;
 		&lt;address&gt;Calle del Marques de Villamagna, 4&lt;/address&gt;
 		&lt;city&gt;Madrid&lt;/city&gt;
@@ -707,7 +720,7 @@
 			&lt;/source&gt;									
 		&lt;/sources&gt;
 	&lt;/hotel&gt;
-	&lt;hotel&gt;
+	&lt;hotel persons="2"&gt;
 		&lt;name&gt;Petit Palace President Castellana&lt;/name&gt;
 		&lt;address&gt;Calle del Marques de Villamagna, 4&lt;/address&gt;
 		&lt;city&gt;Madrid&lt;/city&gt;
@@ -740,7 +753,8 @@
 			&lt;/source&gt;						
 		&lt;/sources&gt;
 	&lt;/hotel&gt;		
-&lt;/Hotels&gt;
+&lt;/Hotels&gt;		
+
 
 							</pre>
 			</div>
@@ -1014,8 +1028,13 @@
 	&lt;car&gt;
 		&lt;name&gt;Mercedes-Benz Viano&lt;/name&gt;		
 		&lt;image&gt;/fanontour/img/results/car.jpg&lt;/image&gt;
-		&lt;address&gt;Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid&lt;/address&gt;		
-		&lt;doors&gt;5&lt;/doors&gt;
+		&lt;address&gt;Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid&lt;/address&gt;	
+		&lt;petrol type="1"&gt;Full to Full&lt;/petrol&gt;	
+		&lt;specifications air-conditioning="1" gearstick="1"&gt;			
+			&lt;doors&gt;5&lt;/doors&gt;
+			&lt;seats&gt;4&lt;/seats&gt;
+			&lt;insurance&gt;at any risk&lt;/insurance&gt;
+		&lt;/specifications&gt;	
 		&lt;sources&gt;
 			&lt;source&gt;
 				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
@@ -1025,22 +1044,22 @@
 			&lt;source&gt;
 				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
 				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
-				&lt;price&gt;150.25&lt;/price&gt;
+				&lt;price&gt;1500.25&lt;/price&gt;
 			&lt;/source&gt;
 			&lt;source&gt;
 				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
 				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
-				&lt;price&gt;150.25&lt;/price&gt;
+				&lt;price&gt;1600.25&lt;/price&gt;
 			&lt;/source&gt;
 			&lt;source&gt;
 				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
 				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
-				&lt;price&gt;150.25&lt;/price&gt;
+				&lt;price&gt;1750.25&lt;/price&gt;
 			&lt;/source&gt;
 			&lt;source&gt;
 				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
 				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
-				&lt;price&gt;150.25&lt;/price&gt;
+				&lt;price&gt;1850.25&lt;/price&gt;
 			&lt;/source&gt;						
 		&lt;/sources&gt;
 	&lt;/car&gt;
@@ -1048,49 +1067,60 @@
 		&lt;name&gt;Mercedes-Benz Viano&lt;/name&gt;		
 		&lt;image&gt;/fanontour/img/results/car.jpg&lt;/image&gt;
 		&lt;address&gt;Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid&lt;/address&gt;		
-		&lt;doors&gt;5&lt;/doors&gt;
+		&lt;petrol type="2"&gt;Pre-purchase (Refunds)&lt;/petrol&gt;
+		&lt;specifications air-conditioning="0" gearstick="0"&gt;			
+			&lt;doors&gt;5&lt;/doors&gt;
+			&lt;seats&gt;4&lt;/seats&gt;
+			&lt;insurance&gt;at any risk&lt;/insurance&gt;
+		&lt;/specifications&gt;	
 		&lt;sources&gt;
 			&lt;source&gt;
 				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
 				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
-				&lt;price&gt;100.25&lt;/price&gt;
-			&lt;/source&gt;							
+				&lt;price&gt;150.25&lt;/price&gt;
+			&lt;/source&gt;									
 		&lt;/sources&gt;
 	&lt;/car&gt;
 	&lt;car&gt;
 		&lt;name&gt;Mercedes-Benz Viano&lt;/name&gt;		
 		&lt;image&gt;/fanontour/img/results/car.jpg&lt;/image&gt;
-		&lt;address&gt;Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid&lt;/address&gt;		
-		&lt;doors&gt;5&lt;/doors&gt;
+		&lt;address&gt;Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid&lt;/address&gt;	
+		&lt;petrol type="3"&gt;Pre-purchase (partial refund)&lt;/petrol&gt;	
+		&lt;specifications air-conditioning="0" gearstick="0"&gt;			
+			&lt;doors&gt;5&lt;/doors&gt;
+			&lt;seats&gt;4&lt;/seats&gt;
+			&lt;insurance&gt;at any risk&lt;/insurance&gt;
+		&lt;/specifications&gt;	
 		&lt;sources&gt;
 			&lt;source&gt;
 				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
 				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
-				&lt;price&gt;50.25&lt;/price&gt;
+				&lt;price&gt;650.25&lt;/price&gt;
 			&lt;/source&gt;
 			&lt;source&gt;
 				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
 				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
-				&lt;price&gt;150.25&lt;/price&gt;
+				&lt;price&gt;1500.25&lt;/price&gt;
 			&lt;/source&gt;
 			&lt;source&gt;
 				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
 				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
-				&lt;price&gt;150.25&lt;/price&gt;
+				&lt;price&gt;1600.25&lt;/price&gt;
 			&lt;/source&gt;
 			&lt;source&gt;
 				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
 				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
-				&lt;price&gt;150.25&lt;/price&gt;
+				&lt;price&gt;1750.25&lt;/price&gt;
 			&lt;/source&gt;
 			&lt;source&gt;
 				&lt;source_name&gt;rentalCars&lt;/source_name&gt;
 				&lt;url&gt;http://www.rentalcars.com/&lt;/url&gt;
-				&lt;price&gt;150.25&lt;/price&gt;
+				&lt;price&gt;1850.25&lt;/price&gt;
 			&lt;/source&gt;						
 		&lt;/sources&gt;
-	&lt;/car&gt;	
+	&lt;/car&gt;
 &lt;/Cars&gt;		
+		
 
 
 							</pre>

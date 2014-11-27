@@ -51,6 +51,50 @@ $( document ).ready(function() { //DOM OK!
 		}
 	}
 
+	function filterByRoom(persons, room){
+		switch(room) {
+		    case 1:
+		        switch(persons) {
+				    case 1:
+				        return true;
+				        break;
+				    case 2:
+				        return false;
+				        break;
+				    case 3:
+				        return false;
+				        break;
+				}
+		        break;
+		    case 2:
+		        switch(persons) {
+				    case 1:
+				        return false;
+				        break;
+				    case 2:
+				        return true;
+				        break;
+				    case 3:
+				        return false;
+				        break;
+				}
+		        break;
+		    case 3:
+		        switch(persons) {
+				    case 1:
+				        return false;
+				        break;
+				    case 2:
+				        return false;
+				        break;
+				    case 3:
+				        return true;
+				        break;
+				}
+		        break;
+		}
+	}
+
 	function filterByDuration(val_duration, v2min, v2max){
 		if(val_duration >= v2min && val_duration <= v2max){
 			return true;	       	   	
@@ -71,10 +115,17 @@ $( document ).ready(function() { //DOM OK!
 		}	
 	}
 
-	function filterByCousine(element, cousine){
-		console.log($(element).find('cousine').text().toLowerCase());
+	function filterByCousine(element, cousine){		
 		if($(element).find('cousine').text().toLowerCase().indexOf(cousine) != -1 || $(element).find('description').text().toLowerCase().indexOf(cousine) != -1){
 			return true;	       	   	
+		}else{
+			return false;
+		}
+	}
+
+	function filterByPetrol(val_petrol, fuel){
+		if(val_petrol == (fuel + 1)){
+			return true;
 		}else{
 			return false;
 		}
@@ -201,24 +252,40 @@ $( document ).ready(function() { //DOM OK!
 
 		var v1min = min_price;
 		var v1max = max_price;
+		var room;
 
 		$(id_page + ' .price-slider').slider();
 
-		function filterHotels(type){
+		function filterHotels(){
 
 			function getResult(element){
 			   var name = $(element).find('name').text();
    			   var address = $(element).find('address').text();
    			   var city = $(element).find('city').text();
    			   var image = $(element).find('image').text();
+   			   var persons = parseInt($(element).attr("persons"));
    			   var price = $(element).find('source').eq(0).find('price').text();		       			      			   
    			   var source = $(element).find('source').eq(0).find('source_name').text();
    			   var url = $(element).find('source').eq(0).find('url').text();
    			   var num_offers = $(element).find("source").length;
-		       
+
+   			   var room_html;
+
+   			   switch(persons) {
+				    case 1:
+				        room_html = '<span class="fanontour-icon icon-icons-fanontour_person1"></span> simple room';
+				        break;
+				    case 2:
+				        room_html = '<span class="fanontour-icon icon-icons-fanontour_person2"></span> double room';
+				        break;
+				    case 3:
+				        room_html = '<span class="fanontour-icon icon-icons-fanontour_person3"></span> triple room';
+				        break;
+				}
+
 		       var resultHtml = "<li class='mod-result'><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
 		       resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>" + address +" - " + city + "</p></div>";
-		       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li>";			
+		       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li>"+ room_html +"</li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li>";			
 			   if(num_offers > 1){
 	       	   	 resultHtml += "<li><a href='#' class='more-offers' rel='nofollow'>See all offers</a></li>";
 	       	   	} 
@@ -234,11 +301,14 @@ $( document ).ready(function() { //DOM OK!
 		    $.get("/fanontour/xml/results/hotels.xml", function (xml) {
 			    $(xml).find("hotel").each(function () {	
 					
-			    	var val_price = parseInt($(this).find('source').eq(0).find('price').text());	
+			    	var val_price = parseInt($(this).find('source').eq(0).find('price').text());
+			    	var persons = parseInt($(this).attr("persons"));
 
 			    	//FILTERING...
 					if(filterByPrice(val_price, v1min, v1max)){ //PRICE?
-			       		resultHtml += getResult($(this)); //OK! DISPLAY RESULT
+						if(filterByRoom(persons, room)){ //TYPE OF ROOM?
+			       			resultHtml += getResult($(this)); //OK! DISPLAY RESULT
+			       		}
 			       	}			       
 			    });
 
@@ -270,6 +340,14 @@ $( document ).ready(function() { //DOM OK!
 		    filterHotels();	  	
 		});
 
+		//ROOM
+		//SCALES FILTER
+		$( ".filter-room .btn" ).click(function() {	
+			room = $(this).prevAll().length;
+			
+			filterHotels();
+		});  
+
 		//PAGINATION
 		paginarFanontour(itemsPage, id_page, 1);
 
@@ -293,7 +371,7 @@ $( document ).ready(function() { //DOM OK!
 
 		$(id_page + ' .price-slider').slider();
 
-		function filterFlights(type){
+		function filterFlights(){
 
 			function getResult(element){
 			   var route = $(element).find('route').text();   			  
@@ -368,14 +446,14 @@ $( document ).ready(function() { //DOM OK!
 		    v1min = res[0];
 		    v1max = res[1];		    
 
-		    filterFlights(0);	  	
+		    filterFlights();	  	
 		});
 
 		//SCALES FILTER
 		$( ".filter-scales input" ).click(function() {	
 			scale = $(this).val();
 
-			filterFlights(1);
+			filterFlights();
 		});
 
 		//PAGINATION
@@ -566,6 +644,8 @@ $( document ).ready(function() { //DOM OK!
 
 		var v1min = min_price;
 		var v1max = max_price;
+		var val_petrol;
+		var fuel;
 
 		$(id_page + ' .price-slider').slider();
 
@@ -576,14 +656,31 @@ $( document ).ready(function() { //DOM OK!
    			   var address = $(element).find('address').text();
    			   var doors = $(element).find('doors').text();
    			   var image = $(element).find('image').text();
+   			   var petrol = $(element).find('petrol').text();
+   			   var seats = $(element).find('seats').text();
+   			   var insurance = $(element).find('insurance').text();
+   			   var air = parseInt($(element).find('specifications').attr("air-conditioning"));
+   			   var gearstick = parseInt($(element).find('specifications').attr("gearstick"));       
+        
    			   var price = $(element).find('source').eq(0).find('price').text();		       			      			   
    			   var source = $(element).find('source').eq(0).find('source_name').text();
    			   var url = $(element).find('source').eq(0).find('url').text();
    			   var num_offers = $(element).find("source").length;
 		       
-		       resultHtml = "<li class='mod-result'><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
-				       resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>Pick up date: <strong>10/11/2014 (11:20)</strong> | Drop off date: <strong>12/11/2014 (11:20)</strong></p><p>Pick up address: <strong>"+ address +"</strong></p></div>";
-				       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li class='doors' data-value="+ doors + "><span class='fanontour-icon icon-icons-fanontour_doors'></span>" + doors +" doors;</li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li>";
+		        resultHtml = "<li class='mod-result'><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
+				resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>Pick up address: <strong>"+ address +"</strong></p>";
+			    resultHtml += "<div><p class='floatl'>Specifications <span class='glyphicon glyphicon-chevron-right'></span></p>";
+				resultHtml += "<ul class='list-inline'><li>Doors: <strong>"+ doors +"</strong>, </li><li>Seats: <strong>"+ seats +"</strong>, </li>";
+				if(air){ 
+					resultHtml += "<li><small><span class='glyphicon glyphicon-ok'></span></small> <strong>air conditioning</strong>, </li>";
+				}	
+				if(gearstick){
+					resultHtml += "<li><small><span class='glyphicon glyphicon-ok'></span></small> <strong>manual transmission</strong>, </li>";
+				}else{ 	
+					resultHtml += "<li><small><span class='glyphicon glyphicon-ok'></span></small> <strong>automatic transmission</strong>, </li>";
+				} 	
+				resultHtml += "<li>insurance: <strong>"+ insurance +"</strong></li></ul></div></div>";
+			    resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_fuel'></span>" + petrol +";</li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li>";
 			   if(num_offers > 1){
 	       	   	 resultHtml += "<li><a href='#' class='more-offers' rel='nofollow'>See all offers</a></li>";
 	       	   	} 
@@ -600,10 +697,13 @@ $( document ).ready(function() { //DOM OK!
 			    $(xml).find("car").each(function () {
 
 			    	var val_price = parseInt($(this).find('source').eq(0).find('price').text());
+			    	var val_petrol = parseInt($(this).find('petrol').attr("type"));
 
 			    	//FILTERING...
 					if(filterByPrice(val_price, v1min, v1max)){ //PRICE?
-			       		resultHtml += getResult($(this)); //OK! DISPLAY RESULT
+						if(filterByPetrol(val_petrol, fuel)){ //PETROL?
+							resultHtml += getResult($(this)); //OK! DISPLAY RESULT
+						}			       		
 			       	}
 			            
 			    });
@@ -635,6 +735,12 @@ $( document ).ready(function() { //DOM OK!
 
 		    filterCars();	  	
 		});
+
+		//PETROL
+		$( ".filter-petrol .dropdown-menu a" ).click(function() {			
+			fuel = $(this).parent().prevAll().length;			
+			filterCars();
+		});  
 
 		//PAGINATION
 		paginarFanontour(itemsPage, id_page, 1);

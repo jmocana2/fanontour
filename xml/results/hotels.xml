@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Hotels>
-	<hotel>
+	<hotel persons="3">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -33,7 +33,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="1">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -46,7 +46,7 @@
 			</source>									
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="2">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -79,7 +79,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="3">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -112,7 +112,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="3">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -145,7 +145,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="1">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -178,7 +178,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="1">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -211,7 +211,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="2">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -244,7 +244,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="1">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -277,7 +277,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="3">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -310,7 +310,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="3">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -343,7 +343,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="3">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -376,7 +376,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="3">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -409,7 +409,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="3">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -442,7 +442,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="3">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -475,7 +475,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="3">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>
@@ -508,7 +508,7 @@
 			</source>						
 		</sources>
 	</hotel>
-	<hotel>
+	<hotel persons="3">
 		<name>Petit Palace President Castellana</name>
 		<address>Calle del Marques de Villamagna, 4</address>
 		<city>Madrid</city>

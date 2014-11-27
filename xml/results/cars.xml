@@ -3,8 +3,13 @@
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
-		<doors>5</doors>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>	
+		<petrol type="1">Full to Full</petrol>	
+		<specifications air-conditioning="1" gearstick="1">			
+			<doors>5</doors>
+			<seats>4</seats>
+			<insurance>at any risk</insurance>
+		</specifications>	
 		<sources>
 			<source>
 				<source_name>rentalCars</source_name>
@@ -14,22 +19,22 @@
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1500.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1600.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1750.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1850.25</price>
 			</source>						
 		</sources>
 	</car>
@@ -37,26 +42,107 @@
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
 		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
-		<doors>5</doors>
+		<petrol type="2">Pre-purchase (Refunds)</petrol>
+		<specifications air-conditioning="0" gearstick="0">			
+			<doors>5</doors>
+			<seats>4</seats>
+			<insurance>at any risk</insurance>
+		</specifications>	
 		<sources>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>100.25</price>
-			</source>							
+				<price>150.25</price>
+			</source>									
 		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
-		<doors>5</doors>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>	
+		<petrol type="3">Pre-purchase (partial refund)</petrol>	
+		<specifications air-conditioning="0" gearstick="0">			
+			<doors>5</doors>
+			<seats>4</seats>
+			<insurance>at any risk</insurance>
+		</specifications>	
 		<sources>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>50.25</price>
+				<price>650.25</price>
 			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>1500.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>1600.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>1750.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>1850.25</price>
+			</source>						
+		</sources>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>	
+		<petrol type="4">Pre-purchase</petrol>	
+		<specifications air-conditioning="1" gearstick="1">			
+			<doors>5</doors>
+			<seats>4</seats>
+			<insurance>at any risk</insurance>
+		</specifications>	
+		<sources>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>750.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>1500.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>1600.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>1750.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>1850.25</price>
+			</source>						
+		</sources>
+	</car>
+	<car>
+		<name>Mercedes-Benz Viano</name>		
+		<image>/fanontour/img/results/car.jpg</image>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>	
+		<petrol type="1">Full to Full</petrol>	
+		<specifications air-conditioning="0" gearstick="1">			
+			<doors>5</doors>
+			<seats>4</seats>
+			<insurance>at any risk</insurance>
+		</specifications>	
+		<sources>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
@@ -65,17 +151,22 @@
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1500.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1600.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1750.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>1850.25</price>
 			</source>						
 		</sources>
 	</car>
@@ -83,73 +174,88 @@
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
 		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
-		<doors>5</doors>
+		<petrol type="1">Full to Full</petrol>
+		<specifications air-conditioning="1" gearstick="0">			
+			<doors>5</doors>
+			<seats>4</seats>
+			<insurance>at any risk</insurance>
+		</specifications>	
 		<sources>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>60.25</price>
+				<price>1350.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1500.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1600.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1750.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1850.25</price>
 			</source>						
 		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
-		<doors>5</doors>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>	
+		<petrol type="4">Pre-purchase</petrol>	
+		<specifications air-conditioning="1" gearstick="1">			
+			<doors>5</doors>
+			<seats>4</seats>
+			<insurance>at any risk</insurance>
+		</specifications>	
 		<sources>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>10.25</price>
-			</source>
-			<source>
-				<source_name>rentalCars</source_name>
-				<url>http://www.rentalcars.com/</url>
 				<price>150.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1500.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1600.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1750.25</price>
+			</source>
+			<source>
+				<source_name>rentalCars</source_name>
+				<url>http://www.rentalcars.com/</url>
+				<price>1850.25</price>
 			</source>						
 		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
-		<doors>5</doors>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>
+		<petrol type="4">Pre-purchase</petrol>		
+		<specifications air-conditioning="1" gearstick="1">			
+			<doors>5</doors>
+			<seats>4</seats>
+			<insurance>at any risk</insurance>
+		</specifications>	
 		<sources>
 			<source>
 				<source_name>rentalCars</source_name>
@@ -159,30 +265,35 @@
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1500.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1600.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1750.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1850.25</price>
 			</source>						
 		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
-		<doors>5</doors>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>
+		<petrol type="1">Full to Full</petrol>		
+		<specifications air-conditioning="1" gearstick="1">			
+			<doors>5</doors>
+			<seats>4</seats>
+			<insurance>at any risk</insurance>
+		</specifications>	
 		<sources>
 			<source>
 				<source_name>rentalCars</source_name>
@@ -192,30 +303,35 @@
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1500.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1600.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1750.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1850.25</price>
 			</source>						
 		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
-		<doors>5</doors>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>
+		<petrol type="1">Full to Full</petrol>		
+		<specifications air-conditioning="1" gearstick="1">			
+			<doors>5</doors>
+			<seats>4</seats>
+			<insurance>at any risk</insurance>
+		</specifications>	
 		<sources>
 			<source>
 				<source_name>rentalCars</source_name>
@@ -225,30 +341,35 @@
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1500.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1600.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1750.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1850.25</price>
 			</source>						
 		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
-		<doors>5</doors>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>
+		<petrol type="5">Free tank</petrol>	
+		<specifications air-conditioning="1" gearstick="1">			
+			<doors>5</doors>
+			<seats>4</seats>
+			<insurance>at any risk</insurance>
+		</specifications>	
 		<sources>
 			<source>
 				<source_name>rentalCars</source_name>
@@ -258,30 +379,35 @@
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1500.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1600.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1750.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1850.25</price>
 			</source>						
 		</sources>
 	</car>
 	<car>
 		<name>Mercedes-Benz Viano</name>		
 		<image>/fanontour/img/results/car.jpg</image>
-		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>		
-		<doors>5</doors>
+		<address>Avenida Gran Bretaña s/n, (Hotel Parquesur), Madrid</address>	
+		<petrol type="5">Free tank</petrol>	
+		<specifications air-conditioning="1" gearstick="1">			
+			<doors>5</doors>
+			<seats>4</seats>
+			<insurance>at any risk</insurance>
+		</specifications>	
 		<sources>
 			<source>
 				<source_name>rentalCars</source_name>
@@ -291,23 +417,24 @@
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1500.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1600.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1750.25</price>
 			</source>
 			<source>
 				<source_name>rentalCars</source_name>
 				<url>http://www.rentalcars.com/</url>
-				<price>150.25</price>
+				<price>1850.25</price>
 			</source>						
 		</sources>
 	</car>
+
 </Cars>		

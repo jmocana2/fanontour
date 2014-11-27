@@ -5,9 +5,22 @@
         $address=$hotel->address;
         $city=$hotel->city;
         $image=$hotel->image;
+        $persons=(int)$hotel['persons'];  
         $price=$hotel->sources->source[0]->price;       
         $source=$hotel->sources->source[0]->source_name;
-        $url=$hotel->sources->source[0]->url;         
+        $url=$hotel->sources->source[0]->url;
+
+        switch ($persons) {
+		    case 1:
+		        $person_html = '<span class="fanontour-icon icon-icons-fanontour_person1"></span> simple room';
+		        break;
+		    case 2:
+		        $person_html = '<span class="fanontour-icon icon-icons-fanontour_person2"></span> double room';
+		        break;
+		    case 3:
+		        $person_html = '<span class="fanontour-icon icon-icons-fanontour_person3"></span> triple room';
+		        break;
+		}         
 	?>
 
     <li class="mod-result">
@@ -21,7 +34,8 @@
 		<div class="result-footer">
 			<ul class="list-inline">
 				<li class="price" data-value="<?php echo $price; ?>"><?php echo $price; ?> &euro;</li>
-				<li class="source"><a class="btn btn-search" href="<?php echo $url; ?>">Book here</a></li>				
+				<li class="source"><a class="btn btn-search" href="<?php echo $url; ?>">Book here</a></li>
+				<li><?php echo $person_html;?></li>				
 				<li><span class="fanontour-icon icon-icons-fanontour_source2"></span>Found in <strong><?php echo $source; ?></strong></li>
 				<?php if(count($hotel->sources->source) != 1){ ?>
 					<li><a href="#" class="more-offers" rel="nofollow">See all offers</a></li>
