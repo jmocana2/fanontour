@@ -46,14 +46,14 @@
 	<!--     -->	
 
 </head>
-<body id="results">
+<body id="results" class="hotels">
 	<!-- HEADER -->
 	<?php include('include/template/header.html'); ?>
 	<!-- -->
 	<!-- MAIN -->
 	<main>
 
-		<div class="bg-container bg-container-generic absolute"></div>
+		<div class="bg-container bg-container-generic absolute"><div class="bg-trans-black-v2"></div></div>
 		<div class="content">
 
 			<!-- ========== (MODAL) TERMS AND CONDITIONS ========= -->
@@ -117,6 +117,14 @@
 											<div class="row-padding-v-small">
 												<label>Price <span>(&euro;)</span></label>
 												<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="2000" data-slider-step="1" data-slider-value="[0,2000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
+											</div>
+											<div class="row-padding-v-small">
+												<div class="btn-group filter-room" role="group" aria-label="...">
+												  <label>People:</label>
+												  <button type="button" class="btn btn-default"><span class="fanontour-icon icon-icons-fanontour_person1"></span></button>
+												  <button type="button" class="btn btn-default"><span class="fanontour-icon icon-icons-fanontour_person2"></span></button>
+												  <button type="button" class="btn btn-default"><span class="fanontour-icon icon-icons-fanontour_person3"></span></button>
+												</div>	
 											</div>											
 										</div>								
 									</div>	
@@ -156,7 +164,7 @@
 										</div>
 									
 								</div>
-								<div class="results activity-resuts">
+								<div class="results">
 									
 									<ul class="list_results">
 										<!-- HOTELS RESULTS -->

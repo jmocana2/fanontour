@@ -46,14 +46,14 @@
 	<!--     -->	
 
 </head>
-<body id="results">
+<body id="results" class="rental-cars">
 	<!-- HEADER -->
 	<?php include('include/template/header.html'); ?>
 	<!-- -->
 	<!-- MAIN -->
 	<main>
 
-		<div class="bg-container bg-container-generic absolute"></div>
+		<div class="bg-container bg-container-generic absolute"><div class="bg-trans-black-v2"></div></div>
 		<div class="content">
 
 			<!-- ========== (MODAL) TERMS AND CONDITIONS ========= -->
@@ -226,6 +226,20 @@
 											<div class="row-padding-v-small">
 												<label>Price <span>(&euro;)</span></label>
 												<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="1" data-slider-value="[0,4000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
+												<div class="form-group filter-petrol">	
+													<label for="car-field-04">Petrol</label>
+													<div class="dropdown dropdown-form dropdown-simple">
+														  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
+														  <input type="text" class="form-control" id="car-field-04" placeholder="Please select"  data-toggle="dropdown">
+														  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-04">
+														    <li><a href="#" rel="nofollow">Full to full</a></li>
+														    <li><a href="#" rel="nofollow">Pre-purchase (Refunds)</a></li>
+														    <li><a href="#" rel="nofollow">Pre-purchase (partial refund)</a></li>
+														    <li><a href="#" rel="nofollow">Pre-purchase</a></li>
+														    <li><a href="#" rel="nofollow">Free tank</a></li>											   
+														  </ul>
+													</div>
+												</div>
 											</div>											
 										</div>								
 									</div>	
@@ -265,7 +279,11 @@
 											</ul>
 										</div>									
 								</div>
-								<div class="results activity-resuts">
+								<div class="results">
+									
+									<div class="panel-box-block">
+										<p>Pick up date: <strong>10/11/2014 (11:20)</strong> | Drop off date: <strong>12/11/2014 (11:20)</strong></p>
+									</div>
 									
 									<ul class="list_results">
 										<!-- RENTAL CARS RESULTS -->

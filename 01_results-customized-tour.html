@@ -46,14 +46,14 @@
 	<!--     -->	
 
 </head>
-<body id="results">
+<body id="results" class="customized">
 	<!-- HEADER -->
 	<?php include('include/template/header.html'); ?>
 	<!-- -->
 	<!-- MAIN -->
 	<main>
 
-		<div class="bg-container bg-container-generic absolute"></div>
+		<div class="bg-container bg-container-generic absolute"><div class="bg-trans-black-v2"></div></div>
 		<div class="content">
 
 			<!-- ========== (MODAL) TERMS AND CONDITIONS ========= -->
@@ -147,7 +147,7 @@
 																	<div class="form-group">
 																	    <label for="event-02">What?</label>
 																	    <div class="input-group filter-name">
-																          <input type="text" class="form-control" id="event-02">
+																          <input type="text" class="form-control" id="event-02" placeholder="Artist, team, event...">
 																          <span class="input-group-btn">
 																            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 																          </span>
@@ -156,7 +156,7 @@
 																	<div class="form-group">
 																	    <label for="event-03">Where?</label>
 																	    <div class="input-group filter-where">
-																          <input type="text" class="form-control" id="event-03">
+																          <input type="text" class="form-control" id="event-03" placeholder="Location">
 																          <span class="input-group-btn">
 																            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 																          </span>
@@ -266,8 +266,16 @@
 																	<div class="row-padding-v-small">
 																		<label>Price <span>(&euro;)</span></label>
 																		<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="2000" data-slider-step="1" data-slider-value="[0,2000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
-																	</div>											
-																</div>								
+																	</div>	
+																	<div class="row-padding-v-small">
+																		<div class="btn-group filter-room" role="group" aria-label="...">
+																		  <label>People:</label>
+																		  <button type="button" class="btn btn-default"><span class="fanontour-icon icon-icons-fanontour_person1"></span></button>
+																		  <button type="button" class="btn btn-default"><span class="fanontour-icon icon-icons-fanontour_person2"></span></button>
+																		  <button type="button" class="btn btn-default"><span class="fanontour-icon icon-icons-fanontour_person3"></span></button>
+																		</div>	
+																	</div>										
+																</div>																								
 															</div>	
 														</div>	
 													</div>
@@ -370,16 +378,12 @@
 																		<label>Price <span>(&euro;)</span></label>
 																		<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="1" data-slider-value="[0,4000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
 																	</div>
-																	<div class="row-padding-mid">
-																		<div class="row-padding-mid">
-																			<div class="checkbox filter-scales">
-																				<label class="control-label">
-									                                        		<input type="checkbox" name="driverage" id="driver" class="small-field-w small-field-h" value="false"><span></span>
-									                                            	Direct flights                                                
-									                                          	</label>
-								                                          	</div>
-																		</div>
-																	</div>
+																	<div class="checkbox filter-scales">
+																		<label class="control-label">
+							                                        		<input type="checkbox" name="driverage" id="driver" class="small-field-w small-field-h" value="false"><span></span>
+							                                            	Direct flights                                                
+							                                          	</label>
+						                                          	</div>																		
 																</div>								
 															</div>	
 														</div>	
@@ -419,7 +423,7 @@
 																</div>
 															
 														</div>
-														<div class="results activity-resuts">
+														<div class="results">
 															
 															<ul class="list_results">
 																<!-- FLIGHTS RESULTS -->
@@ -527,7 +531,7 @@
 																</div>
 															
 														</div>
-														<div class="results activity-resuts">
+														<div class="results">
 															
 															<ul class="list_results">
 																<!-- ACTIVITY RESULTS -->
@@ -655,7 +659,7 @@
 																</div>
 															
 														</div>
-														<div class="results activity-resuts">
+														<div class="results">
 															
 															<ul class="list_results">
 																<!-- RESTAURANTS RESULTS -->
@@ -827,6 +831,20 @@
 																	<div class="row-padding-v-small">
 																		<label>Price <span>(&euro;)</span></label>
 																		<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="1" data-slider-value="[0,4000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
+																	</div>
+																	<div class="form-group filter-petrol">	
+																		<label for="car-field-04">Petrol</label>
+																		<div class="dropdown dropdown-form dropdown-simple">
+																			  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
+																			  <input type="text" class="form-control" id="car-field-04" placeholder="Please select"  data-toggle="dropdown">
+																			  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-04">
+																			    <li><a href="#" rel="nofollow">Full to full</a></li>
+																			    <li><a href="#" rel="nofollow">Pre-purchase (Refunds)</a></li>
+																			    <li><a href="#" rel="nofollow">Pre-purchase (partial refund)</a></li>
+																			    <li><a href="#" rel="nofollow">Pre-purchase</a></li>
+																			    <li><a href="#" rel="nofollow">Free tank</a></li>											   
+																			  </ul>
+																		</div>
 																	</div>											
 																</div>								
 															</div>	
@@ -867,7 +885,11 @@
 																</div>
 															
 														</div>
-														<div class="results activity-resuts">
+														<div class="results">
+
+															<div class="panel-box-block">
+																<p>Pick up date: <strong>10/11/2014 (11:20)</strong> | Drop off date: <strong>12/11/2014 (11:20)</strong></p>
+															</div>
 															
 															<ul class="list_results">
 																<!-- RENTAL CARS RESULTS -->
