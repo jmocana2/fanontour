@@ -1,10 +1,15 @@
 //tables
 //default
 .table{
+	
+	border: 1px @colorK31 solid;
+
 	thead{
 		th{
 			background-color: @colorK2;
 			color: @colorW;
+			text-align: center;
+			font-weight: normal;
 
 			a{
 				color: @colorK21;
@@ -25,5 +30,26 @@
 				}
 			}
 		}
+	}
+
+	td{
+		text-align: center;
+		vertical-align: middle;
+		line-height: 29px !important;
+	}
+
+	tr:nth-child(2n){
+		background-color: @colorW;
+	}
+
+	tr:hover{
+		background-color: @colorK31;
+	}
+}
+
+//table-alerts
+.table-alerts{
+	.save{
+		display: none;
 	}
 }
