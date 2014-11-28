@@ -364,6 +364,20 @@ $( document ).ready(function() { //DOM OK!
 		});	
 	}
 
+	//Log-in validation	   	
+	$( "#form-login" ).click(function(e) {
+
+		$("#contact form").find(".has-error").removeClass("has-error");
+
+		validarVacio($("#input-email-01"));
+		validarVacio($("#input-password-01"));
+
+        if(!emailreg.test($('#input-email-01').val())){	        	
+        	$("#input-email-01").closest(".form-group").addClass("has-error");	        	
+        }        
+	});	
+	
+
 	//Home search	
 	//Tickets
 	$( "#tab-tickets .btn" ).click(function() {
