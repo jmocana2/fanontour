@@ -44,6 +44,9 @@ ul {
 .f-right {
   float: right;
 }
+.f-none {
+  float: none;
+}
 .c-both {
   clear: both;
 }
@@ -1193,6 +1196,28 @@ blockquote dd {
 .btn-primary:hover {
   background-color: #6eb21b;
   border-color: #6eb21b;
+}
+.btn-action {
+  background-color: #6eb21b;
+  color: #ffffff;
+  font: normal 1.131em/1.2em 'roboto_condensedregular', 'Arial', 'sans-serif';
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  vertical-align: middle;
+}
+.btn-action:hover {
+  color: #ffffff;
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  opacity: 0.75;
+}
+.btn-action span {
+  font-size: .85em;
+  padding-left: 5px;
+  position: relative;
+  top: -1px;
 }
 .btn-search {
   background-color: #6eb21b;
