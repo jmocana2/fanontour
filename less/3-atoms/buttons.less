@@ -11,6 +11,27 @@
 	}
 }
 
+//btn-action
+.btn-action{
+	background-color: @colorG1;
+	color: @colorW;
+	font: normal 1.131em/1.2em 'roboto_condensedregular', @font-default-system, @font-third;
+	.transition (.7s); 
+	vertical-align: middle;
+
+	&:hover{
+		color: @colorW;
+		.opacity (@opacity: 0.75);
+	}
+
+	span{
+		font-size: .85em;
+		padding-left: 5px;
+		position: relative;
+		top: -1px;
+	}
+}
+
 //btn-search
 .btn-search{
 	background-color: @colorG1;
