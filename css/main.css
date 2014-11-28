@@ -263,6 +263,12 @@ input[data-toggle="dropdown"] {
 .icon-icons-fanontour_fuel:before {
   content: "\e61b";
 }
+.icon-icons-fanontour_money:before {
+  content: "\e61c";
+}
+.icon-icons-fanontour_alert:before {
+  content: "\e61d";
+}
 .icon-icons-fanontour_restaurant:before {
   content: "\e60a";
 }
@@ -459,6 +465,14 @@ label {
 input.form-control,
 textarea.form-control {
   font-size: .9em;
+}
+input.number {
+  width: 60px;
+  height: 24px;
+  vertical-align: middle;
+  line-height: 12px;
+  text-align: center;
+  margin-right: 5px;
 }
 .checkbox,
 .radio {
@@ -1647,6 +1661,19 @@ blockquote {
 .panel-custom h3 span {
   color: #ffffff;
 }
+.panel-information {
+  padding: 20px;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  vertical-align: middle;
+  line-height: 35px;
+}
+.panel-information p {
+  display: table;
+  height: 1%;
+  line-height: 1.2em;
+  margin-top: 8px;
+}
 .bootstrap-datetimepicker-widget td.disabled {
   -webkit-opacity: 0.5;
   -moz-opacity: 0.5;
@@ -1898,9 +1925,14 @@ blockquote {
 .slider-handle.triangle {
   background: transparent none;
 }
+.table {
+  border: 1px #dddddd solid;
+}
 .table thead th {
   background-color: #403f3f;
   color: #ffffff;
+  text-align: center;
+  font-weight: normal;
 }
 .table thead th a {
   color: #4c4c4c;
@@ -1913,6 +1945,20 @@ blockquote {
 .table thead tr:hover td {
   background-color: #403f3f;
   color: #ffffff;
+}
+.table td {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 29px !important;
+}
+.table tr:nth-child(2n) {
+  background-color: #ffffff;
+}
+.table tr:hover {
+  background-color: #dddddd;
+}
+.table-alerts .save {
+  display: none;
 }
 .sprite {
   background: url('../img/sprites/sprite.png') no-repeat 0 0;
