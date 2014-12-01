@@ -43,7 +43,17 @@ $( document ).ready(function() { //DOM OK!
 		}
 	}
 
-	function filterByPrice(val_price, v1min, v1max){
+	function filterByPrice(val_price, v1min, v1max, val_limit){
+		if(val_limit == v1max){
+
+			if(val_price >= v1min){
+				return true;
+			}
+			else{				
+				return false;
+			}
+		}
+
 		if(val_price >= v1min && val_price <= v1max){
 			return true;	       	   	
 		}else{
@@ -51,7 +61,29 @@ $( document ).ready(function() { //DOM OK!
 		}
 	}
 
+	function filterByDuration(val_duration, v1min, v1max, val_limit){
+		if(val_limit == v1max){
+			if(val_duration >= v1min){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+
+		if(val_duration >= v1min && val_duration <= v1max){
+			return true;	       	   	
+		}else{
+			return false;
+		}	
+	}
+
 	function filterByRoom(persons, room){
+
+		if(isNaN(room)){
+			return true;
+		}
+
 		switch(room) {
 		    case 1:
 		        switch(persons) {
@@ -95,14 +127,6 @@ $( document ).ready(function() { //DOM OK!
 		}
 	}
 
-	function filterByDuration(val_duration, v2min, v2max){
-		if(val_duration >= v2min && val_duration <= v2max){
-			return true;	       	   	
-		}else{
-			return false;
-		}	
-	}
-
 	function filterByScales(scale, scales){
 		if(scale == "true"){
 			if(scales == 0){
@@ -131,7 +155,6 @@ $( document ).ready(function() { //DOM OK!
 		}
 	}
 
-
 	//RESULTS
 	//=============== TICKETS ==================
     function ticketResults(){
@@ -145,7 +168,8 @@ $( document ).ready(function() { //DOM OK!
 		var what = "";
 		var where = "";
 		var v1min = min_price;
-		var v1max = max_price;			
+		var v1max = max_price;
+		var val_limit = v1max;			
 
 		$(id_page + ' .price-slider').slider();
 
@@ -186,8 +210,8 @@ $( document ).ready(function() { //DOM OK!
 			       //FILTERING...			    			
 	    		   if(filterByName($(this), what)){ //WHAT?
 			       	   if(filterByPlace($(this), where)){ //WHERE
-			       	   		if(filterByPrice(val_price, v1min, v1max)){ //PRICE?
-			       	  			resultHtml += getResult($(this)); //OK! DISPLAY RESULT
+			       	   		if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?
+			       	  			resultHtml += getResult($(this)); //OK! DISPLAY RESULT		       	  			
 			       	  		}
 			       		} 	
 			       }
@@ -197,7 +221,7 @@ $( document ).ready(function() { //DOM OK!
 				$(id_page + " .results").html(resultHtml).promise().done(function(){
        				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
        				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1);
-       				setResults();      				       				
+       				setResults();       				     				       				
     			});
 			});
 		}
@@ -252,6 +276,7 @@ $( document ).ready(function() { //DOM OK!
 
 		var v1min = min_price;
 		var v1max = max_price;
+		var val_limit = v1max;
 		var room;
 
 		$(id_page + ' .price-slider').slider();
@@ -305,7 +330,7 @@ $( document ).ready(function() { //DOM OK!
 			    	var persons = parseInt($(this).attr("persons"));
 
 			    	//FILTERING...
-					if(filterByPrice(val_price, v1min, v1max)){ //PRICE?
+					if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?
 						if(filterByRoom(persons, room)){ //TYPE OF ROOM?
 			       			resultHtml += getResult($(this)); //OK! DISPLAY RESULT
 			       		}
@@ -366,12 +391,16 @@ $( document ).ready(function() { //DOM OK!
 
 		var v1min = min_price;
 		var v1max = max_price;
+		var val_limit = v1max;
 		var name = $(".list_results li").eq(0).find("h2").text();
 		var scale;
 
 		$(id_page + ' .price-slider').slider();
 
 		function filterFlights(){
+
+			var departure_date = $(".departure_date").text();
+			var arrival_date = $(".arrival_date").text();
 
 			function getResult(element){
 			   var route = $(element).find('route').text();   			  
@@ -383,7 +412,7 @@ $( document ).ready(function() { //DOM OK!
    			   var source = $(element).find('source').eq(0).find('source_name').text();
    			   var url = $(element).find('source').eq(0).find('url').text();
    			   var num_offers = $(element).find("source").length;
-		       
+
 		       var resultHtml = "<li class='mod-result'>";
 		       resultHtml += "<div class='mod-txt'><div class='clearfix'><h2 class='f-left'>"+ name +"</h2>";
 		       resultHtml += "<p class='f-right'>Fligth with: <img src='"+ image +"' alt='"+ name +"'></p></div>";
@@ -392,7 +421,7 @@ $( document ).ready(function() { //DOM OK!
 		       	  resultHtml += "- <strong>This flight have one scale</strong> <span class='fanontour-icon icon-icons-fanontour_scale'></span>"
 		       }
 			    resultHtml += "</p>";
-			    resultHtml += "<ul><li>Departure time: " + departure_time + "</li><li>Arrival time: " + arrival_time + "</li></ul></div>";	
+			    resultHtml += "<ul><li>Departure date: <strong><small>"+ departure_date +"</small></strong> - <em>" + departure_time + "</em></li><li>Arrival date: <strong><small>"+ arrival_date +"</small></strong> - <em>" + arrival_time + "</em></li></ul></div>";	
 			
 		        resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li>";			
 			    if(num_offers > 1){
@@ -414,7 +443,7 @@ $( document ).ready(function() { //DOM OK!
 			       var scales = $(this).attr("scale");	
 
 			    	//FILTERING...
-					if(filterByPrice(val_price, v1min, v1max)){ //PRICE?
+					if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?
 			       	    if(filterByScales(scale, scales)){ //PRICE?
 			       		 	resultHtml += getResult($(this)); //OK! DISPLAY RESULT
 			       		}
@@ -476,8 +505,10 @@ $( document ).ready(function() { //DOM OK!
 
 		var v1min = min_price;
 		var v1max = max_price;
+		var val_limit = v1max;
 		var v2min = min_duration;
 		var v2max = max_duration;
+		var val_limit2 = v2max;
 
 		$('#activities #price-slider,#activities #duration-slider').slider()
 
@@ -518,10 +549,9 @@ $( document ).ready(function() { //DOM OK!
 			       	val_duration = max_duration;
 			       }
 
-			       //FILTERING...
-			      
-					if(filterByPrice(val_price, v1min, v1max)){ //PRICE?						 						
-			       	    if(filterByDuration(val_duration, v2min, v2max)){ //DURATION?			       	    				       		 	
+			       //FILTERING...			      
+					if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?		
+						if(filterByDuration(val_duration, v2min, v2max, val_limit2)){ //DURATION?			       	    				       		 	
 			       		 	resultHtml += getResult($(this), val_duration); //OK! DISPLAY RESULT
 			       		}
 			       	}		   			      
@@ -644,6 +674,7 @@ $( document ).ready(function() { //DOM OK!
 
 		var v1min = min_price;
 		var v1max = max_price;
+		var val_limit = v1max;
 		var val_petrol;
 		var fuel;
 
@@ -700,7 +731,7 @@ $( document ).ready(function() { //DOM OK!
 			    	var val_petrol = parseInt($(this).find('petrol').attr("type"));
 
 			    	//FILTERING...
-					if(filterByPrice(val_price, v1min, v1max)){ //PRICE?
+					if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?
 						if(filterByPetrol(val_petrol, fuel)){ //PETROL?
 							resultHtml += getResult($(this)); //OK! DISPLAY RESULT
 						}			       		
@@ -833,6 +864,21 @@ $( document ).ready(function() { //DOM OK!
 		var num_results = $(".mod-result").length;
 		$("h1.title span").text(num_results);
 		$(".breadcrumb span").text(num_results);
+
+		if($("#customized-tour").length){
+			console.log($(".tab-pane.active .results li").length);
+			if($(".tab-pane.active .results li").length == 0){
+				$(".tab-pane.active .alert-empty").removeClass("hide");
+			}else{
+				$(".tab-pane.active .alert-empty").addClass("hide");
+			}
+		}else{
+			if(num_results == 0){
+				$(".alert-empty").removeClass("hide");
+			}else{
+				$(".alert-empty").addClass("hide");
+			}
+		}		
 	}
 
 	//ORDER BY
