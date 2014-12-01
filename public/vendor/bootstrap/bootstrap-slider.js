@@ -177,10 +177,17 @@
 				this.selectionElStyle.width = Math.abs(this.percentage[0] - this.percentage[1]) +'%';
 			}
 			if (this.range) {
+
+				if(this.max == this.value[1]){
+					var plus = " +";
+				}else{
+					var plus = "";
+				}
+
 				this.tooltipInner.text(
 					this.formater(this.value[0]) + 
 					' : ' + 
-					this.formater(this.value[1])
+					this.formater(this.value[1]) + plus
 				);
 				this.tooltip[0].style[this.stylePos] = this.size * (this.percentage[0] + (this.percentage[1] - this.percentage[0])/2)/100 - (this.orientation === 'vertical' ? this.tooltip.outerHeight()/2 : this.tooltip.outerWidth()/2) +'px';
 			} else {
@@ -350,8 +357,7 @@
 				(this.value[0]-this.min)*100/this.diff,
 				(this.value[1]-this.min)*100/this.diff,
 				this.step*100/this.diff
-			];
-			this.layout();
+			];			
 		}
 	};
 
