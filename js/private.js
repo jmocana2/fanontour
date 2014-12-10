@@ -27,5 +27,26 @@ $( document ).ready(function() { //DOM OK!
 			$(this).closest("tr").remove();
 		});	
 		e.preventDefault();	
-	});	
+	});
+
+	//Tours
+	if($(".fanontour-mod-information").length){
+		$(".fanontour-mod-information").hide();
+	}
+
+	$( ".btn-toolbar .btn-information" ).click(function(e) { //view all tour information		
+		$(this).closest(".panel").find(".fanontour-mod-information").toggle();
+		e.preventDefault();	
+	});
+
+	$( ".btn-toolbar .btn-print" ).click(function(e) { //view all tour information		
+		window.print();
+		e.preventDefault();	
+	});
+
+	$( ".btn-toolbar .btn-delete" ).click(function(e) { //delete tour	
+		confirm("Are you sure that you want to delete this tour?");
+		e.preventDefault();	
+	});
+	
 });  	
