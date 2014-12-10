@@ -2366,6 +2366,7 @@ video {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+  max-width: 34px;
 }
 #footer .inf1 {
   background-color: #0669b2;
@@ -2794,6 +2795,40 @@ video {
 }
 .fanontour-mod-friend .share-tours a:hover {
   color: #6eb21b;
+}
+.fanontour-mod-preferences {
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 1px #b2b2b2 dotted;
+}
+.fanontour-mod-preferences .panel-heading {
+  margin-bottom: 20px;
+}
+.fanontour-mod-preferences h2 {
+  font: normal 1.4em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
+  margin-bottom: 0;
+}
+.fanontour-mod-preferences h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  background-color: #0669b2;
+  color: #ffffff;
+  float: left;
+  padding: 5px 10px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  min-width: 100px;
+  text-align: center;
+}
+.fanontour-mod-preferences .checkbox {
+  margin-bottom: 20px;
+}
+.fanontour-mod-preferences .checkbox:first-child {
+  margin-top: -5px;
 }
 .results #list_results {
   background-color: #eaeaea;
