@@ -1,5 +1,55 @@
 $( document ).ready(function() { //DOM OK! 
 
+	function getUrlVars() {	    
+	    var vars = {};
+	    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+	        vars[key] = value;
+	    });
+	    return vars;
+	}
+
+	function getXMLObject(data){
+
+		if('customized_01' in data){
+			var url = "xml/results/tickets.xml";
+		}
+		if('customized_02' in data){
+			var url = "xml/results/hotels.xml";
+		}
+		if('customized_03' in data){
+			var url = "xml/results/flights.xml";
+		}
+		if('customized_04' in data){
+			var url = "xml/results/activity.xml";
+		}
+		if('customized_05' in data){
+			var url = "xml/results/restaurants.xml";
+		}
+		if('customized_06' in data){
+			var url = "xml/results/cars.xml";
+		}
+		if('customized_00' in data){
+			var url = "xml/results/tour.xml";			
+		}
+
+		$.ajax({
+		  type: "get",
+		  dataType: "xml",
+		  data: data,
+		  url: url		  
+		})
+		.done(function(xml) {
+		   $(".mod-test p").removeClass("hide");		  
+		})
+		.fail(function() {
+		   alert( "error loading the results." );
+		})
+	}
+
+	var param_object = getUrlVars();
+
+	getXMLObject(param_object);
+
 	function getSuppliers(ticket, offers){
 
 	if(offers > 1){
