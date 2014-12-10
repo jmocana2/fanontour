@@ -1,3 +1,10 @@
+<?php
+ function activeMenu($section, $active){
+ 	if($active == $section){
+ 		echo "class='active'";
+ 	}
+ }?>
+
 <header id="header">
 	<div class="sup clearfix">
 		<div class="container relative">
@@ -23,12 +30,12 @@
 						</div>
 						<nav class="no-margin">
 							<ul class="list-inline">
-								<li><a href="#" title="go to the init page">Home</a></li>
-								<li><a href="#" title="My profile">Profile</a></li>
-								<li><a href="#" title="My FanFriends">FanFriends</a></li>
-								<li><a href="#" title="See my next tours">Next tours</a></li>
-								<li class="active"><a href="#" title="See my alerts">Alerts</a></li>
-								<li><a href="#" title="See my lastest tours">Lastest tours</a></li>
+								<li <?php activeMenu($section, "home");?>><a href="00_home_private.html" title="go to the init page">Home</a></li>
+								<li <?php activeMenu($section, "profile");?>><a href="#" title="My profile">Profile</a></li>
+								<li <?php activeMenu($section, "fanfriends");?>><a href="05_my-fanfriends.html" title="My FanFriends">FanFriends</a></li>
+								<li <?php activeMenu($section, "next-tours");?>><a href="05_my-next-tours.html" title="See my next tours">Next tours</a></li>
+								<li <?php activeMenu($section, "alerts");?>><a href="05_my-tour-alerts.html" title="See my alerts">Alerts</a></li>
+								<li <?php activeMenu($section, "last-tours");?>><a href="#" title="See my lastest tours">Lastest tours</a></li>
 							</ul>
 						</nav>
 					</li>
@@ -39,12 +46,12 @@
 				<div id="dropdown-mobile-02" class="dropdown dropdown-mobile-menu">
 				 	<a data-toggle="dropdown" href="#" title="ver menu"><img src="/fanontour/img/avatar/user.jpg" alt="user"></a>
 				 	<ul class="dropdown-menu no-padding" role="menu" aria-labelledby="dropdown-mobile-02">
-				    	<li class="active"><a href="#" title="go to the init page">Home</a></li>
-						<li><a href="#" title="go to my profile">Profile</a></li>
-						<li><a href="#" title="view my FanFriends">FanFriends</a></li>
-						<li><a href="#" title="next tours planed">Next tours</a></li>
-						<li><a href="#" title="view my alertas">Alerts</a></li>
-						<li><a href="#" title="view my lastest tours">Lastest tours</a></li>
+				    	<li <?php activeMenu($section, "home");?>><a href="00_home_private.html" title="go to the init page">Home</a></li>
+						<li <?php activeMenu($section, "profile");?>><a href="#" title="go to my profile">Profile</a></li>
+						<li <?php activeMenu($section, "fanfriends");?>><a href="05_my-fanfriends.html" title="view my FanFriends">FanFriends</a></li>
+						<li <?php activeMenu($section, "next-tours");?>><a href="05_my-next-tours.html" title="next tours planed">Next tours</a></li>
+						<li <?php activeMenu($section, "alerts");?>><a href="05_my-tour-alerts.html" title="view my alertas">Alerts</a></li>
+						<li <?php activeMenu($section, "last-tours");?>><a href="#" title="view my lastest tours">Lastest tours</a></li>
 						<li class="not-point no-margin"><a href="#" title="close session">Log out</a></li>
 						<li><a href="#" title="How it works">How it works</a></li>
 				  	</ul>
