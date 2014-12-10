@@ -819,6 +819,10 @@ blockquote dd {
 #list_results {
   min-height: inherit !important;
 }
+.list-social iframe {
+  position: relative !important;
+  top: 8px !important;
+}
 .dropdown-default input {
   margin-left: 5px;
 }
@@ -1680,6 +1684,7 @@ blockquote {
   opacity: 0.5;
 }
 .form-default {
+  position: relative;
   padding-top: 20px;
 }
 .form-default .leyend {
@@ -1946,6 +1951,30 @@ blockquote {
   background-color: #403f3f;
   color: #ffffff;
 }
+.table tbody th {
+  background-color: #d9edf7;
+  text-align: center;
+  text-transform: uppercase;
+  color: #323232;
+  text-shadow: 1px 1px #ffffff;
+}
+.table tbody th span {
+  color: #4c4c4c;
+  font-size: .9em;
+}
+.table tbody .description {
+  width: 800px;
+}
+.table tbody ul {
+  margin: 0;
+}
+.table tbody li {
+  border-left: 1px #b2b2b2 solid;
+  line-height: 1em;
+}
+.table tbody li:first-child {
+  border: none;
+}
 .table td {
   text-align: center;
   vertical-align: middle;
@@ -1956,6 +1985,9 @@ blockquote {
 }
 .table tr:hover {
   background-color: #dddddd;
+}
+.table.t_border td {
+  border: 1px #dddddd solid;
 }
 .table-alerts .save {
   display: none;
@@ -2699,6 +2731,9 @@ video {
 .fanontour-mod-details:hover .headband {
   background-color: #6eb21b;
 }
+.fanontour-mod-information {
+  padding: 15px;
+}
 .results #list_results {
   background-color: #eaeaea;
 }
@@ -2983,7 +3018,7 @@ video {
     display: inline;
   }
   .bg-container {
-    background: url('../img/backgrounds/home/mobile_h_600px.jpg') no-repeat center 0;
+    background: url('../img/backgrounds/home/mobile.jpg') no-repeat center 0;
     background-size: cover;
   }
   .bg-container-generic {
