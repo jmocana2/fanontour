@@ -12,6 +12,14 @@ $( document ).ready(function() { //DOM OK!
 		});
     }
 
+    //checkbox
+    $( "input[type='checkbox']" ).click(function(e) {
+    	if($(this).val() == "false"){
+    		$(this).val("true");
+    	}else{
+    		$(this).val("false");
+    	}
+    });
 	//backgrounds search box	
 	$(function() {
 		//=================================
@@ -341,9 +349,13 @@ $( document ).ready(function() { //DOM OK!
 		}				
 	}
 
-	//Email validation
+	//Regular expressions
+	//mail
 	var emailreg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-   
+   	//password
+   	var passreg = /(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;  
+
+
     if($("#contact").length){    	
 		$( "#contact .btn-validate" ).click(function() {
 
@@ -364,19 +376,66 @@ $( document ).ready(function() { //DOM OK!
 		});	
 	}
 
-	//Log-in validation	   	
-	$( "#form-login" ).click(function(e) {
-
-		$("#contact form").find(".has-error").removeClass("has-error");
+	//Log-in validation	
+	function loginValidation(e){
+		$("#form-login").find(".has-error").removeClass("has-error");
 
 		validarVacio($("#input-email-01"));
 		validarVacio($("#input-password-01"));
 
+        if(!emailreg.test($('#input-email-01').val())){        	    	
+        	$("#input-email-01").closest(".form-group").addClass("has-error");
+        	e.preventDefault();	        	
+        } 
+	}	
+
+	$( "#form-login .btn" ).click(function(e) {
+		loginValidation(e);		       
+	});
+
+	$("#form-login").on("change",".has-error input",function(e){    	
+		loginValidation(e); 	
+    });
+
+	//Register validation
+	function registerValidation(e){
+		$("#form-register").find(".has-error").removeClass("has-error");
+
+		validarVacio($("#input-name-01"));
+		validarVacio($("#input-name-02"));
+		validarVacio($("#input-email-01"));
+		validarVacio($("#input-password-01"));
+		validarVacio($("#input-password-02"));
+
         if(!emailreg.test($('#input-email-01').val())){	        	
-        	$("#input-email-01").closest(".form-group").addClass("has-error");	        	
-        }        
+        	$("#input-email-01").closest(".form-group").addClass("has-error");	
+        	e.preventDefault();        	
+        }   
+
+        if(!passreg.test($('#input-password-01').val())){	        	
+        	$("#input-password-01").closest(".form-group").addClass("has-error");
+        	e.preventDefault();	        	
+        } 
+
+        if($("#input-password-01").val() != $("#input-password-02").val()){
+        	$("#input-password-02").closest(".form-group").addClass("has-error");
+        	e.preventDefault();
+        }
+
+        if($("#terms-conditions").val() == "false"){
+        	$("#terms-condition").closest(".form-group").addClass("has-error");
+        	e.preventDefault();
+        }
+	}
+
+	$( "#form-register .btn" ).click(function(e) {
+		registerValidation(e);
 	});	
-	
+
+	 $("#form-register").on("change",".has-error input",function(e){    	
+		registerValidation(e); 	
+    });
+
 
 	//Home search	
 	//Tickets
