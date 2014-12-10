@@ -1,0 +1,424 @@
+<?php $section = "profile"; ?>
+<!DOCTYPE html>
+<!--[if IE 8 ]>    <html class="ie8" lang="es"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="es"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="es"> <!--<![endif]-->
+
+<head>    
+    <title>FanOnTour.com</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">
+	
+	<!-- CONFIG -->
+	<meta name="author" content="Events Tickets Services S.L.U" />
+	<meta name="description" content="Descripción de la página" />
+	<meta name="keywords" content="etiqueta1, etiqueta2, etiqueta3" />
+	<meta name="robots" content="follow, index" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!--     -->
+
+	<!-- SEO -->	
+	<meta name="revisit-after" content="1 days">
+	<meta name="robots" content="INDEX,FOLLOW,NOODP">	
+	<meta name="twitter:card" content="photo">
+	<meta name="twitter:site" content="@FANONTOUR">
+	<meta name="twitter:creator" content="@FANONTOUR">
+	<meta name="twitter:title" content="fanOnTour title">
+	<meta name="twitter:image:src" content="img/social/twitter-card.jpg">
+	<meta name="twitter:domain" content="www.fanontour.com">
+	<meta property="og:title" content="FanOnTour">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="descripción">
+	<meta property="og:url" content="http://www.fanontour.com">
+	<meta property="og:site_name" content="fanOnTour">
+	<meta property="og:image" content="img/social/og-facebook.jpg">
+	<!--     -->
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="public/vendor/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="public/vendor/bower-components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!--     -->
+	
+	<!-- JS -->
+	<script src="public/vendor/modernizr/modernizr_2.8.3.js"></script>
+	<!--     -->
+
+</head>
+<body id="profile" class="en">
+	<!-- HEADER -->
+	<?php include('include/template/private-header.html'); ?>
+	<!-- -->
+	<!-- MAIN -->
+	<main>
+
+		<div class="bg-container bg-container-generic absolute"></div>
+		<div class="content">
+
+			<!-- ========== (MODAL) TERMS AND CONDITIONS ========= -->
+			<?php
+				$modal = "modal-conditions";
+				include('include/modals/modal-box.html'); 
+			?>
+			<!-- ================================================= -->
+			<!-- =========== (MODAL) PRIVACY POLICY ============== -->
+			<?php
+				$modal = "modal-policy";
+				include('include/modals/modal-box.html'); 
+			?>
+			<!-- ================================================= -->
+
+			<section id="my-profile">
+				<div class="container">
+					<header>
+						<h1 class="title title-photo">My Profile</h1>						
+						<nav>
+			                <ol class="breadcrumb breadcrumb-default">
+			                    <li><a href="00_home.html" title="go to the init page">Home</a></li>
+			                    <li><a href="#" title="go to my profile">My profile</a></li>
+			                    <li>My FanFriends</li>
+			                </ol>
+		                </nav>		           
+					</header>					
+					
+						
+					<section id="user-profile" class="bdr-bottom padding-v-20 clearfix  ">
+						<header class="text-center bdr-bottom clearfix">
+							<h1 class="f-left">Welcome User name</h1>							
+						</header>						
+						<div class="fanontour-mod-friend col-sm-6 col-md-4 col-lg-4">
+							<div class="mod-img">
+								<a href="#" title="Edit profile"><img src="img/avatar/avatar.jpg" alt="usuario"></a>
+							</div>
+							<div class="mod-txt">
+								<ul>
+									<li>User name</li>
+									<li>Points: <strong>0</strong></li>
+									<li><a class="btn btn-default btn-change-password" href="#">Change my password</a></li>								
+								</ul>
+							</div>
+							<a href="#" class="btn btn-primary btn-edit-profile c-both d-block" rel="nofollow">Edit profile</a>	
+							<div id="mod-edit">
+								<div class="form-group">
+									<label for="restaurant-field-02">First Name</label>
+							   		<input type="text" name="city_restaurant" class="form-control" id="restaurant-field-02" placeholder="City name">
+								</div>
+								<div class="form-group">
+									<label for="restaurant-field-02">Last Name</label>
+							   		<input type="text" name="city_restaurant" class="form-control" id="restaurant-field-02" placeholder="City name">
+								</div>
+							</div>						
+						</div>
+						<div class="fanontour-mod-preferences padding-v-20 text-center col-sm-6 col-md-4 col-lg-8">
+							<h2>My preferences</h2>
+							<form action="#" method="post" class="text-left">
+
+								<div class="panel panel-primary fanontour-panel-primary">
+									<div class="panel-heading">
+										<h2>Music</h2>
+									</div>
+									<div class="c-both clearfix">
+										<div class="checkbox checkbox-message c-both col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop"  value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message c-both col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop"  value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            </div>	                            
+                            	</div>
+                            	<div class="panel panel-primary fanontour-panel-primary">
+									<div class="panel-heading">
+										<h2>Music</h2>
+									</div>
+									<div class="c-both clearfix">
+										<div class="checkbox checkbox-message c-both col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop"  value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message c-both col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop"  value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            </div>	                            
+                            	</div>
+                            	<div class="panel panel-primary fanontour-panel-primary">
+									<div class="panel-heading">
+										<h2>Music</h2>
+									</div>
+									<div class="c-both clearfix">
+										<div class="checkbox checkbox-message c-both col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop"  value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message c-both col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop"  value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            </div>	                            
+                            	</div>
+                            	<div class="panel panel-primary fanontour-panel-primary">
+									<div class="panel-heading">
+										<h2>Music</h2>
+									</div>
+									<div class="c-both clearfix">
+										<div class="checkbox checkbox-message c-both col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop"  value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message c-both col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop"  value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            </div>	                            
+                            	</div>
+                            	<div class="panel panel-primary fanontour-panel-primary">
+									<div class="panel-heading">
+										<h2>Music</h2>
+									</div>
+									<div class="c-both clearfix">
+										<div class="checkbox checkbox-message c-both col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop"  value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message c-both col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop"  value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            	<div class="checkbox checkbox-message col-sm-3"><!-- has-error -->
+		                               	    <label class="control-label">
+		                                		<input type="checkbox" name="pop" id="pop" value="false"><span></span>
+		                                    	Pop                                                 
+		                                  	</label>  
+		                            	</div>
+		                            </div>	                            
+                            	</div>
+							</form>
+						</div>
+					</section>								
+				   
+			    </div>
+			</section>
+						
+				
+		</div>				
+	</main>
+	<!-- -->
+	<!-- FOOTER -->
+	<?php include('include/template/footer.html'); ?>
+	<!-- -->
+
+	<!-- JS -->
+	<script src="public/vendor/jquery/jquery.js"></script>
+	<script src="public/vendor/jquery/jquery.lazyload.min.js"></script>
+	<script src="public/vendor/bootstrap/bootstrap.js"></script>
+	<script src="public/vendor/bower-components/moment/min/moment.min.js"></script>
+	<script src="public/vendor/bower-components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script src="js/main.js"></script>
+	<script src="js/private.js"></script>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->	
+	<!--    -->
+</body>
+</html>
