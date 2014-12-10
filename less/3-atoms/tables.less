@@ -32,6 +32,38 @@
 		}
 	}
 
+	tbody{
+		th{
+			background-color: #d9edf7;
+			text-align: center;
+			text-transform: uppercase;
+			color: @colorK1;
+			text-shadow: 1px 1px @colorW;
+
+			span{
+				color: @colorK21;
+				font-size: .9em;
+			}
+		}	
+
+		.description{
+			width: 800px;
+		}
+
+		ul{
+			margin: 0;
+		}
+
+		li{
+			border-left: 1px @colorK3 solid;
+			line-height: 1em;
+
+			&:first-child{
+				border: none;
+			}
+		}	
+	}
+
 	td{
 		text-align: center;
 		vertical-align: middle;
@@ -44,6 +76,12 @@
 
 	tr:hover{
 		background-color: @colorK31;
+	}
+
+	&.t_border{
+		td{
+			border: 1px @colorK31 solid;
+		}
 	}
 }
 
