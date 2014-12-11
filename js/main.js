@@ -1,5 +1,25 @@
 var calendar;
 
+//Regular expressions
+//mail
+var emailreg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//password
+var passreg = /(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
+
+//Validations
+//Fields
+//Empty field
+function validarVacio(campo){
+	var valor = $(campo).val();	
+	if(valor == ""){
+		$(campo).closest(".form-group").addClass("has-error error-empty");
+		$(campo).closest(".form-group").removeClass("has-warning");			
+	}
+	else{
+		$(campo).closest(".form-group").removeClass("has-error error-empty");			
+	}
+}
+
 $( document ).ready(function() { //DOM OK! 
 
   	//Lazy load
@@ -246,17 +266,6 @@ $( document ).ready(function() { //DOM OK!
 	  
 	//Validations
 	//Fields
-	//Empty field
-	function validarVacio(campo){
-		var valor = $(campo).val();	
-		if(valor == ""){
-			$(campo).closest(".form-group").addClass("has-error error-empty");
-			$(campo).closest(".form-group").removeClass("has-warning");			
-		}
-		else{
-			$(campo).closest(".form-group").removeClass("has-error error-empty");			
-		}
-	}
 
 	function validarVacioAll(form, e){
 		var validado = 0;
@@ -347,13 +356,7 @@ $( document ).ready(function() { //DOM OK!
 			$(panel).find(".panel-heading").removeClass("has-error");
 			$(".alert-empty-war, .alert-empty").fadeOut();	
 		}				
-	}
-
-	//Regular expressions
-	//mail
-	var emailreg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-   	//password
-   	var passreg = /(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;  
+	}  
 
 
     if($("#contact").length){    	
