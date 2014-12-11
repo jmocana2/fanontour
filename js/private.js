@@ -69,4 +69,60 @@ $( document ).ready(function() { //DOM OK!
 			e.preventDefault();	
 		});		
 	}
+
+	//My profile
+	if($(".fanontour-mod-edit").length){
+		$("#mod-edit, #mod-password").hide();
+
+		$( ".fanontour-mod-people .btn-edit-profile" ).click(function(e) { //edit profile	
+			if($("#mod-password:visible").length){
+				$("#mod-password").slideToggle("slow", function(){
+					$("#mod-edit").slideToggle();
+				});
+			}else{
+				$("#mod-edit").slideToggle();
+			}			
+			e.preventDefault();	
+		});	
+
+
+		$( "#mod-edit .btn" ).click(function(e) { //edit profile	
+			
+			if( $("#input-email-01").val() == "" || !emailreg.test($('#input-email-01').val())){	        	
+	        	$("#input-email-01").closest(".form-group").addClass("has-error");	 
+	        	e.preventDefault();       	
+	        }
+	      
+		});	
+
+		$( "#mod-password .btn" ).click(function(e) { //edit profile	
+			
+			validarVacio($("#input-password-01"));
+			validarVacio($("#input-password-02"));
+			validarVacio($("#input-password-03"));
+			
+	        if(!passreg.test($('#input-password-02').val())){	        	
+	        	$("#input-password-02").closest(".form-group").addClass("has-error");
+	        	e.preventDefault();	        	
+	        } 
+
+	        if($("#input-password-02").val() != $("#input-password-03").val()){
+	        	$("#input-password-03").closest(".form-group").addClass("has-error");
+	        	e.preventDefault();
+	        }
+		});	
+
+		
+
+		$( ".fanontour-mod-people .btn-change-password" ).click(function(e) { //change password
+			if($("#mod-edit:visible").length){
+				$("#mod-edit").slideToggle("slow", function(){
+					$("#mod-password").slideToggle();
+				});
+			}else{
+				$("#mod-password").slideToggle();
+			}		
+			e.preventDefault();	
+		});
+	}
 });  	
