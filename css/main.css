@@ -2748,14 +2748,14 @@ video {
 .fanontour-mod-information {
   padding: 15px;
 }
-.fanontour-mod-friend {
+.fanontour-mod-people {
   margin: 20px 0;
 }
-.fanontour-mod-friend .mod-img {
+.fanontour-mod-people .mod-img {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-.fanontour-mod-friend .mod-img a {
+.fanontour-mod-people .mod-img a {
   border: 2px #eaeaea solid;
   display: block;
   -webkit-border-radius: 5px;
@@ -2765,10 +2765,10 @@ video {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-.fanontour-mod-friend .mod-img a:hover {
+.fanontour-mod-people .mod-img a:hover {
   border: 2px #6eb21b solid;
 }
-.fanontour-mod-friend .mod-img img {
+.fanontour-mod-people .mod-img img {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -2776,7 +2776,7 @@ video {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-.fanontour-mod-friend .share-tours {
+.fanontour-mod-people .share-tours {
   position: absolute;
   top: 0;
   left: 0;
@@ -2787,26 +2787,31 @@ video {
   padding: 10px;
   border-bottom: 2px #0669b2 solid;
 }
-.fanontour-mod-friend .share-tours ul li {
+.fanontour-mod-people .share-tours ul li {
   padding-left: 10px;
 }
-.fanontour-mod-friend .share-tours a {
+.fanontour-mod-people .share-tours a {
   color: #ffffff;
 }
-.fanontour-mod-friend .share-tours a:hover {
+.fanontour-mod-people .share-tours a:hover {
   color: #6eb21b;
 }
 .fanontour-mod-preferences {
   padding: 20px;
-  margin: 20px 0;
+  margin-bottom: 20px;
   border-left: 1px #b2b2b2 dotted;
 }
 .fanontour-mod-preferences .panel-heading {
   margin-bottom: 20px;
+  padding: 5px 10px;
+}
+.fanontour-mod-preferences .panel-heading h2 {
+  font-size: 1.3em;
+  margin-bottom: 0;
 }
 .fanontour-mod-preferences h2 {
-  font: normal 1.4em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
-  margin-bottom: 0;
+  font: normal 1.6em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
+  margin-bottom: 20px;
 }
 .fanontour-mod-preferences h3 {
   font-size: 1.2em;
@@ -2829,6 +2834,31 @@ video {
 }
 .fanontour-mod-preferences .checkbox:first-child {
   margin-top: -5px;
+}
+.fanontour-mod-edit {
+  padding-top: 0;
+}
+.fanontour-mod-edit h2 {
+  font: normal 1.4em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
+}
+.fanontour-mod-edit .dropdown-form a.shape-arrow {
+  position: relative;
+}
+.fanontour-mod-edit .dropdown-form a.shape-arrow span:before {
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  border-top: 5px solid #4a4a4a;
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  border-bottom: 0;
+  content: "";
+  height: 0;
+  left: 322px;
+  position: absolute;
+  top: 15px;
+  width: 0;
+  z-index: 2;
+}
+.fanontour-mod-edit .dropdown-menu {
+  width: 350px;
 }
 .results #list_results {
   background-color: #eaeaea;
