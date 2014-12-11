@@ -183,7 +183,7 @@
 	padding: 15px;
 }
 
-.fanontour-mod-friend{
+.fanontour-mod-people{
 
 	margin: 20px 0;
 
@@ -236,16 +236,22 @@
 .fanontour-mod-preferences{
 
 	padding: 20px;
-	margin: 20px 0;
+	margin-bottom:  20px;
 	border-left: 1px @colorK3 dotted;
 
 	.panel-heading{
 		margin-bottom: 20px;
+		padding: 5px 10px;
+
+		h2{
+			font-size: 1.3em;
+			margin-bottom: 0;
+		}
 	}
 
 	h2{
-		font: normal 1.4em @font-title, @font-title-system, @font-third;
-		margin-bottom: 0;
+		font: normal 1.6em @font-title, @font-title-system, @font-third;
+		margin-bottom: 20px;
 	}
 
 	h3{
@@ -266,5 +272,22 @@
 
 	.checkbox:first-child{
 		margin-top: -5px;
+	}
+}
+
+.fanontour-mod-edit{
+
+	padding-top: 0;
+
+	h2{
+		font: normal 1.4em @font-title, @font-title-system, @font-third;
+	}
+
+	.dropdown-form a.shape-arrow{
+		.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 322px, @y: 15px);
+	}
+
+	.dropdown-menu{
+		width: 350px;
 	}
 }
