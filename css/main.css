@@ -2808,10 +2808,12 @@ video {
 .fanontour-mod-preferences .panel-heading h2 {
   font-size: 1.3em;
   margin-bottom: 0;
+  float: none;
 }
 .fanontour-mod-preferences h2 {
   font: normal 1.6em 'roboto_condensedbold', 'Arial Black', 'sans-serif';
   margin-bottom: 20px;
+  float: left;
 }
 .fanontour-mod-preferences h3 {
   font-size: 1.2em;
