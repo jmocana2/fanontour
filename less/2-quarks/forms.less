@@ -55,6 +55,26 @@ input.number{
 			background-position: 0 -18px;
 		}
 	}	
+	input[type="radio"]{
+		&+span{
+			background-position: 0 -36px;
+		}
+
+		&:checked+span{
+			background-position: 0 -54px;
+		}
+	}
+}
+
+.radio{
+	padding-top: 10px;
+	margin-bottom: 15px;
+
+
+	label{
+		float: left;
+		text-align: left !important;
+	}
 }
 
 .form-control[readonly]{
