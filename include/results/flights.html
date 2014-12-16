@@ -3,8 +3,8 @@
  	foreach ($flights->flight as $flight):
         $route=$flight->route; 
     	$image=$flight->image;
-        $departure_time=$flight->departure_time;
-        $arrival_time=$flight->arrival_time; 
+        $outbund_time=$flight->outbund_time;
+        $return_time=$flight->return_time; 
         $scales=(int)$flight['scale'];  
         $price=$flight->sources->source[0]->price;       
         $source=$flight->sources->source[0]->source_name;
@@ -26,8 +26,8 @@
 				<?php } ?>
 			</p>
 			<ul>
-				<li>Departure date: <strong><small>12/12/2014</small></strong> - <em><?php echo $departure_time; ?> h.</em></li>
-				<li>Arrival date: <strong><small>19/12/2014</small></strong> - <em><?php echo $arrival_time; ?> h.</em></li>
+				<li>Outbund: <strong><small class="outbund_date">12/12/2014</small></strong> - <em><?php echo $outbund_time; ?> h.</em></li>
+				<li class="cont_return">Return: <strong><small class="return_date">19/12/2014</small></strong> - <em><?php echo $return_time; ?> h.</em></li>
 			</ul>			
 		</div>
 		<div class="result-footer">
