@@ -94,18 +94,30 @@
 												   		<label for="flight-field-02">To</label>
 												   		<input type="text" class="form-control" id="flight-field-02" placeholder="City name" required>
 												   	</div>											    
-												    <label for="datetimepicker_03">Departure date</label>
-												    <?php 
-												    	$id_date = "datetimepicker_03";
-												    	$class_input = "start_date";
-												    	include('include/forms/date.html'); 
-												    ?>
-												    <label for="datetimepicker_04">Return date</label>
-												    <?php 
-												    	$id_date = "datetimepicker_04";
-												    	$class_input = "end_date";
-												    	include('include/forms/date.html'); 
-												    ?>
+												    <div class="f-left">											    
+													    <label for="datetimepicker_03">Outbund date</label>
+													    <?php 
+													    	$id_date = "datetimepicker_03";
+													    	$name="departure";
+													    	$class_input = "start_date";													    	
+													    	include('include/forms/date.html'); 
+													    ?>
+												    </div>
+												    <div class="return-date f-left">
+													    <label for="datetimepicker_04">Return date</label>
+													    <?php 
+													    	$id_date = "datetimepicker_04";
+													    	$name="arrive";
+													    	$class_input = "end_date";													    	
+													    	include('include/forms/date.html'); 
+													    ?>
+												    </div>
+												    <div class="radio radio-message c-both clearfix"><!-- has-error -->
+			                                       	    <label class="control-label col-sm-6">
+			                                        		<input type="radio" name="one_way" id="return" class="small-field-w small-field-h" checked="checked" value="true"><span></span>Return</label>
+			                                          	<label class="control-label col-sm-6">
+			                                        		<input type="radio" name="one_way" id="one_way" class="small-field-w small-field-h" value="false"><span></span>One way</label> 
+		                                          	</div>
 												    <div class="text-center">
 												    	<button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
 													</div>
@@ -142,7 +154,7 @@
 										  <input type="text" class="sort-field-01 form-control" data-toggle="dropdown" placeholder="Select order" data-value="">
 										  <ul class="dropdown-menu" role="menu" >
 										    <li><a href="#" class="price-desc" rel="nofollow">Price (High to Low)</a></li>
-										    <li><a href="#" class="price-asc" rel="nofollow">Price (Low to High)</a></li>        									    
+										    <li><a href="#" class="price-asc" rel="nofollow">Price (Low to High)</a></li>						    
 										  </ul>
 										</div>
 								
@@ -168,7 +180,7 @@
 									
 								</div>
 								<div class="panel-box-block">
-									<p>Departure date: <strong class="departure_date">10/11/2014</strong> | Return date: <strong class="arrival_date">15/11/2014</strong>
+									<p>Departure date: <strong class="outbund_date"></strong> | Return date: <strong class="return_date"></strong>
 								</p>								
 								<div class="results">
 

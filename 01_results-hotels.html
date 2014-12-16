@@ -86,21 +86,23 @@
 									<div class="panel panel-filter accordion">
 										<h2><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed" rel="nofollow">Your search details <small><span class="glyphicon glyphicon-chevron-down"></span></small></a></h2>
 										<div class="panel-box-body panel-collapse collapse in" id="collapse1">
-											<form id="tab-activities" role="form" action="#" method="post">
+											<form id="tab-activities" role="form" action="#" method="get">
 												<div class="padding-v-10">
 													<fieldset class="col-xs-12 no-padding form-group">
 											    		<label for="hotel-field-01">Going to</label>
-											   			<input type="text" class="form-control" id="hotel-field-01" placeholder="City name" required>
+											   			<input type="text" class="form-control" id="hotel-field-01" placeholder="City name"  required>
 												    </fieldset>
 												    <label for="datetimepicker_01">Check in</label>
 												    <?php 
 												    	$id_date = "datetimepicker_01";
+												    	$name="check_in";
 												    	$class_input = "start_date";
 												    	include('include/forms/date.html'); 
 												    ?>
 												    <label for="datetimepicker_02">Check out</label>
 												    <?php 
 												    	$id_date = "datetimepicker_02";
+												    	$name="check_out";
 												    	$class_input = "end_date";
 												    	include('include/forms/date.html'); 
 												    ?>

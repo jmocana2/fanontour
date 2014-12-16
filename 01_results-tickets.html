@@ -86,21 +86,23 @@
 									<div class="panel panel-filter accordion">
 										<h2><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed" rel="nofollow">Your search details <small><span class="glyphicon glyphicon-chevron-down"></span></small></a></h2>
 										<div class="panel-box-body panel-collapse collapse in" id="collapse1">
-											<form id="tab-activities" role="form" action="#" method="post">
+											<form id="tab-activities" role="form" action="#" method="get">
 												<div class="padding-v-10">
 													<div class="form-group">
 													    <label for="event-01">Tickets</label>
-													    <input type="text" class="form-control" id="event-01" placeholder="Search by artist, team, city or event" required>   
+													    <input type="text" name="ticket" class="form-control" id="event-01" placeholder="Search by artist, team, city or event" required>   
 													</div>
 												    <label for="datetimepicker_17">From</label>
 												    <?php 
 												    	$id_date = "datetimepicker_17";
+												    	$name="ticket_from";
 												    	$class_input = "start_date";
 												    	include('include/forms/date.html'); 
 												    ?>
 												    <label for="datetimepicker_18">To</label>
 												    <?php 
 												    	$id_date = "datetimepicker_18";
+												    	$name="ticket_to";
 												    	$class_input = "end_date";
 												    	include('include/forms/date.html'); 
 												    ?>
