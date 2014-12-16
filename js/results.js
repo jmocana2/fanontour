@@ -1,3 +1,5 @@
+var xml_object;
+
 $( document ).ready(function() { //DOM OK! 
 
 	function getUrlVars() {	    
@@ -26,7 +28,7 @@ $( document ).ready(function() { //DOM OK!
 			var url = "xml/results/restaurants.xml";
 		}
 		if('customized_06' in data){
-			var url = "xml/results/cars.xml";
+			var url = "xml/results/cars.xml";		
 		}
 		if('customized_00' in data){
 			var url = "xml/results/tour.xml";			
@@ -39,7 +41,8 @@ $( document ).ready(function() { //DOM OK!
 		  url: url		  
 		})
 		.done(function(xml) {
-		   $(".mod-test p").removeClass("hide");		  
+		   $(".mod-test p").removeClass("hide");
+		   xml_object = xml;			   	
 		})
 		.fail(function() {
 		   alert( "error loading the results." );
@@ -48,8 +51,8 @@ $( document ).ready(function() { //DOM OK!
 
 	var param_object = getUrlVars();
 
-	getXMLObject(param_object);
-
+	getXMLObject(param_object);	
+	
 	function getSuppliers(ticket, offers){
 
 	if(offers > 1){
@@ -198,6 +201,11 @@ $( document ).ready(function() { //DOM OK!
 	}
 
 	function filterByPetrol(val_petrol, fuel){
+
+		if(typeof fuel === 'undefined'){
+			return true;
+		}
+
 		if(val_petrol == (fuel + 1)){
 			return true;
 		}else{
@@ -252,28 +260,26 @@ $( document ).ready(function() { //DOM OK!
 			$(id_page + " .results ul").remove();
 		  	var resultHtml = "<ul class='list_results'>";
 
-		    $.get("/fanontour/xml/results/tickets.xml", function (xml) {
-			    $(xml).find("ticket").each(function () {
+		    $(xml_object).find("ticket").each(function () {
+		       var val_price = parseInt($(this).find('source').eq(0).find('price').text());			    
+		       			    			
+		       //FILTERING...			    			
+    		   if(filterByName($(this), what)){ //WHAT?
+		       	   if(filterByPlace($(this), where)){ //WHERE
+		       	   		if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?
+		       	  			resultHtml += getResult($(this)); //OK! DISPLAY RESULT		       	  			
+		       	  		}
+		       		} 	
+		       }
+		    });
 
-			       var val_price = parseInt($(this).find('source').eq(0).find('price').text());			    
-			       			    			
-			       //FILTERING...			    			
-	    		   if(filterByName($(this), what)){ //WHAT?
-			       	   if(filterByPlace($(this), where)){ //WHERE
-			       	   		if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?
-			       	  			resultHtml += getResult($(this)); //OK! DISPLAY RESULT		       	  			
-			       	  		}
-			       		} 	
-			       }
-			    });
-
-				resultHtml += "</ul>";
-				$(id_page + " .results").html(resultHtml).promise().done(function(){
-       				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
-       				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1);
-       				setResults();       				     				       				
-    			});
+			resultHtml += "</ul>";
+			$(id_page + " .results").html(resultHtml).promise().done(function(){
+   				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
+   				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1);
+   				setResults();       				     				       				
 			});
+			
 		}
 
 		//SLIDER		
@@ -373,27 +379,27 @@ $( document ).ready(function() { //DOM OK!
 			$(id_page + " .results ul").remove();
 		  	var resultHtml = "<ul class='list_results'>";
 
-		    $.get("/fanontour/xml/results/hotels.xml", function (xml) {
-			    $(xml).find("hotel").each(function () {	
-					
-			    	var val_price = parseInt($(this).find('source').eq(0).find('price').text());
-			    	var persons = parseInt($(this).attr("persons"));
+		    
+		    $(xml_object).find("hotel").each(function () {	
+				
+		    	var val_price = parseInt($(this).find('source').eq(0).find('price').text());
+		    	var persons = parseInt($(this).attr("persons"));
 
-			    	//FILTERING...
-					if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?
-						if(filterByRoom(persons, room)){ //TYPE OF ROOM?
-			       			resultHtml += getResult($(this)); //OK! DISPLAY RESULT
-			       		}
-			       	}			       
-			    });
+		    	//FILTERING...
+				if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?
+					if(filterByRoom(persons, room)){ //TYPE OF ROOM?
+		       			resultHtml += getResult($(this)); //OK! DISPLAY RESULT
+		       		}
+		       	}			       
+		    });
 
-				resultHtml += "</ul>";
-				$(id_page + " .results").html(resultHtml).promise().done(function(){
-       				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
-       				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1); 
-       				setResults();     				       				
-    			});
+			resultHtml += "</ul>";
+			$(id_page + " .results").html(resultHtml).promise().done(function(){
+   				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
+   				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1); 
+   				setResults();     				       				
 			});
+			
 		}
 
 		//SLIDER
@@ -449,15 +455,15 @@ $( document ).ready(function() { //DOM OK!
 
 		function filterFlights(){
 
-			var departure_date = $(".departure_date").text();
-			var arrival_date = $(".arrival_date").text();
+			var outbund_date = $(".outbund_date").eq(0).text();
+			var return_date = $(".return_date").eq(0).text();
 
 			function getResult(element){
 			   var route = $(element).find('route').text();   			  
    			   var image = $(element).find('image').text();
    			   var scales = parseInt($(element).attr("scale"));
-   			   var departure_time = $(element).find('departure_time').text();
-   			   var arrival_time = $(element).find('arrival_time').text();
+   			   var outbund_time = $(element).find('outbund_time').text();
+   			   var return_time = $(element).find('return_time').text();
    			   var price = $(element).find('source').eq(0).find('price').text();		       			      			   
    			   var source = $(element).find('source').eq(0).find('source_name').text();
    			   var url = $(element).find('source').eq(0).find('url').text();
@@ -471,7 +477,7 @@ $( document ).ready(function() { //DOM OK!
 		       	  resultHtml += "- <strong>This flight have one scale</strong> <span class='fanontour-icon icon-icons-fanontour_scale'></span>"
 		       }
 			    resultHtml += "</p>";
-			    resultHtml += "<ul><li>Departure date: <strong><small>"+ departure_date +"</small></strong> - <em>" + departure_time + "</em></li><li>Arrival date: <strong><small>"+ arrival_date +"</small></strong> - <em>" + arrival_time + "</em></li></ul></div>";	
+			    resultHtml += "<ul><li>Outbund date: <strong><small>"+ outbund_date +"</small></strong> - <em>" + outbund_time + "</em></li><li class='cont_return'>Return date: <strong><small>"+ return_date +"</small></strong> - <em>" + return_time + "</em></li></ul></div>";	
 			
 		        resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li>";			
 			    if(num_offers > 1){
@@ -486,27 +492,27 @@ $( document ).ready(function() { //DOM OK!
 			$(id_page + " .results ul").remove();
 		  	var resultHtml = "<ul class='list_results'>";
 
-		    $.get("/fanontour/xml/results/flights.xml", function (xml) {
-			    $(xml).find("flight").each(function () {	
+		    
+		    $(xml_object).find("flight").each(function () {	
 
-			       var val_price = parseInt($(this).find('source').eq(0).find('price').text());
-			       var scales = $(this).attr("scale");	
+		       var val_price = parseInt($(this).find('source').eq(0).find('price').text());
+		       var scales = $(this).attr("scale");	
 
-			    	//FILTERING...
-					if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?
-			       	    if(filterByScales(scale, scales)){ //PRICE?
-			       		 	resultHtml += getResult($(this)); //OK! DISPLAY RESULT
-			       		}
-			       	}
-			    });
+		    	//FILTERING...
+				if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?
+		       	    if(filterByScales(scale, scales)){ //PRICE?
+		       		 	resultHtml += getResult($(this)); //OK! DISPLAY RESULT
+		       		}
+		       	}
+		    });
 
-				resultHtml += "</ul>";
-				$(id_page + " .results").html(resultHtml).promise().done(function(){
-       				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
-       				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1); 
-       				setResults();      				       				
-    			});
+			resultHtml += "</ul>";
+			$(id_page + " .results").html(resultHtml).promise().done(function(){
+   				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
+   				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1); 
+   				setResults();      				       				
 			});
+			
 		}
 
 		//SLIDER
@@ -590,30 +596,30 @@ $( document ).ready(function() { //DOM OK!
 			$(id_page + " .results ul").remove();
 		  	var resultHtml = "<ul class='list_results'>";
 
-		    $.get("/fanontour/xml/results/activity.xml", function (xml) {
-			    $(xml).find("activity").each(function () {
-			      
-			       var val_price = parseInt($(this).find('source').eq(0).find('price').text());
-			       var val_duration = parseInt($(this).find('duration').text());
-			       if(isNaN(val_duration)){
-			       	val_duration = max_duration;
-			       }
+		    
+		    $(xml_object).find("activity").each(function () {
+		      
+		       var val_price = parseInt($(this).find('source').eq(0).find('price').text());
+		       var val_duration = parseInt($(this).find('duration').text());
+		       if(isNaN(val_duration)){
+		       	val_duration = max_duration;
+		       }
 
-			       //FILTERING...			      
-					if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?		
-						if(filterByDuration(val_duration, v2min, v2max, val_limit2)){ //DURATION?			       	    				       		 	
-			       		 	resultHtml += getResult($(this), val_duration); //OK! DISPLAY RESULT
-			       		}
-			       	}		   			      
-			    });
+		       //FILTERING...			      
+				if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?		
+					if(filterByDuration(val_duration, v2min, v2max, val_limit2)){ //DURATION?			       	    				       		 	
+		       		 	resultHtml += getResult($(this), val_duration); //OK! DISPLAY RESULT
+		       		}
+		       	}		   			      
+		    });
 
-				resultHtml += "</ul>";
-				$(id_page + " .results").html(resultHtml).promise().done(function(){
-       				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
-       				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1); 
-       				setResults();     				       				
-    			});
+			resultHtml += "</ul>";
+			$(id_page + " .results").html(resultHtml).promise().done(function(){
+   				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
+   				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1); 
+   				setResults();     				       				
 			});
+			
 		}
 
 		//SLIDER
@@ -682,22 +688,21 @@ $( document ).ready(function() { //DOM OK!
 			$(id_page + " .results ul").remove();
 		  	var resultHtml = "<ul class='list_results'>";
 
-		    $.get("/fanontour/xml/results/restaurants.xml", function (xml) {
-			    $(xml).find("restaurant").each(function () {			       		    
-			       			    			
-			        //FILTERING...			    			
-	    		    if(filterByCousine($(this), cousine)){ //COUSINE?
-			       	 	resultHtml += getResult($(this)); //OK! DISPLAY RESULT			       	  	
-			        }
-			    });
+		    
+		    $(xml_object).find("restaurant").each(function () {
+		        //FILTERING...			    			
+    		    if(filterByCousine($(this), cousine)){ //COUSINE?
+		       	 	resultHtml += getResult($(this)); //OK! DISPLAY RESULT			       	  	
+		        }
+		    });
 
-				resultHtml += "</ul>";
-				$(id_page + " .results").html(resultHtml).promise().done(function(){
-       				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
-       				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1);
-       				setResults();      				       				
-    			});
+			resultHtml += "</ul>";
+			$(id_page + " .results").html(resultHtml).promise().done(function(){
+   				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
+   				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1);
+   				setResults();      				       				
 			});
+			
 		}
 
 		//WHAT? FILTER
@@ -774,28 +779,28 @@ $( document ).ready(function() { //DOM OK!
 			$(id_page + " .results ul").remove();
 		  	var resultHtml = "<ul class='list_results'>";
 
-		    $.get("/fanontour/xml/results/cars.xml", function (xml) {
-			    $(xml).find("car").each(function () {
+		    
+		    $(xml_object).find("car").each(function () {
 
-			    	var val_price = parseInt($(this).find('source').eq(0).find('price').text());
-			    	var val_petrol = parseInt($(this).find('petrol').attr("type"));
+		    	var val_price = parseInt($(this).find('source').eq(0).find('price').text());
+		    	var val_petrol = parseInt($(this).find('petrol').attr("type"));
 
-			    	//FILTERING...
-					if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?
-						if(filterByPetrol(val_petrol, fuel)){ //PETROL?
-							resultHtml += getResult($(this)); //OK! DISPLAY RESULT
-						}			       		
-			       	}
-			            
-			    });
+		    	//FILTERING...
+				if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?
+					if(filterByPetrol(val_petrol, fuel)){ //PETROL?
+						resultHtml += getResult($(this)); //OK! DISPLAY RESULT
+					}			       		
+		       	}
+		            
+		    });
 
-				resultHtml += "</ul>";
-				$(id_page + " .results").html(resultHtml).promise().done(function(){
-       				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
-       				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1); 
-       				setResults();      				       				
-    			});
+			resultHtml += "</ul>";
+			$(id_page + " .results").html(resultHtml).promise().done(function(){
+   				orderFanontour($(id_page + " .sort-field-01").attr("data-value"));
+   				paginarFanontour($(id_page + " .items-field-01").val(), id_page, 1); 
+   				setResults();      				       				
 			});
+			
 		}
 
 		//SLIDER
@@ -858,7 +863,12 @@ $( document ).ready(function() { //DOM OK!
 			activityResults(); //run activities!	
 	    } 		
 		if($("#flights").length){
-			flightResults(); //run flights!			
+			flightResults(); //run flights!	
+			$(".outbund_date").text($("#datetimepicker_03").val());
+			$(".return_date").text($("#datetimepicker_04").val());	
+			if($("#datetimepicker_04").val() == ""){
+				$(".cont_return").hide();
+			}							
 		}			
 		if($("#rental-cars").length){
 			rentalcarResults(); //run cars!
