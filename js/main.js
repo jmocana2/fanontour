@@ -33,7 +33,7 @@ $( document ).ready(function() { //DOM OK!
     }
 
     //checkbox
-    $( "input[type='checkbox']" ).click(function(e) {
+    $( "input[type='checkbox']", "input[type='radio']"  ).click(function(e) {
     	if($(this).val() == "false"){
     		$(this).val("true");
     	}else{
@@ -455,6 +455,14 @@ $( document ).ready(function() { //DOM OK!
 	$( "#tab-flights .btn" ).click(function() {
 		validarVacio($("#flight-field-02"));
 	});	
+
+	$( "#one_way" ).click(function() {
+		$(".return-date").fadeOut();
+	});	
+
+	$( "#return" ).click(function() {
+		$(".return-date").fadeIn();
+	});
 
 	//Activities
 	$( "#tab-activities .btn" ).click(function() {		
