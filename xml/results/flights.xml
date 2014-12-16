@@ -3,8 +3,8 @@
 	<flight scale="0">
 		<route>FRA To YYZ</route>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<departure_time>07:30</departure_time>
-		<arrival_time>19:00</arrival_time>	
+		<outbund_time>07:30</outbund_time>
+		<return_time>19:00</return_time>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -36,8 +36,8 @@
 	<flight scale="1">
 		<route>YYZ To YHZ | YHZ To FRA</route>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<departure_time>07:30</departure_time>
-		<arrival_time>19:00</arrival_time>	
+		<outbund_time>07:30</outbund_time>
+		<return_time>19:00</return_time>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -69,8 +69,8 @@
 	<flight scale="0">
 		<route>FRA To YYZ</route>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<departure_time>07:30</departure_time>
-		<arrival_time>19:00</arrival_time>	
+		<outbund_time>07:30</outbund_time>
+		<return_time>19:00</return_time>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -82,8 +82,8 @@
 	<flight scale="0">
 		<route>FRA To YYZ</route>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<departure_time>07:30</departure_time>
-		<arrival_time>19:00</arrival_time>	
+		<outbund_time>07:30</outbund_time>
+		<return_time>19:00</return_time>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -115,8 +115,8 @@
 	<flight scale="1">
 		<route>YYZ To YHZ | YHZ To FRA</route>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<departure_time>07:30</departure_time>
-		<arrival_time>19:00</arrival_time>	
+		<outbund_time>07:30</outbund_time>
+		<return_time>19:00</return_time>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -148,8 +148,8 @@
 	<flight scale="0">
 		<route>FRA To YYZ</route>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<departure_time>07:30</departure_time>
-		<arrival_time>19:00</arrival_time>	
+		<outbund_time>07:30</outbund_time>
+		<return_time>19:00</return_time>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -181,8 +181,8 @@
 	<flight scale="0">
 		<route>FRA To YYZ</route>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<departure_time>07:30</departure_time>
-		<arrival_time>19:00</arrival_time>	
+		<outbund_time>07:30</outbund_time>
+		<return_time>19:00</return_time>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -214,8 +214,8 @@
 	<flight scale="0">
 		<route>FRA To YYZ</route>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<departure_time>07:30</departure_time>
-		<arrival_time>19:00</arrival_time>	
+		<outbund_time>07:30</outbund_time>
+		<return_time>19:00</return_time>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -247,8 +247,8 @@
 	<flight scale="0">
 		<route>FRA To YYZ</route>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<departure_time>07:30</departure_time>
-		<arrival_time>19:00</arrival_time>	
+		<outbund_time>07:30</outbund_time>
+		<return_time>19:00</return_time>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -280,8 +280,8 @@
 	<flight scale="0">
 		<route>FRA To YYZ</route>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<departure_time>07:30</departure_time>
-		<arrival_time>19:00</arrival_time>	
+		<outbund_time>07:30</outbund_time>
+		<return_time>19:00</return_time>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -313,8 +313,8 @@
 	<flight scale="0">
 		<route>FRA To YYZ</route>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<departure_time>07:30</departure_time>
-		<arrival_time>19:00</arrival_time>	
+		<outbund_time>07:30</outbund_time>
+		<return_time>19:00</return_time>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -346,8 +346,8 @@
 	<flight scale="0">
 		<route>FRA To YYZ</route>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<departure_time>07:30</departure_time>
-		<arrival_time>19:00</arrival_time>	
+		<outbund_time>07:30</outbund_time>
+		<return_time>19:00</return_time>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -379,8 +379,8 @@
 	<flight scale="0">
 		<route>FRA To YYZ</route>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<departure_time>07:30</departure_time>
-		<arrival_time>19:00</arrival_time>	
+		<outbund_time>07:30</outbund_time>
+		<return_time>19:00</return_time>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
