@@ -517,6 +517,22 @@ input.number {
 .radio input[type="checkbox"]:checked + span {
   background-position: 0 -18px;
 }
+.checkbox input[type="radio"] + span,
+.radio input[type="radio"] + span {
+  background-position: 0 -36px;
+}
+.checkbox input[type="radio"]:checked + span,
+.radio input[type="radio"]:checked + span {
+  background-position: 0 -54px;
+}
+.radio {
+  padding-top: 10px;
+  margin-bottom: 15px;
+}
+.radio label {
+  float: left;
+  text-align: left !important;
+}
 .form-control[readonly] {
   background-color: #ffffff;
   cursor: pointer;
