@@ -20,6 +20,15 @@ function validarVacio(campo){
 	}
 }
 
+function validateDate(campo) {
+      var RegExPattern = /^\d{2}\/\d{2}\/\d{4}$/;
+      if ((campo.match(RegExPattern)) && (campo!='')) {
+            return true;
+      } else {
+            return false;
+      }
+}
+
 $( document ).ready(function() { //DOM OK! 
 
   	//Lazy load
