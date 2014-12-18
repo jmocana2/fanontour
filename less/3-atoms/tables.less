@@ -33,9 +33,13 @@
 	}
 
 	tbody{
+
+		tr{
+			background-color: @colorW;
+		}
+
 		th{
-			background-color: #d9edf7;
-			text-align: center;
+			background-color: @colorK31;
 			text-transform: uppercase;
 			color: @colorK1;
 			text-shadow: 1px 1px @colorW;
@@ -68,14 +72,17 @@
 		text-align: center;
 		vertical-align: middle;
 		line-height: 29px !important;
-	}
 
-	tr:nth-child(2n){
-		background-color: @colorW;
+		textarea{
+			width: 100%;
+			height: 150px;
+			color: @colorK2;
+			padding: 5px;
+		}
 	}
 
 	tr:hover{
-		background-color: @colorK31;
+		background-color: @colorK4;		
 	}
 
 	&.t_border{
@@ -91,3 +98,78 @@
 		display: none;
 	}
 }
+
+.table-tour{
+
+	input{
+		width: 100px;
+		height: 29px;
+		text-align: center;
+	}
+
+	.booked{
+
+		width: 144px;		
+
+		.radio{			
+			margin: 0;			
+			
+			label{
+				width: 37px;
+				display: inline-block;
+				margin-left: 20px;	
+
+				&:first-child{
+					margin-left: 0;
+				}						
+			}
+		}				
+	}
+
+	.table-striped{
+
+		margin-bottom: 20px;
+
+		td{
+			padding: 12px;
+			.gradient(#f7f1af, #fcf179);
+			color: @colorK;
+			text-align: left;
+
+			p{
+				line-height: 1.4em;
+			}
+		}
+
+		tbody > tr:nth-child(odd) > td{
+			.gradient(#f7f1af, #fcf179);
+		}
+
+		.big-text{
+			font-size: 1.4em;
+			margin-left: 10px;
+			margin-bottom: 10px;
+		}
+	}
+
+	.table-next-tour-note{
+		td{			
+			.gradient(#f7f1af, #fcf179);
+		}
+
+		tbody > tr:nth-child(odd) > td{
+			.gradient(#f7f1af, #fcf179);
+		}
+	}
+
+	.table-last-tour-note{
+		td{			
+			.gradient(#f7aa74, #fc9044);
+		}
+
+		tbody > tr:nth-child(odd) > td{
+			.gradient(#f7aa74, #fc9044);
+		}
+	}
+}
+
