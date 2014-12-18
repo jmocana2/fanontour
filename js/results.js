@@ -218,7 +218,7 @@ $( document ).ready(function() { //DOM OK!
     function ticketResults(){
     	//************* CONFIG ***************			
 		var min_price = 0;
-		var max_price = 2000;
+		var max_price = 1000;
 		var itemsPage = 10;
 		var id_page = "#tickets";		
 		//************* CONFIG ***************
@@ -325,7 +325,7 @@ $( document ).ready(function() { //DOM OK!
     function hotelResults(){
     	//************* CONFIG ***************			
 		var min_price = 0;
-		var max_price = 2000;
+		var max_price = 1000;
 		var itemsPage = 10;
 		var id_page = "#hotels";
 		//************* CONFIG ***************
@@ -440,7 +440,7 @@ $( document ).ready(function() { //DOM OK!
     function flightResults(){
     	//************* CONFIG ***************
 		var min_price = 0;
-		var max_price = 4000;
+		var max_price = 1000;
 		var itemsPage = 10;
 		var id_page = "#flights";
 		//************* CONFIG ***************
@@ -552,9 +552,9 @@ $( document ).ready(function() { //DOM OK!
 	function activityResults(){			
 		//************* CONFIG ***************
 		var min_duration = 0;
-		var max_duration = 120;
+		var max_duration = 1440;
 		var min_price = 0;
-		var max_price = 600;
+		var max_price = 500;
 		var itemsPage = 10;
 		var id_page = "#activities";
 		//************* CONFIG ***************
@@ -722,7 +722,7 @@ $( document ).ready(function() { //DOM OK!
     function rentalcarResults(){
     	//************* CONFIG ***************
 		var min_price = 0;
-		var max_price = 4000;
+		var max_price = 1000;
 		var itemsPage = 10;
 		var id_page = "#rental-cars";
 		//************************************
