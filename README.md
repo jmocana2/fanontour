@@ -59,7 +59,7 @@ FanOnTour Repository
     <td>Results</td>
     <td class="ok"><a target="_blank" href="wireframes/results.png">wireframe</a></td>
     <td class="ok"><a target="_blank" href="design/results.png">png</a></td>
-  <td class="ok"><a target="_blank" href="01_results-tickets.html">01_results-tickets</a> <br><a target="_blank" href="01_results-hotels.html">01_results-hotels</a> <br><a target="_blank" href="01_results-flights.html">01_results-flights</a> <br><a target="_blank" href="01_results-activities.html">01_results-activities</a> <br><a target="_blank" href="01_results-restaurants.html">01_results-restaurants</a> <br><a target="_blank" href="01_results-rental-cars.html">01_results-rental-cars</a> <br><a target="_blank" href="01_results-customized-tour.html">01_results-customized-tour.html</a></td>
+  <td class="ok"><a target="_blank" href="01_results-tickets.html?customized_01=true">01_results-tickets</a> <br><a target="_blank" href="01_results-hotels.html?customized_02=true">01_results-hotels</a> <br><a target="_blank" href="01_results-flights.html?customized_03=true">01_results-flights</a> <br><a target="_blank" href="01_results-activities.html?customized_04=true">01_results-activities</a> <br><a target="_blank" href="01_results-restaurants.html?customized_05=true">01_results-restaurants</a> <br><a target="_blank" href="01_results-rental-cars.html?customized_06=true">01_results-rental-cars</a> <br><a target="_blank" href="01_results-customized-tour.html?customized_00=true">01_results-customized-tour.html</a></td>
   <td class="ok">&nbsp;</td>
   </tr>
   <tr>
@@ -147,7 +147,7 @@ FanOnTour Repository
     <td>Login</td>
     <td class="ok"><a class="fancybox" target="_blank" href="diseno//05_user/grupos/user-perfil-grupos."></a></td>
     <td class="ok"><a target="_blank" href="design/03_log-in.png">png</a></td>
-  <td class="validacion"><a target="_blank" href="03_log-in.html">HTML5</a></td>
+  <td class="ok"><a target="_blank" href="03_log-in.html">HTML5</a></td>
   <td class="ok">&nbsp;</td>
   </tr>
   <tr>
@@ -155,7 +155,7 @@ FanOnTour Repository
     <td>Register</td>
     <td class="ok"><a class="fancybox" target="_blank" href="diseno//05_user/subir-video."></a></td>
     <td class="ok"><a target="_blank" href="design/04_register.png">png</a></td>
-  <td class="validacion"><a target="_blank" href="04_register.html">HTML5</a></td>
+  <td class="ok"><a target="_blank" href="04_register.html">HTML5</a></td>
   <td class="ok">&nbsp;</td>
   </tr>
   <tr>
@@ -163,7 +163,7 @@ FanOnTour Repository
     <td>My profile</td>
     <td class="ok"><a class="fancybox" target="_blank" href="wireframes/my-profile.png">wireframe</a></td>
     <td class="ok"><a target="_blank" href="design/05_my-profile.png">png</a></td>
-  <td class="validacion"><a target="_blank" href="05_my-profile.html">HTML5</a></td>
+  <td class="ok"><a target="_blank" href="05_my-profile.html">HTML5</a></td>
   <td class="ok">&nbsp;</td>
   </tr>  
   <tr>
@@ -171,7 +171,7 @@ FanOnTour Repository
     <td>My FanFriends</td>
     <td class="ok"><a class="fancybox" target="_blank" href="wireframes/my-fanfriends.png">wireframe</a></td>
     <td class="ok"><a target="_blank" href="design/05_my-fanfriends.png">png</a></td>
-  <td class="validacion"><a target="_blank" href="05_my-fanfriends.html">HTML5</a></td>
+  <td class="ok"><a target="_blank" href="05_my-fanfriends.html">HTML5</a></td>
   <td class="ok">&nbsp;</td>
   </tr>
   <tr>
@@ -179,7 +179,7 @@ FanOnTour Repository
     <td>My next tours</td>
     <td class="ok"><a class="fancybox" target="_blank" href="wireframes/my-next-tours.png">wireframe</a></td>
     <td class="ok"><a target="_blank" href="design/05_my-next-tours.png">png</a></td>
-  <td class="validacion"><a target="_blank" href="05_my-next-tours.html">HTML5</a></td>
+  <td class="ok"><a target="_blank" href="05_my-next-tours.html">HTML5</a></td>
   <td class="ok">&nbsp;</td>
   </tr>
   <tr>
@@ -187,7 +187,7 @@ FanOnTour Repository
     <td>My last Tours</td>
     <td class="ok"><a class="fancybox" target="_blank" href="wireframes/my-last-tours.png">wireframe</a></td>
     <td class="ok"><a target="_blank" href="design/05_my-last-tours.png">png</a></td>
-  <td class="validacion"><a target="_blank" href="05_my-last-tours.html">HTML5</a></td>
+  <td class="ok"><a target="_blank" href="05_my-last-tours.html">HTML5</a></td>
   <td class="ok">&nbsp;</td>
   </tr>
   <tr>
@@ -195,7 +195,7 @@ FanOnTour Repository
     <td>My tour alerts</td>
     <td class="ok"><a class="fancybox" target="_blank" href="wireframes/my-tour-alerts.png">wireframe</a></td>
     <td class="ok"><a target="_blank" href="design/05_my-tour-alerts.png">png</a></td>
-  <td class="validacion"><a target="_blank" href="05_my-tour-alerts.html">HTML5</a></td>
+  <td class="ok"><a target="_blank" href="05_my-tour-alerts.html">HTML5</a></td>
   <td class="ok">&nbsp;</td>
   </tr> 
 </table>
