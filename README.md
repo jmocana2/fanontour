@@ -155,7 +155,7 @@ FanOnTour Repository
     <td>Register</td>
     <td class="ok"><a class="fancybox" target="_blank" href="diseno//05_user/subir-video."></a></td>
     <td class="ok"><a target="_blank" href="design/04_register.png">png</a></td>
-  <td class="ok"><a target="_blank" href="04_register.html">HTML5</a></td>
+  <td class="ok"><a target="_blank" href="04_register.html">Register</a><br><a target="_blank" href="04_register-mail.html">Register confirmation</a></td>
   <td class="ok">&nbsp;</td>
   </tr>
   <tr>
