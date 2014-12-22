@@ -89,10 +89,10 @@
 											<form id="tab-flights" role="form" action="#" method="post">
 												<div class="form-group padding-v-10">
 													<label for="flight-field-01">From</label>
-												   	<input type="text" class="form-control city_ori" id="flight-field-01" placeholder="City name">
+												   	<input type="text" name="city_origin" class="form-control city_ori" id="flight-field-01" placeholder="City name">
 												   	<div class="form-group">
 												   		<label for="flight-field-02">To</label>
-												   		<input type="text" class="form-control" id="flight-field-02" placeholder="City name" required>
+												   		<input type="text" name="city_destiny" class="form-control" id="flight-field-02" placeholder="City name" required>
 												   	</div>											    
 												    <div class="f-left">											    
 													    <label for="datetimepicker_03">Outbund date</label>
@@ -118,6 +118,7 @@
 			                                          	<label class="control-label col-sm-6">
 			                                        		<input type="radio" name="one_way" id="one_way" class="small-field-w small-field-h" value="false"><span></span>One way</label> 
 		                                          	</div>
+		                                          	<input type="hidden" name="customized_03" value="true">
 												    <div class="text-center">
 												    	<button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
 													</div>
@@ -130,7 +131,7 @@
 										<div class="panel-box-body panel-collapse collapse in" id="collapse2">
 											<div class="row-padding-v-small">
 												<label>Price <span>(&euro;)</span></label>
-												<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="1" data-slider-value="[0,4000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
+												<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="1000" data-slider-step="1" data-slider-value="[0,1000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
 											</div>
 											<div class="row-padding-mid">
 												<div class="checkbox filter-scales">
@@ -151,10 +152,10 @@
 										<label>Sort by</label>
 									    <div class="dropdown dropdown-default">
 										  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-										  <input type="text" class="sort-field-01 form-control" data-toggle="dropdown" placeholder="Select order" data-value="">
+										  <input type="text" class="sort-field-01 form-control" data-toggle="dropdown" placeholder="Select order" data-value="" autocomplete="off">
 										  <ul class="dropdown-menu" role="menu" >
+										    <li><a href="#" class="price-asc" rel="nofollow">Price (Low to High)</a></li>
 										    <li><a href="#" class="price-desc" rel="nofollow">Price (High to Low)</a></li>
-										    <li><a href="#" class="price-asc" rel="nofollow">Price (Low to High)</a></li>						    
 										  </ul>
 										</div>
 								
@@ -163,7 +164,7 @@
 											<label>Items per page:</label>
 											<div class="dropdown dropdown-default dropdown-small">
 											  <a class="shape-arrow" href="#"><span></span></a>
-											  <input type="text" class="items-field-01 form-control" data-toggle="dropdown" value="10" >
+											  <input type="text" class="items-field-01 form-control" data-toggle="dropdown" value="10" autocomplete="off" >
 											  <ul class="dropdown-menu" role="menu" >
 											    <li><a href="#" rel="nofollow">5</a></li>
 											    <li><a href="#" rel="nofollow">10</a></li>

@@ -90,14 +90,14 @@
 												<div class="padding-v-10">													
 												    <div class="form-group">
 														<label for="restaurant-field-02">City</label>
-											   			<input type="text" class="form-control" id="restaurant-field-02" placeholder="City name">
+											   			<input type="text" name="city_restaurant" class="form-control" id="restaurant-field-02" placeholder="City name">
 													</div>
 													<label for="restaurant-field-01">Restaurant</label>
-												   	<input type="text" class="form-control" id="restaurant-field-01" placeholder="Restaurant name">	   												    
+												   	<input type="text"  name="restaurant" class="form-control" id="restaurant-field-01" placeholder="Restaurant name">	   												    
 												    <label for="restaurant-field-03">Cuisine</label>
 												    <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
 													  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-													  <input type="text" class="form-control" id="restaurant-field-03" placeholder="Cuisine type" data-toggle="dropdown" >
+													  <input type="text" name="cousine" class="form-control" id="restaurant-field-03" placeholder="Cuisine type" autocomplete="off" data-toggle="dropdown" >
 													  <ul class="dropdown-menu" role="menu" aria-labelledby="restaurant-field-03">
 													    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
 													    <li class="col-sm-3"><a href="#" rel="nofollow">Italian</a></li>
@@ -133,6 +133,7 @@
 													    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
 													  </ul>
 													</div>
+													<input type="hidden" name="customized_05" value="true">
 												    <div class="text-center">
 												    	<button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
 													</div>
@@ -166,7 +167,7 @@
 											<label>Items per page:</label>
 											<div class="dropdown dropdown-default dropdown-small">
 											  <a class="shape-arrow" href="#"><span></span></a>
-											  <input type="text" class="items-field-01 form-control" data-toggle="dropdown" value="10" >
+											  <input type="text" class="items-field-01 form-control" data-toggle="dropdown" value="10" autocomplete="off" >
 											  <ul class="dropdown-menu" role="menu" >
 											    <li><a href="#" rel="nofollow">5</a></li>
 											    <li><a href="#" rel="nofollow">10</a></li>

@@ -90,13 +90,13 @@
 												<div class="form-group padding-v-10">
 													<div class="form-group">
 														<label for="car-field-01">City</label>
-														<input type="text" class="form-control small-field-h" id="car-field-01" placeholder="City name" required>				
+														<input type="text" name="city_car" class="form-control small-field-h" id="car-field-01" placeholder="City name" required>				
 													</div>
 													<div class="form-group">				
 														<label for="car-field-02">Location</label>
 														<div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
 															  <a class="shape-arrow" data-toggle="dropdown" href="#"><span></span></a>
-															  <input type="text" class="form-control small-field-h" id="car-field-02" placeholder="Please select"  data-toggle="dropdown" required>
+															  <input type="text" name="location" class="form-control small-field-h" id="car-field-02" placeholder="Please select" autocomplete="off"  data-toggle="dropdown" required>
 															  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-02">
 															    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
 															    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
@@ -119,13 +119,13 @@
 			                                    	<div class="conditionsAccepted d-none">
 			                                    		<div class="form-group">		                                    	
 															<label for="car-field-03">City</label>
-															<input type="text" class="form-control small-field-h" id="car-field-03" placeholder="City name">	
+															<input type="text" name="city_car_return" class="form-control small-field-h" id="car-field-03" placeholder="City name">	
 														</div>
 														<div class="form-group">	
 															<label for="car-field-04">Location</label>
 															<div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
 																  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-																  <input type="text" class="form-control small-field-h" id="car-field-04" placeholder="Please select"  data-toggle="dropdown">
+																  <input type="text" name="location_return" class="form-control small-field-h" id="car-field-04" placeholder="Please select" autocomplete="off"  data-toggle="dropdown">
 																  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-04">
 																    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
 																    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
@@ -152,7 +152,7 @@
 															<label for="car-field-08">Time</label>
 															<div class="dropdown dropdown-form small-field-w form-group">
 																  <a class="shape-arrow"  href="#" data-toggle="dropdown"><span></span></a>
-																  <input type="text" class="form-control small-field-h" id="car-field-08" data-toggle="dropdown" required>
+																  <input type="text" name="pick_up_hour" class="form-control small-field-h" id="car-field-08" data-toggle="dropdown" autocomplete="off" required>
 																  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-08">
 																    <li><a href="#" rel="nofollow">11</a></li>
 																    <li><a href="#" rel="nofollow">12</a></li>												    
@@ -162,7 +162,7 @@
 															<label for="car-field-09" class="sr-only">Minute</label>
 															<div class="dropdown dropdown-form small-field-w form-group">
 																  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-																  <input type="text" class="form-control small-field-h" id="car-field-09" data-toggle="dropdown" required>
+																  <input type="text" name="pick_up_minute" class="form-control small-field-h" id="car-field-09" data-toggle="dropdown" autocomplete="off" required>
 																  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-09">
 																    <li><a href="#" rel="nofollow">00</a></li>
 																    <li><a href="#" rel="nofollow">15</a></li>
@@ -183,7 +183,7 @@
 														<label for="car-field-11">Time</label>
 														<div class="dropdown dropdown-form small-field-w form-group">
 															  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-															  <input type="text" class="form-control small-field-h" id="car-field-11" data-toggle="dropdown" required>
+															  <input type="text" name="drop_off_hour" class="form-control small-field-h" id="car-field-11" data-toggle="dropdown" autocomplete="off" required>
 															  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-11">
 															    <li><a href="#" rel="nofollow">11</a></li>
 															    <li><a href="#" rel="nofollow">12</a></li>												    
@@ -193,7 +193,7 @@
 														<label for="car-field-12" class="sr-only">Minute</label>
 														<div class="dropdown dropdown-form small-field-w form-group">
 															  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-															  <input type="text" class="form-control small-field-h" id="car-field-12" data-toggle="dropdown" required>
+															  <input type="text" name="drop_off_minute" class="form-control small-field-h" id="car-field-12" data-toggle="dropdown" autocomplete="off" required>
 															  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-12">
 															    <li><a href="#" rel="nofollow">00</a></li>
 															    <li><a href="#" rel="nofollow">15</a></li>
@@ -211,10 +211,11 @@
 			                                          	<div class="positionr">
 			                                          		<div class="age-field form-group">
 			                                          			<label for="car-field13">Age</label>
-													   			<input type="text" class="form-control small-field-w small-field-h" id="car-field13">
+													   			<input type="text" name="age" class="form-control small-field-w small-field-h" id="car-field13">
 													   		</div>
 													   	</div>
-			                                    	</div>	
+			                                    	</div>
+			                                    	<input type="hidden" name="customized_06" value="true">	
 												    <div class="text-center">
 												    	<button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
 													</div>
@@ -227,12 +228,12 @@
 										<div class="panel-box-body panel-collapse collapse in" id="collapse2">
 											<div class="row-padding-v-small">
 												<label>Price <span>(&euro;)</span></label>
-												<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="4000" data-slider-step="1" data-slider-value="[0,4000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
+												<input type="text" class="price-slider span2" value="" data-slider-min="0" data-slider-max="1000" data-slider-step="1" data-slider-value="[0,1000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show" data-slider-formater="Euros" >
 												<div class="form-group filter-petrol">	
 													<label for="car-field-04">Petrol</label>
 													<div class="dropdown dropdown-form dropdown-simple">
 														  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-														  <input type="text" class="form-control" id="car-field-04" placeholder="Please select"  data-toggle="dropdown">
+														  <input type="text" class="form-control" id="car-field-04" placeholder="Please select" autocomplete="off"  data-toggle="dropdown">
 														  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-04">
 														    <li><a href="#" rel="nofollow">Full to full</a></li>
 														    <li><a href="#" rel="nofollow">Pre-purchase (Refunds)</a></li>
@@ -254,10 +255,10 @@
 										<label>Sort by</label>
 									    <div class="dropdown dropdown-default">
 										  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
-										  <input type="text" class="sort-field-01 form-control" data-toggle="dropdown" placeholder="Select order" data-value="">
+										  <input type="text" class="sort-field-01 form-control" data-toggle="dropdown" placeholder="Select order" autocomplete="off" data-value="">
 										  <ul class="dropdown-menu" role="menu" >
-										    <li><a href="#" class="price-desc" rel="nofollow">Price (High to Low)</a></li>
-										    <li><a href="#" class="price-asc" rel="nofollow">Price (Low to High)</a></li>	      									    
+										    <li><a href="#" class="price-asc" rel="nofollow">Price (Low to High)</a></li>
+										    <li><a href="#" class="price-desc" rel="nofollow">Price (High to Low)</a></li>	
 										  </ul>
 										</div>
 								
@@ -266,7 +267,7 @@
 											<label>Items per page:</label>
 											<div class="dropdown dropdown-default dropdown-small">
 											  <a class="shape-arrow" href="#"><span></span></a>
-											  <input type="text" class="items-field-01 form-control" data-toggle="dropdown" value="10" >
+											  <input type="text" class="items-field-01 form-control" data-toggle="dropdown" value="10" autocomplete="off">
 											  <ul class="dropdown-menu" role="menu" >
 											    <li><a href="#" rel="nofollow">5</a></li>
 											    <li><a href="#" rel="nofollow">10</a></li>
@@ -281,11 +282,8 @@
 											</ul>
 										</div>									
 								</div>
-								<div class="results">
-									
-									<div class="panel-box-block">
-										<p>Pick up date: <strong>10/11/2014 (11:20)</strong> | Drop off date: <strong>12/11/2014 (11:20)</strong></p>
-									</div>
+								<div class="results">								
+								
 									
 									<ul class="list_results">
 										<!-- RENTAL CARS RESULTS -->
