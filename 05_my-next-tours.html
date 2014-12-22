@@ -85,7 +85,7 @@
 					
 					<div class="row padding-v-20">					
 
-						<div class="panel-group" id="accordion">
+						<div class="panel-group panel-highlight" id="accordion">
 						  <div class="panel panel-default">
 						    <div class="panel-heading">
 						      <h4 class="panel-title">
@@ -96,6 +96,8 @@
 						    </div>
 						    <div id="collapseOne" class="panel-collapse collapse in">
 						      <div class="panel-body">
+						      <form action="#" method="get">
+						        <button class="btn btn-search btn-save-table f-right margin-bottom-small">Save table</button>
 						      	<div class="table-responsive">
 									<table class="table table-tour t_border" sumary="user alerts">
 										<thead>
@@ -103,71 +105,143 @@
 												<th scope="col">Name</th>
 												<th scope="col">Price <span class="fanontour-icon icon-icons-fanontour_money"></span></th>
 												<th scope="col">Date <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></th>
+												<th scope="col">Booked <span class="glyphicon glyphicon-save" aria-hidden="true"></span></th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_entry"></span> Tickets</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_entry"></span> Tickets</th>
 											</tr>
 											<tr>	
 												<td>Madona concert</td>
 												<td>134&euro;</td>		
 												<td>13/03/2015</td>
+												<td class="booked">													
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_01" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_01" value="false"><span></span>No</label> 
+		                                          	</div> 
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_hotel"></span> Hotels</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_hotel"></span> Hotels</th>
 											</tr>
 											<tr>												
 												<td>Riu London</td>
 												<td>69&euro;</td>		
 												<td>15/03/2015</td>
+												<td class="booked">
+													<strong>Yes</strong>
+												</td>
 											</tr>
 											<tr>												
 												<td>Riu London</td>
 												<td>69&euro;</td>		
 												<td>15/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_02" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_02" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>												
 												<td>Riu London</td>
 												<td>69&euro;</td>		
 												<td>15/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_03" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_03" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_flight"></span> Flights</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_flight"></span> Flights</th>
 											</tr>
 											<tr>												
 												<td>Madrid to London</td>
 												<td>483&euro;</td>		
 												<td>17/03/2015</td>
+												<td class="booked">
+													<strong>Yes</strong>
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_activity"></span> Activities</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_activity"></span> Activities</th>
 											</tr>
 											<tr>												
 												<td>Skydiving</td>
 												<td>23&euro;</td>		
-												<td>19/03/2015</td>
+												<td>
+													<a class="btn-date" href="#" rel="nofollow">select date</a>
+													<input class="date hide" type="text" name="date" placeholder="dd/mm/yyyy">
+												</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_05" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_05" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>												
 												<td>Skydiving</td>
 												<td>23&euro;</td>		
-												<td>19/03/2015</td>
+												<td>
+													<a class="btn-date" href="#" rel="nofollow">select date</a>
+													<input class="date hide" type="text" name="date" placeholder="dd/mm/yyyy">
+												</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_05" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_05" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_restaurant"></span> Restaurants</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_restaurant"></span> Restaurants</th>
 											</tr>
 											<tr>												
 												<td>London restaurant</td>
 												<td>23&euro;</td>		
-												<td>21/03/2015</td>
+												<td>
+													<a class="btn-date" href="#" rel="nofollow">select date</a>
+													<input class="date hide" type="text" name="date" placeholder="dd/mm/yyyy">
+												</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_06" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_06" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_cars"></span> Rental cars</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_cars"></span> Rental cars</th>
 											</tr>
 											<tr>												
 												<td>Renault megane</td>
 												<td>83&euro;</td>		
 												<td>23/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_07" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_07" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 										</tbody>										
 									</table>
@@ -186,13 +260,52 @@
 									
 										
 									</ul>
-								</div>							        
+								</div>
+								</form>							        
 						      </div>
 						      <div class="table-responsive fanontour-mod-information">
 									<table class="table table-tour t_border" sumary="user alerts">										
 										<tbody>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day1 <span>(13/03/2015)</span></th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> No date selected</th>
+											</tr>
+											<tr>	
+												<td><span class="fanontour-icon icon-icons-fanontour_restaurant"></span> Restaurant</td>
+												<td>La parrilla</td>
+												<td class="description">
+													<ul class="list-inline">														
+														<li>Address: <strong>C/London Nº12</strong></li>
+														<li>City: <strong>London</strong></li>
+														<li>Cousine: <strong>Spanish</strong></li>
+													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day1 <span>(13/03/2015)</span></th>
 											</tr>
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_flight"></span> Flight</td>
@@ -202,8 +315,32 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Departure time: <strong>10:00 h.</strong></li>
 														<li>Transit: <strong>Yes</strong></li>														
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -219,12 +356,21 @@
 														<li><small><span class="glyphicon glyphicon-ok"></span></small> <strong>air conditioning</strong>, </li>
 														<li><small><span class="glyphicon glyphicon-ok"></span></small> <strong>manual transmission</strong>, </li>			
 														<li>insurance: <strong>at any risk</strong></li>														
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">													
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day2 <span>(14/03/2015)</span></th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day2 <span>(14/03/2015)</span></th>
 											</tr>											
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_activity"></span> Activity</td>
@@ -234,8 +380,32 @@
 														<li>Price: <strong>134&euro;</strong></li>														
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Duration: <strong>120 minutes approx.</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -246,12 +416,36 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Type of room: <strong>Simple</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day3 <span>(15/03/2015)</span></th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day3 <span>(15/03/2015)</span></th>
 											</tr>
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_entry"></span> Ticket</td>
@@ -261,8 +455,32 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>City: <strong>London</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -273,12 +491,21 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Type of room: <strong>Simple</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">													
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day4 <span>(16/03/2015)</span></th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day4 <span>(16/03/2015)</span></th>
 											</tr>
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_activity"></span> Activity</td>
@@ -288,8 +515,32 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Duration: <strong>120 minutes approx.</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -300,8 +551,32 @@
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>City: <strong>London</strong></li>
 														<li>Cousine: <strong>Spanish</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -312,12 +587,36 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Type of room: <strong>Simple</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day5 (17/03/2015)</th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day5 (17/03/2015)</th>
 											</tr>
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_flight"></span> Flight</td>
@@ -327,8 +626,32 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Date: <strong>13/03/2015 <em>10:00h</em></strong></li>
 														<li>Transit: <strong>Yes</strong></li>														
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>											
 										</tbody>										
@@ -346,6 +669,8 @@
 						    </div>
 						    <div id="collapseTwo" class="panel-collapse collapse">
 						      <div class="panel-body">
+						      	<form action="#" method="get">
+						        <button class="btn btn-search f-right margin-bottom-small">Save table</button>
 						      	<div class="table-responsive">
 									<table class="table table-tour t_border" sumary="user alerts">
 										<thead>
@@ -353,71 +678,134 @@
 												<th scope="col">Name</th>
 												<th scope="col">Price <span class="fanontour-icon icon-icons-fanontour_money"></span></th>
 												<th scope="col">Date <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></th>
+												<th scope="col">Booked <span class="glyphicon glyphicon-save" aria-hidden="true"></span></th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_entry"></span> Tickets</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_entry"></span> Tickets</th>
 											</tr>
 											<tr>	
 												<td>Madona concert</td>
 												<td>134&euro;</td>		
 												<td>13/03/2015</td>
+												<td class="booked">													
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_01" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_01" value="false"><span></span>No</label> 
+		                                          	</div> 
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_hotel"></span> Hotels</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_hotel"></span> Hotels</th>
 											</tr>
 											<tr>												
 												<td>Riu London</td>
 												<td>69&euro;</td>		
 												<td>15/03/2015</td>
+												<td class="booked">
+													<strong>Yes</strong>
+												</td>
 											</tr>
 											<tr>												
 												<td>Riu London</td>
 												<td>69&euro;</td>		
 												<td>15/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_02" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_02" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>												
 												<td>Riu London</td>
 												<td>69&euro;</td>		
 												<td>15/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_03" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_03" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_flight"></span> Flights</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_flight"></span> Flights</th>
 											</tr>
 											<tr>												
 												<td>Madrid to London</td>
 												<td>483&euro;</td>		
 												<td>17/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_04" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_04" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_activity"></span> Activities</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_activity"></span> Activities</th>
 											</tr>
 											<tr>												
 												<td>Skydiving</td>
 												<td>23&euro;</td>		
 												<td>19/03/2015</td>
+												<td class="booked">
+													<strong>Yes</strong>
+												</td>
 											</tr>
 											<tr>												
 												<td>Skydiving</td>
 												<td>23&euro;</td>		
 												<td>19/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_05" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_05" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_restaurant"></span> Restaurants</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_restaurant"></span> Restaurants</th>
 											</tr>
 											<tr>												
 												<td>London restaurant</td>
 												<td>23&euro;</td>		
 												<td>21/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_06" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_06" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_cars"></span> Rental cars</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_cars"></span> Rental cars</th>
 											</tr>
 											<tr>												
 												<td>Renault megane</td>
 												<td>83&euro;</td>		
 												<td>23/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_07" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_07" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 										</tbody>										
 									</table>
@@ -436,13 +824,52 @@
 									
 										
 									</ul>
-								</div>							        
+								</div>
+								</form>							        
 						      </div>
 						      <div class="table-responsive fanontour-mod-information">
 									<table class="table table-tour t_border" sumary="user alerts">										
 										<tbody>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day1 <span>(13/03/2015)</span></th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> No date selected</th>
+											</tr>
+											<tr>	
+												<td><span class="fanontour-icon icon-icons-fanontour_restaurant"></span> Restaurant</td>
+												<td>La parrilla</td>
+												<td class="description">
+													<ul class="list-inline">														
+														<li>Address: <strong>C/London Nº12</strong></li>
+														<li>City: <strong>London</strong></li>
+														<li>Cousine: <strong>Spanish</strong></li>
+													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day1 <span>(13/03/2015)</span></th>
 											</tr>
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_flight"></span> Flight</td>
@@ -452,8 +879,32 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Departure time: <strong>10:00 h.</strong></li>
 														<li>Transit: <strong>Yes</strong></li>														
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -469,12 +920,21 @@
 														<li><small><span class="glyphicon glyphicon-ok"></span></small> <strong>air conditioning</strong>, </li>
 														<li><small><span class="glyphicon glyphicon-ok"></span></small> <strong>manual transmission</strong>, </li>			
 														<li>insurance: <strong>at any risk</strong></li>														
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">													
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day2 <span>(14/03/2015)</span></th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day2 <span>(14/03/2015)</span></th>
 											</tr>											
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_activity"></span> Activity</td>
@@ -484,8 +944,32 @@
 														<li>Price: <strong>134&euro;</strong></li>														
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Duration: <strong>120 minutes approx.</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -496,12 +980,36 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Type of room: <strong>Simple</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day3 <span>(15/03/2015)</span></th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day3 <span>(15/03/2015)</span></th>
 											</tr>
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_entry"></span> Ticket</td>
@@ -511,8 +1019,32 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>City: <strong>London</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -523,12 +1055,21 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Type of room: <strong>Simple</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">													
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day4 <span>(16/03/2015)</span></th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day4 <span>(16/03/2015)</span></th>
 											</tr>
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_activity"></span> Activity</td>
@@ -538,8 +1079,32 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Duration: <strong>120 minutes approx.</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -550,8 +1115,32 @@
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>City: <strong>London</strong></li>
 														<li>Cousine: <strong>Spanish</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -562,12 +1151,36 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Type of room: <strong>Simple</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day5 (17/03/2015)</th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day5 (17/03/2015)</th>
 											</tr>
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_flight"></span> Flight</td>
@@ -577,8 +1190,32 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Date: <strong>13/03/2015 <em>10:00h</em></strong></li>
 														<li>Transit: <strong>Yes</strong></li>														
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>											
 										</tbody>										
@@ -596,6 +1233,8 @@
 						    </div>
 						    <div id="collapsethree" class="panel-collapse collapse">
 						      <div class="panel-body">
+						      	<form action="#" method="get">
+						        <button class="btn btn-search f-right margin-bottom-small">Save table</button>
 						      	<div class="table-responsive">
 									<table class="table table-tour t_border" sumary="user alerts">
 										<thead>
@@ -603,71 +1242,134 @@
 												<th scope="col">Name</th>
 												<th scope="col">Price <span class="fanontour-icon icon-icons-fanontour_money"></span></th>
 												<th scope="col">Date <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></th>
+												<th scope="col">Booked <span class="glyphicon glyphicon-save" aria-hidden="true"></span></th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_entry"></span> Tickets</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_entry"></span> Tickets</th>
 											</tr>
 											<tr>	
 												<td>Madona concert</td>
 												<td>134&euro;</td>		
 												<td>13/03/2015</td>
+												<td class="booked">													
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_01" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_01" value="false"><span></span>No</label> 
+		                                          	</div> 
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_hotel"></span> Hotels</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_hotel"></span> Hotels</th>
 											</tr>
 											<tr>												
 												<td>Riu London</td>
 												<td>69&euro;</td>		
 												<td>15/03/2015</td>
+												<td class="booked">
+													<strong>Yes</strong>
+												</td>
 											</tr>
 											<tr>												
 												<td>Riu London</td>
 												<td>69&euro;</td>		
 												<td>15/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_02" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_02" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>												
 												<td>Riu London</td>
 												<td>69&euro;</td>		
 												<td>15/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_03" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_03" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_flight"></span> Flights</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_flight"></span> Flights</th>
 											</tr>
 											<tr>												
 												<td>Madrid to London</td>
 												<td>483&euro;</td>		
 												<td>17/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_04" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_04" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_activity"></span> Activities</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_activity"></span> Activities</th>
 											</tr>
 											<tr>												
 												<td>Skydiving</td>
 												<td>23&euro;</td>		
 												<td>19/03/2015</td>
+												<td class="booked">
+													<strong>Yes</strong>
+												</td>
 											</tr>
 											<tr>												
 												<td>Skydiving</td>
 												<td>23&euro;</td>		
 												<td>19/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_05" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_05" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_restaurant"></span> Restaurants</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_restaurant"></span> Restaurants</th>
 											</tr>
 											<tr>												
 												<td>London restaurant</td>
 												<td>23&euro;</td>		
 												<td>21/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_06" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_06" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="fanontour-icon icon-icons-fanontour_cars"></span> Rental cars</th>
+												<th scope="row" colspan="4"><span class="fanontour-icon icon-icons-fanontour_cars"></span> Rental cars</th>
 											</tr>
 											<tr>												
 												<td>Renault megane</td>
 												<td>83&euro;</td>		
 												<td>23/03/2015</td>
+												<td class="booked">
+													<div class="radio radio-message"><!-- has-error -->
+			                                       	    <label class="control-label">
+			                                        		<input type="radio" name="booked_07" value="false"><span></span>Yes</label>
+			                                          	<label class="control-label">
+			                                        		<input type="radio" name="booked_07" value="false"><span></span>No</label> 
+		                                          	</div>
+												</td>
 											</tr>
 										</tbody>										
 									</table>
@@ -686,13 +1388,52 @@
 									
 										
 									</ul>
-								</div>							        
+								</div>
+								</form>							        
 						      </div>
 						      <div class="table-responsive fanontour-mod-information">
 									<table class="table table-tour t_border" sumary="user alerts">										
 										<tbody>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day1 <span>(13/03/2015)</span></th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> No date selected</th>
+											</tr>
+											<tr>	
+												<td><span class="fanontour-icon icon-icons-fanontour_restaurant"></span> Restaurant</td>
+												<td>La parrilla</td>
+												<td class="description">
+													<ul class="list-inline">														
+														<li>Address: <strong>C/London Nº12</strong></li>
+														<li>City: <strong>London</strong></li>
+														<li>Cousine: <strong>Spanish</strong></li>
+													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day1 <span>(13/03/2015)</span></th>
 											</tr>
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_flight"></span> Flight</td>
@@ -702,8 +1443,32 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Departure time: <strong>10:00 h.</strong></li>
 														<li>Transit: <strong>Yes</strong></li>														
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -719,12 +1484,21 @@
 														<li><small><span class="glyphicon glyphicon-ok"></span></small> <strong>air conditioning</strong>, </li>
 														<li><small><span class="glyphicon glyphicon-ok"></span></small> <strong>manual transmission</strong>, </li>			
 														<li>insurance: <strong>at any risk</strong></li>														
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">													
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day2 <span>(14/03/2015)</span></th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day2 <span>(14/03/2015)</span></th>
 											</tr>											
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_activity"></span> Activity</td>
@@ -734,8 +1508,32 @@
 														<li>Price: <strong>134&euro;</strong></li>														
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Duration: <strong>120 minutes approx.</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -746,12 +1544,36 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Type of room: <strong>Simple</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day3 <span>(15/03/2015)</span></th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day3 <span>(15/03/2015)</span></th>
 											</tr>
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_entry"></span> Ticket</td>
@@ -761,8 +1583,32 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>City: <strong>London</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -773,12 +1619,21 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Type of room: <strong>Simple</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">													
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day4 <span>(16/03/2015)</span></th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day4 <span>(16/03/2015)</span></th>
 											</tr>
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_activity"></span> Activity</td>
@@ -788,8 +1643,32 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Duration: <strong>120 minutes approx.</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -800,8 +1679,32 @@
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>City: <strong>London</strong></li>
 														<li>Cousine: <strong>Spanish</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>	
@@ -812,12 +1715,36 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Address: <strong>C/London Nº12</strong></li>
 														<li>Type of room: <strong>Simple</strong></li>
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>
 											<tr>
-												<th scope="row" colspan="3"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day5 (17/03/2015)</th>
+												<th scope="row" colspan="4"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Day5 (17/03/2015)</th>
 											</tr>
 											<tr>	
 												<td><span class="fanontour-icon icon-icons-fanontour_flight"></span> Flight</td>
@@ -827,8 +1754,32 @@
 														<li>Price: <strong>134&euro;</strong></li>
 														<li>Date: <strong>13/03/2015 <em>10:00h</em></strong></li>
 														<li>Transit: <strong>Yes</strong></li>														
-														<li>Found in: <strong><a href="#">seatweave</a></strong></li>
+														
 													</ul>
+												</td>
+												<td><a class="btn-note big-text" href="#" rel="nofollow" title="See comments"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr class="hide">
+												<td colspan="4">
+													<table class="table-striped table-next-tour-note">
+														<thead class="hide">
+															<tr>
+																<th>Comments</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+															<tr>
+																<td><p class="f-right big-text"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span></p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda, expedita laboriosam ad recusandae voluptatum facere molestias dolores, autem excepturi, maxime eius! Autem aut facere dignissimos, libero, nam expedita dicta.</p></td>
+															</tr>
+														</tbody>														
+													</table>
+													<form action="#" method="get">
+														<textarea name="note" id="note_01" cols="30" rows="10"></textarea>
+														<button class="btn btn-search">New comment</button>
+													</form>
 												</td>
 											</tr>											
 										</tbody>										
