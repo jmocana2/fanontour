@@ -20,12 +20,16 @@
 					color: @colorG1;
 				}
 			}
+
+			&.text-right{
+				text-align: right;
+			}
 		}
 
 		tr{
 			&:hover{
 				td{
-					background-color: @colorK2;
+					background-color: @colorK2 !important;
 					color: @colorW;
 				}
 			}
@@ -90,6 +94,14 @@
 			border: 1px @colorK31 solid;
 		}
 	}
+}
+
+.table-striped{
+	tr:hover{
+		td{
+			background-color: @colorK4 !important;
+		}
+	}	
 }
 
 //table-alerts
