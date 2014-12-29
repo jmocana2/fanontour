@@ -1,34 +1,50 @@
  <?php
  	$flights = simplexml_load_file('xml/results/flights.xml'); 
  	foreach ($flights->flight as $flight):
-        $route=$flight->route; 
+        $route1=$flight->route1; 
+    	$route2=$flight->route2;
     	$image=$flight->image;
-        $outbund_time=$flight->outbund_time;
-        $return_time=$flight->return_time; 
-        $scales=(int)$flight['scale'];  
+        $outbund_time1=$flight->outbund_time1;
+        $return_time1=$flight->return_time1;
+        $outbund_time2=$flight->outbund_time2;
+        $return_time2=$flight->return_time2; 
+        $scale_outbund=(int)$flight['scale_outbund']; 
+        $scale_return=(int)$flight['scale_return'];  
         $price=$flight->sources->source[0]->price;       
         $source=$flight->sources->source[0]->source_name;
         $url=$flight->sources->source[0]->url;
-
 	?>
 
     <li class="mod-result">
-		<div class="mod-txt">
-			<div class="clearfix">
-				<h2 class="f-left">Fráncfort, (Alemania) - Toronto (Canadá)</h2>	
-				<p class="f-right">Fligth with: <img src="<?php echo $image; ?>" alt="<?php echo $route; ?>"></p>		
-			</div>
-			<p class="c-both route"><?php echo $route; ?> 
-				<?php
-					if($scales == 1){
-				?>	 
-				- <strong>This flight have one scale</strong> <span class="fanontour-icon icon-icons-fanontour_scale"></span>
-				<?php } ?>
-			</p>
-			<ul>
-				<li>Outbund: <strong><small class="outbund_date">12/12/2014</small></strong> - <em><?php echo $outbund_time; ?> h.</em></li>
-				<li class="cont_return">Return: <strong><small class="return_date">19/12/2014</small></strong> - <em><?php echo $return_time; ?> h.</em></li>
-			</ul>			
+		<div class="table-responsive">		
+
+			<table class="table table-flight">
+				<thead>
+					<tr>
+						<th>Airline</th>
+						<th>Outbund <br /> <small>(02/03/2015)</small></th>
+						<th>Return <br /> <small>(07/03/2015)</small></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><img src="<?php echo $image; ?>" alt="<?php echo $route1; ?>"></td>
+						<td><span><?php echo $outbund_time1; ?> - <?php echo $outbund_time2; ?></span> <small><?php echo $route1; ?></small> <br /> 
+						<?php
+							if($scale_outbund == 1){
+						?>	 
+							<strong>With scales</strong> <span class="fanontour-icon icon-icons-fanontour_scale"></span>
+						<?php } ?></td>						
+						<td><span><?php echo $return_time1; ?> - <?php echo $return_time2; ?></span> <small><?php echo $route2; ?></small><br />
+							<?php
+							if($scale_return == 1){
+						?>	 
+							<strong>With scales</strong> <span class="fanontour-icon icon-icons-fanontour_scale"></span>
+						<?php } ?></td>
+						</td>
+					</tr>
+				</tbody>
+			</table>						
 		</div>
 		<div class="result-footer">
 			<ul class="list-inline">
