@@ -463,7 +463,7 @@ a:hover {
 }
 label {
   font: normal 1em/1.1em 'robotoregular', 'Arial', 'sans-serif';
-  color: #403f3f;
+  color: #000000;
 }
 input.form-control,
 textarea.form-control {
@@ -1367,20 +1367,20 @@ blockquote dd {
   background: url('../img/backgrounds/home/tickets.jpg') no-repeat center 0;
   background-size: cover;
   width: 100%;
-  height: 486px;
-  top: 0;
+  height: 531px;
+  top: -44px;
 }
 .bg-container-generic {
   background: url('../img/backgrounds/general/general-background_200px-h.jpg') no-repeat center 0;
   background-size: cover;
   width: 100%;
-  height: 149px;
-  top: 0;
+  height: 191px;
+  top: -44px;
 }
 .bg-trans-black-v2 {
   background: url('../img/backgrounds/bg_black_trans_light.png') 0 0;
   position: relative;
-  height: 149px;
+  height: 191px;
   width: 100%;
 }
 .tickets .bg-container-generic {
@@ -1986,8 +1986,11 @@ blockquote {
 .table thead th a:hover {
   color: #6eb21b;
 }
+.table thead th.text-right {
+  text-align: right;
+}
 .table thead tr:hover td {
-  background-color: #403f3f;
+  background-color: #403f3f !important;
   color: #ffffff;
 }
 .table tbody tr {
@@ -2032,6 +2035,9 @@ blockquote {
 }
 .table.t_border td {
   border: 1px #dddddd solid;
+}
+.table-striped tr:hover td {
+  background-color: #eaeaea !important;
 }
 .table-alerts .save {
   display: none;
@@ -2119,6 +2125,9 @@ blockquote {
 }
 .sprite {
   background: url('../img/sprites/sprite.png') no-repeat 0 0;
+}
+.modal {
+  top: 85px;
 }
 .modal-default .modal-header {
   background-color: #0669b2;
@@ -3085,6 +3094,26 @@ video {
   border: 1px #ffffff solid;
   padding-left: 50px !important;
   padding-right: 50px !important;
+}
+.results li .table-flight {
+  display: table;
+}
+.results li .table-flight td {
+  border: 1px #b2b2b2 solid;
+}
+.results li .table-flight span {
+  display: block;
+  font-size: .9em;
+  line-height: .8em;
+  font-weight: bold;
+}
+.results li .table-flight small:hover {
+  cursor: help;
+}
+.results li .table-flight .icon-icons-fanontour_scale {
+  font-size: 1.6em;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 #fanontour-search-box {
   padding-top: 169px;
