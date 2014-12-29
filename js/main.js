@@ -236,7 +236,7 @@ $( document ).ready(function() { //DOM OK!
   	});
 
   	//Geolocalización
-	if($(".city_ori").length){
+	/*if($(".city_ori").length){
 
 		//Get the latitude and the longitude;
 		function successFunction(position) {
@@ -270,7 +270,7 @@ $( document ).ready(function() { //DOM OK!
 		       }  
 		    });
 		}
-	}
+	}*/
 
 	  
 	//Validations
