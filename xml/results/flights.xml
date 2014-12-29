@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Flights>
-	<flight scale="0">
-		<route>FRA To YYZ</route>
+	<flight scale_outbund="0" scale_return="0">
+		<route1>BCN To FEZ</route1>
+		<route2>FEZ To BCN</route2>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<outbund_time>07:30</outbund_time>
-		<return_time>19:00</return_time>	
+		<outbund_time1>07:30</outbund_time1>
+		<outbund_time2>08:30</outbund_time2>
+		<return_time1>19:00</return_time1>	
+		<return_time2>19:30</return_time2>
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -33,11 +36,14 @@
 			</source>			
 		</sources>		
 	</flight>
-	<flight scale="1">
-		<route>YYZ To YHZ | YHZ To FRA</route>
+	<flight scale_outbund="0" scale_return="1">
+		<route1>BCN To FEZ</route1>
+		<route2>FEZ To BCN</route2>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<outbund_time>07:30</outbund_time>
-		<return_time>19:00</return_time>	
+		<outbund_time1>07:30</outbund_time1>
+		<outbund_time2>08:30</outbund_time2>
+		<return_time1>19:00</return_time1>	
+		<return_time2>19:30</return_time2>
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -66,90 +72,50 @@
 			</source>			
 		</sources>		
 	</flight>
-	<flight scale="0">
-		<route>FRA To YYZ</route>
+	<flight scale_outbund="1" scale_return="1">
+		<route1>BCN To FEZ</route1>
+		<route2>FEZ To BCN</route2>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<outbund_time>07:30</outbund_time>
-		<return_time>19:00</return_time>	
+		<outbund_time1>07:30</outbund_time1>
+		<outbund_time2>08:30</outbund_time2>
+		<return_time1>19:00</return_time1>	
+		<return_time2>19:30</return_time2>
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
 				<url>http://www.wegolo.com/</url>
 				<price>50</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3500</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3600</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3700</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3800</price>
 			</source>			
 		</sources>		
 	</flight>	
-	<flight scale="0">
-		<route>FRA To YYZ</route>
+	<flight scale_outbund="1" scale_return="0">
+		<route1>BCN To FEZ</route1>
+		<route2>FEZ To BCN</route2>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<outbund_time>07:30</outbund_time>
-		<return_time>19:00</return_time>	
-		<sources>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>2000</price>
-			</source>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>3500</price>
-			</source>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>3600</price>
-			</source>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>3700</price>
-			</source>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>3800</price>
-			</source>			
-		</sources>		
-	</flight>
-	<flight scale="1">
-		<route>YYZ To YHZ | YHZ To FRA</route>
-		<image>/fanontour/img/results/wegolo.png</image>
-		<outbund_time>07:30</outbund_time>
-		<return_time>19:00</return_time>	
-		<sources>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>700</price>
-			</source>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>3500</price>
-			</source>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>3600</price>
-			</source>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>3700</price>
-			</source>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>3800</price>
-			</source>			
-		</sources>		
-	</flight>
-	<flight scale="0">
-		<route>FRA To YYZ</route>
-		<image>/fanontour/img/results/wegolo.png</image>
-		<outbund_time>07:30</outbund_time>
-		<return_time>19:00</return_time>	
+		<outbund_time1>07:30</outbund_time1>
+		<outbund_time2>08:30</outbund_time2>
+		<return_time1>19:00</return_time1>	
+		<return_time2>19:30</return_time2>
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -178,11 +144,14 @@
 			</source>			
 		</sources>		
 	</flight>
-	<flight scale="0">
-		<route>FRA To YYZ</route>
+	<flight scale_outbund="0" scale_return="1">
+		<route1>BCN To FEZ</route1>
+		<route2>FEZ To BCN</route2>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<outbund_time>07:30</outbund_time>
-		<return_time>19:00</return_time>	
+		<outbund_time1>07:30</outbund_time1>
+		<outbund_time2>08:30</outbund_time2>
+		<return_time1>19:00</return_time1>	
+		<return_time2>19:30</return_time2>
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -211,11 +180,86 @@
 			</source>			
 		</sources>		
 	</flight>
-	<flight scale="0">
-		<route>FRA To YYZ</route>
+	<flight scale_outbund="0" scale_return="0">
+		<route1>BCN To FEZ</route1>
+		<route2>FEZ To BCN</route2>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<outbund_time>07:30</outbund_time>
-		<return_time>19:00</return_time>	
+		<outbund_time1>07:30</outbund_time1>
+		<outbund_time2>08:30</outbund_time2>
+		<return_time1>19:00</return_time1>	
+		<return_time2>19:30</return_time2>
+		<sources>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>50</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3500</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3600</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3700</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3800</price>
+			</source>			
+		</sources>		
+	</flight>
+	<flight scale_outbund="0" scale_return="1">
+		<route1>BCN To FEZ</route1>
+		<route2>FEZ To BCN</route2>
+		<image>/fanontour/img/results/wegolo.png</image>
+		<outbund_time1>07:30</outbund_time1>
+		<outbund_time2>08:30</outbund_time2>
+		<return_time1>19:00</return_time1>	
+		<return_time2>19:30</return_time2>
+		<sources>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>50</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3500</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3600</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3700</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3800</price>
+			</source>			
+		</sources>		
+	</flight>
+	<flight scale_outbund="0" scale_return="0">
+		<route1>BCN To FEZ</route1>
+		<route2>FEZ To BCN</route2>
+		<image>/fanontour/img/results/wegolo.png</image>
+		<outbund_time1>07:30</outbund_time1>
+		<outbund_time2>08:30</outbund_time2>
+		<return_time1>19:00</return_time1>	
+		<return_time2>19:30</return_time2>
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -244,44 +288,14 @@
 			</source>			
 		</sources>		
 	</flight>
-	<flight scale="0">
-		<route>FRA To YYZ</route>
+	<flight scale_outbund="0" scale_return="1">
+		<route1>BCN To FEZ</route1>
+		<route2>FEZ To BCN</route2>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<outbund_time>07:30</outbund_time>
-		<return_time>19:00</return_time>	
-		<sources>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>100</price>
-			</source>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>3500</price>
-			</source>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>3600</price>
-			</source>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>3700</price>
-			</source>
-			<source>
-				<source_name>wegolo</source_name>
-				<url>http://www.wegolo.com/</url>
-				<price>3800</price>
-			</source>			
-		</sources>		
-	</flight>
-	<flight scale="0">
-		<route>FRA To YYZ</route>
-		<image>/fanontour/img/results/wegolo.png</image>
-		<outbund_time>07:30</outbund_time>
-		<return_time>19:00</return_time>	
+		<outbund_time1>07:30</outbund_time1>
+		<outbund_time2>08:30</outbund_time2>
+		<return_time1>19:00</return_time1>	
+		<return_time2>19:30</return_time2>
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -310,11 +324,14 @@
 			</source>			
 		</sources>		
 	</flight>
-	<flight scale="0">
-		<route>FRA To YYZ</route>
+	<flight scale_outbund="0" scale_return="0">
+		<route1>BCN To FEZ</route1>
+		<route2>FEZ To BCN</route2>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<outbund_time>07:30</outbund_time>
-		<return_time>19:00</return_time>	
+		<outbund_time1>07:30</outbund_time1>
+		<outbund_time2>08:30</outbund_time2>
+		<return_time1>19:00</return_time1>	
+		<return_time2>19:30</return_time2>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -343,11 +360,50 @@
 			</source>			
 		</sources>		
 	</flight>
-	<flight scale="0">
-		<route>FRA To YYZ</route>
+	<flight scale_outbund="0" scale_return="1">
+		<route1>BCN To FEZ</route1>
+		<route2>FEZ To BCN</route2>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<outbund_time>07:30</outbund_time>
-		<return_time>19:00</return_time>	
+		<outbund_time1>07:30</outbund_time1>
+		<outbund_time2>08:30</outbund_time2>
+		<return_time1>19:00</return_time1>	
+		<return_time2>19:30</return_time2>
+		<sources>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>50</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3500</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3600</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3700</price>
+			</source>
+			<source>
+				<source_name>wegolo</source_name>
+				<url>http://www.wegolo.com/</url>
+				<price>3800</price>
+			</source>			
+		</sources>		
+	</flight>
+	<flight scale_outbund="0" scale_return="0">
+		<route1>BCN To FEZ</route1>
+		<route2>FEZ To BCN</route2>
+		<image>/fanontour/img/results/wegolo.png</image>
+		<outbund_time1>07:30</outbund_time1>
+		<outbund_time2>08:30</outbund_time2>
+		<return_time1>19:00</return_time1>	
+		<return_time2>19:30</return_time2>	
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
@@ -376,11 +432,14 @@
 			</source>			
 		</sources>		
 	</flight>
-	<flight scale="0">
-		<route>FRA To YYZ</route>
+	<flight scale_outbund="0" scale_return="1">
+		<route1>BCN To FEZ</route1>
+		<route2>FEZ To BCN</route2>
 		<image>/fanontour/img/results/wegolo.png</image>
-		<outbund_time>07:30</outbund_time>
-		<return_time>19:00</return_time>	
+		<outbund_time1>07:30</outbund_time1>
+		<outbund_time2>08:30</outbund_time2>
+		<return_time1>19:00</return_time1>	
+		<return_time2>19:30</return_time2>
 		<sources>
 			<source>
 				<source_name>wegolo</source_name>
