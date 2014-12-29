@@ -180,9 +180,9 @@ $( document ).ready(function() { //DOM OK!
 		}
 	}
 
-	function filterByScales(scale, scales){
+	function filterByScales(scale, scales1, scales2){
 		if(scale == "true"){
-			if(scales == 0){
+			if(scales1 == 0 && scales2 == 0){
 				return true;
 			}else{
 				return false;
@@ -247,7 +247,7 @@ $( document ).ready(function() { //DOM OK!
 		       
 		       var resultHtml = "<li class='mod-result'><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
 		        resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>" + place + ", " + city + " - <em>" + date +"</em></p><p>"+ description +"</p></div>";
-		        resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_source2'></span> Found in <strong>"+ source +"</strong></li>";			
+		        resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_source22'></span> Found in <strong>"+ source +"</strong></li>";			
 	       	    if(num_offers > 1){
 	       	   	 resultHtml += "<li><a href='#' class='more-offers' rel='nofollow'>See all offers</a></li>";
 	       	   	} 
@@ -295,8 +295,8 @@ $( document ).ready(function() { //DOM OK!
 		  	}
 
 		  	var res = interval.split(",");
-		    v1min = res[0];
-		    v1max = res[1];
+		    v1min = parseInt(res[0]);
+		    v1max = parseInt(res[1]);
 
 		    filterTickets();	  	
 		});
@@ -354,7 +354,7 @@ $( document ).ready(function() { //DOM OK!
 
    			   switch(persons) {
 				    case 1:
-				        room_html = '<span class="fanontour-icon icon-icons-fanontour_person1"></span> simple room';
+				        room_html = '<span class="fanontour-icon icon-icons-fanontour_person1"></span> single room';
 				        break;
 				    case 2:
 				        room_html = '<span class="fanontour-icon icon-icons-fanontour_person2"></span> double room';
@@ -366,7 +366,7 @@ $( document ).ready(function() { //DOM OK!
 
 		       var resultHtml = "<li class='mod-result'><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
 		       resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>" + address +" - " + city + "</p></div>";
-		       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li>"+ room_html +"</li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li>";			
+		       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li>"+ room_html +"</li><li><span class='fanontour-icon icon-icons-fanontour_source2'></span> Found in <strong>"+ source +"</strong></li>";			
 			   if(num_offers > 1){
 	       	   	 resultHtml += "<li><a href='#' class='more-offers' rel='nofollow'>See all offers</a></li>";
 	       	   	} 
@@ -459,27 +459,33 @@ $( document ).ready(function() { //DOM OK!
 			var return_date = $(".return_date").eq(0).text();
 
 			function getResult(element){
-			   var route = $(element).find('route').text();   			  
+			   var route1 = $(element).find('route1').text();
+			   var route2 = $(element).find('route2').text(); 			  
    			   var image = $(element).find('image').text();
-   			   var scales = parseInt($(element).attr("scale"));
-   			   var outbund_time = $(element).find('outbund_time').text();
-   			   var return_time = $(element).find('return_time').text();
+   			   var scale_outbund = parseInt($(element).attr("scale_outbund"));
+   			   var scale_return = parseInt($(element).attr("scale_return"));
+   			   var outbund_time1 = $(element).find('outbund_time1').text();
+   			   var return_time1 = $(element).find('return_time1').text();
+   			   var outbund_time2 = $(element).find('outbund_time2').text();
+   			   var return_time2 = $(element).find('return_time2').text();
    			   var price = $(element).find('source').eq(0).find('price').text();		       			      			   
    			   var source = $(element).find('source').eq(0).find('source_name').text();
    			   var url = $(element).find('source').eq(0).find('url').text();
    			   var num_offers = $(element).find("source").length;
 
-		       var resultHtml = "<li class='mod-result'>";
-		       resultHtml += "<div class='mod-txt'><div class='clearfix'><h2 class='f-left'>"+ name +"</h2>";
-		       resultHtml += "<p class='f-right'>Fligth with: <img src='"+ image +"' alt='"+ name +"'></p></div>";
-		       resultHtml += "<p class='c-both route'>" + route; 
-		       if(scales == 1){
-		       	  resultHtml += "- <strong>This flight have one scale</strong> <span class='fanontour-icon icon-icons-fanontour_scale'></span>"
+		       var resultHtml = "<li class='mod-result'><div class='table-responsive'><table class='table table-flight'><thead><tr>";
+		       resultHtml += "<th>Airline</th><th>Outbund <br /> <small>"+ $(".outbund_date").text() +"</small></th><th>Return <br /> <small>"+ $(".return_date").text() +"</small></th></tr></thead><tbody><tr>";
+		       resultHtml += "<td><img src="+ image +" alt="+ route1 +"></td>";
+		       resultHtml += "<td><span>"+ outbund_time1 + " - "+ return_time1 +"</span> <small>"+ route1 +"</small> <br />"; 
+		       if(scale_outbund == 1){
+		       	  resultHtml += "<strong>With scales</strong> <span class='fanontour-icon icon-icons-fanontour_scale'></span>";
 		       }
-			    resultHtml += "</p>";
-			    resultHtml += "<ul><li>Outbund date: <strong><small>"+ outbund_date +"</small></strong> - <em>" + outbund_time + "</em></li><li class='cont_return'>Return date: <strong><small>"+ return_date +"</small></strong> - <em>" + return_time + "</em></li></ul></div>";	
-			
-		        resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li>";			
+			    resultHtml += "</td><td><span>"+ outbund_time2 +" - "+ return_time2 +"</span> <small>"+ route2 +"</small><br />";
+			    if(scale_return == 1){
+		       	  resultHtml += "<strong>With scales</strong> <span class='fanontour-icon icon-icons-fanontour_scale'></span>";
+		       }
+			    resultHtml += "</td></td></tr></tbody></table></div>";			
+		        resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_source2'></span> Found in <strong>"+ source +"</strong></li>";			
 			    if(num_offers > 1){
 	       	   	 resultHtml += "<li><a href='#' class='more-offers' rel='nofollow'>See all offers</a></li>";
 	       	   	} 
@@ -496,11 +502,12 @@ $( document ).ready(function() { //DOM OK!
 		    $(xml_object).find("flight").each(function () {	
 
 		       var val_price = parseInt($(this).find('source').eq(0).find('price').text());
-		       var scales = $(this).attr("scale");	
+		       var scales1= $(this).attr("scale_outbund");
+		       var scales2 = $(this).attr("scale_return");	
 
 		    	//FILTERING...
 				if(filterByPrice(val_price, v1min, v1max, val_limit)){ //PRICE?
-		       	    if(filterByScales(scale, scales)){ //PRICE?
+		       	    if(filterByScales(scale, scales1, scales2)){ //PRICE?
 		       		 	resultHtml += getResult($(this)); //OK! DISPLAY RESULT
 		       		}
 		       	}
@@ -583,7 +590,7 @@ $( document ).ready(function() { //DOM OK!
    			   
 		       resultHtml = "<li class='mod-result'><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";		       
 		       resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>"+ description +"</p></div>";
-		       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li class='duration' data-value='"+ val_duration +"'><span class='fanontour-icon icon-icons-fanontour_clock'></span> "+ duration +" <abbr title='approximately'> approx.</abbr></li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li>";			
+		       resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li class='duration' data-value='"+ val_duration +"'><span class='fanontour-icon icon-icons-fanontour_clock'></span> "+ duration +" <abbr title='approximately'> approx.</abbr></li><li><span class='fanontour-icon icon-icons-fanontour_source2'></span> Found in <strong>"+ source +"</strong></li>";			
 				if(num_offers > 1){
 	       	   	 resultHtml += "<li><a href='#' class='more-offers' rel='nofollow'>See all offers</a></li>";
 	       	   	} 
@@ -680,7 +687,7 @@ $( document ).ready(function() { //DOM OK!
 		       
 		       var resultHtml = "<li class='mod-result'><div class='mod-img'><img src="+ image +" alt=" + name +"></div>";
 		        resultHtml += "<div class='mod-txt'><h2>"+ name +"</h2><p>" + address + ", " + city +"</p><p>" + description +"</p></div>";
-		        resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_cousine'></span> Cousine: <strong>"+ cousine +"</strong></li><li><span class='fanontour-icon icon-icons-fanontour_source2'></span> Found in <strong>"+ source +"</strong></li></ul></div></li>";			
+		        resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_cousine'></span> Cousine: <strong>"+ cousine +"</strong></li><li><span class='fanontour-icon icon-icons-fanontour_source22'></span> Found in <strong>"+ source +"</strong></li></ul></div></li>";			
 	       	   
 	       	    return resultHtml;
 			}
@@ -766,7 +773,7 @@ $( document ).ready(function() { //DOM OK!
 					resultHtml += "<li><small><span class='glyphicon glyphicon-ok'></span></small> <strong>automatic transmission</strong>, </li>";
 				} 	
 				resultHtml += "<li>insurance: <strong>"+ insurance +"</strong></li></ul></div></div>";
-			    resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_fuel'></span>" + petrol +";</li><li><span class='fanontour-icon icon-icons-fanontour_source'></span> Found in <strong>"+ source +"</strong></li>";
+			    resultHtml += "<div class='result-footer'><ul class='list-inline'><li class='price' data-value="+ price + ">" + price +" &euro;</li><li class='source'><a class='btn btn-search' href='"+ url +"'>Book here</a></li><li><span class='fanontour-icon icon-icons-fanontour_fuel'></span>" + petrol +";</li><li><span class='fanontour-icon icon-icons-fanontour_source2'></span> Found in <strong>"+ source +"</strong></li>";
 			   if(num_offers > 1){
 	       	   	 resultHtml += "<li><a href='#' class='more-offers' rel='nofollow'>See all offers</a></li>";
 	       	   	} 
@@ -863,9 +870,7 @@ $( document ).ready(function() { //DOM OK!
 			activityResults(); //run activities!	
 	    } 		
 		if($("#flights").length){
-			flightResults(); //run flights!	
-			$(".outbund_date").text($("#datetimepicker_03").val());
-			$(".return_date").text($("#datetimepicker_04").val());	
+			flightResults(); //run flights!				
 			if($("#datetimepicker_04").val() == ""){
 				$(".cont_return").hide();
 			}							
@@ -884,40 +889,18 @@ $( document ).ready(function() { //DOM OK!
 	    } 		
 	}
 
-	//Creating fixed panels
-	/*if($("#results").length && $(window).width() > 991){		
-		var max_height;
-		var altura;
-
-		$( "#customized-tour .nav-tabs li" ).click(function() {
-			 var num_tab = $(this).prevAll().length;
-			 altura = $("section.tab-pane").eq(num_tab).find(".results").height() + 135;
-			 alert(altura);		
-		});
-
+	//BTN UP
+	if($("#results").length && $(window).width() > 991){		
 		$(window).scroll(function() {
-			init_height = $("#header").height() + $(".bg-container").height();
-			max_height = $(".results").height() - 215;
+			init_height = $("#header").height() + $(".bg-container").height();		
 
-			altura = $(".results").height() + 135;				
-     		$(".col-filter").css("height", altura);
-
-     		console.log($(window).scrollTop() +" / " + max_height)
-
-			if($(window).scrollTop() > init_height){
-		   		$(".panel-fix-top").addClass("active");
+     		if($(window).scrollTop() > init_height){		   		
 		   		$(".btn-up").fadeIn();
-		   }else{
-		   		$(".panel-fix-top").removeClass("active");
+		   }else{		   		
 		   		$(".btn-up").fadeOut();
-		   }
-		   if($(window).scrollTop() >= max_height){
-		   		$(".panel-fix-top").addClass("limit-height");
-		   }else{
-		   		$(".panel-fix-top").removeClass("limit-height");
-		   }
+		   }		  
 		});
-	}*/
+	}
 
 	//SET RESULTS
 	function setResults(){
