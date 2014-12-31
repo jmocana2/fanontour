@@ -690,8 +690,35 @@ $( document ).ready(function() { //DOM OK!
 
 	if($(".new-tour").length){
 		$('#modal-customized-tour').modal('show');
-	}	
+	}
 
+	//Alert	
+	$( ".btn-alert" ).click(function() {
+		$('#modal-alert').modal('show');		
+	});	
+
+	$("#modal-alert").on("click",".btn-new-alert",function(e){   		
+
+		var url="/fanontour/php/alert.php";
+		var price = $("#input-price-01");
+
+		$.ajax({
+		  type: "get",		  
+		  data: "?price=" + price,
+		  url: url		  
+		})
+		.done(function() {
+		   $("#modal-alert").find(".alert-success").removeClass("hide");		   	
+		})
+		.fail(function() {
+		   $("#modal-alert").find(".alert-danger").removeClass("hide");	
+		})	
+	});	
+
+	$('#modal-alert').on('hidden.bs.modal', function (e) {
+	   $("#modal-alert").find(".alert").addClass("hide");
+	})
+	
 	//TOOLTIPS
 	//
 	//Car information

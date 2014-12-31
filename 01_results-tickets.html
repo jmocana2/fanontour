@@ -68,6 +68,12 @@
 				include('include/modals/modal-box.html'); 
 			?>
 			<!-- ================================================= -->
+			<!-- ================ (MODAL) ALERTS ================= -->
+			<?php
+				$modal = "modal-alert";
+				include('include/modals/modal-box.html'); 
+			?>
+			<!-- ================================================= -->
 
 			<section id="tickets">
 				<div class="container">						
@@ -83,6 +89,7 @@
 						<div>
 							<div class="col-md-3 col-filter">
 								<div class="panel-fix-top">
+									<a data-toggle="modal" data-target="#modal-alert" href="/fanontour/include/modals/alert.html" class="btn btn-primary d-block margin-bottom-mid"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span> New price alert</a>
 									<div class="panel panel-filter accordion">
 										<h2><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed" rel="nofollow">Your search details <small><span class="glyphicon glyphicon-chevron-down"></span></small></a></h2>
 										<div class="panel-box-body panel-collapse collapse in" id="collapse1">
