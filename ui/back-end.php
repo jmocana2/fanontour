@@ -391,23 +391,26 @@
 							<div class="panel-body">
 								<p><strong>properties values:</strong></p>
 								<ul>
-									<li>scale="0" (Direct flight), scale="1" (Not direct flight)</li>
+									<li>scale_outbund="0" scale_return="0" (0=no scales ; 1=with scales)</li>
 								</ul>
 								<div class="col-md-12 row-padding-v-small">
 							<pre class="bg-light-blue" style="margin: 0; line-height: 125%">
 &lt;?xml version="1.0" encoding="utf-8" ?&gt;
 &lt;Flights&gt;
-	&lt;flight scale="0"&gt;
-		&lt;route&gt;&lt;/route&gt;
-		&lt;image&gt;&lt;/image&gt;
-		&lt;departure_time&gt;&lt;/departure_time&gt;
-		&lt;arrival_time&gt;&lt;/arrival_time&gt;	
+	&lt;flight scale_outbund="0" scale_return="0"&gt;
+		&lt;route1&gt;BCN To FEZ&lt;/route1&gt;
+		&lt;route2&gt;FEZ To BCN&lt;/route2&gt;
+		&lt;image&gt;/fanontour/img/results/wegolo.png&lt;/image&gt;
+		&lt;outbund_time1&gt;07:30&lt;/outbund_time1&gt;
+		&lt;outbund_time2&gt;08:30&lt;/outbund_time2&gt;
+		&lt;return_time1&gt;19:00&lt;/return_time1&gt;	
+		&lt;return_time2&gt;19:30&lt;/return_time2&gt;
 		&lt;sources&gt;
 			&lt;source&gt;
-				&lt;source_name&gt;&lt;/source_name&gt;
-				&lt;url&gt;&lt;/url&gt;
-				&lt;price&gt;&lt;/price&gt;
-			&lt;/source&gt;			
+				&lt;source_name&gt;wegolo&lt;/source_name&gt;
+				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
+				&lt;price&gt;50&lt;/price&gt;
+			&lt;/source&gt;					
 		&lt;/sources&gt;		
 	&lt;/flight&gt;
 &lt;/Flights&gt;
@@ -775,11 +778,30 @@
 
 &lt;?xml version="1.0" encoding="utf-8" ?&gt;
 &lt;Flights&gt;
-	&lt;flight scale="0"&gt;
-		&lt;route&gt;FRA To YYZ&lt;/route&gt;
+	&lt;flight scale_outbund="0" scale_return="0"&gt;
+		&lt;route1&gt;BCN To FEZ&lt;/route1&gt;
+		&lt;route2&gt;FEZ To BCN&lt;/route2&gt;
 		&lt;image&gt;/fanontour/img/results/wegolo.png&lt;/image&gt;
-		&lt;departure_time&gt;07:30&lt;/departure_time&gt;
-		&lt;arrival_time&gt;19:00&lt;/arrival_time&gt;	
+		&lt;outbund_time1&gt;07:30&lt;/outbund_time1&gt;
+		&lt;outbund_time2&gt;08:30&lt;/outbund_time2&gt;
+		&lt;return_time1&gt;19:00&lt;/return_time1&gt;	
+		&lt;return_time2&gt;19:30&lt;/return_time2&gt;
+		&lt;sources&gt;
+			&lt;source&gt;
+				&lt;source_name&gt;wegolo&lt;/source_name&gt;
+				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
+				&lt;price&gt;50&lt;/price&gt;
+			&lt;/source&gt;					
+		&lt;/sources&gt;		
+	&lt;/flight&gt;
+	&lt;flight scale_outbund="0" scale_return="1"&gt;
+		&lt;route1&gt;BCN To FEZ&lt;/route1&gt;
+		&lt;route2&gt;FEZ To BCN&lt;/route2&gt;
+		&lt;image&gt;/fanontour/img/results/wegolo.png&lt;/image&gt;
+		&lt;outbund_time1&gt;07:30&lt;/outbund_time1&gt;
+		&lt;outbund_time2&gt;08:30&lt;/outbund_time2&gt;
+		&lt;return_time1&gt;19:00&lt;/return_time1&gt;	
+		&lt;return_time2&gt;19:30&lt;/return_time2&gt;
 		&lt;sources&gt;
 			&lt;source&gt;
 				&lt;source_name&gt;wegolo&lt;/source_name&gt;
@@ -808,11 +830,14 @@
 			&lt;/source&gt;			
 		&lt;/sources&gt;		
 	&lt;/flight&gt;
-	&lt;flight scale="1"&gt;
-		&lt;route&gt;YYZ To YHZ | YHZ To FRA&lt;/route&gt;
+	&lt;flight scale_outbund="1" scale_return="1"&gt;
+		&lt;route1&gt;BCN To FEZ&lt;/route1&gt;
+		&lt;route2&gt;FEZ To BCN&lt;/route2&gt;
 		&lt;image&gt;/fanontour/img/results/wegolo.png&lt;/image&gt;
-		&lt;departure_time&gt;07:30&lt;/departure_time&gt;
-		&lt;arrival_time&gt;19:00&lt;/arrival_time&gt;	
+		&lt;outbund_time1&gt;07:30&lt;/outbund_time1&gt;
+		&lt;outbund_time2&gt;08:30&lt;/outbund_time2&gt;
+		&lt;return_time1&gt;19:00&lt;/return_time1&gt;	
+		&lt;return_time2&gt;19:30&lt;/return_time2&gt;
 		&lt;sources&gt;
 			&lt;source&gt;
 				&lt;source_name&gt;wegolo&lt;/source_name&gt;
@@ -840,21 +865,9 @@
 				&lt;price&gt;3800&lt;/price&gt;
 			&lt;/source&gt;			
 		&lt;/sources&gt;		
-	&lt;/flight&gt;
-	&lt;flight scale="0"&gt;
-		&lt;route&gt;FRA To YYZ&lt;/route&gt;
-		&lt;image&gt;/fanontour/img/results/wegolo.png&lt;/image&gt;
-		&lt;departure_time&gt;07:30&lt;/departure_time&gt;
-		&lt;arrival_time&gt;19:00&lt;/arrival_time&gt;	
-		&lt;sources&gt;
-			&lt;source&gt;
-				&lt;source_name&gt;wegolo&lt;/source_name&gt;
-				&lt;url&gt;http://www.wegolo.com/&lt;/url&gt;
-				&lt;price&gt;50&lt;/price&gt;
-			&lt;/source&gt;			
-		&lt;/sources&gt;		
-	&lt;/flight&gt;
+	&lt;/flight&gt;		
 &lt;/Flights&gt;		
+		
 
 
 							</pre>
