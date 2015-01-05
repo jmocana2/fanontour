@@ -958,16 +958,16 @@ $( document ).ready(function() { //DOM OK!
 	function orderFanontour(orderby){
 		orderby = parseInt(orderby);
 		switch(orderby){
-			case 0:				
+			case 1:				
 				$('.mod-result').tsort('li.price',{order:'desc', attr:'data-value'});
 				break;
-			case 1:
+			case 0:
 				$('.mod-result').tsort('li.price',{order:'asc', attr:'data-value'});
 				break;
-			case 2:
+			case 3:
 				$('.mod-result').tsort('li.duration',{order:'desc', attr:'data-value'});
 				break;
-			case 3:
+			case 2:
 				$('.mod-result').tsort('li.duration',{order:'asc', attr:'data-value'});
 				break;		
 		}
@@ -982,13 +982,13 @@ $( document ).ready(function() { //DOM OK!
 
     /* more offers */
     $(".results").on("click",".more-offers",function(e){
-       	$(this).closest(".mod-result").find("table").toggle(); 
+       	$(this).closest(".mod-result").find("table.table-striped").toggle(); 
        	e.preventDefault(); 
      	 	
     });
 
     $(".results").on("click",".btn-hide",function(e){    	
-     	$(this).closest(".mod-result").find("table").toggle(); 
+     	$(this).closest(".mod-result").find("table.table-striped").toggle(); 
      	e.preventDefault();   	
     });
 });
