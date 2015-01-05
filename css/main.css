@@ -1742,7 +1742,6 @@ blockquote {
   margin-top: 2px;
 }
 .small-field-h {
-  padding: 0 5px;
   height: 27px;
 }
 .small-field-h + .input-group-addon {
@@ -1790,6 +1789,7 @@ blockquote {
 .time-field label {
   display: inline-block;
   width: 33px;
+  margin-left: 0;
 }
 .time-field input {
   max-width: 50px;
