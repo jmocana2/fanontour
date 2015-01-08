@@ -4,7 +4,7 @@ var calendar;
 //mail
 var emailreg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 //password
-var passreg = /(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
+var passreg = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
 
 //Validations
 //Fields
@@ -42,8 +42,8 @@ $( document ).ready(function() { //DOM OK!
     }
 
     //checkbox
-    $( "input[type='checkbox']", "input[type='radio']"  ).click(function(e) {
-    	if($(this).val() == "false"){
+    $( "input[type='checkbox'], input[type='radio']").click(function(e) {    	
+     	if($(this).val() == "false"){
     		$(this).val("true");
     	}else{
     		$(this).val("false");
@@ -426,17 +426,26 @@ $( document ).ready(function() { //DOM OK!
 
         if(!passreg.test($('#input-password-01').val())){	        	
         	$("#input-password-01").closest(".form-group").addClass("has-error");
+          	$(".alert-pass").removeClass("hide")
         	e.preventDefault();	        	
-        } 
+        }else{
+        	$(".alert-pass").addClass("hide")
+        }
 
         if($("#input-password-01").val() != $("#input-password-02").val()){
         	$("#input-password-02").closest(".form-group").addClass("has-error");
         	e.preventDefault();
         }
 
-        if($("#terms-conditions").val() == "false"){
+
+
+        if($("#terms-conditions").val() == "false"){        	
         	$("#terms-condition").closest(".form-group").addClass("has-error");
+        	$(".alert-conditions").removeClass("hide");
         	e.preventDefault();
+        }else{
+        	
+        	$(".alert-conditions").addClass("hide");        	
         }
 	}
 

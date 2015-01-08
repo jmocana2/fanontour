@@ -125,8 +125,12 @@
 									   <div class="form-group clearfix">
 									    <label for="input-password-01" class="col-xs-12 control-label">Password *</label>
 									    <div class="col-sm-10">
-									      <input type="password" id="input-password-01" name="password" class="form-control" placeholder="Enter password" required>		      
+									      <input type="password" id="input-password-01" name="password" class="form-control" placeholder="Enter password" required>	
+									       <div class="alert alert-danger alert-pass hide" role="alert">
+											  Password is case sensitive, must be at least 8 characters, and include one uppercase letter, one lowercase letter and one number or one special character (eg. @/&%#*)  
+											</div>	      
 									    </div>
+
 									  </div>
 									  <div class="form-group clearfix">
 									    <label for="input-password-02" class="col-xs-12 control-label">Confirm password *</label>
@@ -145,8 +149,12 @@
                                    	    <label class="control-label">
                                     		<input type="checkbox" name="terms-conditions" id="terms-conditions" class="small-field-w small-field-h" value="false"><span></span>
                                         	I agree with the <a data-toggle="modal" data-target="#modal-conditions" href="/fanontour/include/modals/terms-conditions.html">terms and conditions</a> of fanontour                                               
-                                      	</label> 
+                                      	</label>
+                                      	 
                                 	  </div>
+                                	  <div class="alert alert-danger alert-conditions hide" role="alert">
+											 You must accept terms and conditions of Fanontour.com
+										</div>	
                                 	  </div>							  											  
 									  <div class="form-group clearfix">
 									    <div class="col-xs-12">
