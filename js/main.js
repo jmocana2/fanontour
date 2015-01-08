@@ -448,6 +448,31 @@ $( document ).ready(function() { //DOM OK!
 		registerValidation(e); 	
     });
 
+	//forgot password
+	$( "#form-login1 .btn" ).click(function(e) {
+		 validarVacio($("#input-email-01"));
+
+		 if(!emailreg.test($('#input-email-01').val())){	        	
+        	$("#input-email-01").closest(".form-group").addClass("has-error");	
+        	e.preventDefault();        	
+        }
+	});
+
+	$( "#form-login3 .btn" ).click(function(e) {
+		validarVacio($("#input-password-01"));
+		validarVacio($("#input-password-02"));
+
+		 if(!passreg.test($('#input-password-01').val())){	        	
+        	$("#input-password-01").closest(".form-group").addClass("has-error");
+        	e.preventDefault();	        	
+        } 
+
+        if($("#input-password-01").val() != $("#input-password-02").val()){
+        	$("#input-password-02").closest(".form-group").addClass("has-error");
+        	e.preventDefault();
+        }
+	});
+
 
 	//Home search	
 	//Tickets
