@@ -10,9 +10,13 @@
 
 	li{
 		padding: 20px;
-		border-top: 1px @colorK3 solid;
+		border-top: 1px @colorK3 dotted;
 		margin-bottom: 0;	
 		background-color: @colorK4;
+
+		&:first-child{
+			border: none;
+		}
 
 		&:hover{
 			background-color: @colorK5;
