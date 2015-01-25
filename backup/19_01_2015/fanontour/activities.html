@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+
+
+<html>
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://localhost:8080/FanOnTour/css/jquery.autocomplete.css" />
+        <script type="text/javascript" src="http://localhost:8080/FanOnTour/js/jquery.autocomplete.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("input[name=searchOpt]:radio").change(function() {
+                    $('.seForcl').hide();
+                    $('#' + $(this).val()).show();
+                })
+            });
+
+            function getCities(val) {
+                alert("val>>" + val);
+                if (window.XMLHttpRequest)
+                {
+                    xmlhttp = new XMLHttpRequest();
+                }
+                else
+                {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function()
+                {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                    {
+                        //xmlhttp.responseText
+                    }
+                }
+                xmlhttp.open("get", "http://localhost:8080/FanOnTour/CarRental/retrieveCities?country=" + val, false);
+                xmlhttp.send();
+            }
+
+        </script>
+
+        <title></title>
+    <script language="JavaScript" type="text/javascript">
+    // Dojo configuration
+    djConfig = {
+        isDebug: false,
+        bindEncoding: "UTF-8"
+          ,baseRelativePath: "/FanOnTour/struts/dojo/"
+          ,baseScriptUri: "/FanOnTour/struts/dojo/"
+         ,parseWidgets : false
+        
+    };
+</script>
+
+
+
+  <script language="JavaScript" type="text/javascript"
+        src="/FanOnTour/struts/dojo/struts_dojo.js"></script>
+
+<script language="JavaScript" type="text/javascript"
+        src="/FanOnTour/struts/ajax/dojoRequire.js"></script>
+<link rel="stylesheet" href="/FanOnTour/struts/xhtml/styles.css" type="text/css"/>
+
+<script language="JavaScript" src="/FanOnTour/struts/utils.js" type="text/javascript"></script>
+<script language="JavaScript" src="/FanOnTour/struts/xhtml/validation.js" type="text/javascript"></script>
+<script language="JavaScript" src="/FanOnTour/struts/css_xhtml/validation.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="banner">
+            
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+<!--        https://developers.facebook.com/docs/facebook-login/login-flow-for-web-->
+    </head>
+    <body>
+        <h1>FanOnTour</h1>
+    </body>
+</html>
+
+        </div>
+        <div id="menu">
+            
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+       
+       
+    </head>
+    <body>
+        <div id="searchForm">
+            <tr>
+    <td class="tdLabel"></td>
+    <td
+>
+<input type="radio" name="searchOpt" id="searchOpt1" value="1"/><label for="searchOpt1">Hotels</label>
+<input type="radio" name="searchOpt" id="searchOpt2" value="2"/><label for="searchOpt2">Flights</label>
+<input type="radio" name="searchOpt" id="searchOpt3" value="3"/><label for="searchOpt3">Events</label>
+<input type="radio" name="searchOpt" id="searchOpt4" value="4"/><label for="searchOpt4">Restaurants</label>
+<input type="radio" name="searchOpt" id="searchOpt5" value="5"/><label for="searchOpt5">Rent Car</label>
+<input type="radio" name="searchOpt" id="searchOpt6" value="6"/><label for="searchOpt6">Customized Tour</label>
+<input type="radio" name="searchOpt" id="searchOpt7" value="7"/><label for="searchOpt7">Activities</label>
+    </td>
+</tr>
+
+
+        </div>
+        <div id="1" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/hotels/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="hDest" value="City" id="find_hDest" class="class java.util.HashMap"/></td>
+</tr>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_427436601"    name="hDateFr"    inputName="dojo.hDateFr"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_427436601");</script>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_1091238777"    name="hDateTo"    inputName="dojo.hDateTo"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_1091238777");</script>
+
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find hotels"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        <div id="2" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/flights/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="fOrig" value="Origin" id="find_fOrig"/></td>
+</tr>
+
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="fDest" value="Destination" id="find_fDest"/></td>
+</tr>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_1490113839"    name="fDateFr"    inputName="dojo.fDateFr"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_1490113839");</script>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_1070766095"    name="fDateTo"    inputName="dojo.fDateTo"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_1070766095");</script>
+
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find flights"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        
+        <div id="3" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/events/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><select name="event" id="event">
+    <option value="1">Sports</option>
+    <option value="2">Concerts</option>
+    <option value="3">All</option>
+
+
+</select>
+</td>
+</tr>
+
+                <tr>
+    <td class="tdLabel"><label for="efDate" class="label">From Date:</label></td>
+    <td
+><div
+     dojoType="struts:StrutsDatePicker"    id="efDate"    name="efDate"    inputName="dojo.efDate"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+</td>
+</tr>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("efDate");</script>
+
+                 <tr>
+    <td class="tdLabel"><label for="etDate" class="label">To Date:</label></td>
+    <td
+><div
+     dojoType="struts:StrutsDatePicker"    id="etDate"    name="etDate"    inputName="dojo.etDate"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+</td>
+</tr>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("etDate");</script>
+
+                 <tr>
+    <td class="tdLabel"><label for="name" class="label">Event Name:</label></td>
+    <td
+><input type="text" name="name" value="" id="name"/></td>
+</tr>
+ 
+                <tr>
+    <td class="tdLabel"><label for="city" class="label">City:</label></td>
+    <td
+><input type="text" name="city" value="" id="city"/></td>
+</tr>
+
+                
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find Events"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        
+         <div id="4" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/restaurants/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="city" value="city" id="find_city"/></td>
+</tr>
+
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find restaurants"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        
+         
+         <div id="5" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/cars/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><select name="carRequest.country" id="carCountry">
+    <option value="1">Hotels</option>
+    <option value="2">Flights</option>
+    <option value="3">Events</option>
+    <option value="4">Restaurants</option>
+    <option value="5">Rent Car</option>
+    <option value="6">Customized Tour</option>
+    <option value="7">Activities</option>
+
+
+</select>
+</td>
+</tr>
+
+                      
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find car"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        
+          <div id="6" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/activities/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="fOrig" value="Origin" id="find_fOrig"/></td>
+</tr>
+
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="fDest" value="Destination" id="find_fDest"/></td>
+</tr>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_1057820003"    name="fDateFr"    inputName="dojo.fDateFr"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_1057820003");</script>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_99299672"    name="fDateTo"    inputName="dojo.fDateTo"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_99299672");</script>
+
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find activities"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        
+          <div id="7" class="seForcl" style="display:none">
+            <form id="find" name="find" action="/FanOnTour/activities/find" method="GET">
+<table class="wwFormTable">
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="fOrig" value="Origin" id="find_fOrig"/></td>
+</tr>
+
+                <tr>
+    <td class="tdLabel"></td>
+    <td
+><input type="text" name="fDest" value="Destination" id="find_fDest"/></td>
+</tr>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_1234684797"    name="fDateFr"    inputName="dojo.fDateFr"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_1234684797");</script>
+
+                <div
+     dojoType="struts:StrutsDatePicker"    id="widget_623071756"    name="fDateTo"    inputName="dojo.fDateTo"    displayFormat="dd-MMM-yyyy"  saveFormat="rfc"></div>
+<script language="JavaScript" type="text/javascript">djConfig.searchIds.push("widget_623071756");</script>
+
+                <tr>
+    <td colspan="2"><div align="right"><input type="submit" id="find_0" value="Find activities"/>
+</div></td>
+</tr>
+
+            </table></form>
+
+
+
+
+        </div>
+        
+    </body>
+</html>
+
+        </div>
+        <div id="content">
+            
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <table border="2">
+            <thead><tr><td>Logo</td><td>Title</td><td>Duration</td><td>Description</td><td>Source</td><td>Price</td><td>Action</td>
+                    </tr></thead>
+
+            
+                <tr>
+                    <td><img src="http://cache.graphicslib.viator.com/graphicslib-prelive/thumbs154x109/5156/SITours/shark-reef-at-mandalay-bay-hotel-and-casino-in-las-vegas-160823.jpg"/></td>
+                    <td>Shark Reef at Mandalay Bay Hotel and Casino</td>
+                    <td>Varies</td> 
+                    <td>Marvel at the incredible Shark Reef Aquarium in the heart of the desert at Mandalay Bay Hotel and Casino on the Las Vegas Strip. Explore the 14 exhibits containing exotic and endangered fish, reptiles and ? of course ? sharks. Enjoy up-close views of more than
+100 sharks, including 30 in the 1.3 million-gallon (4.9 million-liter) main tank, one of the largest in the US. By walking through two underwater tunnels, get an even better sense of what it's like to be under the sea.</td>
+                    <td>Viator</td>
+                    <td>14.65</td>
+                    <td><a href="http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Shark-Reef-at-Mandalay-Bay-Hotel-and-Casino/d684-5156SHARK">Book Here</a></td>
+                </tr>
+            
+                <tr>
+                    <td><img src="http://cache.graphicslib.viator.com/graphicslib-prelive/thumbs154x109/5156/SITours/siegfried-and-roy-s-secret-garden-and-dolphin-habitat-at-the-mirage-in-las-vegas-158439.jpg"/></td>
+                    <td>Siegfried & Roy's Secret Garden and Dolphin Habitat at the Mirage Hotel and Casino</td>
+                    <td>Varies</td> 
+                    <td>Admire gorgeous white tigers and playful dolphins right in the comfort of the world-class Mirage Hotel and Casino! Capture photos of magnificent white tigers and lions at Siegfried &amp; Roy's Secret Garden, a jungle-like habitat complete with waterfalls. Observe bottlenose dolphins frolicking from the underwater viewing area of the Dolphin Habitat. Learn about these fascinating creatures from educational displays. The indoor habitats are a welcome respite from the desert heat and the perfect daytime diversion for the whole family!</td>
+                    <td>Viator</td>
+                    <td>15.83</td>
+                    <td><a href="http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Siegfried-and-Roys-Secret-Garden-and-Dolphin-Habitat-at-the-Mirage-Hotel-and-Casino/d684-5156DOLPHIN">Book Here</a></td>
+                </tr>
+            
+                <tr>
+                    <td><img src="http://cache.graphicslib.viator.com/graphicslib-prelive/thumbs154x109/6072/SITours/lion-habitat-ranch-general-admission-private-tour-or-lion-tamer-for-a-in-las-vegas-143455.jpg"/></td>
+                    <td>Lion Habitat Ranch: General Admission, Private Tour or Lion Tamer For a Day</td>
+                    <td>Varies</td> 
+                    <td>Get an up-close look at more than 40 lions and their cubs during a self-guided tour of the Lion Habitat Ranch near Las Vegas. Want more action? You have the option to learn how to safely hand-feed, bathe or train the majestic cats like a lion tamer. For an even more behind-the-scenes look, upgrade to a private tour around the ranch, where you can watch lions as they learn marks, play and devour their meals. If you choose one of these upgrades, you?ll receive a keepsake T-shirt.</td>
+                    <td>Viator</td>
+                    <td>15.83</td>
+                    <td><a href="http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Lion-Habitat-Ranch-General-Admission-Private-Tour-or-Lion-Tamer-For-a-Day/d684-6072LION">Book Here</a></td>
+                </tr>
+            
+                <tr>
+                    <td><img src="http://cache.graphicslib.viator.com/graphicslib-prelive/thumbs154x109/5305/SITours/mike-hammer-comedy-magic-show-in-las-vegas-138120.jpg"/></td>
+                    <td>Mike Hammer Comedy Magic Show</td>
+                    <td>70 minutes</td> 
+                    <td>When Hammer hits the stage you know you're in for a ride. He is a master of cutting wit and non-stop improvisation--every show an original. You'll witness the world-famous handcuff escape; gasp at the sight of swallowing double-edged razor blades; and marvel at the tricks performed by this master magician! Beware, every show is loaded with 100% audience participation. Nobody is safe.</td>
+                    <td>Viator</td>
+                    <td>18.21</td>
+                    <td><a href="http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Mike-Hammer-Comedy-Magic-Show/d684-5305LASMS">Book Here</a></td>
+                </tr>
+            
+                <tr>
+                    <td><img src="http://cache.graphicslib.viator.com/graphicslib-prelive/thumbs154x109/3072/SITours/popovich-comedy-pet-theater-at-planet-hollywood-resort-and-casino-in-las-vegas-118041.jpg"/></td>
+                    <td>Popovich Comedy Pet Theater at Planet Hollywood Resort and Casino</td>
+                    <td>70 minutes</td> 
+                    <td>Gregory Popovich's Comedy Pet Theater is an extravaganza of juggling, European-style comedy and a furry entourage of performing cats and dogs. This unique and hilarious show featuring cats and amazing dogs, all who have been rescued from animal shelters. The ring-leader is Moscow Circus Superstar and master juggler Gregory Popovich. Bring the whole family for an afternoon of fun!</td>
+                    <td>Viator</td>
+                    <td>23.76</td>
+                    <td><a href="http://prelive.partner.viator.com/en/5667/tours/Las-Vegas/Popovich-Comedy-Pet-Theater-at-Planet-Hollywood-Resort-and-Casino/d684-3072LASCOM">Book Here</a></td>
+                </tr>
+            
+        </table>
+    </body>
+</html>
+
+        </div>
+        <div id="footer">
+            
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <p>this is footerß</p>
+    </body>
+</html>
+
+        </div>
+    </div>  
+
+</body>
+</html>

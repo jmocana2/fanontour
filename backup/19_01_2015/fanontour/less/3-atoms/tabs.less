@@ -1,0 +1,71 @@
+//tab-default
+.tab-default{
+	.nav-tabs{
+		border: none;
+
+		li{
+			margin-bottom: 0;
+
+			&:first-child{
+				a{
+					margin-left: 0;
+				}
+			}
+		}
+
+		a{
+			background-color: @colorB1;
+			color: @colorW;
+			border: none;
+			margin-right: 0;
+			margin-left: 3px;
+			width: 105px;
+			text-align: center;
+			padding: 10px 0;
+
+			&:hover{
+				border: none;
+				background-color: @colorG1;
+			}
+
+			&.highlight{
+				width: 170px;
+				padding-right: 48px;
+			}		
+		}
+
+		li.active{
+
+			border: none;		
+
+			a{
+				background-color: @colorG1;
+				color: @colorW;
+				border: none;
+			}
+		}
+
+		.text-new-feature{
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 58px;
+			padding-left:  20px;
+			text-align: center;
+			background: transparent url('../img/shapes/rec_left.png') no-repeat 0 0;
+
+			span{
+				display: block;
+				width: 100%;
+				background-color: @colorR1;
+				padding: 10px 20px 10px 0;
+			}
+		}
+	}
+
+	.tab-content{
+		p{
+			max-width: 750px;
+		}
+	}
+}

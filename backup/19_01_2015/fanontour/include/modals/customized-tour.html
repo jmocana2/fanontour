@@ -1,0 +1,410 @@
+<form action="01_results-customized-tour.html" method="get">
+  <div id="modal-customized-tour" class="modal modal-default fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Customized Tour</h4>
+      </div>
+      <div class="modal-body">
+        <div class="panel-group" id="accordion">
+           <div class="panel panel-default panel-accordion panel-tickets">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTickets">
+                    Tickets <span class="fanontour-icon icon-icons-fanontour_entry floatr"></span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTickets" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <div class="form-group text-center">
+                       <label class="sr-only" for="tour-event-01">Ticket</label>
+                       <input type="text" name="ticket" class="form-control type-reset mandatory" id="tour-event-01" placeholder="Search by artist, team, city or event">
+                       <input type="hidden" name="city_ticket" class="city_dest" id="city-tickets">
+                       <input type="hidden" name="customized_01" class="panel_activate" value=false>
+                       <a href="#" class="btn btn-primary btn-reset" rel="nofollow"><span class="fanontour-icon icon-icons-fanontour_trash"></span> Reset Tickets</a>          
+                    </div>            
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default panel-accordion panel-hotels">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseHotels">
+                    Hotels <span class="fanontour-icon icon-icons-fanontour_hotel floatr"></span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseHotels" class="panel-collapse collapse">
+                <div class="panel-body">
+                 
+                  <fieldset class="form-group">
+                      <label for="tour-hotel-field-01">Going to</label>
+                      <input type="text" name="city_hotel" class="form-control city_dest type-reset mandatory" id="tour-hotel-field-01" placeholder="City name">
+                    </fieldset>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label for="datetimepicker_09">Check in</label>
+                        <?php 
+                          $id_date = "datetimepicker_09";
+                          $name="check_in";
+                          $class_input = "start_date";
+                          include('include/forms/date.html'); 
+                        ?>
+                      </div>
+                      <div class="col-sm-6">
+                      <label for="datetimepicker_10">Check out</label>
+                      <?php 
+                        $id_date = "datetimepicker_10";
+                        $name="check_out";
+                        $class_input = "end_date";
+                        $vacio = 1;
+                        include('include/forms/date.html'); 
+                      ?>                      
+                      </div>
+                    </div>
+                    <input type="hidden" name="customized_02" class="panel_activate" value=false>
+                    <a href="#" class="btn btn-primary btn-reset" rel="nofollow"><span class="fanontour-icon icon-icons-fanontour_trash"></span> Reset Hotels</a>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default panel-accordion panel-flights">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseFlights">
+                    Flights <span class="fanontour-icon icon-icons-fanontour_flight floatr"></span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseFlights" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="form-group col-sm-6">                      
+                      <label for="tour-flight-field-01">From</label>
+                      <input type="text" name="city_origin" class="form-control city_ori type-reset mandatory" id="tour-flight-field-01" placeholder="City name">
+                    </div>
+                    <div class="form-group col-sm-6"> 
+                      <label for="tour-flight-field-02">To</label>
+                      <input type="text" name="city_destiny" class="form-control city_dest type-reset mandatory" id="tour-flight-field-02" placeholder="City name">                          
+                    </div>  
+                    <div class="col-sm-6 form-group">
+                     <label for="datetimepicker_11">Departure date</label>
+                      <?php 
+                        $id_date = "datetimepicker_11";
+                        $name="departure";
+                        $class_input = "start_date";
+                        $vacio = 0;
+                        include('include/forms/date.html'); 
+                      ?>
+                      </div>
+                      <div class="col-sm-6 form-group">
+                      <label for="datetimepicker_12">Return date</label>
+                      <?php 
+                        $id_date = "datetimepicker_12";
+                        $name="arrive";
+                        $class_input = "end_date";
+                        $vacio = 1;
+                        include('include/forms/date.html'); 
+                      ?>  
+                      </div>                    
+                    </div>
+                    <input type="hidden" name="customized_03" class="panel_activate" value=false>
+                    <a href="#" class="btn btn-primary btn-reset" rel="nofollow"><span class="fanontour-icon icon-icons-fanontour_trash"></span> Reset Flights</a>
+                </div>
+              </div>
+           </div>
+           <div class="panel panel-default panel-accordion panel-activities">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseActivities">
+                    Activities <span class="fanontour-icon icon-icons-fanontour_activity floatr"></span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseActivities" class="panel-collapse collapse">
+                <div class="panel-body">
+                
+                  <fieldset class="form-group">
+                      <label for="tour-activity-field-01">City</label>
+                      <input type="text" name="city_activity" class="form-control city_dest type-reset mandatory" id="tour-activity-field-01" placeholder="City name">
+                    </fieldset>
+                    <div class="row">
+                       <div class="col-sm-6 form-group">
+                        <label for="datetimepicker_13">From</label>
+                        <?php 
+                          $id_date = "datetimepicker_13";
+                          $name="activity_date_1";
+                          $class_input = "start_date";
+                          $vacio = 0;
+                          include('include/forms/date.html'); 
+                        ?>
+                      </div>
+                      <div class="col-sm-6 form-group">  
+                        <label for="datetimepicker_14">To</label>
+                        <?php 
+                          $id_date = "datetimepicker_14";
+                          $name="activity_date_2";
+                          $class_input = "end_date";
+                          $vacio = 1;
+                          include('include/forms/date.html'); 
+                        ?>
+                      </div>                    
+                    </div>
+                    <input type="hidden" name="customized_04" class="panel_activate" value=false>
+                    <a href="#" class="btn btn-primary btn-reset" rel="nofollow"><span class="fanontour-icon icon-icons-fanontour_trash"></span> Reset Activities</a>
+                </div>
+              </div>
+           </div>
+           <div class="panel panel-default panel-accordion panel-restaurants">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseRestaurants">
+                    Restaurants <span class="fanontour-icon icon-icons-fanontour_restaurant floatr"></span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseRestaurants" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="form-group">
+                      <label for="tour-restaurant-field-02">City</label>
+                      <input type="text" name="city_restaurant" class="form-control city_dest type-reset mandatory" id="tour-restaurant-field-02" placeholder="City name">
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-sm-6">  
+                        <label for="tour-restaurant-field-01">Restaurant</label>
+                        <input type="text" name="restaurant" class="form-control type-reset" id="tour-restaurant-field-01" placeholder="Restaurant name">                               
+                      </div>
+                      <div class="form-group col-sm-6">  
+                          <label for="tour-restaurant-field-03">Cuisine</label>
+                          <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
+                          <a class="shape-arrow" href="#"><span></span></a>
+                          <input type="text" name="cousine" class="form-control type-reset mandatory" id="tour-restaurant-field-03" placeholder="Cuisine type" data-toggle="dropdown">
+                          <ul class="dropdown-menu" role="menu" aria-labelledby="tour-restaurant-field-03">
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Italian</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">American</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Japanese</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                            <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+                          </ul>
+                        </div>                     
+                      </div>
+                   </div> 
+                   <input type="hidden" name="customized_05" class="panel_activate" value=false>
+                   <a href="#" class="btn btn-primary btn-reset" rel="nofollow"><span class="fanontour-icon icon-icons-fanontour_trash"></span> Reset Restaurants</a>
+                </div>
+              </div>
+           </div>
+           <div class="panel panel-default panel-accordion panel-rental-cars">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseCars">
+                    Rental cars <span class="fanontour-icon icon-icons-fanontour_cars floatr"></span>
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseCars" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="row">
+                      <div class="col-sm-6 form-group">
+                        <label for="tour-car-field-01">City</label>
+                        <input type="text" name="city_car" class="form-control city_dest type-reset mandatory" id="tour-car-field-01" placeholder="City name">
+                      </div>
+                      <div class="col-sm-6">  
+                        <div class="form-group">
+                          <label for="tour-car-field-03">Location</label>
+                          <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
+                              <a class="shape-arrow" href="#"><span></span></a>
+                              <input type="text" name="location" class="form-control type-reset mandatory" id="tour-car-field-03" placeholder="Please select" data-toggle="dropdown">
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="tour-car-field-03">
+                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                              </ul>
+                          </div>
+                        </div>
+                       </div>
+                     </div>   
+                        <div class="checkbox "><!-- has-error -->
+                            <label class="control-label">
+                              <input type="checkbox" name="tourConditionsAccepted" id="tourConditionsAccepted" value="true" checked="checked"><span></span>
+                              Return car to the same location.                                                
+                            </label>
+                        </div>
+                        <div class="conditionsAccepted d-none">
+                         <div class="row">
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                            <label for="tour-car-field-05">City</label>
+                            <input type="text" name="city_car_return" class="form-control city_dest type-reset" id="tour-car-field-05" placeholder="City name">
+                          </div>
+                         </div>
+                         <div class="col-sm-6">
+                          <div class="form-group">  
+                            <label for="tour-car-field-06">Location</label>
+                            <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
+                                <a class="shape-arrow" href="#"><span></span></a>
+                                <input type="text" name="location_return" class="form-control type-reset" id="tour-car-field-06" placeholder="Please select" data-toggle="dropdown">
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="tour-car-field-06">
+                                  <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                  <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                  <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                  <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                  <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                  <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                  <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                  <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                  <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+                                </ul>
+                            </div>
+                           </div> 
+                          </div>
+                         </div>
+                        </div>
+                        <div class="row">
+                         <div class="col-sm-6">
+                          <label for="datetimepicker_15">Pick up date</label>
+                          <?php 
+                              $id_date = "datetimepicker_15";
+                              $name="pick_up_date";
+                              $class_input = "start_date";
+                              include('include/forms/date.html'); 
+                          ?>
+                          <div class="form-group time-field">
+                            <label for="tour-car-field-08">Time</label>
+                            <div class="dropdown dropdown-form">
+                                <a class="shape-arrow" href="#"><span></span></a>
+                                <input name="pick_up_hour" type="text" class="form-control type-reset mandatory" id="tour-car-field-08" data-toggle="dropdown">
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="tour-car-field-08">
+                                  <li><a href="#" rel="nofollow">11</a></li>
+                                  <li><a href="#" rel="nofollow">12</a></li>                            
+                                </ul>
+                            </div>
+                          </div>
+                           <span>:</span>
+                          <div class="form-group time-field">    
+                            <label for="tour-car-field-09" class="sr-only">Minute</label>
+                            <div class="dropdown dropdown-form">
+                                <a class="shape-arrow" href="#"><span></span></a>
+                                <input type="text" name="pick_up_minute" class="form-control type-reset mandatory" id="tour-car-field-09" data-toggle="dropdown">
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="tour-car-field-09">
+                                  <li><a href="#" rel="nofollow">00</a></li>
+                                  <li><a href="#" rel="nofollow">15</a></li>
+                                  <li><a href="#" rel="nofollow">30</a></li>
+                                  <li><a href="#" rel="nofollow">45</a></li>                            
+                                </ul>
+                            </div>
+                          </div> 
+                         </div> 
+                          <div class="col-sm-6">
+                          <label for="datetimepicker_16">Drop off date</label>
+                          <?php 
+                              $id_date = "datetimepicker_16";
+                              $name="drop_off_date";
+                              $class_input = "end_date";
+                              include('include/forms/date.html'); 
+                          ?>
+                          <div class="form-group time-field">
+                            <label for="tour-car-field-11">Time</label>
+                            <div class="dropdown dropdown-form">
+                                <a class="shape-arrow" href="#"><span></span></a>
+                                <input type="text" name="drop_off_hour" class="form-control type-reset mandatory" id="tour-car-field-11" data-toggle="dropdown">
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="tour-car-field-11">
+                                  <li><a href="#" rel="nofollow">11</a></li>
+                                  <li><a href="#" rel="nofollow">12</a></li>                            
+                                </ul>
+                            </div>
+                          </div>
+                          <span>:</span>
+                          <div class="form-group time-field">    
+                            <label for="tour-car-field-12" class="sr-only">Minute</label>
+                            <div class="dropdown dropdown-form">
+                                <a class="shape-arrow" href="#"><span></span></a>
+                                <input type="text" name="drop_off_minute" class="form-control type-reset mandatory" id="tour-car-field-12" data-toggle="dropdown">
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="tour-car-field-12">
+                                  <li><a href="#" rel="nofollow">00</a></li>
+                                  <li><a href="#" rel="nofollow">15</a></li>
+                                  <li><a href="#" rel="nofollow">30</a></li>
+                                  <li><a href="#" rel="nofollow">45</a></li>                            
+                                </ul>
+                            </div>
+                          </div>
+                          
+                         </div> 
+                  </div>
+                  <div class="checkbox tourCheckbox-message"><!-- has-error -->
+                      <label class="control-label">
+                        <input type="checkbox" name="driverage" id="tour-driver" checked="checked" value="true"><span></span>
+                          Driver aged between 25 – 70                                              
+                      </label>
+                      <span class="glyphicon glyphicon-question-sign car-tooltip"  data-toggle="tooltip" data-placement="top" title="Drivers under 25 or over 70 may have to pay extra, so please check the cars terms and conditions"></span>
+                        <div class="positionr">
+                          <div class="age-field form-group">
+                            <label for="tour-car-field13">Age</label>
+                            <input type="text" name="age" class="form-control small-field-w small-field-h" id="tour-car-field13">
+                        </div>
+                      </div>
+                    </div>
+                    <input type="hidden" name="customized_06" class="panel_activate" value=false>
+                    <a href="#" class="btn btn-primary btn-reset" rel="nofollow"><span class="fanontour-icon icon-icons-fanontour_trash"></span> Reset rental cars</a>      
+                </div>
+              </div>
+           </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="alerts-output">
+            <div class="alert alert-danger alert-none-search dnone" role="alert">
+              <p>You must to do almost one search</p>
+            </div>
+            <div class="alert alert-danger alert-empty dnone" role="alert">
+              <p>Please fill in the missing field(s) to activate the search or click reset.</p>
+            </div>
+            <div class="alert alert-danger alert-age dnone" role="alert">
+              <p>Select a correct age</p>
+            </div>
+            <div class="alert alert-warning alert-empty-war dnone" role="alert">
+              <p>Please fill in the missing field(s) or click reset.</p>
+            </div>
+        </div>
+        <input type="hidden" name="customized_00" value="true">
+        <button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,84 @@
+#footer{
+	.inf1{
+		background-color: @colorB1;
+		height: 55px;
+		overflow: hidden;
+		border-bottom: 	5px @colorB12 solid;	
+
+		.fanontour-mod-share{
+			width: 556px;
+			margin: 0 auto;
+		}
+
+		p{
+			float: left;
+			color: @colorW;
+			margin-right: 10px;
+			margin-top: 5px;
+		}
+	}
+
+	.inf2{
+		background-color: @colorK2;
+		border-bottom: 	2px @colorK12 solid;			
+
+		ul{
+			border-left: 	1px #212121 solid;
+			border-right: 	1px #5b5a5a solid;
+		}
+
+		a{
+			color: @colorW;
+			font-weight: 400;
+
+			&:hover{
+				color: @colorG1;
+			}
+		}
+
+		li{
+			margin-top: 15px;
+
+			&:first-child{
+				margin-top: 0;	
+			}
+		}
+	}
+
+	.inf3{
+		background-color: @colorK1;
+		padding-bottom: 40px;	
+
+		img{
+			display: block;	
+			margin:0 auto 10px auto;
+			position: relative;	
+			left: 15px;		
+		}
+
+		p{
+			color: @colorW;
+			font-size: .8em;
+			margin-bottom: 5px;			
+		}
+	}
+
+	.fanontour-mod-share{
+		li{
+			float: left;
+			margin-left: 35px;				
+		}
+
+		a{
+			.opacity (@opacity: 0.7);
+			position: relative;	
+			top: -3px;	
+
+
+			&:hover{
+				.opacity (@opacity: 1);
+				top: -12px;	
+			}
+		}
+	}
+}

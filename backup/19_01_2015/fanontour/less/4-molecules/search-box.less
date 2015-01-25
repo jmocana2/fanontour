@@ -1,0 +1,201 @@
+//SEARCH BOX
+//=====================
+#fanontour-search-box{
+
+	header{
+		position: absolute;
+		top: -140px;
+		left: 0;
+		width: 100%;
+	}
+	
+	h1{
+		font: normal 3.929em/1.2em 'roboto_condensedbold', @font-title-system, @font-third;
+		color: @colorW;
+		text-align: center;	
+		text-transform: uppercase;
+		margin-bottom: 0;
+		text-shadow: 1px 1px #333;
+	}
+
+	h2{
+		font: normal 2.143em/1.2em @font-title, @font-third;
+		color: @colorW;
+		text-align: center;
+		text-shadow: 1px 1px #333;
+	}
+
+	.tab-default{
+		width: 818px;
+		margin: 0 auto;
+
+		.highlight{
+			position: relative;
+			z-index: 2;
+		}
+
+		.tab-content{
+			background: url('../img/backgrounds/bg_white_trans.png');
+			padding: 15px;
+
+			p{
+				max-width: inherit;
+			}
+		}		
+	}	
+
+	#tab-tickets{
+		label{
+			width: 42px;
+		}
+
+		input{
+			width: 328px;
+		}
+	}
+
+	.dropdown-toggle{
+		width: 100%;
+		margin-left: 0;
+	}
+
+	label{
+		width: 100px;
+		text-align: right;
+		position: relative;
+		top: -3px;
+		color: @colorK;
+	}
+
+	input{
+		width: 275px;
+		text-align: center;
+		margin-bottom: 10px;
+		margin-right: 15px;		
+	}
+
+	.input-group{
+		cursor: pointer;
+		margin-bottom: 10px;
+		margin-right: 15px;	
+
+		input{
+			margin: 0;			
+		}	
+		
+	}
+
+	.dropdown{
+		display: inline-block;
+
+		.dropdown-menu{
+			background-color: transparent;			
+		}
+	}
+
+	.btn-search{
+		//margin: 0 auto;
+	}
+
+	//form cols
+	.form-col-1{
+		input{
+			margin-bottom: 0;
+			margin-right: 5px;			
+		}
+	}
+
+	.form-col-2{
+		input, .dropdown{
+			width: 204px;
+		}
+
+		.input-group{
+			input{
+				width: 163px;
+			}			
+		}
+
+		.btn-search{
+			margin-top: 10px;
+		}
+
+		.time-field{
+			.dropdown-form{
+				.dropdown-menu{
+					max-width: 56px;
+					min-width: inherit;
+					margin-top: -10px;
+				}
+			}
+		}
+	}
+
+	.form-col-3{
+		label{
+			width: 84px;	
+		}
+
+		input, .dropdown{
+			width: 153px;
+		}
+
+		//dropdown-form
+		.dropdown-form{
+			a{
+				&.shape-arrow{
+					display: inline-block;
+					.shape-arrow-bottom (@radius: 5px, @color: #4a4a4a, @x: 130px, @y: 5px);
+				}
+			}	
+
+			.dropdown-menu{
+				max-width: 153px;
+				margin-top: -10px;
+			}	
+
+			&.dropdown-col-4{
+				.dropdown-menu{
+					max-width: 600px;
+				}
+			}	
+		}
+
+		.input-group{
+			margin-right: 0;
+
+			input{
+				width: 112px;	
+			}
+		}
+	}	
+
+	.checkbox, .radio{
+
+		display: block;
+		margin-left: 30px;
+		margin-bottom: 10px;
+
+		input{
+			width: auto;
+		}
+
+
+	}	
+
+	#car-tooltip{
+		font-size: 1.1em;
+		margin-left: 5px;
+		display: inline-block;
+		position: relative;
+		top: 4px;
+	}
+
+	.age-field{
+		display: none;
+		margin-left: 15px;
+		position: absolute;
+		left: 124px;
+		top: 25px;
+	}
+}

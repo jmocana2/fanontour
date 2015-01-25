@@ -1,0 +1,12 @@
+bower.json
+*.psd
+Gruntfile.js
+node_modules
+/package.json
+/fanontour.sublime-workspace
+sublime
+*.map
+*.sublime-project
+*.sublime-workspace
+design/resources/logos/logo_v2.png
+design/resources/logos/favicon_ori.png

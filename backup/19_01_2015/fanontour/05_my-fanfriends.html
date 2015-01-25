@@ -1,0 +1,434 @@
+<?php $section = "FanFriends"; ?>
+<!DOCTYPE html>
+<!--[if IE 8 ]>    <html class="ie8" lang="es"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="es"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="es"> <!--<![endif]-->
+
+<head>    
+    <title>FanOnTour.com</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">
+	
+	<!-- CONFIG -->
+	<meta name="author" content="Events Tickets Services S.L.U" />
+	<meta name="description" content="Descripción de la página" />
+	<meta name="keywords" content="etiqueta1, etiqueta2, etiqueta3" />
+	<meta name="robots" content="follow, index" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!--     -->
+
+	<!-- SEO -->	
+	<meta name="revisit-after" content="1 days">
+	<meta name="robots" content="INDEX,FOLLOW,NOODP">	
+	<meta name="twitter:card" content="photo">
+	<meta name="twitter:site" content="@FANONTOUR">
+	<meta name="twitter:creator" content="@FANONTOUR">
+	<meta name="twitter:title" content="fanOnTour title">
+	<meta name="twitter:image:src" content="img/social/twitter-card.jpg">
+	<meta name="twitter:domain" content="www.fanontour.com">
+	<meta property="og:title" content="FanOnTour">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="descripción">
+	<meta property="og:url" content="http://www.fanontour.com">
+	<meta property="og:site_name" content="fanOnTour">
+	<meta property="og:image" content="img/social/og-facebook.jpg">
+	<!--     -->
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="public/vendor/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="public/vendor/bower-components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!--     -->
+	
+	<!-- JS -->
+	<script src="public/vendor/modernizr/modernizr_2.8.3.js"></script>
+	<!--     -->
+
+</head>
+<body id="friends" class="en">
+	<!-- HEADER -->
+	<?php include('include/template/private-header.html'); ?>
+	<!-- -->
+	<!-- MAIN -->
+	<main>
+
+		<div class="bg-container bg-container-generic absolute"></div>
+		<div class="content">
+
+			<!-- ========== (MODAL) TERMS AND CONDITIONS ========= -->
+			<?php
+				$modal = "modal-conditions";
+				include('include/modals/modal-box.html'); 
+			?>
+			<!-- ================================================= -->
+			<!-- =========== (MODAL) PRIVACY POLICY ============== -->
+			<?php
+				$modal = "modal-policy";
+				include('include/modals/modal-box.html'); 
+			?>
+			<!-- ================================================= -->
+
+			<section id="my-FanFriends">
+				<div class="container">
+					<header>
+						<h1 class="title title-photo">My FanFriends</h1>						
+						<nav>
+			                <ol class="breadcrumb breadcrumb-default">
+			                    <li><a href="00_home.html" title="go to the init page">Home</a></li>
+			                    <li><a href="#" title="go to my profile">My profile</a></li>
+			                    <li>My FanFriends</li>
+			                </ol>
+		                </nav>		           
+					</header>					
+					
+						
+					<section id="my-friends" class="bdr-bottom padding-v-20 clearfix">
+						<header class="padding-v-20 text-center">
+							<h1 class="f-left">My FanFriends</h1>
+							<div class="bdr-bottom clearfix">
+					
+								<form id="form-friends" action="#" method="post">
+									<div class="form-group  text-center">
+									    <label class="f-left hidden-xs" for="friend-01">Search friends</label>
+									    <input type="text" name="friend" class="form-control margin-bottom-small f-left" id="friend-01" placeholder="Enter name" required>						    
+									    <button class="btn btn-search text-uppercase f-left">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
+									</div>
+								</form>													
+							</div>
+						</header>
+						<ul>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<a href="#" title="See user profile"><img src="img/avatar/avatar.jpg" alt="usuario"></a>
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>
+										<li>Tours shared: <strong>0</strong></li>
+										<li><a class="btn btn-default btn-delete-friend" href="#">Delete friend</a></li>								
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary btn-see-tours c-both d-block" rel="nofollow">See tors shared</a>
+								<div class="share-tours">
+									<ul>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>										
+									</ul>
+								</div>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<a href="#" title="See user profile"><img src="img/avatar/avatar.jpg" alt="usuario"></a>
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>
+										<li>Tours shared: <strong>0</strong></li>
+										<li><a class="btn btn-default btn-delete-friend" href="#">Delete friend</a></li>								
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary btn-see-tours c-both d-block" rel="nofollow">See tors shared</a>
+								<div class="share-tours">
+									<ul>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>	
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>									
+									</ul>
+								</div>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<a href="#" title="See user profile"><img src="img/avatar/avatar.jpg" alt="usuario"></a>
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>
+										<li>Tours shared: <strong>0</strong></li>
+										<li><a class="btn btn-default btn-delete-friend" href="#">Delete friend</a></li>								
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary btn-see-tours c-both d-block" rel="nofollow">See tors shared</a>
+								<div class="share-tours">
+									<ul>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>										
+									</ul>
+								</div>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<a href="#" title="See user profile"><img src="img/avatar/avatar.jpg" alt="usuario"></a>
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>
+										<li>Tours shared: <strong>0</strong></li>
+										<li><a class="btn btn-default btn-delete-friend" href="#">Delete friend</a></li>								
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary btn-see-tours c-both d-block" rel="nofollow">See tors shared</a>
+								<div class="share-tours">
+									<ul>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>										
+									</ul>
+								</div>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<a href="#" title="See user profile"><img src="img/avatar/avatar.jpg" alt="usuario"></a>
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>
+										<li>Tours shared: <strong>0</strong></li>
+										<li><a class="btn btn-default btn-delete-friend" href="#">Delete friend</a></li>								
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary btn-see-tours c-both d-block" rel="nofollow">See tors shared</a>
+								<div class="share-tours">
+									<ul>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>										
+									</ul>
+								</div>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<a href="#" title="See user profile"><img src="img/avatar/avatar.jpg" alt="usuario"></a>
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>
+										<li>Tours shared: <strong>0</strong></li>
+										<li><a class="btn btn-default btn-delete-friend" href="#">Delete friend</a></li>								
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary btn-see-tours c-both d-block" rel="nofollow">See tors shared</a>
+								<div class="share-tours">
+									<ul>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>										
+									</ul>
+								</div>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<a href="#" title="See user profile"><img src="img/avatar/avatar.jpg" alt="usuario"></a>
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>
+										<li>Tours shared: <strong>0</strong></li>
+										<li><a class="btn btn-default btn-delete-friend" href="#">Delete friend</a></li>								
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary btn-see-tours c-both d-block" rel="nofollow">See tors shared</a>
+								<div class="share-tours">
+									<ul>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>										
+									</ul>
+								</div>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<a href="#" title="See user profile"><img src="img/avatar/avatar.jpg" alt="usuario"></a>
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>
+										<li>Tours shared: <strong>0</strong></li>
+										<li><a class="btn btn-default btn-delete-friend" href="#">Delete friend</a></li>								
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary btn-see-tours c-both d-block" rel="nofollow">See tors shared</a>
+								<div class="share-tours">
+									<ul>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>
+										<li><a href="#" title="see tour">Madona 5 days London</a></li>										
+									</ul>
+								</div>									
+							</li>
+							
+						</ul>
+						<div class="floatr pag c-both">									
+							<ul class="pagination"><li><a class="jp-previous jp-disabled">←</a></li><li class="active"><a>1</a></li><li><a href="#" class="">2</a></li><li><a href="#">3</a></li><li><a href="#" class="jp-next">→</a></li></ul>
+						</div>
+					</section>	
+					<section id="my-friends" class="bdr-bottom padding-v-20 clearfix">
+						<header class="padding-v-20">
+							<h1 class="bdr-bottom padding-v-20">FanFriends request</h1>							
+						</header>
+						<ul>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<img src="img/avatar/avatar.jpg" alt="usuario">
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>																		
+									</ul>
+								</div>
+								<ul class="c-both">
+									<li class="col-sm-6"><a href="#" class="btn btn-primary d-block" rel="nofollow">Accept</a></li>
+									<li class="col-sm-6"><a href="#" class="btn btn-primary d-block" rel="nofollow">Not accept</a></li>	
+								</ul>						
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<img src="img/avatar/avatar.jpg" alt="usuario">
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>																		
+									</ul>
+								</div>
+								<ul class="c-both">
+									<li class="col-sm-6"><a href="#" class="btn btn-primary d-block" rel="nofollow">Accept</a></li>
+									<li class="col-sm-6"><a href="#" class="btn btn-primary d-block" rel="nofollow">Not accept</a></li>
+								</ul>										
+							</li>
+						</ul>						
+					</section>
+					<section id="my-next-friends" class="bdr-bottom padding-v-20 clearfix">
+						<header class="padding-v-20 text-center">
+							<h1 class="f-left">Find new FanFriends</h1>
+							<div class="bdr-bottom clearfix">
+					
+							<form id="form-friends" action="#" method="post">
+								<div class="form-group  text-center">
+								    <label class="f-left hidden-xs" for="friend-01">Search friends</label>
+								    <input type="text" name="friend" class="form-control margin-bottom-small f-left" id="friend-01" placeholder="Search by name or city" required>						    
+								    <button class="btn btn-search text-uppercase f-left">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
+								</div>
+							</form>	
+												
+					</div>
+						</header>
+						<ul>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<img src="img/avatar/avatar.jpg" alt="usuario">
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>																		
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary c-both d-block" rel="nofollow">Add FanFriend</a>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<img src="img/avatar/avatar.jpg" alt="usuario">
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>																		
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary c-both d-block" rel="nofollow">Add FanFriend</a>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<img src="img/avatar/avatar.jpg" alt="usuario">
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>																		
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary c-both d-block" rel="nofollow">Add FanFriend</a>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<img src="img/avatar/avatar.jpg" alt="usuario">
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>																		
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary c-both d-block" rel="nofollow">Add FanFriend</a>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<img src="img/avatar/avatar.jpg" alt="usuario">
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>																		
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary c-both d-block" rel="nofollow">Add FanFriend</a>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<img src="img/avatar/avatar.jpg" alt="usuario">
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>																		
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary c-both d-block" rel="nofollow">Add FanFriend</a>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<img src="img/avatar/avatar.jpg" alt="usuario">
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>																		
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary c-both d-block" rel="nofollow">Add FanFriend</a>									
+							</li>
+							<li class="fanontour-mod-people col-sm-6 col-md-4 col-lg-3">
+								<div class="mod-img">
+									<img src="img/avatar/avatar.jpg" alt="usuario">
+								</div>
+								<div class="mod-txt">
+									<ul>
+										<li>User name</li>																		
+									</ul>
+								</div>
+								<a href="#" class="btn btn-primary c-both d-block" rel="nofollow">Add FanFriend</a>									
+							</li>							
+						</ul>
+						<div class="floatr pag c-both">									
+							<ul class="pagination"><li><a class="jp-previous jp-disabled">←</a></li><li class="active"><a>1</a></li><li><a href="#" class="">2</a></li><li><a>3</a></li><li><a class="jp-next">→</a></li></ul>
+						</div>
+					</section>		
+				   
+			    </div>
+			</section>
+						
+				
+		</div>				
+	</main>
+	<!-- -->
+	<!-- FOOTER -->
+	<?php include('include/template/footer.html'); ?>
+	<!-- -->
+
+	<!-- JS -->
+	<script src="public/vendor/jquery/jquery.js"></script>
+	<script src="public/vendor/jquery/jquery.lazyload.min.js"></script>
+	<script src="public/vendor/bootstrap/bootstrap.js"></script>
+	<script src="public/vendor/bower-components/moment/min/moment.min.js"></script>
+	<script src="public/vendor/bower-components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script src="js/main.js"></script>
+	<script src="js/private.js"></script>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->	
+	<!--    -->
+</body>
+</html>

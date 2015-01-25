@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Hotels>
+	<hotel persons="3">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>100</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="1">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1500</price>
+			</source>									
+		</sources>
+	</hotel>
+	<hotel persons="2">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>200</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="3">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>100</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="3">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>100</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="1">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>10</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="1">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>20</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="2">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>100</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="1">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>100</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="3">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>600</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="3">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="3">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>100</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="3">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>100</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="3">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>100</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="3">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>100</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="3">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>100</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>
+	<hotel persons="3">
+		<name>Petit Palace President Castellana</name>
+		<address>Calle del Marques de Villamagna, 4</address>
+		<city>Madrid</city>
+		<image>/fanontour/img/results/hotel.jpg</image>		
+		<sources>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>100</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1800</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1900</price>
+			</source>
+			<source>
+				<source_name>hoteles.com</source_name>
+				<url>http://es.hoteles.com/</url>
+				<price>1700</price>
+			</source>						
+		</sources>
+	</hotel>	
+</Hotels>		

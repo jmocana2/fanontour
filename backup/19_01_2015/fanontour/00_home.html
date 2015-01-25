@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>    <html class="ie8" lang="es"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9" lang="es"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="es"> <!--<![endif]-->
+
+<head>    
+    <title>FanOnTour.com</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/icons/favicon.ico" type="image/x-icon">
+	
+	<!-- CONFIG -->
+	<meta name="author" content="Events Tickets Services S.L.U" />
+	<meta name="description" content="Descripción de la página" />
+	<meta name="keywords" content="etiqueta1, etiqueta2, etiqueta3" />
+	<meta name="robots" content="follow, index" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!--     -->
+
+	<!-- SEO -->	
+	<meta name="revisit-after" content="1 days">
+	<meta name="robots" content="INDEX,FOLLOW,NOODP">	
+	<meta name="twitter:card" content="photo">
+	<meta name="twitter:site" content="@FANONTOUR">
+	<meta name="twitter:creator" content="@FANONTOUR">
+	<meta name="twitter:title" content="fanOnTour title">
+	<meta name="twitter:image:src" content="img/social/twitter-card.jpg">
+	<meta name="twitter:domain" content="www.fanontour.com">
+	<meta property="og:title" content="FanOnTour">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="descripción">
+	<meta property="og:url" content="http://www.fanontour.com">
+	<meta property="og:site_name" content="fanOnTour">
+	<meta property="og:image" content="img/social/og-facebook.jpg">
+	<!--     -->
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="public/vendor/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="public/vendor/bower-components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!--     -->
+	
+	<!-- JS -->
+	<script src="public/vendor/modernizr/modernizr_2.8.3.js"></script>
+	<!--     -->	
+
+
+</head>
+<body id="home" class="en">
+	<!-- HEADER -->
+	<?php include('include/template/header.html'); ?>
+	<!-- -->
+	<!-- MAIN -->
+	<main>
+
+		<div class="bg-container absolute"></div>
+		<div class="content">
+
+			<!-- ========== (MODAL) TERMS AND CONDITIONS ========= -->
+			<?php
+				$modal = "modal-conditions";
+				include('include/modals/modal-box.html'); 
+			?>
+			<!-- ================================================= -->
+			<!-- =========== (MODAL) PRIVACY POLICY ============== -->
+			<?php
+				$modal = "modal-policy";
+				include('include/modals/modal-box.html'); 
+			?>
+			<!-- ================================================= -->
+			<!-- ========== (MODAL) REGISTER ADVISE ============== -->
+			<?php
+				include('include/modals/register-advise.html'); 
+			?>
+			<!-- ================================================= -->
+			<!-- ========== (MODAL) CUSTOMIZED TOUR ============== -->
+			<?php
+				include('include/modals/customized-tour.html'); 
+			?>
+			<!-- ================================================= -->
+				
+			
+			<section id="fanontour-search-box" class="bg-trans-black <?php if(isset($_GET['nt'])){ echo $_GET['nt'];}?>">
+				<h1 class="sr-only">Search box</h1>
+				<div class="container relative">
+					<div class="tab tab-default">
+				
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs nav-tabs-default" role="tablist">
+						  <li class="active hidden-xs hidden-sm"><a href="#tab-tickets" role="tab" data-toggle="tab" title="search tickets"><span class="fanontour-icon icon-icons-fanontour_entry"></span> Tickets</a></li>
+						  <li class="hidden-xs hidden-sm"><a href="#tab-hotels" role="tab" data-toggle="tab" title="search hotels"><span class="fanontour-icon icon-icons-fanontour_hotel"></span> Hotels</a></li>
+						  <li class="hidden-xs hidden-sm"><a href="#tab-flights" role="tab" data-toggle="tab" title="search flights"><span class="fanontour-icon icon-icons-fanontour_flight"></span> Flights</a></li>
+						  <li class="hidden-xs hidden-sm"><a href="#tab-activities" role="tab" data-toggle="tab" title="search activities"><span class="fanontour-icon icon-icons-fanontour_activity"></span> Activities</a></li>
+						  <li class="hidden-xs hidden-sm"><a href="#tab-restaurants" role="tab" data-toggle="tab" title="search restaurants"><span class="fanontour-icon icon-icons-fanontour_restaurant"></span> Restaurants</a></li>
+						  <li class="hidden-xs hidden-sm"><a href="#tab-rent-car" role="tab" data-toggle="tab" title="search rental cars"><span class="fanontour-icon icon-icons-fanontour_cars"></span> Rental cars</a></li>
+						  <li class="hidden-xs hidden-sm"><a class="register-advise highlight relative" href="#tab-tour" role="tab" data-toggle="tab" title="make your cutomized tour">Customized tour <span class="text-new-feature"><span>New!</span></span></a></li>
+						  <li class="dropdown dropdown-tab visible-xs visible-sm">
+					        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">What are you looking for? <span class="caret"></span></a>
+					        <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+					          <li><a href="#tab-tickets" tabindex="-1" role="tab" data-toggle="tab" title="search tickets">Tickets</a></li>
+					          <li><a href="#tab-hotels" tabindex="-1" role="tab" data-toggle="tab" title="search hotels">Hotels</a></li>
+					          <li><a href="#tab-flights" tabindex="-1" role="tab" data-toggle="tab" title="search flights">Flights</a></li>
+					          <li><a href="#tab-activities" tabindex="-1" role="tab" data-toggle="tab" title="search activities">Activities</a></li>
+					          <li><a href="#tab-restaurants" tabindex="-1" role="tab" data-toggle="tab" title="search restaurants">Restaurants</a></li>
+					          <li><a href="#tab-rent-car" tabindex="-1" role="tab" data-toggle="tab" title="search rental cars">Rental cars</a></li>
+					          <li><a class="relative customized-tour" href="#tab-tour" tabindex="-1" role="tab" data-toggle="tab" title="make your cutomized tour">Customized tour <span class="text-new-feature"><span>New!</span></span></a></li>
+					        </ul>
+					      </li>
+						</ul>
+						
+						<!-- Tab panes -->
+						<div class="tab-content clearfix">
+						  <div class="tab-pane active" id="tab-tickets">
+						  		<section id="fanontour-search-tickets">
+						  			<header>
+										<h1>Get your tickets now! </h1>
+										<h2>Tickets for any event worldwide</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<form class="form-inline form-col-1" role="form" action="01_results-tickets.html" method="get">
+											<div class="form-group col-sm-offset-1 col-sm-10 text-center padding-v-20">
+											    <label class="sr-only" for="event-01">Tickets</label>
+											    <input type="text" name="ticket" class="form-control" id="event-01" placeholder="Search by artist, team, city or event" required>
+											    <input type="hidden" name="customized_01" value="true">
+											    <button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
+											</div>
+										</form>
+									</div>
+						  		</section>
+						  </div>
+						  <div class="tab-pane" id="tab-hotels">
+						  		<section id="fanontour-search-hotels">
+						  			<header>
+										<h1>Find the best hotels! </h1>
+										<h2>Bookings for any hotel worldwide</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<form class="form-inline form-col-2" role="form" action="01_results-hotels.html" method="get">
+											<div class="form-group col-sm-offset-1 col-sm-10 padding-v-10">
+												<fieldset class="col-xs-12 no-padding form-group">
+											    	<label for="hotel-field-01">Going to</label>
+											   		<input type="text" name="city_hotel" class="form-control" id="hotel-field-01" placeholder="City name" required>
+											    </fieldset>
+											    <label for="datetimepicker_01">Check in</label>
+											    <?php 
+											    	$id_date = "datetimepicker_01";
+											    	$name="check_in";
+											    	$class_input = "start_date";
+											    	include('include/forms/date.html'); 
+											    ?>
+											    <label for="datetimepicker_02">Check out</label>
+											    <?php 
+											    	$id_date = "datetimepicker_02";
+											    	$name="check_out";
+											    	$class_input = "end_date";
+											    	include('include/forms/date.html'); 
+											    ?>
+											    <input type="hidden" name="customized_02" value="true">
+											    <div class="text-center">
+											    	<button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
+												</div>
+											</div>
+										</form>
+									</div>
+						  		</section>
+						  </div>
+						  <div class="tab-pane" id="tab-flights">
+						  		<section id="fanontour-search-flights">
+						  			<header>
+										<h1>Book your flight!</h1>
+										<h2>Best flight prices worldwide</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<form class="form-inline form-col-2" role="form" action="01_results-flights.html" method="get">
+											<div class="form-group col-sm-offset-1 col-sm-10 padding-v-10">
+												<label for="flight-field-01">From</label>
+											   	<input type="text" name="city_origin" class="form-control city_ori" id="flight-field-01" placeholder="City name">
+											   	<div class="form-group">
+											   		<label for="flight-field-02">To</label>
+											   		<input type="text" name="city_destiny" class="form-control" id="flight-field-02" placeholder="City name" required>
+											   	</div>
+											   	<div class="f-left">											    
+												    <label for="datetimepicker_03">Outbund date</label>
+												    <?php 
+												    	$id_date = "datetimepicker_03";
+												    	$name="departure";
+												    	$class_input = "start_date";
+												    	include('include/forms/date.html'); 
+												    ?>
+											    </div>
+											    <div class="return-date f-left">
+												    <label for="datetimepicker_04">Return date</label>
+												    <?php 
+												    	$id_date = "datetimepicker_04";
+												    	$name="arrive";
+												    	$class_input = "end_date";
+												    	include('include/forms/date.html'); 
+												    ?>
+											    </div>
+											    <div class="radio radio-message c-both clearfix"><!-- has-error -->
+		                                       	    <label class="control-label col-sm-6">
+		                                        		<input type="radio" name="one_way" id="return" class="small-field-w small-field-h" checked="checked" value="true"><span></span>Return</label>
+		                                          	<label class="control-label col-sm-6">
+		                                        		<input type="radio" name="one_way" id="one_way" class="small-field-w small-field-h" value="false"><span></span>One way</label> 
+	                                          	</div>
+											    <input type="hidden" name="customized_03" value="true">
+											    <div class="text-center">
+											    	<button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
+												</div>
+											</div>
+										</form>
+									</div>
+						  		</section>
+						  </div>
+						  <div class="tab-pane" id="tab-activities">
+						  		<section id="fanontour-search-activities">
+						  			<header>
+										<h1>Experience new activities!</h1>
+										<h2>All kinds of activities worldwide</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<form class="form-inline form-col-2" role="form" action="01_results-activities.html" method="get">
+											<div class="form-group col-sm-offset-1 col-sm-10 padding-v-10">
+												<fieldset class="col-xs-12 no-padding form-group">
+											    	<label for="activity-field-01">City</label>
+											   		<input type="text" name="city_activity" class="form-control" id="activity-field-01" placeholder="City name" required>
+											    </fieldset>
+											    <label for="datetimepicker_05">From</label>
+											    <?php 
+											    	$id_date = "datetimepicker_05";
+											    	$name="activity_date_1";
+											    	$class_input = "start_date";
+											    	include('include/forms/date.html'); 
+											    ?>
+											    <label for="datetimepicker_06">To</label>
+											    <?php 
+											    	$id_date = "datetimepicker_06";
+											    	$name="activity_date_2";
+											    	$class_input = "end_date";
+											    	include('include/forms/date.html'); 
+											    ?>
+											    <input type="hidden" name="customized_04" value="true">
+											    <div class="text-center">
+											    	<button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
+												</div>
+											</div>
+										</form>
+									</div>
+						  		</section>
+						  </div>
+						  <div class="tab-pane" id="tab-restaurants">
+						  		<section id="fanontour-search-restaurants">
+						  			<header>
+										<h1>Eat in the best restaurants!</h1>
+										<h2>Reservations for any restaurant worldwide</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<form class="form-inline form-col-2" role="form" action="01_results-restaurants.html" method="get">
+											<div class="form-group col-sm-offset-1 col-sm-10 padding-v-10">
+												<div class="form-group">
+													<label for="restaurant-field-02">City</label>
+											   		<input type="text" name="city_restaurant" class="form-control" id="restaurant-field-02" placeholder="City name">
+												</div>
+												<label for="restaurant-field-01">Restaurant</label>
+											   	<input type="text" name="restaurant" class="form-control" id="restaurant-field-01" placeholder="Restaurant name">	   												    
+											    <label for="restaurant-field-03">Cuisine</label>
+											    <div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
+												  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
+												  <input type="text" name="cousine" class="form-control" id="restaurant-field-03" placeholder="Cuisine type" data-toggle="dropdown" autocomplete="off">
+												  <ul class="dropdown-menu" role="menu" aria-labelledby="restaurant-field-03">
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Italian</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">American</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Japanese</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												    <li class="col-sm-3"><a href="#" rel="nofollow">Spanish</a></li>
+												  </ul>
+												</div>
+											    <input type="hidden" name="customized_05" value="true">											    
+											    <div class="text-center">
+											    	<button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
+												</div>
+											</div>
+										</form>
+									</div>
+						  		</section>
+						  </div>
+						  <div class="tab-pane" id="tab-rent-car">
+						  		<section id="fanontour-search-rent-car">
+						  			<header>
+										<h1>Rent a car!</h1>
+										<h2>Best rental offers worldwide</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<form class="form-inline form-col-2" role="form" action="01_results-rental-cars.html" method="get">
+											<div class="form-group">
+												<label for="car-field-01">City</label>
+												<input type="text" name="city_car" class="form-control small-field-h" id="car-field-01" placeholder="City name" required>				
+											</div>
+											<div class="form-group">				
+												<label for="car-field-02">Location</label>
+												<div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
+													  <a class="shape-arrow" data-toggle="dropdown" href="#"><span></span></a>
+													  <input type="text" name="location" class="form-control small-field-h" id="car-field-02" placeholder="Please select"  data-toggle="dropdown" autocomplete="off" required>
+													  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-02">
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+													  </ul>
+												</div>
+											</div>
+											<div class="checkbox "><!-- has-error -->
+	                                       	    <label class="control-label">
+	                                        	<input type="checkbox" name="conditionsAccepted" id="conditionsAccepted" value="true" checked="checked"><span></span>
+	                                            Return car to the same location.                                                
+	                                          </label>
+	                                    	</div>
+	                                    	<div class="conditionsAccepted d-none">
+	                                    		<div class="form-group">		                                    	
+													<label for="car-field-03">City</label>
+													<input type="text" name="city_car_return" class="form-control small-field-h" id="car-field-03" placeholder="City name">	
+												</div>
+												<div class="form-group">	
+													<label for="car-field-04">Location</label>
+													<div class="dropdown dropdown-form dropdown-multiple dropdown-col-4">
+														  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
+														  <input type="text" name="location_return" class="form-control small-field-h" id="car-field-04" placeholder="Please select" autocomplete="off"  data-toggle="dropdown">
+														  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-04">
+														    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+														    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+														    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+														    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+														    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+														    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+														    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+														    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+														    <li class="col-sm-3"><a href="#" rel="nofollow">Madrid Aerport</a></li>
+														  </ul>
+													</div>
+												</div>	
+											</div>
+											<div class="clearfix">
+												<label for="datetimepicker_07">Pick up date</label>
+												<?php 
+												   	$id_date = "datetimepicker_07";
+												   	$name = "pick_up_date";
+												   	$class_input = "start_date small-field-h";
+												   	include('include/forms/date.html'); 
+												?>
+												<div class="time-field dinline-block">
+													<label for="car-field-08">Time</label>
+													<div class="dropdown dropdown-form small-field-w form-group">
+														  <a class="shape-arrow"  href="#" data-toggle="dropdown"><span></span></a>
+														  <input type="text" name="pick_up_hour" class="form-control small-field-h" id="car-field-08" data-toggle="dropdown" autocomplete="off" required>
+														  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-08">
+														    <li><a href="#" rel="nofollow">11</a></li>
+														    <li><a href="#" rel="nofollow">12</a></li>												    
+														  </ul>
+													</div>
+													<span>:</span>												
+													<label for="car-field-09" class="sr-only">Minute</label>
+													<div class="dropdown dropdown-form small-field-w form-group">
+														  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
+														  <input type="text" name="pick_up_minute" class="form-control small-field-h" id="car-field-09" data-toggle="dropdown" autocomplete="off" required>
+														  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-09">
+														    <li><a href="#" rel="nofollow">00</a></li>
+														    <li><a href="#" rel="nofollow">15</a></li>
+														    <li><a href="#" rel="nofollow">30</a></li>
+														    <li><a href="#" rel="nofollow">45</a></li>												    
+														  </ul>
+													</div>
+												</div>	
+											</div>
+											<label for="datetimepicker_08" class="">Drop off date</label>
+											<?php 
+											   	$id_date = "datetimepicker_08";
+											   	$name = "drop_off_date";
+											   	$class_input = "end_date small-field-h";
+											   	include('include/forms/date.html'); 
+											?>
+											<div class="time-field dinline-block">
+												<label for="car-field-11">Time</label>
+												<div class="dropdown dropdown-form small-field-w form-group">
+													  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
+													  <input type="text" name="drop_off_hour" class="form-control small-field-h" id="car-field-11" data-toggle="dropdown" autocomplete="off" required>
+													  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-11">
+													    <li><a href="#" rel="nofollow">11</a></li>
+													    <li><a href="#" rel="nofollow">12</a></li>												    
+													  </ul>
+												</div>	
+												<span>:</span>
+												<label for="car-field-12" class="sr-only">Minute</label>
+												<div class="dropdown dropdown-form small-field-w form-group">
+													  <a class="shape-arrow" href="#" data-toggle="dropdown"><span></span></a>
+													  <input type="text" name="drop_off_minute" class="form-control small-field-h" id="car-field-12" data-toggle="dropdown" autocomplete="off" required>
+													  <ul class="dropdown-menu" role="menu" aria-labelledby="car-field-12">
+													    <li><a href="#" rel="nofollow">00</a></li>
+													    <li><a href="#" rel="nofollow">15</a></li>
+													    <li><a href="#" rel="nofollow">30</a></li>
+													    <li><a href="#" rel="nofollow">45</a></li>												    
+													  </ul>
+												</div>
+											</div>
+											<div class="checkbox checkbox-message"><!-- has-error -->
+	                                       	    <label class="control-label">
+	                                        		<input type="checkbox" name="driverage" id="driver" class="small-field-w small-field-h" checked="checked" value="true"><span></span>
+	                                            	Driver aged between 25 – 70                                                 
+	                                          	</label>
+	                                          <span class="glyphicon glyphicon-question-sign car-tooltip"  data-toggle="tooltip" data-placement="top" title="Drivers under 25 or over 70 may have to pay extra, so please check the cars terms and conditions"></span>
+	                                          	<div class="positionr">
+	                                          		<div class="age-field form-group">
+	                                          			<label for="car-field13">Age</label>
+											   			<input type="text" name="age" class="form-control small-field-w small-field-h" id="car-field13">
+											   		</div>
+											   	</div>
+	                                    	</div>	
+	                                    	<input type="hidden" name="customized_06" value="true">
+	                                    	<div class="text-center">
+										    	<button class="btn btn-search text-uppercase">search <span class="fanontour-icon icon-icons-fanontour_search"></span></button>
+											</div>									
+										</form>
+									</div>
+						  		</section>
+						  </div>
+						  <div class="tab-pane" id="tab-tour">
+						  		<section id="fanontour-search-tour">
+						  			<header>
+										<h1>Plan your perfect tour!</h1>
+										<h2>Fast and easy. Save time and money</h2>
+									</header>
+									<div class="fanontour-mod-search">
+										<p class="big-text text-center">Start your tour now</p>
+										<div class="text-center">
+											<ul class="list-inline">
+												<li><a class="btn btn-primary" href="03_log-in.html">Login</a></li>
+												<li><a class="btn btn-primary" href="04_register.html">Register</a></li>
+											</ul>
+										</div>
+									</div>
+						  		</section>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="fanontour-most-popular-events" class="fanontour-mod">
+				<div class="container">
+					<header>
+						<h1 class="text-center">Most popular events</h1>
+						<h2 class="text-center">Check out what’s hot right now</h2>
+					</header>
+					<div class="row padding-v-15">
+						<ul class="clearfix">
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="Full Madona Concert. Great Concert!" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Full Madona Concert. Great Concert!  dssad sad sa as sa das s as a</h2>
+										<div class="bg-trans-title">
+											<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona</h2>
+										<div class="bg-trans-title">
+											<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona</h2>
+										<div class="bg-trans-title">
+											<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona</h2>
+										<div class="bg-trans-title">
+											<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona</h2>
+										<div class="bg-trans-title">
+											<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona</h2>
+										<div class="bg-trans-title">
+											<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona</h2>
+										<div class="bg-trans-title">
+											<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madona_262x196.jpg" data-original="img/photos/madona_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madona</h2>
+										<div class="bg-trans-title">
+											<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>	
+			</section>
+			<section id="fanontour-most-popular-destinations" class="fanontour-mod bg-white">
+				<div class="container">
+					<header>
+						<h1 class="text-center">Most popular destinations</h1>
+						<h2 class="text-center">Explore some of the coolest cities in the world.</h2>
+					</header>
+					<div class="row padding-v-15">
+						<ul class="clearfix">
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="Saint petersburg and Roma" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Saint petersburg and Roma</h2>
+										<div class="bg-trans-title">
+											<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;<span>/night</span></p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;<span>/night</span></p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;<span>/night</span></p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;<span>/night</span></p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;<span>/night</span></p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;<span>/night</span></p>
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<h2 itemprop="name">Madrid</h2>
+										<p class="price price-default" itemprop="price"><span>from:</span> 175 &euro;<span>/night</span></p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>	
+			</section>
+			<section id="fanontour-lastest-coustomized-tours" class="fanontour-mod">
+				<div class="container">
+					<header>
+						<h1 class="text-center">Lastest customized tours</h1>
+						<h2 class="text-center">Find out more about tours our users created.</h2>
+					</header>
+					<div class="row padding-v-15">
+						<ul class="clearfix">
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>	
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<ul class="list-inline">
+											<li class="d-block">At matrid against Juventus. Final Champions league</li>
+											<li class="no-margin no-border">Madrid</li>
+											<li>1 day</li>
+										</ul>																			
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/rural_262x196.jpg" data-original="img/photos/rural_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<ul class="list-inline">
+											<li class="d-block">Concert</li>
+											<li class="no-margin no-border">Madrid</li>
+											<li>1 day</li>
+										</ul>																			
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>									
+									<img class="lazy" src="img/photos/atleti_262x196.jpg" data-original="img/photos/atleti_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<ul class="list-inline">
+											<li class="d-block">Concert</li>
+											<li class="no-margin no-border">Madrid</li>
+											<li>1 day</li>
+										</ul>																			
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/tapas_262x196.jpg" data-original="img/photos/tapas_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<ul class="list-inline">
+											<li class="d-block">Concert</li>
+											<li class="no-margin no-border">Madrid</li>
+											<li>1 day</li>
+										</ul>																			
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<ul class="list-inline">
+											<li class="d-block">Concert</li>
+											<li class="no-margin no-border">Madrid</li>
+											<li>1 day</li>
+										</ul>																			
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<ul class="list-inline">
+											<li class="d-block">Concert</li>
+											<li class="no-margin no-border">Madrid</li>
+											<li>1 day</li>
+										</ul>																			
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<ul class="list-inline">
+											<li class="d-block">Concert</li>
+											<li class="no-margin no-border">Madrid</li>
+											<li>1 day</li>
+										</ul>																			
+									</div>
+								</div>
+							</li>
+							<li class="fanontour-mod-details col-xs-6 col-sm-4 col-md-3" itemscope itemtype="http://schema.org/Event">								
+								<div class="fanontour-bg-img">
+									<a href="#" class="text-hide" title="see event" itemprop="url"></a>
+									<img class="lazy" src="img/photos/madrid_262x196.jpg" data-original="img/photos/madrid_262x196.jpg" alt="#">
+									<a class="headband headband-photo" href="#"><img class="avatar" src="img/avatar/user.jpg" alt="usuario"> by jmocana</a>
+								</div>
+								<div class="fanontour-details">
+									<div>
+										<ul class="list-inline">
+											<li class="d-block">Concert</li>
+											<li class="no-margin no-border">Madrid</li>
+											<li>1 day</li>
+										</ul>																			
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>	
+			</section>	
+		</div>				
+	</main>
+	<!-- -->
+	<!-- FOOTER -->
+	<?php include('include/template/footer.html'); ?>
+	<!-- -->
+
+	<!-- JS -->
+	<script src="public/vendor/jquery/jquery.js"></script>
+	<script src="public/vendor/jquery/jquery.lazyload.min.js"></script>
+	<script src="public/vendor/bootstrap/bootstrap.js"></script>
+	<script src="public/vendor/bower-components/moment/min/moment.min.js"></script>
+	<script src="public/vendor/bower-components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script src="js/main.js"></script>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->	
+	<!--    -->
+
+
+</body>
+</html>

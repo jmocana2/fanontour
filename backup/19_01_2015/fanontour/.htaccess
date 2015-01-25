@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "FanOnTour private zone"
+AuthUserFile "/home/pixelind/.htpasswds/public_html/fanontour/passwd"
+require valid-user
