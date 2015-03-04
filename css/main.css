@@ -3368,6 +3368,9 @@ video {
   }
 }
 @media (max-width: 480px) {
+  h1.title {
+    font-size: 1.4em;
+  }
   #header nav {
     margin-right: 0;
   }
@@ -3450,5 +3453,4 @@ video {
     display: block !important;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=bootstrap.css.map */
