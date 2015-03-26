@@ -10,3 +10,4 @@ sublime
 *.sublime-workspace
 design/resources/logos/logo_v2.png
 design/resources/logos/favicon_ori.png
+*.cfg
